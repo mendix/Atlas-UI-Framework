@@ -46,6 +46,7 @@
                 }
                 select.form-control {
                     padding: 3px;
+                    vertical-align: middle;
                 }
                 .mx-button {
                     height: 28px;
@@ -56,6 +57,7 @@
         }
     }
 }
+
 
 // Remove default border from grid inside a Mendix Dataview 
 .mx-dataview .mx-grid {
