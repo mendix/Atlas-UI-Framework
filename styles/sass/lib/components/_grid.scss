@@ -43,12 +43,9 @@
                 .form-control {
                     height: 28px;
                     font-size: 11px;
-                    line-height: 1em;
-                    vertical-align: middle;
                 }
                 select.form-control {
                     padding: 3px;
-                    vertical-align: middle;
                 }
                 .mx-button {
                     height: 28px;
@@ -60,8 +57,16 @@
     }
 }
 
-
 // Remove default border from grid inside a Mendix Dataview 
 .mx-dataview .mx-grid {
     border: 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
+    input[type=date],
+    input[type=time],
+    input[type=datetime-local],
+    input[type=month] {
+        line-height: 1;
+    }
 }
