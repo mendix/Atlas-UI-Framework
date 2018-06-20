@@ -100,17 +100,15 @@ select.form-control {
 // Form Group
 .form-group {
     margin-bottom: $form-group-margin-bottom;
-    & > [class*="col-"] {
+    &>[class*="col-"] {
         padding-right: $form-group-gutter;
         padding-left: $form-group-gutter;
-    }
-    // Alignment content
-    div[class*="textBox"] > label,
-    div[class*="textArea"] > label,
-    div[class*="datePicker"] > label {
+    } // Alignment content
+    div[class*="textBox"]>label,
+    div[class*="textArea"]>label,
+    div[class*="datePicker"]>label {
         @extend .form-control-static;
-    }
-    // Label
+    } // Label
     .control-label {
         color: $form-label-color;
         font-size: $form-label-size;
@@ -126,5 +124,14 @@ select.form-control {
             padding-bottom: $form-input-padding-y;
             line-height: $form-input-line-height;
         }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
+    input[type=date],
+    input[type=time],
+    input[type=datetime-local],
+    input[type=month] {
+        line-height: 1;
     }
 }
