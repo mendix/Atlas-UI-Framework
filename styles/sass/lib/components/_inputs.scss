@@ -129,7 +129,8 @@ select.form-control {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
+// Fixes alignmcode ent bug on iPads / iPhones where datefield is not aligned vertically
+@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
     input[type=date],
     input[type=time],
     input[type=datetime-local],
