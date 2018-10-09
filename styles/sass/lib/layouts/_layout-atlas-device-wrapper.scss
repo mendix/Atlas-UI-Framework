@@ -1,0 +1,51 @@
+.phone-wrapper {
+    width: 375px;
+    height: 765px;
+    margin: auto;
+    padding: 120px 40px;
+    background: url(../../../resources/samsung.png) no-repeat center center;
+
+    .device-frame,
+    .device-shadow-wrapper {
+        border-radius: 28px;
+    }
+}
+
+.tablet-wrapper {
+    width: 1005px;
+    height: 780px;
+    margin: auto;
+    padding: 120px 100px;
+    background: url(../../../resources/ipad-hor.png) no-repeat center center;
+}
+
+.device-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.device-shadow-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.device-frame-shadow {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    pointer-events: none;
+    box-shadow: inset 10px 0 10px -10px black, inset -10px 0 10px -10px black;
+}
+.device-disclaimer {
+    margin-top: 80px;
+    padding: 10px;
+    text-align: center;
+    color: $gray-light;
+    border-top: 1px solid $border-color-default;
+    font-size: 12px;
+    line-height: 20px;
+}

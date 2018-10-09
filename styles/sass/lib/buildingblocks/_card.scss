@@ -6,7 +6,7 @@
     padding: 30px;
     border: 1px solid $border-color-default;
     border-radius: $border-radius-default;
-    background-color: #FFFFFF;;
+    background-color: #FFFFFF;
 }
 
 //== Elements
@@ -21,6 +21,16 @@
     .card-image {
         .glyphicon {
             font-size: 58px;
+        }
+    }
+    .mx-link {
+        max-width: 100%;
+        a {
+            display: block;
+            overflow: hidden;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
 }
@@ -184,7 +194,10 @@
         position: relative;
         padding: 20px 30px;
         .cardproduct-name {
+            overflow: hidden;
             margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         .widget-star-rating-font {
             font-size: 20px;
@@ -261,6 +274,10 @@
 }
 
 .cardpayment {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .cardprogress {
@@ -277,4 +294,25 @@
 
 .cardhighlight {
     border-top: 4px solid $brand-primary;
+}
+
+
+@media screen and (max-width: $screen-sm-max) {
+    .cardhighlight {
+        .widget-charts:not([height]),
+        .widget-charts-line:not([height]) {
+            padding-bottom: 80% !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: $screen-md-max) {
+    .cardprogress {
+        .cardprogress-state {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+        }
+    }
 }
