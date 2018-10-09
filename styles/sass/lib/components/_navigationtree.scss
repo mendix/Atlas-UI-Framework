@@ -84,6 +84,7 @@
                     &:focus,
                     &.active {
                         color: $navigation-sub-color-hover;
+                        outline: 0;
                         background-color: $navigation-sub-bg-hover;
                     }
                     &.active {

@@ -2,7 +2,7 @@ body {
     height: 100%;
 }
 
-.wrapper {
+.login-wrapper {
     display: flex;
     height: 100%;
 
@@ -47,7 +47,7 @@ body {
                         font-weight: 500;
                     }
 
-                    .inputWrapper {
+                    .input-wrapper {
                         position: relative;
                         width: 100%;
 
@@ -129,7 +129,7 @@ body {
 
 // Show only on wide screens
 @media screen and (min-width: $screen-lg) {
-    .wrapper {
+    .login-wrapper {
         .logo {
             width: 150px;
         }
