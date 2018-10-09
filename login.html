@@ -7,31 +7,31 @@
     <title>Login</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
-    <link rel="stylesheet" href="styles/css/lib/lib.css?{{cachebust}}">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
+    <link rel="stylesheet" type="text/css" href="styles/css/lib/lib.css?{{cachebust}}">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="design-wrapper">
-            <div class="bg-image"></div>
+    <div class="loginwrapper">
+        <div class="designwrapper">
+            <div class="bgimage"></div>
         </div>
-        <div class="login-wrapper">
-            <div class="login-container">
+        <div class="loginformwrapper">
+            <div class="logincontainer">
                 <h2>Sign in</h2>
-                <form id="loginForm" class="login-form">
-                    <div class="login-form-inputs">
-                        <div id="loginMessage" class="alert alert-danger login-message"></div>
+                <form id="loginForm" class="loginform">
+                    <div>
+                        <div id="loginMessage" class="alert alert-danger"></div>
                         <div class="form-group">
                             <label id="usernameLabel" for="usernameInput">User name</label>
-                            <div class="inputWrapper">
+                            <div class="inputwrapper">
                                 <input id="usernameInput" class="form-control" type="text" placeholder="User name" autocorrect="off" autocapitalize="none">
                                 <span class="glyphicon glyphicon-user"></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label id="passwordLabel" for="passwordInput">Password</label>
-                            <div class="inputWrapper">
+                            <div class="inputwrapper">
                                 <input id="passwordInput" class="form-control" type="password" placeholder="Password" autocorrect="off" autocapitalize="none">
                                 <span class="glyphicon glyphicon-eye-close"></span>
                             </div>

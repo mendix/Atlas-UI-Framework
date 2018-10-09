@@ -6,7 +6,7 @@
     padding: 30px;
     border: 1px solid $border-color-default;
     border-radius: $border-radius-default;
-    background-color: #FFFFFF;;
+    background-color: #FFFFFF;
 }
 
 //== Elements
@@ -277,4 +277,23 @@
 
 .cardhighlight {
     border-top: 4px solid $brand-primary;
+}
+
+
+@media screen and (max-width: $screen-sm-max) {
+    .widget-charts:not([height]),
+    .widget-charts-line:not([height]) {
+        padding-bottom: 80% !important;
+    }
+}
+
+
+@media screen and (max-width: $screen-md-max) {
+    .cardprogress {
+        .cardprogress-state {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+        }
+    }
 }

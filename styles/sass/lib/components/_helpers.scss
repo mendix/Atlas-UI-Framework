@@ -34,10 +34,10 @@
 
 .nowrap,
 .nowrap * {
-    overflow: hidden;
+    overflow: hidden !important;
     // Star for inside an element, IE8 span > a
     white-space: nowrap !important;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis !important;
 }
 
 // Render DIV as Table Cells

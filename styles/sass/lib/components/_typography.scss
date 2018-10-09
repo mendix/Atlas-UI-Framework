@@ -76,7 +76,7 @@ h6,
 //## Helper classes to change the look and feel of the component
 //-------------------------------------------------------------------------------------------------------------------//
 
-// Text size 
+// Text size
 .text-small {
     font-size: $font-size-small !important;
 }
@@ -85,7 +85,7 @@ h6,
     font-size: $font-size-large !important;
 }
 
-// Text Weights 
+// Text Weights
 .text-light,
 .text-light > *,
 .text-light label {
@@ -133,7 +133,7 @@ h6,
 
 .text-warning,
 .text-warning:hover {
-    color: $brand-warning!important;
+    color: $brand-warning !important;
 }
 
 .text-danger,
@@ -193,4 +193,13 @@ h6,
 
 .text-nowrap {
     white-space: nowrap !important;
+}
+
+.text-nowrap,
+.text-nowrap * {
+    // Star for inside an element, IE8 span > a
+    overflow: hidden !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
 }
