@@ -117,7 +117,10 @@ select.form-control {
         font-weight: $form-label-weight;
     }
 }
-
+// Targets only webkit iOS devices
+.dj_webkit.dj_ios .form-control {
+    transform: translateZ(0);
+}
 // Orientation
 .form-horizontal {
     @media (min-width: $screen-sm) {
