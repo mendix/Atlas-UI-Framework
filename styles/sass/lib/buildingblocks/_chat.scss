@@ -1,0 +1,119 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: $bg-color-secondary;
+}
+.chat-content {
+    display: flex;
+    overflow: auto;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    .mx-listview {
+        position: relative;
+        overflow: auto;
+        .mx-listview-list {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: $m-spacing-large;
+        }
+        .mx-listview-item {
+            padding: 15px 30px;
+            animation: fadeIn 0.2s;
+            border: 0;
+            background-color: transparent;
+            animation-fill-mode: both;
+        }
+        .mx-listview-loadMore {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: block;
+            width: 50%;
+            margin: 15px auto;
+            color: #FFFFFF;
+            background-color: $brand-primary;
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+.chat-message-wrapper {
+    display: flex;
+    & > .mx-image {
+        margin: 0 20px 0 0;
+        border-radius: 50%;
+    }
+    .chat-message {
+        display: inline-flex;
+        flex-direction: column;
+        .chat-balloon {
+            position: relative;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: $bg-color;
+            &::after {
+                position: absolute;
+                top: 10px;
+                right: 100%;
+                width: 0;
+                height: 0;
+                content: "";
+                border: 10px solid transparent;
+                border-top: 0;
+                border-right-color: $bg-color;
+                border-left: 0;
+            }
+        }
+        .chat-message-time {
+            padding-top: 2px;
+        }
+    }
+}
+.chat-message-wrapper-self {
+    justify-content: flex-end;
+    & > .mx-image {
+        margin: 0 0 0 20px;
+    }
+    .chat-message {
+        .chat-balloon {
+            background-color: $color-primary-lighter;
+            &::after {
+                left: 100%;
+                border: 10px solid transparent;
+                border-top: 0;
+                border-right: 0;
+                border-left-color: $color-primary-lighter;
+            }
+        }
+        .chat-message-time {
+            text-align: right;
+        }
+    }
+}
+.chat-footer {
+    z-index: 1;
+    padding: $m-spacing-large;
+    background-color: $bg-color;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.chat-input {
+    display: flex;
+    .chat-textbox {
+        flex: 1;
+        margin-right: $spacing-large;
+        .form-control {
+            border: 0;
+        }
+    }
+}
+.cardchat {
+    overflow: hidden;
+    padding: 0;
+    .chat {
+        height: 400px;
+    }
+}
