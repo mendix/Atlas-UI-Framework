@@ -2481,17 +2481,18 @@ input[type="checkbox"] {
 }
 
 /* search fields */
-.mx-grid-search-item {
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 8px;
-}
+// .mx-grid-search-item {
+//     display: inline-flex;
+//     align-items: center;
+    // vertical-align: top;
+//     margin-bottom: 8px;
+// }
 .mx-grid-search-label {
     width: 110px;
     padding: 0 5px;
     text-align: right;
-    display: inline-block;
-    vertical-align: top;
+    // display: inline-block;
+    // vertical-align: top;
     overflow: hidden;
 }
 [dir="rtl"] .mx-grid-search-label {
@@ -3300,10 +3301,10 @@ body[dir="rtl"] .mx-header-left {
 .mx-selectbox {
     text-align: left;
 }
-.mx-selectbox-caret-wrapper {
-    float: right;
-    height: 100%;
-}
+// .mx-selectbox-caret-wrapper {
+//     float: right;
+//     height: 100%;
+// }
 
 .mx-demouserswitcher {
     position: fixed;

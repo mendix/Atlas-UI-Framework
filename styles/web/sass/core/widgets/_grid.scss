@@ -32,23 +32,33 @@
     }
     .mx-grid-searchbar {
         margin: 10px 0;
+
+        .mx-grid-search-inputs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .mx-grid-search-item {
-            .mx-grid-search-label {
-                vertical-align: middle;
-                label {
-                    padding-top: 5px;
-                }
-            }
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            // .mx-grid-search-label {
+            //     vertical-align: middle;
+            //     label {
+            //         padding-top: 5px;
+            //     }
+            // }
             .mx-grid-search-input {
                 display: inline-flex;
                 .form-control {
                     height: 28px;
                     font-size: 11px;
                 }
-                select.form-control {
-                    padding: 3px;
-                    vertical-align: middle;
-                }
+                // select.form-control {
+                //     padding: 3px;
+                //     vertical-align: middle;
+                // }
                 .mx-button {
                     height: 28px;
                     padding-top: 2px;
