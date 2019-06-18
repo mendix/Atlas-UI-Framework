@@ -16,7 +16,7 @@
         background-color: $dataview-controls-bg;
         /* Buttons */
         .mx-button {
-            margin-right: 0.3em;
+            margin-right: 5px;
             margin-bottom: 0;
             &:last-child {
                 margin-right: 0;
@@ -34,5 +34,15 @@
     .mx-dataview-message {
         color: $dataview-emptymessage-color;
         background: $dataview-emptymessage-bg;
+    }
+}
+
+[dir='rtl'] {
+    .mx-dataview-controls .mx-button {
+        margin-right: 0;
+        margin-left: 5px;
+        &:last-child {
+            margin-left: 0;
+        }
     }
 }

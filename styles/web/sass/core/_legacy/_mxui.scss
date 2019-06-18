@@ -2320,13 +2320,13 @@ html, body, #content {
 
 /* Bacause we use checkboxes without labels, align them with other widgets. */
 input[type="checkbox"] {
-    margin: 9px 0;
+    margin: 0;
 }
 
 .mx-checkbox input[type="checkbox"] {
     margin-left: 0;
-    margin-right: 8px;
-    position: static;
+    // margin-right: 8px;
+    // position: static;
 }
 
 .form-vertical .form-group.mx-checkbox input[type="checkbox"] {
@@ -2342,15 +2342,15 @@ input[type="checkbox"] {
     padding-right: 15px;
 }
 
-.mx-radiobuttons.inline .radio {
-    display: inline-block;
-    margin-right: 20px;
-}
+// .mx-radiobuttons.inline .radio {
+//     display: inline-block;
+//     margin-right: 20px;
+// }
 
 .mx-radiobuttons .radio input[type="radio"] {
     /* Reset bootstrap rules */
-    position: static;
-    margin-right: 8px;
+    // position: static;
+    margin-right: 0;
     margin-left: 0;
 }
 
