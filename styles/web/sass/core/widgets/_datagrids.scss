@@ -10,12 +10,8 @@
         background-color: transparent;
         /* Table header */
         th {
-            border-style: solid;
-            border-color: $grid-border-color;
-            border-top-width: 0;
-            border-right: 0;
-            border-bottom-width: 1px;
-            border-left: 0;
+            border: 0;
+            border-bottom: 1px solid $grid-border-color;
             background-color: $grid-bg-header;
             padding: $grid-padding-top $grid-padding-right $grid-padding-bottom $grid-padding-left;
             vertical-align: middle;
@@ -29,10 +25,8 @@
                 @include transition();
                 padding: $grid-padding-top $grid-padding-right $grid-padding-bottom $grid-padding-left;
                 vertical-align: middle;
-                border-width: 0;
-                border-color: $grid-border-color;
-                border-bottom-width: 1px;
-                border-bottom-style: solid;
+                border: 0;
+                border-bottom: 1px solid $grid-border-color;
                 background-color: $grid-bg;
                 &:focus {
                     outline: none;

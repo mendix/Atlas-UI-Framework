@@ -2557,12 +2557,12 @@ input[type="checkbox"] {
     margin-bottom: 0;
 }
 
-.mx-datagrid th, .mx-datagrid td {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: bottom;
-    border: 1px solid #ddd;
-}
+// .mx-datagrid th, .mx-datagrid td {
+//     padding: 8px;
+//     line-height: 1.42857143;
+//     vertical-align: bottom;
+//     border: 1px solid #ddd;
+// }
 
 /* head */
 .mx-datagrid th {
@@ -2579,7 +2579,8 @@ input[type="checkbox"] {
 }
 [dir="rtl"] .mx-datagrid-sort-icon {
     float: left;
-    padding: 0 5px 0 0;
+    padding-left: 0;
+    padding-right: 5px;
 }
 .mx-datagrid-column-resizer {
     position: absolute;
