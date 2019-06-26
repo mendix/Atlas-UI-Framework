@@ -166,3 +166,14 @@
         }
     }
 }
+
+[dir='rtl'] {
+    .btn,
+    .mx-button,
+    .mx-link {
+        img {
+            margin-right: 0;
+            margin-left: 5px;
+        }
+    }
+}
