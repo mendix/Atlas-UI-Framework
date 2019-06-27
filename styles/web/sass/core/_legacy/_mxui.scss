@@ -2498,12 +2498,12 @@ input[type="checkbox"] {
 [dir="rtl"] .mx-grid-search-label {
     text-align: left;
 }
-.mx-grid-search-input {
-    width: 150px;
-    padding: 0 5px;
-    display: inline-block;
-    vertical-align: top;
-}
+// .mx-grid-search-input {
+//     width: 150px;
+//     padding: 0 5px;
+//     display: inline-block;
+//     vertical-align: top;
+// }
 .mx-grid-search-message {
     flex-basis: 100%;
 }
@@ -2999,41 +2999,41 @@ input[type="checkbox"] {
     margin-top: 0px;
 }
 
-.mx-listview {
-    padding: 8px;
-}
+// .mx-listview {
+//     padding: 8px;
+// }
 .mx-listview > ul {
     padding: 0px;
     list-style: none;
 }
-.mx-listview > ul > li {
-    padding: 5px 10px 10px;
-    border: 1px #ddd;
-    border-style: solid solid none;
-    background-color: #fff;
-    outline: none;
-}
-.mx-listview > ul > li:first-child {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
-.mx-listview > ul > li:last-child {
-    border-bottom-style: solid;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-.mx-listview li:nth-child(2n+1) {
-    background: #f9f9f9;
-}
-.mx-listview li:nth-child(2n+1):hover {
-    background: #f5f5f5;
-}
-.mx-listview > ul > li.selected {
-    background: #eee;
-}
-.mx-listview-clickable ul * {
-    cursor: pointer;
-}
+// .mx-listview > ul > li {
+//     padding: 5px 10px 10px;
+//     border: 1px #ddd;
+//     border-style: solid solid none;
+//     background-color: #fff;
+//     outline: none;
+// }
+// .mx-listview > ul > li:first-child {
+//     border-top-left-radius: 4px;
+//     border-top-right-radius: 4px;
+// }
+// .mx-listview > ul > li:last-child {
+//     border-bottom-style: solid;
+//     border-bottom-left-radius: 4px;
+//     border-bottom-right-radius: 4px;
+// }
+// .mx-listview li:nth-child(2n+1) {
+//     background: #f9f9f9;
+// }
+// .mx-listview li:nth-child(2n+1):hover {
+//     background: #f5f5f5;
+// }
+// .mx-listview > ul > li.selected {
+//     background: #eee;
+// }
+// .mx-listview-clickable ul * {
+//     cursor: pointer;
+// }
 .mx-listview-empty {
     color: #999;
     text-align: center;
