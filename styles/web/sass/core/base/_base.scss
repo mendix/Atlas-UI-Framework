@@ -66,8 +66,8 @@ div[tabindex] {
 }
 
 [dir='rtl'] {
-    .glyphicon-chevron-left,
-    .glyphicon-chevron-right {
+    :not(.widget-carousel-control) > .glyphicon-chevron-left,
+    :not(.widget-carousel-control) > .glyphicon-chevron-right {
         transform: rotate(180deg);
     }
 }
