@@ -6,7 +6,7 @@
     padding: 30px;
     border: 1px solid $border-color-default;
     border-radius: $border-radius-default;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 //== Elements
@@ -99,7 +99,6 @@
     }
 }
 
-
 .cardtabs {
     padding: 0;
     .cardtabs-tabs {
@@ -107,7 +106,7 @@
         ul.mx-tabcontainer-tabs {
             display: flex;
             margin: 0;
-            background-color: mix($tabs-border-color, #FFFFFF, 20%);
+            background-color: mix($tabs-border-color, #ffffff, 20%);
 
             li {
                 flex: 1 1 auto;
@@ -171,12 +170,12 @@
             left: 0;
             width: 100%;
             padding: 20px 30px;
-            background: rgba(0, 0, 0, 0.60);
+            background: rgba(0, 0, 0, 0.6);
 
             .cardproduct-overlay-category,
             .cardproduct-overlay-title {
                 margin: 0;
-                color: #FFFFFF;
+                color: #ffffff;
             }
         }
     }
@@ -213,15 +212,32 @@
             display: block;
             width: 100%;
             padding: 20px 30px;
-            content: "";
-            background: rgba(0, 0, 0, 0.60);
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
-            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+            content: '';
+            background: rgba(0, 0, 0, 0.6);
+            background: -moz-linear-gradient(
+                top,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 250, 250, 0) 2%,
+                rgba(0, 0, 0, 0.99) 99%,
+                rgba(0, 0, 0, 1) 100%
+            );
+            background: -webkit-linear-gradient(
+                top,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 250, 250, 0) 2%,
+                rgba(0, 0, 0, 0.99) 99%,
+                rgba(0, 0, 0, 1) 100%
+            );
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 250, 250, 0) 2%,
+                rgba(0, 0, 0, 0.99) 99%,
+                rgba(0, 0, 0, 1) 100%
+            );
         }
     }
 }
-
 
 .cardproduct3 {
     @extend .cardproduct;
@@ -236,9 +252,27 @@
         .cardproduct-overlay {
             min-height: 100px;
             padding: 30px;
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
-            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+            background: -moz-linear-gradient(
+                top,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 250, 250, 0) 8%,
+                rgba(0, 0, 0, 0.99) 121%,
+                rgba(0, 0, 0, 1) 100%
+            );
+            background: -webkit-linear-gradient(
+                top,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 250, 250, 0) 8%,
+                rgba(0, 0, 0, 0.99) 121%,
+                rgba(0, 0, 0, 1) 100%
+            );
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 250, 250, 0) 8%,
+                rgba(0, 0, 0, 0.99) 121%,
+                rgba(0, 0, 0, 1) 100%
+            );
             font-size: $font-size-default;
         }
     }
@@ -294,7 +328,6 @@
     }
 }
 
-
 @media screen and (max-width: $screen-md-max) {
     .cardprogress {
         .cardprogress-state {
@@ -302,5 +335,24 @@
             height: 60px;
             font-size: 24px;
         }
+    }
+}
+
+[dir='rtl'] {
+    .cardproduct .cardproduct-footer .cardproduct-btn {
+        left: 0;
+        right: unset;
+    }
+
+    // Used in card info
+    .textwithicon .textwithicon-icon {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+
+    // Used in card info
+    .socialprofiles .socialprofiles-button {
+        margin-right: 0;
+        margin-left: 15px;
     }
 }
