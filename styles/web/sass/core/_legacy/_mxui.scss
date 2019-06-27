@@ -2981,18 +2981,18 @@ input[type="checkbox"] {
     color: #eee;
     line-height: 30px; /* height of buttons */
 }
-body[dir="ltr"] .mx-header-left,
-body[dir="rtl"] .mx-header-right {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-}
-body[dir="ltr"] .mx-header-right,
-body[dir="rtl"] .mx-header-left {
-    position: absolute;
-    top: 9px;
-    right: 9px;
-}
+// body[dir="ltr"] .mx-header-left,
+// body[dir="rtl"] .mx-header-right {
+//     position: absolute;
+//     top: 9px;
+//     left: 9px;
+// }
+// body[dir="ltr"] .mx-header-right,
+// body[dir="rtl"] .mx-header-left {
+//     position: absolute;
+//     top: 9px;
+//     right: 9px;
+// }
 
 .mx-title {
     margin-bottom: 0px;
