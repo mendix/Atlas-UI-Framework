@@ -9,7 +9,7 @@
     /* Every navigation item */
     .navbar-inner > ul {
         margin: 0;
-        padding-left: 0;
+        padding: 0;
         & > li {
             padding: 0;
             border-style: none;
@@ -61,10 +61,10 @@
     }
 
     /* Sub navigation item specific */
-    li.mx-navigationtree-has-items {
+    .mx-navigationtree-has-items {
         & > ul {
             margin: 0;
-            padding-left: 0;
+            padding: 0;
             background-color: $navigation-sub-bg;
             li {
                 margin: 0;
@@ -255,6 +255,22 @@
     .navbar-inner ul {
         a {
             justify-content: center;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .mx-navigationtree {
+        /* Every navigation item */
+        .navbar-inner > ul > li > a {
+            img {
+                margin-right: 0;
+                margin-left: 0.5em;
+            }
+            .glyphicon {
+                margin-right: 0;
+                margin-left: 0.5em;
+            }
         }
     }
 }
