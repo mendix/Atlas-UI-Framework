@@ -1,17 +1,17 @@
 /* ==========================================================================
    Atlas layout
-   
+
    Extra styling for responsive layouts
 ========================================================================== */
-.layout-atlas-responsive-default {
-    $sidebar-width: 60px;
+$sidebar-width: 60px;
 
+.layout-atlas-responsive-default {
     @media (min-width: $screen-sm) {
         .mx-scrollcontainer:not(.mx-scrollcontainer-open) > .region-sidebar {
             width: $sidebar-width !important;
 
-            .mx-scrollcontainer-wrapper > .mx-navigationtree ul li {
-                &.mx-navigationtree-has-items:hover {
+            .mx-navigationtree {
+                .mx-navigationtree-has-items:hover {
                     a {
                         background-color: $navsidebar-sub-bg;
                     }
@@ -29,8 +29,8 @@
                     }
                 }
 
-                &.mx-navigationtree-collapsed,
-                &.mx-navigationtree-has-items {
+                .mx-navigationtree-collapsed,
+                .mx-navigationtree-has-items {
                     ul {
                         display: none;
                     }
@@ -56,28 +56,26 @@
             background: transparent;
         }
 
-        .mx-scrollcontainer-wrapper > .mx-navigationtree {
-            .navbar-inner > ul > li {
-                & > a {
-                    height: $sidebar-width;
-                    // Glyph icon
-                    .glyphicon {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 40px;
-                        height: 40px;
-                        margin-left: -5px;
-                        padding: 10px;
-                        border-radius: 3px;
-                    }
+        .mx-navigationtree .navbar-inner > ul > li > a {
+            height: $sidebar-width;
+            // Glyph icon
+            .glyphicon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                // margin-left: -5px;
+                padding: 10px;
+                border-radius: 3px;
+            }
 
-                    &.active {
-                        .glyphicon {
-                            background: $brand-primary;
-                        }
-                    }
-                }
+            .caret {
+                margin-left: 10px;
+            }
+
+            &.active .glyphicon {
+                background: $brand-primary;
             }
         }
     }
@@ -95,24 +93,35 @@
 .layout-atlas-responsive-default,
 .layout-atlas-responsive-topbar {
     // Topbar
-    .region-topbar {
-        .toggle-btn {
-            display: none;
+    .region-topbar .toggle-btn {
+        display: none;
 
-            @media (max-width: $screen-xs-max) {
-                display: inline-block;
-            }
+        @media (max-width: $screen-xs-max) {
+            display: inline-block;
         }
     }
 }
 
 // Fix Safari issue of sidebar disappearing
-.profile-tablet {
-    .mx-scrollcontainer:not(.mx-scrollcontainer-open) > .region-sidebar {
-        overflow-y: auto;
+.profile-tablet .mx-scrollcontainer:not(.mx-scrollcontainer-open) > .region-sidebar {
+    overflow-y: auto;
 
-        .mx-scrollcontainer-wrapper {
-            overflow: visible;
+    .mx-scrollcontainer-wrapper {
+        overflow: visible;
+    }
+}
+
+[dir='rtl'] {
+    .layout-atlas-responsive-default {
+        .mx-scrollcontainer:not(.mx-scrollcontainer-open) > .region-sidebar .mx-navigationtree-has-items:hover ul {
+            left: unset;
+            right: $sidebar-width;
+        }
+
+        // Sidebar
+        .region-sidebar .caret {
+            margin-left: 0;
+            margin-right: 10px;
         }
     }
 }
