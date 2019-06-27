@@ -1,6 +1,6 @@
 /* ==========================================================================
    Control Group
-   
+
    A group of buttons next to eachother
 ========================================================================== */
 .controlgroup {
@@ -8,7 +8,6 @@
     .btn-group {
         margin-right: $spacing-small;
         margin-bottom: $spacing-small;
-
         &:last-child {
             margin-right: 0;
         }
@@ -20,6 +19,22 @@
     .btn-group {
         .btn + .btn {
             margin-left: -1px;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .controlgroup {
+        .btn,
+        .btn-group {
+            margin-left: $spacing-small;
+            margin-right: 0;
+            &:last-child {
+                margin-left: 0;
+            }
+            .btn {
+                margin-left: 0;
+            }
         }
     }
 }
