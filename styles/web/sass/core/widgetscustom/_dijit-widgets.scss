@@ -10,6 +10,130 @@
 */
 
 /*
+ * Dijit Calendar Widget
+ *
+ * Used in dataviews
+ */
+
+.dijitCalendarContainer {
+    /* (must be higher than popup z-index) */
+    z-index: 10010 !important;
+    padding: 10px;
+    border: 1px solid #d1d6e4;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+    font-size: 12px;
+    tr {
+        th {
+            text-align: center;
+            color: $brand-primary;
+        }
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        td .dijitCalendarDateLabel {
+            color: #2d3e4e;
+        }
+        tfoot h3 {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+        }
+        .dijitCalendarNextMonth,
+        .dijitCalendarPreviousMonth {
+            span {
+                color: lighten(#2d3e4e, 50%);
+            }
+        }
+    }
+    .dijitCalendarMonthLabel {
+        color: $brand-primary;
+    }
+    .dijitButtonNode {
+        border: 0;
+    }
+    .dijitCalendarArrow {
+        cursor: pointer;
+    }
+    .dijitCalendarSelectedDate,
+    .dijitCalendarSelectedDate:hover {
+        border-radius: 50%;
+        background: $brand-primary;
+        .dijitCalendarDateLabel {
+            color: #ffffff;
+        }
+    }
+    .dijitCalendarHoveredDate {
+        border-radius: 50%;
+        background-color: $brand-default;
+        .dijitCalendarDateLabel {
+            color: $brand-primary;
+        }
+    }
+    .dijitCalendarYearContainer {
+        text-align: center;
+        span {
+            color: lighten($brand-primary, 30);
+            &.dijitCalendarSelectedYear {
+                color: $brand-primary;
+            }
+            &:hover {
+                text-decoration: underline;
+                background-color: transparent;
+            }
+        }
+    }
+    .dijitCalendarMonthContainer th:first-child {
+        border-top-left-radius: 3px;
+    }
+    .dijitCalendarMonthContainer th:last-child {
+        border-top-right-radius: 3px;
+    }
+}
+
+.dijitCalendarMonthMenuPopup {
+    /* (must be higher than popup z-index) */
+    z-index: 10020 !important;
+    padding: 3px 4px;
+    border-radius: 3px;
+    background-color: #26323d;
+    .dijitCalendarMonthMenu {
+        padding: 5px;
+        border-style: none;
+        background: none;
+        font-size: 12px;
+        .dijitCalendarMonthLabel {
+            padding: 2px 0;
+            color: #ffffff;
+            &:hover,
+            &:focus {
+                color: #4280cb;
+            }
+        }
+    }
+}
+
+.dj_rtl {
+    .dijitCalendarContainer {
+        .dijitCalendarMonthContainer {
+            th {
+                &:first-child {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 3px;
+                }
+                &:last-child {
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+/*
  * Dijit Tooltip Widget
  *
  * Default tooltip used for Mendix widgets
