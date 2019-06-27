@@ -22,3 +22,10 @@
 .flex-center {
     align-items: center;
 }
+
+[dir='rtl'] {
+    .flexcontainer .flexitem {
+        margin-right: 0;
+        margin-left: $gutter-size;
+    }
+}
