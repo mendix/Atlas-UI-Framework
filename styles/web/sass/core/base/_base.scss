@@ -64,3 +64,10 @@ div[tabindex] {
     box-shadow: none;
     filter: alpha(opacity=65);
 }
+
+[dir='rtl'] {
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right {
+        transform: rotate(180deg);
+    }
+}
