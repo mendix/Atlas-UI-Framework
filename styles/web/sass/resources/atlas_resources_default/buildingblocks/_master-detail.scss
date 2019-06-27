@@ -1,6 +1,6 @@
 /* ==========================================================================
    Master Detail
-   
+
     A list with a listening dataview
 ========================================================================== */
 .masterdetail {
@@ -18,7 +18,6 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 0;
             padding: 0;
             border-right: 1px solid $border-color-default;
 
@@ -47,5 +46,16 @@
     }
     .masterdetail-detail {
         @include layout-spacing($type: padding, $direction: top, $device: responsive);
+    }
+}
+
+[dir='rtl'] {
+    .masterdetail {
+        .masterdetail-master {
+            @media (min-width: $screen-md) {
+                border-right: unset;
+                border-left: 1px solid $border-color-default;
+            }
+        }
     }
 }
