@@ -15,7 +15,7 @@ $wizard-step-height: 50px;
             display: block;
             width: 100%;
             height: 2px;
-            content: "";
+            content: '';
             background-color: $border-color-default;
         }
         .wizard-step-number {
@@ -23,7 +23,7 @@ $wizard-step-height: 50px;
             height: $wizard-step-number-size;
             border-color: $border-color-default;
             border-radius: 50%;
-            background-color: #FFFFFF;
+            background-color: #ffffff;
             font-size: 20px;
         }
         .wizard-step-text {
@@ -32,11 +32,10 @@ $wizard-step-height: 50px;
         }
     }
 
-
     // States
     .wizard-step-active {
         .wizard-step-number {
-            color: #FFFFFF;
+            color: #ffffff;
             border-color: $brand-primary;
             background-color: $brand-primary;
         }
@@ -46,7 +45,7 @@ $wizard-step-height: 50px;
     }
     .wizard-step-visited {
         .wizard-step-number {
-            color: #FFFFFF;
+            color: #ffffff;
             border-color: $brand-success;
             background-color: $brand-success;
         }
@@ -70,7 +69,7 @@ $wizard-step-height: 50px;
         margin-left: 0 - ($wizard-step-height / 2);
         padding-left: ($wizard-step-height / 2);
         border: 1px solid $border-color-default;
-        background: #FFFFFF;
+        background: #ffffff;
 
         a {
             display: block;
@@ -89,14 +88,14 @@ $wizard-step-height: 50px;
             z-index: 1;
             left: 100%;
             margin-left: 0 - ($wizard-step-height / 2);
-            content: " ";
+            content: ' ';
             border-style: solid;
             border-color: transparent;
         }
         &::after {
             top: 1px;
             border-width: (($wizard-step-height / 2) - 1);
-            border-left-color: #FFFFFF;
+            border-left-color: #ffffff;
         }
         &::before {
             top: 0;
@@ -123,15 +122,56 @@ $wizard-step-height: 50px;
         background: $brand-primary;
         a {
             text-decoration: none;
-            color: #FFFFFF;
+            color: #ffffff;
         }
         &::after {
-            border-left-color: $brand-primary;
+            border-color: $brand-primary;
         }
     }
     .wizard-step-visited {
         a {
             color: $link-color;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .wizardprogress {
+        .wizard-step {
+            margin-left: unset !important;
+            padding-left: unset !important;
+            margin-right: 0 - ($wizard-step-height / 2);
+            padding-right: ($wizard-step-height / 2);
+
+            &::before,
+            &::after {
+                left: unset !important;
+                right: 100%;
+                margin-left: unset !important;
+                margin-right: 0 - ($wizard-step-height / 2);
+                border-color: transparent;
+            }
+            &::after {
+                border-right-color: #ffffff;
+            }
+            &::before {
+                border-right-color: $border-color-default;
+            }
+
+            &:first-child {
+                margin-right: 0 !important;
+                padding-right: 0 !important;
+                border-radius: 0 5px 5px 0;
+            }
+
+            &:last-child {
+                border-radius: 5px 0 0 5px;
+            }
+        }
+
+        // States
+        .wizard-step-active::after {
+            border-right-color: $brand-primary;
         }
     }
 }
