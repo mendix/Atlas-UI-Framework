@@ -217,3 +217,16 @@
         }
     }
 }
+
+[dir='rtl'] {
+    .mx-menubar .mx-menubar-list .mx-menubar-item > a {
+        img {
+            margin-right: 0;
+            margin-left: 0.5em;
+        }
+        .glyphicon {
+            margin-right: 0;
+            margin-left: 0.5em;
+        }
+    }
+}
