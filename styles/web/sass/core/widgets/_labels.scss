@@ -11,11 +11,16 @@
     text-align: center;
     vertical-align: baseline;
     white-space: nowrap;
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 0.25em;
     font-size: 100%;
-    font-weight: $font-weight-bold;
     line-height: 1;
+    margin: 0;
+
+    .form-control-static {
+        all: unset;
+        font-weight: $font-weight-normal;
+    }
 }
 
 //== Design Properties
