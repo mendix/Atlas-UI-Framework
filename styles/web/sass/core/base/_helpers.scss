@@ -17,11 +17,6 @@
     visibility: hidden !important;
 }
 
-.display-ie8-only:not([attr*=""]) {
-    display: none !important;
-    padding: 0 !important;
-}
-
 .list-nostyle {
     ul {
         margin: 0 !important;
