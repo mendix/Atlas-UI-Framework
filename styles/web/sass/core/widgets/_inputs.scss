@@ -8,7 +8,6 @@
     flex: 1;
     display: flex;
     align-items: center; // Can have children.
-    min-width: 50px;
     max-width: 100%;
     min-width: 50px;
     height: $form-input-height;
@@ -189,17 +188,14 @@ textarea.form-control {
 }
 
 [dir='rtl'] {
+    .form-control-static + .control-label {
+        margin-left: 0;
+        margin-right: $form-label-gutter;
+    }
     // Dropdown input widget
     select.form-control {
         padding-right: 30px;
         padding-left: 30px;
         background-position: #{$form-input-padding-x} center;
-    }
-}
-
-[dir='rtl'] {
-    .form-control-static + .control-label {
-        margin-left: 0;
-        margin-right: $form-label-gutter;
     }
 }
