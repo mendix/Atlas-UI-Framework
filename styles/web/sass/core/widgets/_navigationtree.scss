@@ -26,6 +26,7 @@
                 font-size: $navigation-font-size;
                 font-weight: $font-weight-normal;
                 .caret {
+                    margin-left: 0.5em;
                     border-top-color: $navigation-color;
                     border-bottom-color: $navigation-color;
                 }
@@ -270,6 +271,11 @@
             .glyphicon {
                 margin-right: 0;
                 margin-left: 0.5em;
+            }
+
+            .caret {
+                margin-left: 0;
+                margin-right: 0.5em;
             }
         }
     }
