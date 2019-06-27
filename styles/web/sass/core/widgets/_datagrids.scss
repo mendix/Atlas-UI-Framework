@@ -183,17 +183,20 @@
         display: none;
     }
     .mx-grid-searchbar {
-        .mx-grid-search-controls {
-            position: absolute;
-            right: 0;
-        }
         .mx-grid-search-input {
             width: 80%;
-            padding-left: 0;
+            padding-right: 5px;
             .form-control {
                 height: 35px;
                 font-size: 12px;
             }
         }
+    }
+}
+
+[dir='rtl'] {
+    .datagrid-fullsearch.mx-grid .mx-grid-search-input {
+        padding-left: 5px;
+        padding-right: 0;
     }
 }
