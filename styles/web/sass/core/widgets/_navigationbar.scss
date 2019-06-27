@@ -51,7 +51,7 @@
                 left: 15px;
                 width: 0;
                 height: 0;
-                content: "";
+                content: '';
                 -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
                 border-width: 0 9px 9px 9px;
@@ -302,6 +302,25 @@
                         background-color: $navsidebar-sub-bg-active;
                     }
                 }
+            }
+        }
+    }
+}
+
+.mx-navbar {
+    ul.nav {
+        & > li.mx-navbar-item > a {
+            .mx-navbar-submenu::before {
+                left: 15px;
+            }
+
+            img {
+                margin-right: 0;
+                margin-left: 0.5em;
+            }
+            .glyphicon {
+                margin-right: 0;
+                margin-left: 0.5em;
             }
         }
     }
