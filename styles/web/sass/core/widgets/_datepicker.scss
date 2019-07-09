@@ -1,0 +1,104 @@
+.mx-calendar {
+    /* (must be higher than popup z-index) */
+    z-index: 10010 !important;
+    padding: 10px;
+    font-size: 12px;
+    background: $bg-color;
+    border-radius: $border-radius-default;
+    border: 1px solid $border-color-default;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+    .mx-calendar-month-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 3px 10px 3px;
+    }
+    .mx-calendar-month-next,
+    .mx-calendar-month-previous,
+    .mx-calendar-month-dropdown {
+        border: 0;
+        cursor: pointer;
+        background: transparent;
+    }
+    .mx-calendar-month-next,
+    .mx-calendar-month-previous {
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+    .mx-calendar-month-dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .mx-calendar-month-current:first-child {
+            margin-right: 10px;
+        }
+    }
+    th {
+        color: $brand-primary;
+    }
+    th,
+    td {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+    }
+    td {
+        color: $font-color-default;
+
+        &:hover {
+            cursor: pointer;
+            border-radius: 50%;
+            color: $brand-primary;
+            background-color: $brand-default;
+        }
+    }
+    .mx-calendar-day-month-next,
+    .mx-calendar-day-month-previous {
+        color: lighten($font-color-default, 45%);
+    }
+    .mx-calendar-day-selected,
+    .mx-calendar-day-selected:hover {
+        color: #fff;
+        border-radius: 50%;
+        background: $brand-primary;
+    }
+
+    //
+
+    .mx-calendar-year-switcher {
+        text-align: center;
+        margin-top: 10px;
+        color: lighten($brand-primary, 30%);
+        span.mx-calendar-year-selected {
+            color: $brand-primary;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        span:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            background-color: transparent;
+        }
+    }
+}
+
+.mx-calendar-month-dropdown-options {
+    /* (must be higher than popup z-index) */
+    z-index: 10020 !important;
+    position: absolute;
+    top: 25px;
+    padding: 2px 10px;
+    border-radius: $border-radius-default;
+    background-color: $bg-color;
+    div {
+        cursor: pointer;
+        font-size: 12px;
+        padding: 2px 0;
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+        }
+    }
+}

@@ -1,15 +1,14 @@
 {
     "pageTemplates": "WebModeler",
-    "cssFiles": [
-        "styles/css/lib/lib.css",
-        "styles/css/custom/custom.css"
-    ],
+    "cssFiles": ["styles/web/css/main.css"],
     "designProperties": {
-        "Widget": [{
+        "Widget": [
+            {
                 "name": "Spacing top",
                 "type": "Dropdown",
                 "description": "The spacing above this element.",
-                "options": [{
+                "options": [
+                    {
                         "name": "None",
                         "class": "spacing-outer-top-none"
                     },
@@ -31,7 +30,8 @@
                 "name": "Spacing bottom",
                 "type": "Dropdown",
                 "description": "The spacing below this element.",
-                "options": [{
+                "options": [
+                    {
                         "name": "None",
                         "class": "spacing-outer-bottom-none"
                     },
@@ -53,7 +53,8 @@
                 "name": "Spacing left",
                 "type": "Dropdown",
                 "description": "The spacing to the left of this element.",
-                "options": [{
+                "options": [
+                    {
                         "name": "None",
                         "class": "spacing-outer-left-none"
                     },
@@ -75,7 +76,8 @@
                 "name": "Spacing right",
                 "type": "Dropdown",
                 "description": "The spacing to the right of this element.",
-                "options": [{
+                "options": [
+                    {
                         "name": "None",
                         "class": "spacing-outer-right-none"
                     },
@@ -97,7 +99,8 @@
                 "name": "Align self",
                 "type": "Dropdown",
                 "description": "Float the element to the left or to the right.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Left",
                         "class": "pull-left"
                     },
@@ -126,11 +129,13 @@
                 "class": "hidden-md"
             }
         ],
-        "DivContainer": [{
+        "DivContainer": [
+            {
                 "name": "Align content",
                 "type": "Dropdown",
                 "description": "Align content of this element left, right or center it. Align elements inside the container as a row or as a column.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Left align as a row",
                         "class": "row-left"
                     },
@@ -160,7 +165,8 @@
                 "name": "Background color",
                 "type": "Dropdown",
                 "description": "Change the background color of the container.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Brand Default",
                         "class": "background-default"
                     },
@@ -195,11 +201,13 @@
                 ]
             }
         ],
-        "Button": [{
+        "Button": [
+            {
                 "name": "Size",
                 "type": "Dropdown",
                 "description": "Size of the buttons",
-                "options": [{
+                "options": [
+                    {
                         "name": "Small",
                         "class": "btn-sm"
                     },
@@ -226,7 +234,8 @@
                 "name": "Align icon",
                 "type": "Dropdown",
                 "description": "Place the icon to the left or on top of the button.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Right",
                         "class": "btn-icon-right"
                     },
@@ -237,11 +246,13 @@
                 ]
             }
         ],
-        "ListView": [{
+        "ListView": [
+            {
                 "name": "Style",
                 "type": "Dropdown",
                 "description": "Change the appearance of rows in the list view.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Striped",
                         "class": "listview-striped"
                     },
@@ -269,7 +280,8 @@
                 "name": "Row Size",
                 "type": "Dropdown",
                 "description": "Change the row spacing of the list view.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Small",
                         "class": "listview-sm"
                     },
@@ -280,11 +292,13 @@
                 ]
             }
         ],
-        "DataGrid": [{
+        "DataGrid": [
+            {
                 "name": "Style",
                 "type": "Dropdown",
                 "description": "Choose one of the following styles to change the appearance of the data grid.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Striped",
                         "class": "datagrid-striped"
                     },
@@ -308,7 +322,8 @@
                 "name": "Row size",
                 "type": "Dropdown",
                 "description": "Increase or decrease the row spacing of the data grid row.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Small",
                         "class": "datagrid-sm"
                     },
@@ -319,11 +334,13 @@
                 ]
             }
         ],
-        "TemplateGrid": [{
+        "TemplateGrid": [
+            {
                 "name": "Style",
                 "type": "Dropdown",
                 "description": "Choose one of the following styles to change the appearance of the template grid.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Striped",
                         "class": "templategrid-striped"
                     },
@@ -348,11 +365,13 @@
                 "class": "templategrid-hover"
             }
         ],
-        "GroupBox": [{
+        "GroupBox": [
+            {
                 "name": "Style",
                 "type": "Dropdown",
                 "description": "Choose one of the following styles to change the appearance of the groupbox.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Brand Default",
                         "class": "groupbox-default"
                     },
@@ -389,11 +408,13 @@
                 "class": "groupbox-callout"
             }
         ],
-        "Image": [{
+        "Image": [
+            {
                 "name": "Style",
                 "type": "Dropdown",
                 "description": "Choose the style of your image.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Rounded",
                         "class": "img-rounded"
                     },
@@ -414,41 +435,46 @@
                 "class": "img-center"
             }
         ],
-        "Label": [{
-            "name": "Style",
-            "type": "Dropdown",
-            "description": "Change the appearance of a label.",
-            "options": [{
-                    "name": "Brand Default",
-                    "class": "label-default"
-                },
-                {
-                    "name": "Brand Primary",
-                    "class": "label-primary"
-                },
-                {
-                    "name": "Brand Inverse",
-                    "class": "label-inverse"
-                },
-                {
-                    "name": "Brand Success",
-                    "class": "label-success"
-                },
-                {
-                    "name": "Brand Warning",
-                    "class": "label-warning"
-                },
-                {
-                    "name": "Brand Danger",
-                    "class": "label-danger"
-                }
-            ]
-        }],
-        "DynamicText": [{
+        "Label": [
+            {
+                "name": "Style",
+                "type": "Dropdown",
+                "description": "Change the appearance of a label.",
+                "options": [
+                    {
+                        "name": "Brand Default",
+                        "class": "label-default"
+                    },
+                    {
+                        "name": "Brand Primary",
+                        "class": "label-primary"
+                    },
+                    {
+                        "name": "Brand Inverse",
+                        "class": "label-inverse"
+                    },
+                    {
+                        "name": "Brand Success",
+                        "class": "label-success"
+                    },
+                    {
+                        "name": "Brand Warning",
+                        "class": "label-warning"
+                    },
+                    {
+                        "name": "Brand Danger",
+                        "class": "label-danger"
+                    }
+                ]
+            }
+        ],
+        "DynamicText": [
+            {
                 "name": "Font Weight",
                 "type": "Dropdown",
                 "description": "Emphasize the text with a heavier or lighter font weight",
-                "options": [{
+                "options": [
+                    {
                         "name": "Light",
                         "class": "text-light"
                     },
@@ -470,7 +496,8 @@
                 "name": "Color",
                 "type": "Dropdown",
                 "description": "Change the color of text.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Header color",
                         "class": "text-header"
                     },
@@ -508,7 +535,8 @@
                 "name": "Alignment",
                 "type": "Dropdown",
                 "description": "Align the text.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Left",
                         "class": "text-left d-block"
                     },
@@ -526,7 +554,8 @@
                 "name": "Transform",
                 "type": "Dropdown",
                 "description": "Change the letter case of the text.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Lowercase",
                         "class": "text-lowercase"
                     },
@@ -544,7 +573,8 @@
                 "name": "Wrap options",
                 "type": "Dropdown",
                 "description": "Break long words and sentences into multiple lines.",
-                "options": [{
+                "options": [
+                    {
                         "name": "Wrap",
                         "class": "text-break"
                     },

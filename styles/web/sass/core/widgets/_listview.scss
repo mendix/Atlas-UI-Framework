@@ -1,0 +1,366 @@
+/* ==========================================================================
+   Listview
+
+   Default Mendix Listview Widget. The list view shows a list of objects arranged vertically. Each object is shown using a template
+========================================================================== */
+
+.mx-listview {
+    // Remove widget padding
+    padding: 0;
+
+    /* Clear search button (overrides load more button stying) */
+
+    // Search bar
+    .mx-listview-searchbar {
+        margin-bottom: $gutter-size;
+
+        .btn {
+            width: auto;
+        }
+    }
+
+    /* Load more button */
+    & > .btn {
+        width: 100%;
+        margin: 10px auto;
+    }
+    ul {
+        margin: 0;
+        .mx-listview-empty {
+            border-style: none;
+            background-color: transparent;
+        }
+    }
+    li {
+        @include transition();
+        padding: $listview-padding-top $listview-padding-right $listview-padding-bottom $listview-padding-left;
+        border-width: 1px 0 0 0;
+        border-style: solid;
+        border-color: $grid-border-color;
+        background-color: $grid-bg;
+
+        &:first-child {
+            border-radius: 0; // Reset mxui listview style
+        }
+        &:last-child {
+            border-bottom: 1px solid $grid-border-color;
+            border-radius: 0; // Reset mxui listview style
+        }
+        &:nth-child(2n + 1) {
+            background-color: $grid-bg;
+        }
+        &:hover {
+            background-color: $grid-bg;
+        }
+        &:focus,
+        &:active {
+            background-color: $grid-bg-hover;
+        }
+        &.selected {
+            background-color: $grid-bg-selected !important;
+        }
+    }
+    .mx-layoutgrid {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Bordered
+.listview-bordered.mx-listview {
+    li {
+        border: 1px solid $grid-border-color;
+        border-top: 0;
+        &:first-child {
+            border-top: 1px solid $grid-border-color;
+            border-radius: 0;
+        }
+        &:last-child {
+            border-radius: 0;
+        }
+    }
+}
+
+// Striped
+.listview-striped.mx-listview {
+    li:nth-child(2n + 1) {
+        background-color: $grid-bg-striped;
+    }
+}
+
+// Items as seperated blocks
+.listview-seperated.mx-listview {
+    li {
+        margin-bottom: $gutter-size;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: $border-radius-default;
+    }
+}
+
+// Hover style activated
+.listview-hover.mx-listview {
+    li {
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $grid-bg-hover !important;
+        }
+        &.selected {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $grid-bg-selected-hover !important;
+            }
+        }
+    }
+}
+
+// Remove all styling
+.listview-stylingless.mx-listview {
+    li {
+        padding: 0;
+        cursor: default;
+        border: 0;
+        background-color: transparent;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
+        }
+        &.selected {
+            background-color: transparent !important;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+// Templategrid Row Sizes
+.listview-lg.mx-listview {
+    li {
+        padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
+    }
+}
+
+.listview-sm.mx-listview {
+    li {
+        padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left / 2);
+    }
+}
+
+// Bootstrap columns
+.mx-listview[class*='lv-col'] {
+    overflow: hidden; // For if it is not in a layout, to prevent scrollbars
+    & > ul {
+        display: block; // normal a table
+        margin-right: -1 * $gutter-size;
+        margin-left: -1 * $gutter-size;
+        &::before,
+        &::after {
+            // clearfix
+            display: table;
+            clear: both;
+            content: ' ';
+        }
+        & > li {
+            // bootstrap col
+            position: relative;
+            display: block; // normal a table
+            float: left;
+            min-height: 1px;
+            padding-right: $gutter-size;
+            padding-left: $gutter-size;
+            border: 0;
+            @media (max-width: $screen-sm-max) {
+                width: 100% !important;
+            }
+            & > .mx-dataview {
+                overflow: hidden;
+            }
+        }
+    }
+    &.lv-col-xs-12 > ul > li {
+        width: 100% !important;
+    }
+    &.lv-col-xs-11 > ul > li {
+        width: 91.66666667% !important;
+    }
+    &.lv-col-xs-10 > ul > li {
+        width: 83.33333333% !important;
+    }
+    &.lv-col-xs-9 > ul > li {
+        width: 75% !important;
+    }
+    &.lv-col-xs-8 > ul > li {
+        width: 66.66666667% !important;
+    }
+    &.lv-col-xs-7 > ul > li {
+        width: 58.33333333% !important;
+    }
+    &.lv-col-xs-6 > ul > li {
+        width: 50% !important;
+    }
+    &.lv-col-xs-5 > ul > li {
+        width: 41.66666667% !important;
+    }
+    &.lv-col-xs-4 > ul > li {
+        width: 33.33333333% !important;
+    }
+    &.lv-col-xs-3 > ul > li {
+        width: 25% !important;
+    }
+    &.lv-col-xs-2 > ul > li {
+        width: 16.66666667% !important;
+    }
+    &.lv-col-xs-1 > ul > li {
+        width: 8.33333333% !important;
+    }
+    @media (min-width: $screen-sm) {
+        &.lv-col-sm-12 > ul > li {
+            width: 100% !important;
+        }
+        &.lv-col-sm-11 > ul > li {
+            width: 91.66666667% !important;
+        }
+        &.lv-col-sm-10 > ul > li {
+            width: 83.33333333% !important;
+        }
+        &.lv-col-sm-9 > ul > li {
+            width: 75% !important;
+        }
+        &.lv-col-sm-8 > ul > li {
+            width: 66.66666667% !important;
+        }
+        &.lv-col-sm-7 > ul > li {
+            width: 58.33333333% !important;
+        }
+        &.lv-col-sm-6 > ul > li {
+            width: 50% !important;
+        }
+        &.lv-col-sm-5 > ul > li {
+            width: 41.66666667% !important;
+        }
+        &.lv-col-sm-4 > ul > li {
+            width: 33.33333333% !important;
+        }
+        &.lv-col-sm-3 > ul > li {
+            width: 25% !important;
+        }
+        &.lv-col-sm-2 > ul > li {
+            width: 16.66666667% !important;
+        }
+        &.lv-col-sm-1 > ul > li {
+            width: 8.33333333% !important;
+        }
+    }
+    @media (min-width: $screen-md) {
+        &.lv-col-md-12 > ul > li {
+            width: 100% !important;
+        }
+        &.lv-col-md-11 > ul > li {
+            width: 91.66666667% !important;
+        }
+        &.lv-col-md-10 > ul > li {
+            width: 83.33333333% !important;
+        }
+        &.lv-col-md-9 > ul > li {
+            width: 75% !important;
+        }
+        &.lv-col-md-8 > ul > li {
+            width: 66.66666667% !important;
+        }
+        &.lv-col-md-7 > ul > li {
+            width: 58.33333333% !important;
+        }
+        &.lv-col-md-6 > ul > li {
+            width: 50% !important;
+        }
+        &.lv-col-md-5 > ul > li {
+            width: 41.66666667% !important;
+        }
+        &.lv-col-md-4 > ul > li {
+            width: 33.33333333% !important;
+        }
+        &.lv-col-md-3 > ul > li {
+            width: 25% !important;
+        }
+        &.lv-col-md-2 > ul > li {
+            width: 16.66666667% !important;
+        }
+        &.lv-col-md-1 > ul > li {
+            width: 16.66666667% !important;
+        }
+    }
+    @media (min-width: $screen-lg) {
+        &.lv-col-lg-12 > ul > li {
+            width: 100% !important;
+        }
+        &.lv-col-lg-11 > ul > li {
+            width: 91.66666667% !important;
+        }
+        &.lv-col-lg-10 > ul > li {
+            width: 83.33333333% !important;
+        }
+        &.lv-col-lg-9 > ul > li {
+            width: 75% !important;
+        }
+        &.lv-col-lg-8 > ul > li {
+            width: 66.66666667% !important;
+        }
+        &.lv-col-lg-7 > ul > li {
+            width: 58.33333333% !important;
+        }
+        &.lv-col-lg-6 > ul > li {
+            width: 50% !important;
+        }
+        &.lv-col-lg-5 > ul > li {
+            width: 41.66666667% !important;
+        }
+        &.lv-col-lg-4 > ul > li {
+            width: 33.33333333% !important;
+        }
+        &.lv-col-lg-3 > ul > li {
+            width: 25% !important;
+        }
+        &.lv-col-lg-2 > ul > li {
+            width: 16.66666667% !important;
+        }
+        &.lv-col-lg-1 > ul > li {
+            width: 8.33333333% !important;
+        }
+    }
+}
+
+//== Phone specific
+//-------------------------------------------------------------------------------------------------------------------//
+.profile-phone .mx-listview {
+    .mx-listview-searchbar {
+        margin-bottom: 3px;
+        background: #ffffff;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+        input {
+            padding: 14px 15px;
+            color: #555555;
+            border-style: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .btn {
+            padding: 14px 15px;
+            color: inherit;
+            border-style: none;
+        }
+    }
+    li {
+        &:first-child {
+            border-top: none;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+/*
+* Mendix Documentation
+* Special styles for presenting components
+*/
+
+/*
+* Dijit Widgets
+*
+* Default Dojo Dijit Widgets
+*/
+
+/*
+ * Dijit Tooltip Widget
+ *
+ * Default tooltip used for Mendix widgets
+ */
+
+.mx-tooltip {
+    .dijitTooltipContainer {
+        border-width: 1px;
+        border-color: $gray-light;
+        border-radius: 4px;
+        background: #ffffff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        .mx-tooltip-content {
+            padding: 10px;
+        }
+        .form-group {
+            margin-bottom: 5px;
+        }
+    }
+    .dijitTooltipConnector {
+        width: 0;
+        height: 0;
+        margin-left: -10px;
+        border-width: 10px 10px 10px 0;
+        border-style: solid;
+        border-color: transparent;
+        border-right-color: $gray-light;
+    }
+}
+
+/*
+ * Dijit Border Container
+ *
+ * Used in Mendix as split pane containers
+ */
+
+.dijitBorderContainer {
+    padding: 5px;
+    background-color: #fcfcfc;
+    .dijitSplitterV,
+    .dijitGutterV {
+        width: 5px;
+        border: 0;
+        background: #fcfcfc;
+    }
+    .dijitSplitterH,
+    .dijitGutterH {
+        height: 5px;
+        border: 0;
+        background: #fcfcfc;
+    }
+    .dijitSplitterH {
+        .dijitSplitterThumb {
+            top: 2px;
+            width: 19px;
+            height: 1px;
+            background: #b0b0b0;
+        }
+    }
+    .dijitSplitterV {
+        .dijitSplitterThumb {
+            left: 2px;
+            width: 1px;
+            height: 19px;
+            background: #b0b0b0;
+        }
+    }
+    .dijitSplitContainer-child,
+    .dijitBorderContainer-child {
+        border: 1px solid #cccccc;
+    }
+    .dijitBorderContainer-dijitTabContainerTop,
+    .dijitBorderContainer-dijitTabContainerBottom,
+    .dijitBorderContainer-dijitTabContainerLeft,
+    .dijitBorderContainer-dijitTabContainerRight {
+        border: none;
+    }
+    .dijitBorderContainer-dijitBorderContainer {
+        padding: 0;
+        border: none;
+    }
+    .dijitSplitterActive {
+        /* For IE8 and earlier */
+        margin: 0;
+        opacity: 0.6;
+        background-color: #aaaaaa;
+        background-image: none;
+        font-size: 1px;
+        filter: alpha(opacity=60);
+    }
+    .dijitSplitContainer-dijitContentPane,
+    .dijitBorderContainer-dijitContentPane {
+        padding: 5px;
+        background-color: #ffffff;
+    }
+}
+
+/*
+ * Dijit Menu Popup
+ *
+ * Used in datepickers and calendar widgets
+ */
+
+.dijitMenuPopup {
+    margin-top: 10px;
+    .dijitMenu {
+        display: block;
+        width: 200px !important;
+        margin-top: 0; // No top margin because there is no parent with margin bottom
+        padding: 12px 10px;
+        border-radius: 3px;
+        background: $brand-inverse;
+        &:after {
+            position: absolute;
+            bottom: 100%;
+            left: 20px;
+            width: 0;
+            height: 0;
+            margin-left: -10px;
+            content: ' ';
+            pointer-events: none;
+            border: medium solid transparent;
+            border-width: 10px;
+            border-bottom-color: $brand-inverse;
+        }
+        // Menu item
+        .dijitMenuItem {
+            background: transparent;
+            .dijitMenuItemLabel {
+                display: block;
+                overflow: hidden;
+                width: 180px !important;
+                padding: 10px;
+                text-overflow: ellipsis;
+                color: #ffffff;
+                border-radius: 3px;
+            }
+            // Hover
+            &.dijitMenuItemHover {
+                background: none;
+                .dijitMenuItemLabel {
+                    background: $brand-primary;
+                }
+            }
+        }
+        // New label
+        .tg_newlabelmenuitem {
+            .dijitMenuItemLabel {
+                font-weight: $font-weight-bold;
+            }
+        }
+        // Seperator
+        .dijitMenuSeparator {
+            td {
+                padding: 0;
+                border-bottom-width: 3px;
+            }
+            .dijitMenuSeparatorIconCell {
+                > div {
+                    margin: 0; //override dijit styling
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@mixin get-responsive-spacing-large ($type: padding, $direction: all, $is_important: false) {
+    $suffix: "";
+    $dash: "-"; // Otherwise it will be interpreted as a minus symbol. Needed for the Gonzales PE version: 3.4.7 compiler (used by the Webmodeler)
+
+    @if $is_important != false {
+        $suffix: " !important";
+    }
+    @if $direction==all {
+        @media (max-width: $screen-xs-max) {
+            #{$type}: #{$m-spacing-large}#{$suffix};
+        }
+        @media (min-width: $screen-sm) {
+            #{$type}: #{$t-spacing-large}#{$suffix};
+        }
+        @media (min-width: $screen-md) {
+            #{$type}: #{$spacing-large}#{$suffix};
+        }
+    } @else {
+        @media (max-width: $screen-xs-max) {
+            #{$type}#{$dash}#{$direction}: #{$m-spacing-large}#{$suffix};
+        }
+        @media (min-width: $screen-sm) {
+            #{$type}#{$dash}#{$direction}: #{$t-spacing-large}#{$suffix};
+        }
+        @media (min-width: $screen-md) {
+            #{$type}#{$dash}#{$direction}: #{$spacing-large}#{$suffix};
+        }
+    }
+}
+
+@mixin get-responsive-spacing-medium ($type: padding, $direction: all, $is_important: false) {
+    $suffix: "";
+    $dash: "-"; // Otherwise it will be interpreted as a minus symbol. Needed for the Gonzales PE version: 3.4.7 compiler (used by the Webmodeler)
+
+    @if $is_important != false {
+        $suffix: " !important";
+    }
+    @if $direction==all {
+        @media (max-width: $screen-xs-max) {
+            #{$type}: #{$m-spacing-medium}#{$suffix};
+        }
+        @media (min-width: $screen-sm) {
+            #{$type}: #{$t-spacing-medium}#{$suffix};
+        }
+        @media (min-width: $screen-md) {
+            #{$type}: #{$spacing-medium}#{$suffix};
+        }
+    } @else {
+        @media (max-width: $screen-xs-max) {
+            #{$type}#{$dash}#{$direction}: #{$m-spacing-medium}#{$suffix};
+        }
+        @media (min-width: $screen-sm) {
+            #{$type}#{$dash}#{$direction}: #{$t-spacing-medium}#{$suffix};
+        }
+        @media (min-width: $screen-md) {
+            #{$type}#{$dash}#{$direction}: #{$spacing-medium}#{$suffix};
+        }
+    }
+}

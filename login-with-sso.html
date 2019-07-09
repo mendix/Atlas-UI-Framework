@@ -1,78 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="styles/web/css/main.css?{{ cachebust }}" />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css?{{cachebust}}">
-    <link rel="stylesheet" type="text/css" href="styles/css/lib/lib.css?{{cachebust}}">
-</head>
-
-<body>
-    <div class="loginpage">
-        <div class="loginpage-left">
-            <div class="loginpage-image"></div>
-        </div>
-        <div class="loginpage-right">
-            <div class="loginpage-formwrapper">
-                <h2>Sign in</h2>
-                <form id="loginForm" class="loginpage-form" autocomplete="off">
-                    <div>
-                        <div id="loginMessage" class="alert alert-danger"></div>
-                        <div class="form-group">
-                            <label id="usernameLabel" for="usernameInput">User name</label>
-                            <div class="inputwrapper">
-                                <input id="usernameInput" class="form-control" type="text" placeholder="User name" autocorrect="off" autocomplete="off" autocapitalize="none">
-                                <span class="glyphicon glyphicon-user"></span>
+    <body>
+        <div class="loginpage">
+            <div class="loginpage-left">
+                <div class="loginpage-image"></div>
+            </div>
+            <div class="loginpage-right">
+                <div class="loginpage-formwrapper">
+                    <h2>Sign in</h2>
+                    <form id="loginForm" class="loginpage-form" autocomplete="off">
+                        <div>
+                            <div id="loginMessage" class="alert alert-danger"></div>
+                            <div class="form-group">
+                                <label id="usernameLabel" for="usernameInput">User name</label>
+                                <div class="inputwrapper">
+                                    <input id="usernameInput" class="form-control" type="text" placeholder="User name" autocorrect="off" autocapitalize="none" autocomplete="off" />
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label id="passwordLabel" for="passwordInput">Password</label>
-                            <div class="inputwrapper">
-                                <input id="passwordInput" class="form-control" type="password" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="none">
-                                <span class="glyphicon glyphicon-eye-close"></span>
+                            <div class="form-group">
+                                <label id="passwordLabel" for="passwordInput">Password</label>
+                                <div class="inputwrapper">
+                                    <input id="passwordInput" class="form-control" type="password" placeholder="Password" autocorrect="off" autocapitalize="none" autocomplete="off" />
+                                    <span class="glyphicon glyphicon-eye-close"></span>
+                                </div>
                             </div>
+                            <button id="loginButton" type="submit" class="btn btn-success btn-lg">Sign in</button>
                         </div>
-                        <button id="loginButton" type="submit" class="btn btn-success btn-lg">Sign in</button>
-                    </div>
 
-                    <div class="loginpage-alternativelabel">
-                        <div>Or sign in with</div>
-                        <hr>
-                    </div>
+                        <div class="loginpage-alternativelabel">
+                            <div>Or sign in with</div>
+                            <hr />
+                        </div>
 
-                    <a id="ssoButton" href="/openid/login" class="btn btn-default btn-lg">
-                        <img src="logo.png" />
-                        <span class="loginpage-signin">Mendix Account</span>
-                    </a>
-
-                </form>
+                        <a id="ssoButton" href="/openid/login" class="btn btn-default btn-lg">
+                            <img src="logo.png" />
+                            <span class="loginpage-signin">Mendix Account</span>
+                        </a>
+                    </form>
+                </div>
+            </div>
+            <div class="loginpage-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 599 187">
+                    <g>
+                        <rect x="0.98" y="0.86" width="185.28" height="185.28" rx="24.72" ry="24.72" style="fill: #00aae7" />
+                        <polygon points="598.02 60 578.15 60 570.62 75.08 563.08 60 543.21 60 560.22 93.51 543.21 127.03 563.08 127.03 570.62 111.95 578.15 127.03 598.02 127.03 581.02 93.51 598.02 60" style="fill: #1a1a1a" />
+                        <path
+                            d="M355.57,109.52a6.84,6.84,0,0,1-5.06,6l-.28.07a8.09,8.09,0,0,1-2.11.31c-4,0-6.9-1.89-7.45-6.35s-.6-12.91-.6-12.91h35.42c0-5.24.38-10-.11-14.47a29.32,29.32,0,0,0-3.54-11.53,19.51,19.51,0,0,0-8.41-7.69q-5.61-2.82-15.09-2.82t-14.82,2.63a19.21,19.21,0,0,0-8.28,7.11,25.91,25.91,0,0,0-3.61,10.44,95.45,95.45,0,0,0-.8,12.62,102.66,102.66,0,0,0,.87,13.9,26.88,26.88,0,0,0,3.74,10.88,19.19,19.19,0,0,0,8.35,7.12c3.65,1.7,8.49,2.56,14.55,2.56A36.38,36.38,0,0,0,360,125.69a23.49,23.49,0,0,0,8.28-4.61c4.54-3.93,7.21-8.86,7.21-14.34H355.62S355.67,107.6,355.57,109.52Zm-14.86-31c.38-4,3.35-7.22,7.45-7.22s7.12,2.57,7.45,7.22a56.24,56.24,0,0,1,.12,8H340.11C340.42,81.35,340.42,81.39,340.71,78.47Z"
+                            style="fill: #1a1a1a"
+                        />
+                        <path
+                            d="M310.19,68.24a14.19,14.19,0,0,0-3.88-4.42,17.6,17.6,0,0,0-5.63-2.75,23.43,23.43,0,0,0-6.77-1,25.5,25.5,0,0,0-10.57,2,22.29,22.29,0,0,0-7.89,6.21,16.85,16.85,0,0,0-6.48-6,19.81,19.81,0,0,0-9.44-2.18,25,25,0,0,0-9.73,1.73,16.29,16.29,0,0,0-7,6.09h-.28V60.1H222.61V127h19.87V82.45c0-.14,0-.26,0-.4V78.9h0a7.46,7.46,0,0,1,14.91,0h0v3.3h0c0,.08,0,.16,0,.25V127h19.87V78.9h0a7.46,7.46,0,0,1,14.91,0h0V127h19.87V75.15A16.06,16.06,0,0,0,310.19,68.24Z"
+                            style="fill: #1a1a1a"
+                        />
+                        <path
+                            d="M166.59,60H146.72l-7.53,15.09L131.65,60H111.78l17,33.52-15.36,30.27V75.13a16,16,0,0,0-1.9-6.9,14.08,14.08,0,0,0-3.88-4.42A17.61,17.61,0,0,0,102,61.05a23.77,23.77,0,0,0-6.77-1,25.34,25.34,0,0,0-10.57,2,22.29,22.29,0,0,0-7.89,6.21,16.85,16.85,0,0,0-6.48-6,19.81,19.81,0,0,0-9.44-2.18,25,25,0,0,0-9.73,1.73,16.2,16.2,0,0,0-7,6.08h-.28V60.09H24V127H43.82V82.43c0-.13,0-.26,0-.39V78.88h0a7.46,7.46,0,0,1,14.91,0h0v3.3h0a2.18,2.18,0,0,1,0,.25V127H78.62V78.88h0a7.46,7.46,0,0,1,14.91,0h0V127h38.09l7.54-15.09L146.72,127h19.87l-17-33.52Z"
+                            style="fill: #fff"
+                        />
+                        <path
+                            d="M437.7,68.24a14.29,14.29,0,0,0-3.87-4.42,17.71,17.71,0,0,0-5.65-2.75,25.79,25.79,0,0,0-16.48.83,15.94,15.94,0,0,0-7.05,6h-.27V60.1H384.5V127h19.88V81.5c0-.22,0-.41,0-.62v-2h0a7.46,7.46,0,0,1,14.91,0h0V127h19.87V74.19A11.89,11.89,0,0,0,437.7,68.24Z"
+                            style="fill: #1a1a1a"
+                        />
+                        <path
+                            d="M502.85,50.16c0-9.32-7.79-17-17.78-17.93-.66-.06-1.34-.09-2-.09v33a16.63,16.63,0,0,0-5.46-3.92,24.08,24.08,0,0,0-9.51-1.71q-7.69,0-11.84,3.42a19.44,19.44,0,0,0-5.95,8.59,37.59,37.59,0,0,0-2,11.15c-.11,3.16-.18,6.1-.2,8.84h0c0,.7,0,1.39,0,2.06,0,3.43.08,7.19.22,11.28a39.41,39.41,0,0,0,2,11.42,19.83,19.83,0,0,0,6,8.84q4.21,3.57,12.19,3.57a24.38,24.38,0,0,0,10.17-1.92,14.22,14.22,0,0,0,4.3-3.08V127h19.87V50.51h0C502.83,50.39,502.85,50.28,502.85,50.16ZM483,81.92v26.51l0,2.09a7.14,7.14,0,0,1-5,6.22,6,6,0,0,1-2.21.41h-.19s-9.45,1.79-9.45-23.1c0-11.93,2.17-17.73,4.43-20.54a8.43,8.43,0,0,1,.73-.92,3.27,3.27,0,0,1,1.21-.84,4.71,4.71,0,0,1,3.08-.81,7.28,7.28,0,0,1,3.55,1l.18.1A7.57,7.57,0,0,1,483,78.47v3.45Z"
+                            style="fill: #1a1a1a"
+                        />
+                        <g>
+                            <path d="M534.83,80.84V127H515V60h19.87V80.84Z" style="fill: #1a1a1a" />
+                            <rect x="514.96" y="32.14" width="19.87" height="18.06" rx="3.14" ry="3.14" style="fill: #1a1a1a" />
+                        </g>
+                    </g>
+                </svg>
             </div>
         </div>
-        <div class="loginpage-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 599 187">
-                <g>
-                    <rect x="0.98" y="0.86" width="185.28" height="185.28" rx="24.72" ry="24.72" style="fill: #00aae7" />
-                    <polygon points="598.02 60 578.15 60 570.62 75.08 563.08 60 543.21 60 560.22 93.51 543.21 127.03 563.08 127.03 570.62 111.95 578.15 127.03 598.02 127.03 581.02 93.51 598.02 60" style="fill: #1a1a1a" />
-                    <path d="M355.57,109.52a6.84,6.84,0,0,1-5.06,6l-.28.07a8.09,8.09,0,0,1-2.11.31c-4,0-6.9-1.89-7.45-6.35s-.6-12.91-.6-12.91h35.42c0-5.24.38-10-.11-14.47a29.32,29.32,0,0,0-3.54-11.53,19.51,19.51,0,0,0-8.41-7.69q-5.61-2.82-15.09-2.82t-14.82,2.63a19.21,19.21,0,0,0-8.28,7.11,25.91,25.91,0,0,0-3.61,10.44,95.45,95.45,0,0,0-.8,12.62,102.66,102.66,0,0,0,.87,13.9,26.88,26.88,0,0,0,3.74,10.88,19.19,19.19,0,0,0,8.35,7.12c3.65,1.7,8.49,2.56,14.55,2.56A36.38,36.38,0,0,0,360,125.69a23.49,23.49,0,0,0,8.28-4.61c4.54-3.93,7.21-8.86,7.21-14.34H355.62S355.67,107.6,355.57,109.52Zm-14.86-31c.38-4,3.35-7.22,7.45-7.22s7.12,2.57,7.45,7.22a56.24,56.24,0,0,1,.12,8H340.11C340.42,81.35,340.42,81.39,340.71,78.47Z" style="fill: #1a1a1a" />
-                    <path d="M310.19,68.24a14.19,14.19,0,0,0-3.88-4.42,17.6,17.6,0,0,0-5.63-2.75,23.43,23.43,0,0,0-6.77-1,25.5,25.5,0,0,0-10.57,2,22.29,22.29,0,0,0-7.89,6.21,16.85,16.85,0,0,0-6.48-6,19.81,19.81,0,0,0-9.44-2.18,25,25,0,0,0-9.73,1.73,16.29,16.29,0,0,0-7,6.09h-.28V60.1H222.61V127h19.87V82.45c0-.14,0-.26,0-.4V78.9h0a7.46,7.46,0,0,1,14.91,0h0v3.3h0c0,.08,0,.16,0,.25V127h19.87V78.9h0a7.46,7.46,0,0,1,14.91,0h0V127h19.87V75.15A16.06,16.06,0,0,0,310.19,68.24Z" style="fill: #1a1a1a" />
-                    <path d="M166.59,60H146.72l-7.53,15.09L131.65,60H111.78l17,33.52-15.36,30.27V75.13a16,16,0,0,0-1.9-6.9,14.08,14.08,0,0,0-3.88-4.42A17.61,17.61,0,0,0,102,61.05a23.77,23.77,0,0,0-6.77-1,25.34,25.34,0,0,0-10.57,2,22.29,22.29,0,0,0-7.89,6.21,16.85,16.85,0,0,0-6.48-6,19.81,19.81,0,0,0-9.44-2.18,25,25,0,0,0-9.73,1.73,16.2,16.2,0,0,0-7,6.08h-.28V60.09H24V127H43.82V82.43c0-.13,0-.26,0-.39V78.88h0a7.46,7.46,0,0,1,14.91,0h0v3.3h0a2.18,2.18,0,0,1,0,.25V127H78.62V78.88h0a7.46,7.46,0,0,1,14.91,0h0V127h38.09l7.54-15.09L146.72,127h19.87l-17-33.52Z" style="fill: #fff" />
-                    <path d="M437.7,68.24a14.29,14.29,0,0,0-3.87-4.42,17.71,17.71,0,0,0-5.65-2.75,25.79,25.79,0,0,0-16.48.83,15.94,15.94,0,0,0-7.05,6h-.27V60.1H384.5V127h19.88V81.5c0-.22,0-.41,0-.62v-2h0a7.46,7.46,0,0,1,14.91,0h0V127h19.87V74.19A11.89,11.89,0,0,0,437.7,68.24Z" style="fill: #1a1a1a" />
-                    <path d="M502.85,50.16c0-9.32-7.79-17-17.78-17.93-.66-.06-1.34-.09-2-.09v33a16.63,16.63,0,0,0-5.46-3.92,24.08,24.08,0,0,0-9.51-1.71q-7.69,0-11.84,3.42a19.44,19.44,0,0,0-5.95,8.59,37.59,37.59,0,0,0-2,11.15c-.11,3.16-.18,6.1-.2,8.84h0c0,.7,0,1.39,0,2.06,0,3.43.08,7.19.22,11.28a39.41,39.41,0,0,0,2,11.42,19.83,19.83,0,0,0,6,8.84q4.21,3.57,12.19,3.57a24.38,24.38,0,0,0,10.17-1.92,14.22,14.22,0,0,0,4.3-3.08V127h19.87V50.51h0C502.83,50.39,502.85,50.28,502.85,50.16ZM483,81.92v26.51l0,2.09a7.14,7.14,0,0,1-5,6.22,6,6,0,0,1-2.21.41h-.19s-9.45,1.79-9.45-23.1c0-11.93,2.17-17.73,4.43-20.54a8.43,8.43,0,0,1,.73-.92,3.27,3.27,0,0,1,1.21-.84,4.71,4.71,0,0,1,3.08-.81,7.28,7.28,0,0,1,3.55,1l.18.1A7.57,7.57,0,0,1,483,78.47v3.45Z" style="fill: #1a1a1a" />
-                    <g>
-                        <path d="M534.83,80.84V127H515V60h19.87V80.84Z" style="fill: #1a1a1a" />
-                        <rect x="514.96" y="32.14" width="19.87" height="18.06" rx="3.14" ry="3.14" style="fill: #1a1a1a" />
-                    </g>
-                </g>
-            </svg>
-        </div>
-    </div>
 
-    <script src="js/login_i18n.js?{{cachebust}}"></script>
-    <script src="js/login.js?{{cachebust}}"></script>
-</body>
-
+        <script src="js/login_i18n.js?{{ cachebust }}"></script>
+        <script src="js/login.js?{{ cachebust }}"></script>
+    </body>
 </html>
