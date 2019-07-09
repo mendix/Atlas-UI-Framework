@@ -1,0 +1,628 @@
+//
+// ██████╗  █████╗ ███████╗██╗ ██████╗
+// ██╔══██╗██╔══██╗██╔════╝██║██╔════╝
+// ██████╔╝███████║███████╗██║██║
+// ██╔══██╗██╔══██║╚════██║██║██║
+// ██████╔╝██║  ██║███████║██║╚██████╗
+// ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝
+//
+
+
+//== Gray Shades
+//## Different gray shades to be used for our variables and components
+$gray-darker:                         #222 !default;
+$gray-dark:                             #333 !default;
+$gray:                                  #555 !default;
+$gray-light:                            #888 !default;
+$gray-primary:                          #d7d7d7 !default;
+$gray-lighter:                        #eee !default;
+
+
+//== Step 1: Brand Colors
+$brand-default:                         #DDDDDD !default;
+$brand-primary:                         #0595DB !default;
+$brand-inverse:                         #252C36 !default;
+$brand-info:                            #48B0F7 !default;
+$brand-success:                         #76CA02 !default;
+$brand-warning:                         #f99b1d !default;
+$brand-danger:                          #ed1c24 !default;
+
+$brand-logo:							false !default;
+$brand-logo-height:						26px !default;
+$brand-logo-width:						26px !default; // Only used for CSS brand logo
+
+
+
+
+
+//== Step 2: UI Customization
+
+// Default Font Size & Color
+$font-size-default:                     14px !default;
+$font-color-default:                    #555 !default;
+
+// Global Border Color
+$border-color-default:                  $gray-primary !default;
+$border-radius-default:                 4px !default;
+
+// Topbar
+$topbar-bg:                             #FFF !default;
+$topbar-minimalheight:                  60px !default;
+$topbar-border-color:                   $border-color-default !default;
+
+// Topbar mobile
+$m-header-height:                    	45px !default;
+$m-header-bg:                           $topbar-bg !default;
+$m-header-color:                        #555 !default;
+$m-header-title-size:                   17px !default;
+
+
+// Sidebar
+$sidebar-bg:                            $brand-inverse !default;
+
+// Navbar Brand Name / For your company, product, or project name (used in layouts/base/)
+$navbar-brand-name:                     $font-color-default !default;
+
+// Background Colors
+$bg-color:                              #FFF !default;
+$bg-color-secondary:                    #F5F8FD !default; // Background color that is used for specific page templates background
+
+// Default Link Color
+$link-color:                            $brand-primary !default;
+$link-hover-color:                      darken($link-color, 15%) !default;
+
+
+
+
+
+//
+//  █████╗ ██████╗ ██╗   ██╗ █████╗ ███╗   ██╗ ██████╗███████╗██████╗
+// ██╔══██╗██╔══██╗██║   ██║██╔══██╗████╗  ██║██╔════╝██╔════╝██╔══██╗
+// ███████║██║  ██║██║   ██║███████║██╔██╗ ██║██║     █████╗  ██║  ██║
+// ██╔══██║██║  ██║╚██╗ ██╔╝██╔══██║██║╚██╗██║██║     ██╔══╝  ██║  ██║
+// ██║  ██║██████╔╝ ╚████╔╝ ██║  ██║██║ ╚████║╚██████╗███████╗██████╔╝
+// ╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝╚═════╝
+//
+
+
+//== Typography
+//## Change your font family, weight, line-height, headings and more (used in components/typography)
+
+// Font Family Import (Used for google font plugin in theme creater https://ux.mendix.com/theme-creator.html)
+$font-family-import:                    "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" !default;
+@if $font-family-import != false { // Only import, if the import is set
+    @import url($font-family-import);
+}
+
+// Font Family / False = fallback from Bootstrap (Helvetica Neue)
+$font-family-base:                      'Open Sans', sans-serif !default;
+
+// Font Sizes
+$font-size-large:                       16px !default;
+$font-size-small:                       12px !default;
+
+// Font Weights
+$font-weight-light:                     100 !default;
+$font-weight-normal:                    normal !default;
+$font-weight-semibold:                  600 !default;
+$font-weight-bold:                      bold !default;
+
+// Font Size Headers
+$font-size-h1:                          31px !default;
+$font-size-h2:                          26px !default;
+$font-size-h3:                          24px !default;
+$font-size-h4:                          18px !default;
+$font-size-h5:                          $font-size-default !default;
+$font-size-h6:                          12px !default;
+
+// Font Weight Headers
+$font-weight-header:                    $font-weight-normal !default;
+
+// Line Height
+$line-height-base:                      1.428571429 !default;
+
+// Spacing
+$font-header-margin:					15px 0 30px 0 !default;
+
+// Text Colors
+$font-color-header:				        #17347B !default;
+$font-color-detail:                     $gray-light !default;
+
+
+
+
+
+//== Navigation
+//## Used in components/navigation
+
+// Default Navigation styling
+$navigation-item-height:                60px !default;
+$navigation-item-padding:               5px 15px !default;
+
+$navigation-font-size:                  $font-size-default !default;
+$navigation-sub-font-size:              $font-size-small !default;
+$navigation-glyph-size:                 20px !default; // For glyphicons that you can select in the Mendix Modeler
+
+$navigation-bg:                         $brand-inverse !default;
+$navigation-bg-hover:                   lighten($navigation-bg, 4) !default;
+$navigation-bg-active:                  lighten($navigation-bg, 8) !default;
+$navigation-color:                      #FFF !default;
+$navigation-color-hover:                #FFF !default;
+$navigation-color-active:               #FFF !default;
+
+$navigation-sub-bg:                     darken($navigation-bg, 4) !default;
+$navigation-sub-bg-hover:               $navigation-sub-bg !default;
+$navigation-sub-bg-active:              $navigation-sub-bg !default;
+$navigation-sub-color:                  #AAA !default;
+$navigation-sub-color-hover:            $brand-primary !default;
+$navigation-sub-color-active:           $brand-primary !default;
+
+$navigation-border-color:               $navigation-bg-hover !default;
+
+// Navigation Sidebar
+$navsidebar-font-size:                  $font-size-default !default;
+$navsidebar-sub-font-size:              $font-size-small !default;
+$navsidebar-glyph-size:                 20px !default; // For glyphicons that you can select in the Mendix Modeler
+
+$navsidebar-bg:                         $sidebar-bg !default;
+$navsidebar-bg-hover:                   lighten($navsidebar-bg, 4) !default;
+$navsidebar-bg-active:                  lighten($navsidebar-bg, 8) !default;
+$navsidebar-color:                      #FFF !default;
+$navsidebar-color-hover:                #FFF !default;
+$navsidebar-color-active:               #FFF !default;
+
+$navsidebar-sub-bg:                     darken($navsidebar-bg, 4) !default;
+$navsidebar-sub-bg-hover:               $navsidebar-sub-bg !default;
+$navsidebar-sub-bg-active:              $navsidebar-sub-bg !default;
+$navsidebar-sub-color:                  #AAA !default;
+$navsidebar-sub-color-hover:            $brand-primary !default;
+$navsidebar-sub-color-active:           $brand-primary !default;
+
+$navsidebar-border-color:               $navsidebar-bg-hover !default;
+
+// Navigation topbar
+$navtopbar-font-size:                   $font-size-default !default;
+$navtopbar-sub-font-size:               $font-size-small !default;
+$navtopbar-glyph-size:                  1.2em !default; // For glyphicons that you can select in the Mendix Modeler
+
+$navtopbar-bg:                          $topbar-bg !default;
+$navtopbar-bg-hover:                    darken($navtopbar-bg, 4) !default;
+$navtopbar-bg-active:                   darken($navtopbar-bg, 8) !default;
+$navtopbar-color:                       $font-color-default !default;
+$navtopbar-color-hover:                 $navtopbar-color !default;
+$navtopbar-color-active:                $navtopbar-color !default;
+
+$navtopbar-sub-bg:                      lighten($navtopbar-bg, 4) !default;
+$navtopbar-sub-bg-hover:                $navtopbar-sub-bg !default;
+$navtopbar-sub-bg-active:               $navtopbar-sub-bg !default;
+$navtopbar-sub-color:                   #AAA !default;
+$navtopbar-sub-color-hover:             $brand-primary !default;
+$navtopbar-sub-color-active:            $brand-primary !default;
+
+//## Used in layouts/base
+$navtopbar-border-color:                $topbar-border-color !default;
+
+
+
+
+//== Form
+//## Used in components/inputs
+
+// Values that can be used default | lined
+$form-input-style:                      default !default;
+
+// Form Label
+$form-label-color:                      #666 !default;
+$form-label-size:                       $font-size-default !default;
+$form-label-weight:                     $font-weight-semibold !default;
+$form-label-gutter:                     8px !default;
+
+// Form Input dimensions
+$form-input-height:                     auto !default;
+$form-input-padding-y:                  8px !default;
+$form-input-padding-x:                  10px !default;
+$form-input-font-size:                  $form-label-size !default;
+$form-input-line-height:                $line-height-base !default;
+$form-input-border-radius:              $border-radius-default !default;
+
+// Form Input styling
+$form-input-bg:                         #FFF !default;
+$form-input-bg-focus:                   #FFF !default;
+$form-input-bg-hover:                   $gray-primary !default;
+$form-input-bg-disabled:                $gray-lighter !default;
+$form-input-color:                      $font-color-default !default;
+$form-input-focus-color:                $form-input-color !default;
+$form-input-disabled-color:             $form-input-color !default;
+$form-input-placeholder-color:          $gray-light !default;
+$form-input-border-color:               $border-color-default !default;
+$form-input-border-focus-color:         $brand-primary !default;
+
+// Form Input Static styling
+$form-input-static-border-color:		#F0F0EE !default;
+
+// Form Group
+$form-group-margin-bottom:              15px !default;
+$form-group-gutter:                     15px !default;
+
+
+
+
+//== Buttons
+//## Define background-color, border-color and text. Used in components/buttons
+
+// Default button style
+$btn-font-size:                         14px !default;
+$btn-bordered:                          false !default; // Default value false, set to true if you want this effect
+$btn-border-radius:                     $border-radius-default !default;
+
+// Button Background Color
+$btn-default-bg:                        #FFF !default;
+$btn-inverse-bg:                        $brand-inverse !default;
+$btn-primary-bg:                        $brand-primary !default;
+$btn-info-bg:                           $brand-info !default;
+$btn-success-bg:                        $brand-success !default;
+$btn-warning-bg:                        $brand-warning !default;
+$btn-danger-bg:                         $brand-danger !default;
+
+// Button Border Color
+$btn-default-border-color:              $brand-default !default;
+$btn-inverse-border-color:              $btn-inverse-bg !default;
+$btn-primary-border-color:              $btn-primary-bg !default;
+$btn-info-border-color:                 $btn-info-bg !default;
+$btn-success-border-color:              $btn-success-bg !default;
+$btn-warning-border-color:              $btn-warning-bg !default;
+$btn-danger-border-color:               $btn-danger-bg !default;
+
+// Button Text Color
+$btn-default-color:                     $brand-primary !default;
+$btn-inverse-color:                     #FFF !default;
+$btn-primary-color:                     #FFF !default;
+$btn-info-color:                        #FFF !default;
+$btn-success-color:                     #FFF !default;
+$btn-warning-color:                     #FFF !default;
+$btn-danger-color:                      #FFF !default;
+
+// Button Background Color
+$btn-default-bg-hover:                  $btn-default-border-color !default;
+$btn-inverse-bg-hover:                  mix($btn-inverse-bg, white, 80%) !default;
+$btn-primary-bg-hover:                  mix($btn-primary-bg, black, 80%) !default;
+$btn-info-bg-hover:                     mix($btn-info-bg, black, 80%) !default;
+$btn-success-bg-hover:                  mix($btn-success-bg, black, 80%) !default;
+$btn-warning-bg-hover:                  mix($btn-warning-bg, black, 80%) !default;
+$btn-danger-bg-hover:                   mix($btn-danger-bg, black, 80%) !default;
+$btn-link-bg-hover:                     $gray-lighter !default;
+
+
+
+
+//== Header blocks
+//## Define look and feel over multible building blocks that serve as header
+$header-bg-color:                       $bg-color-secondary !default;
+$header-text-color:                     #FFF !default;
+$header-text-color-detail:              rgba(0,0,0, 0.2) !default;
+
+
+
+
+
+//
+// ███████╗██╗  ██╗██████╗ ███████╗██████╗ ████████╗
+// ██╔════╝╚██╗██╔╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝
+// █████╗   ╚███╔╝ ██████╔╝█████╗  ██████╔╝   ██║
+// ██╔══╝   ██╔██╗ ██╔═══╝ ██╔══╝  ██╔══██╗   ██║
+// ███████╗██╔╝ ██╗██║     ███████╗██║  ██║   ██║
+// ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝
+//
+
+//== Color variations
+//## These variations are used to support several other variables and components
+
+// Color variations
+$color-default-darker:                  mix($brand-default, black, 60%) !default;
+$color-default-dark:                    mix($brand-default, black, 70%) !default;
+$color-default-light:                   mix($brand-default, white, 60%) !default;
+$color-default-lighter:                 mix($brand-default, white, 20%) !default;
+
+$color-inverse-darker:                  mix($brand-inverse, black, 60%) !default;
+$color-inverse-dark:                    mix($brand-inverse, black, 70%) !default;
+$color-inverse-light:                   mix($brand-inverse, white, 60%) !default;
+$color-inverse-lighter:                 mix($brand-inverse, white, 20%) !default;
+
+$color-primary-darker:                  mix($brand-primary, black, 60%) !default;
+$color-primary-dark:                    mix($brand-primary, black, 70%) !default;
+$color-primary-light:                   mix($brand-primary, white, 60%) !default;
+$color-primary-lighter:                 mix($brand-primary, white, 20%) !default;
+
+$color-info-darker:                     mix($brand-info, black, 60%) !default;
+$color-info-dark:                       mix($brand-info, black, 70%) !default;
+$color-info-light:                      mix($brand-info, white, 60%) !default;
+$color-info-lighter:                    mix($brand-info, white, 20%) !default;
+
+$color-success-darker:                  mix($brand-success, black, 60%) !default;
+$color-success-dark:                    mix($brand-success, black, 70%) !default;
+$color-success-light:                   mix($brand-success, white, 60%) !default;
+$color-success-lighter:                 mix($brand-success, white, 20%) !default;
+
+$color-warning-darker:                  mix($brand-warning, black, 60%) !default;
+$color-warning-dark:                    mix($brand-warning, black, 70%) !default;
+$color-warning-light:                   mix($brand-warning, white, 60%) !default;
+$color-warning-lighter:                 mix($brand-warning, white, 20%) !default;
+
+$color-danger-darker:                   mix($brand-danger, black, 60%) !default;
+$color-danger-dark:                     mix($brand-danger, black, 70%) !default;
+$color-danger-light:                    mix($brand-danger, white, 60%) !default;
+$color-danger-lighter:                  mix($brand-danger, white, 20%) !default;
+
+$brand-gradient:                        linear-gradient(152deg, #0CC7F0 0%, #087ECC 51%, #077AC9 55%, #0659B9 78%) !default;
+
+
+//== Grids
+//## Used for Datagrid, Templategrid, Listview & Tables (see components folder)
+
+// Default Border Colors
+$grid-border-color:                     $border-color-default !default;
+
+// Spacing
+// Default
+$grid-padding-top:                      15px !default;
+$grid-padding-right:                    15px !default;
+$grid-padding-bottom:                   15px !default;
+$grid-padding-left:                     15px !default;
+
+// Listview
+$listview-padding-top:                  15px !default;
+$listview-padding-right:                15px !default;
+$listview-padding-bottom:               15px !default;
+$listview-padding-left:                 15px !default;
+
+// Background Colors
+$grid-bg:                               #FFF !default;
+$grid-bg-header:                        transparent !default; // Grid Headers
+$grid-bg-hover:                         mix($grid-border-color, #FFF, 20%) !default;
+$grid-bg-selected:                      mix($grid-border-color, #FFF, 30%) !default;
+$grid-bg-selected-hover:                mix($grid-border-color, #FFF, 50%) !default;
+
+// Striped Background Color
+$grid-bg-striped:                       mix($grid-border-color, #FFF, 10%) !default;
+
+// Background Footer Color
+$grid-footer-bg:                        $gray-primary !default;
+
+// Text Color
+$grid-selected-color:                   $font-color-default !default;
+
+// Paging Colors
+$grid-paging-bg:                        transparent !default;
+$grid-paging-bg-hover:                  transparent !default;
+$grid-paging-border-color:              transparent !default;
+$grid-paging-border-color-hover:        transparent !default;
+$grid-paging-color:                     $gray-light !default;
+$grid-paging-color-hover:               $brand-primary !default;
+
+
+
+
+//== Tabs
+//## Default variables for Tab Container Widget (used in components/tabcontainer)
+
+// Text Color
+$tabs-color:                            $font-color-detail !default;
+$tabs-color-active:                     $font-color-default !default;
+$tabs-lined-color-active:               $brand-primary !default;
+
+// Border Color
+$tabs-border-color:                     $border-color-default !default;
+$tabs-lined-border-color:               $brand-primary !default;
+
+// Background Color
+$tabs-bg:                               #FFF !default;
+$tabs-bg-hover:                         lighten($tabs-border-color,5) !default;
+$tabs-bg-active:                        $brand-primary !default;
+
+
+
+
+//== Modals
+//## Default Mendix Modal, Blocking Modal and Login Modal (used in components/modals)
+
+// Background Color
+$modal-header-bg:                       transparent !default;
+
+// Border Color
+$modal-header-border-color:             $border-color-default !default;
+
+// Text Color
+$modal-header-color:                    $font-color-default !default;
+
+
+
+
+//== Dataview
+//## Default variables for Dataview Widget (used in components/dataview)
+
+// Controls
+$dataview-controls-bg:                  transparent !default;
+$dataview-controls-border-color:        $border-color-default !default;
+
+// Empty Message
+$dataview-emptymessage-bg:              $bg-color !default;
+$dataview-emptymessage-color:           $font-color-default !default;
+
+
+
+
+//== Alerts
+//## Default Bootstrap alerts, not a widget in the Modeler (used in components/alerts)
+
+// Background Color
+$alert-info-bg:                         $color-info-lighter !default;
+$alert-success-bg:                      $color-success-lighter !default;
+$alert-warning-bg:                      $color-warning-lighter !default;
+$alert-danger-bg:                       $color-danger-lighter !default;
+
+// Text Color
+$alert-info-color:                      $color-info-darker !default;
+$alert-success-color:                   $color-success-darker !default;
+$alert-warning-color:                   $color-warning-darker !default;
+$alert-danger-color:                    $color-danger-darker !default;
+
+// Border Color
+$alert-info-border-color:               $color-info-dark !default;
+$alert-success-border-color:            $color-success-dark !default;
+$alert-warning-border-color:            $color-warning-dark !default;
+$alert-danger-border-color:             $color-danger-dark !default;
+
+
+
+
+//== Labels
+//## Default Bootstrap Labels, not a widget in the Modeler (used in components/labels)
+
+// Background Color
+$label-default-bg:                      $brand-default !default;
+$label-primary-bg:                      $brand-primary !default;
+$label-info-bg:                         $brand-info !default;
+$label-success-bg:                      $brand-success !default;
+$label-warning-bg:                      $brand-warning !default;
+$label-danger-bg:                       $brand-danger !default;
+
+// Border Color
+$label-default-border-color:            $brand-default !default;
+$label-primary-border-color:            $brand-primary !default;
+$label-info-border-color:               $brand-info !default;
+$label-success-border-color:            $brand-success !default;
+$label-warning-border-color:            $brand-warning !default;
+$label-danger-border-color:             $brand-danger !default;
+
+// Text Color
+$label-default-color:                   $font-color-default !default;
+$label-primary-color:                   #FFF !default;
+$label-info-color:                      #FFF !default;
+$label-success-color:                   #FFF !default;
+$label-warning-color:                   #FFF !default;
+$label-danger-color:                    #FFF !default;
+
+
+
+
+//== Groupbox
+//## Default variables for Groupbox Widget (used in components/groupbox)
+
+// Background Color
+$groupbox-default-bg:                   $brand-default !default;
+$groupbox-inverse-bg:                   $brand-inverse !default;
+$groupbox-primary-bg:                   $brand-primary !default;
+$groupbox-info-bg:                      $brand-info !default;
+$groupbox-success-bg:                   $brand-success !default;
+$groupbox-warning-bg:                   $brand-warning !default;
+$groupbox-danger-bg:                    $brand-danger !default;
+$groupbox-white-bg:                     #FFF !default;
+
+// Text Color
+$groupbox-default-color:                $font-color-default !default;
+$groupbox-inverse-color:                #FFF !default;
+$groupbox-primary-color:                #FFF !default;
+$groupbox-info-color:                   #FFF !default;
+$groupbox-success-color:                #FFF !default;
+$groupbox-warning-color:                #FFF !default;
+$groupbox-danger-color:                 #FFF !default;
+$groupbox-white-color:                  $font-color-default !default;
+
+
+
+
+//== Callout (groupbox) Colors
+//## Extended variables for Groupbox Widget (used in components/groupbox)
+
+// Text and Border Color
+$callout-default-color:                 $font-color-default !default;
+$callout-info-color:                    $brand-info !default;
+$callout-success-color:                 $brand-success !default;
+$callout-warning-color:                 $brand-warning !default;
+$callout-danger-color:                  $brand-danger !default;
+
+// Background Color
+$callout-default-bg:                    $color-default-lighter!default;
+$callout-info-bg:                       $color-info-lighter !default;
+$callout-success-bg:                    $color-success-lighter !default;
+$callout-warning-bg:                    $color-warning-lighter !default;
+$callout-danger-bg:                     $color-danger-lighter !default;
+
+
+
+
+
+//== Spacing
+//## Advanced layout options (used in base/mixins/default-spacing)
+
+// Small spacing
+$spacing-small:                        5px !default;
+
+// Medium spacing
+$spacing-medium:                       15px !default;
+$t-spacing-medium:                     15px !default;
+$m-spacing-medium:                     15px !default;
+
+// Large spacing
+$spacing-large:                        30px !default;
+$t-spacing-large:                      30px !default;
+$m-spacing-large:                      15px !default;
+
+// Layout spacing
+$layout-spacing-top:                   30px !default;
+$layout-spacing-right:                 30px !default;
+$layout-spacing-bottom:                30px !default;
+$layout-spacing-left:                  30px !default;
+
+$t-layout-spacing-top:                 30px !default;
+$t-layout-spacing-right:               30px !default;
+$t-layout-spacing-bottom:              30px !default;
+$t-layout-spacing-left:                30px !default;
+
+$m-layout-spacing-top:                 15px !default;
+$m-layout-spacing-right:               15px !default;
+$m-layout-spacing-bottom:              15px !default;
+$m-layout-spacing-left:                15px !default;
+
+// Combined layout spacing
+$layout-spacing:                       $layout-spacing-top $layout-spacing-right $layout-spacing-bottom $layout-spacing-left !default;
+$m-layout-spacing:                     $m-layout-spacing-top $m-layout-spacing-right $m-layout-spacing-bottom $m-layout-spacing-left !default;
+$t-layout-spacing:                     $t-layout-spacing-top $t-layout-spacing-right $t-layout-spacing-bottom $t-layout-spacing-left !default;
+
+// Gutter size
+$gutter-size:                           15px !default;
+
+
+
+
+
+//== Tables
+//## Table spacing options (used in components/tables)
+
+$padding-table-cell-top:                8px !default;
+$padding-table-cell-bottom:             8px !default;
+$padding-table-cell-left:               8px !default;
+$padding-table-cell-right:              8px !default;
+
+
+
+
+//== Media queries breakpoints
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                             480px !default;
+
+// Small screen / tablet Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                             768px !default;
+
+// Medium screen / desktop Deprecated `$screen-md` as of v3.0.1
+$screen-md:                             992px !default;
+
+// Large screen / wide desktop Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                             1200px !default;
+
+// So media queries don't overlap when required, provide a maximum (used for max-width)
+$screen-xs-max:                         ($screen-sm - 1) !default;
+$screen-sm-max:                         ($screen-md - 1) !default;
+$screen-md-max:                         ($screen-lg - 1) !default;

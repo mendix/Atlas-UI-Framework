@@ -1,0 +1,94 @@
+// Atlas-UI-Framework v2.0.0 (https://atlas.mendix.com/)
+// Copyright (c) 2018 Mendix
+// Licensed under MIT (https://github.com/mendix/Atlas-UI-Framework/blob/master/LICENSE)
+//
+
+// Utilities
+@import 'core/_legacy/bootstrap/bootstrap';
+@import 'core/_legacy/bootstrap/bootstrap-rtl';
+@import 'core/_legacy/mxui';
+
+// Custom variables
+@import 'app/custom-variables';
+
+//================================== CORE ==================================\\
+// Default variables
+@import 'core/variables';
+
+// Base
+@import 'core/base/mixins/animations';
+@import 'core/base/mixins/spacing';
+@import 'core/base/mixins/layout-spacing';
+@import 'core/base/mixins/buttons';
+@import 'core/base/mixins/groupbox';
+@import 'core/base/animation';
+@import 'core/base/reset';
+@import 'core/base/base';
+@import 'core/base/login';
+@import 'core/base/helpers';
+
+// Widgets
+@import 'core/widgets/inputs';
+@import 'core/widgets/alerts';
+@import 'core/widgets/backgrounds';
+@import 'core/widgets/buttons';
+@import 'core/widgets/checkbox';
+@import 'core/widgets/grid';
+@import 'core/widgets/datagrids';
+@import 'core/widgets/dataview';
+@import 'core/widgets/datepicker';
+@import 'core/widgets/header';
+@import 'core/widgets/glyphicons';
+@import 'core/widgets/groupbox';
+@import 'core/widgets/images';
+@import 'core/widgets/labels';
+@import 'core/widgets/listview';
+@import 'core/widgets/modals';
+@import 'core/widgets/navigationbar';
+@import 'core/widgets/navigationlist';
+@import 'core/widgets/navigationtree';
+@import 'core/widgets/simplemenubar';
+@import 'core/widgets/radiobuttons';
+@import 'core/widgets/tabcontainer';
+@import 'core/widgets/tables';
+@import 'core/widgets/templategrids';
+@import 'core/widgets/typography';
+@import 'core/widgets/layoutgrid';
+@import 'core/widgets/progress';
+
+// Custom widgets
+@import 'core/widgetscustom/dijit-widgets';
+@import 'core/widgetscustom/progress-bar-theme';
+@import 'core/widgetscustom/progress-circle-theme';
+@import 'core/widgetscustom/range-slider-theme';
+@import 'core/widgetscustom/slider-theme';
+@import 'core/widgetscustom/star-rating-theme';
+@import 'core/widgetscustom/switchwidget';
+
+//================================= CUSTOM =================================\\
+
+// Building blocks
+@import 'resources/atlas_resources_default/buildingblocks/alignment-block';
+@import 'resources/atlas_resources_default/buildingblocks/breadcrumb';
+@import 'resources/atlas_resources_default/buildingblocks/card';
+@import 'resources/atlas_resources_default/buildingblocks/chat';
+@import 'resources/atlas_resources_default/buildingblocks/controlgroup';
+@import 'resources/atlas_resources_default/buildingblocks/pageblocks';
+@import 'resources/atlas_resources_default/buildingblocks/pageheader';
+@import 'resources/atlas_resources_default/buildingblocks/heroheader';
+@import 'resources/atlas_resources_default/buildingblocks/formblock';
+@import 'resources/atlas_resources_default/buildingblocks/list';
+@import 'resources/atlas_resources_default/buildingblocks/master-detail';
+@import 'resources/atlas_resources_default/buildingblocks/userprofile';
+@import 'resources/atlas_resources_default/buildingblocks/wizard';
+@import 'resources/atlas_resources_default/buildingblocks/timeline';
+
+// Layouts
+@import 'resources/atlas_resources_default/layouts/layout-atlas';
+@import 'resources/atlas_resources_default/layouts/layout-atlas-phone';
+@import 'resources/atlas_resources_default/layouts/layout-atlas-responsive';
+@import 'resources/atlas_resources_default/layouts/layout-atlas-tablet';
+@import 'resources/atlas_resources_default/layouts/layout-atlas-device-wrapper';
+
+// Custom
+@import 'app/custom';

@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Checkbox
+
+   Default checkbox styling
+========================================================================== */
+
+.mx-checkbox.label-after {
+    flex-wrap: wrap;
+
+    .control-label {
+        padding: 0;
+    }
+}
+
+input[type='checkbox'] {
+    position: relative !important; //Remove after mxui merge
+    width: 16px;
+    height: 16px;
+    margin: 0 !important; // Remove after mxui merge
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+    &:before {
+        // Checkbox
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: $form-input-border-radius;
+        border: 1px solid $form-input-border-color;
+        background-color: transparent;
+    }
+    &:after {
+        // Checkmark
+        width: 8px;
+        height: 4px;
+        margin: 5px 4px;
+        border: 2px solid #fff;
+        border-top: 0;
+        border-right: 0;
+        pointer-events: none;
+        transform: rotate(-45deg);
+    }
+    &:not(:disabled):not(:checked):hover:after {
+        content: '';
+        border-color: $form-input-bg-hover; // color of checkmark on hover
+    }
+    &:checked:before {
+        border-color: $form-input-border-focus-color;
+        background-color: $form-input-border-focus-color;
+    }
+    &:checked:after {
+        content: '';
+    }
+    &:disabled:before {
+        background-color: $form-input-bg-disabled;
+    }
+    &:checked:disabled:before {
+        border-color: transparent;
+        background-color: rgba($form-input-border-focus-color, 0.4);
+    }
+    &:disabled:after,
+    &:checked:disabled:after {
+        border-color: $form-input-bg-disabled;
+    }
+    & + .control-label {
+        margin-left: $form-label-gutter;
+    }
+}

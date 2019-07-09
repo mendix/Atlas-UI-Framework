@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Base
+
+   Default settings
+========================================================================== */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    color: $font-color-default;
+    background-color: $bg-color;
+    font-family: $font-family-base;
+    font-size: $font-size-default;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-base;
+}
+
+a {
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    color: $link-color;
+    -webkit-backface-visibility: hidden;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: $link-hover-color;
+}
+
+// Address `outline` inconsistency between Chrome and other browsers.
+a:focus {
+    outline: thin dotted;
+}
+
+// Improve readability when focused and also mouse hovered in all browsers
+a:active,
+a:hover {
+    outline: 0;
+}
+
+// Removes large blue border in chrome on focus and active states
+input:focus,
+button:focus,
+.mx-link:focus {
+    outline: 0;
+}
+
+// Removes large blue border for tabindexes from widgets
+div[tabindex] {
+    outline: 0;
+}
+
+// Disabled State
+.disabled,
+[disabled] {
+    cursor: not-allowed;
+    // opacity: 0.65;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    filter: alpha(opacity=65);
+}

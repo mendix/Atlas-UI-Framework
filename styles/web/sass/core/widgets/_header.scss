@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Header
+
+   Default Mendix Mobile Header
+========================================================================== */
+
+.mx-header {
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    height: $m-header-height;
+    padding: 0;
+    text-align: initial;
+    color: $m-header-color;
+    border-bottom: 1px solid $border-color-default;
+    background-color: $m-header-bg;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+
+    // Reset mxui
+    div.mx-header-left,
+    div.mx-header-right {
+        position: relative;
+        top: initial;
+        right: initial;
+        left: initial;
+        display: flex;
+        align-items: center;
+        width: 25%;
+        height: 100%;
+        .mx-placeholder {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    div.mx-header-left .mx-placeholder {
+        order: 1;
+        .mx-placeholder {
+            justify-content: flex-start;
+        }
+    }
+    div.mx-header-center {
+        overflow: hidden;
+        flex: 1;
+        order: 2;
+        text-align: center;
+
+        .mx-title {
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            text-overflow: ellipsis;
+            color: $m-header-color;
+            font-size: $m-header-title-size;
+            line-height: $m-header-height;
+        }
+    }
+    div.mx-header-right {
+        order: 3;
+        .mx-placeholder {
+            justify-content: flex-end;
+        }
+    }
+
+    // Content magic
+    .mx-link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        text-decoration: none;
+        .glyphicon {
+            top: 0;
+            font-size: 23px;
+        }
+        &:active {
+            -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+            color: $link-hover-color;
+        }
+    }
+
+    .mx-link,
+    .btn,
+    img {
+        padding: 0 8px;
+    }
+
+    .mx-sidebartoggle {
+        font-size: 24px;
+        line-height: $m-header-height;
+        img {
+            height: 20px;
+        }
+    }
+}
+
+// RTL support
+body[dir='rtl'] {
+    .mx-header-left {
+        order: 3;
+    }
+    .mx-header-right {
+        order: 1;
+    }
+}

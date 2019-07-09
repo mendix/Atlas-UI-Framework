@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Tables
+
+   Default Mendix Table Widget. Tables can be used to lend structure to a page. They contain a number of rows (tr) and columns, the intersection of which is called a cell (td). Each cell can contain widgets
+========================================================================== */
+
+th {
+    font-weight: $font-weight-bold;
+}
+
+html body .mx-page table.mx-table {
+    th,
+    td {
+        &.nopadding {
+            padding: 0;
+        }
+    }
+}
+
+table.mx-table {
+    > tbody {
+        /* Table row */
+        > tr {
+            /* Table header */
+            > th {
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;s
+                * {
+                    color: $form-label-color;
+                    font-weight: $font-weight-bold;
+                    font-weight: $form-label-weight;
+                }
+                > label {
+                    padding-top: 7px;
+                    padding-bottom: 6px; // Aligns label in the middle if there is no input field next to it.
+                }
+            }
+            /* Table cells */
+            > td {
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
+                > div > label,
+                .mx-referenceselector-input-wrapper label {
+                    padding-top: 7px;
+                    padding-bottom: 6px; // Aligns label in the middle if there is no input field next to it.
+                }
+            }
+        }
+    }
+}
+
+// Default Mendix Table Widget inside TemplateGrid
+.mx-templategrid table.mx-table {
+    > tbody {
+        > tr {
+            > th,
+            > td {
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
+            }
+        }
+    }
+}
+
+// Default Mendix Table Widget inside Listview
+.mx-list table.mx-table {
+    > tbody {
+        > tr {
+            > th,
+            > td {
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
+            }
+        }
+    }
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Lined
+table.table-lined.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > td {
+                border-width: 1px 0;
+                border-style: solid;
+                border-color: $grid-border-color;
+            }
+        }
+    }
+}
+
+// Bordered
+table.table-bordered.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                border-width: 1px;
+                border-style: solid;
+                border-color: $grid-border-color;
+            }
+        }
+    }
+}
+
+// Makes table compact
+table.table-compact.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+        }
+    }
+}
+
+// Remove padding on sides
+table.table-sideless.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > td,
+            > th {
+                padding-right: 0;
+            }
+            > th:first-child,
+            > td:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+// Remove all padding
+table.table-spaceless.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                padding: 0;
+            }
+        }
+    }
+}
+
+// Tables Vertical
+// Will remove unwanted paddings
+table.table-vertical.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            > th {
+                padding-bottom: 0;
+                > label {
+                    padding: 0;
+                }
+                > div > label {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+// Align content in middle
+table.table-align-vertical-middle.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+// Compact labels
+table.table-label-compact.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                > label {
+                    margin: 0;
+                    padding: 0;
+                }
+                > div > label,
+                .mx-referenceselector-input-wrapper label {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+$height-row-s: 55px;
+$height-row-m: 70px;
+$height-row-l: 120px;
+// Small rows
+table.table-row-s.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                height: $height-row-s;
+            }
+        }
+    }
+}
+
+// Medium rows
+table.table-row-m.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                height: $height-row-m;
+            }
+        }
+    }
+}
+
+// Large rows
+table.table-row-l.mx-table {
+    > tbody {
+        // Table row
+        > tr {
+            // Table header
+            // Table data
+            > th,
+            > td {
+                height: $height-row-l;
+            }
+        }
+    }
+}
+
+// Makes the columns fixed
+table.table-fixed {
+    table-layout: fixed;
+}

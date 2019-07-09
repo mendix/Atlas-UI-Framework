@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Navigation
+
+   Default Mendix Simple Menu Bar
+========================================================================== */
+.mx-menubar {
+    padding: 0;
+    background-color: $navigation-bg;
+    ul.mx-menubar-list {
+        display: flex;
+        width: 100%;
+        min-height: 50px;
+        li.mx-menubar-item {
+            margin: 0;
+            > a {
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: $navigation-item-padding;
+                white-space: nowrap;
+                color: $navigation-color;
+                border-radius: 0;
+                font-size: $navigation-font-size;
+                font-weight: $font-weight-normal;
+                img {
+                    margin-right: 0.5em;
+                }
+                .glyphicon {
+                    top: -1px;
+                    margin-right: 0.5em;
+                    vertical-align: middle;
+                    font-size: $navigation-glyph-size;
+                }
+            }
+            a:hover,
+            a:focus,
+            &:hover a,
+            &:focus a,
+            &.active a {
+                text-decoration: none;
+                color: $navigation-color-hover;
+                background-color: $navigation-bg-hover;
+            }
+            &.active a {
+                color: $navigation-color-active;
+                background-color: $navigation-bg-active;
+            }
+        }
+    }
+
+    /* remove focus */
+    &:focus {
+        outline: 0;
+    }
+}
+
+// Vertical variation specifics
+.mx-menubar-vertical {
+    background-color: $navigation-bg;
+    ul.mx-menubar-list {
+        display: flex;
+        li.mx-menubar-item {
+            display: block;
+            a {
+                border-bottom: 1px solid $navigation-border-color;
+            }
+        }
+    }
+}
+
+// Horizontal variation specifics
+.mx-menubar-horizontal {
+    box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.14);
+    ul.mx-menubar-list {
+        li.mx-menubar-item {
+            width: auto;
+            a {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Two menu items */
+    &.menubar-col-6 ul.mx-menubar-list li.mx-menubar-item {
+        width: 50%;
+    }
+
+    /* Three menu items */
+    &.menubar-col-4 ul.mx-menubar-list li.mx-menubar-item {
+        width: 33.33333333%;
+    }
+
+    /* Four menu items */
+    &.menubar-col-3 ul.mx-menubar-list li.mx-menubar-item {
+        width: 25%;
+    }
+
+    /* Five menu items */
+    &.menubar-col-2 ul.mx-menubar-list li.mx-menubar-item {
+        width: 20%;
+    }
+}
+
+//== Regions
+//## Behavior in the different regions
+//-------------------------------------------------------------------------------------------------------------------//
+// When used in topbar
+.region-topbar {
+    .mx-menubar {
+        background-color: $navtopbar-bg;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    color: $navtopbar-color;
+                    font-size: $navtopbar-font-size;
+                    .glyphicon {
+                        font-size: $navtopbar-glyph-size;
+                    }
+                }
+                a:hover,
+                a:focus,
+                &:hover a,
+                &:focus a,
+                &.active a {
+                    color: $navtopbar-color-hover;
+                    background-color: $navtopbar-bg-hover;
+                }
+                &.active a {
+                    color: $navtopbar-color-active;
+                    background-color: $navtopbar-bg-active;
+                }
+            }
+        }
+    }
+
+    // Vertical variation specifics
+    .mx-menubar-vertical {
+        background-color: $navtopbar-bg;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    height: $navigation-item-height;
+                    border-color: $navtopbar-border-color;
+                }
+            }
+        }
+    }
+}
+
+// When used in sidebar
+.region-sidebar {
+    .mx-menubar {
+        background-color: $navsidebar-bg;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    color: $navsidebar-color;
+                    font-size: $navsidebar-font-size;
+                    .glyphicon {
+                        font-size: $navsidebar-glyph-size;
+                    }
+                }
+                a:hover,
+                a:focus,
+                &:hover a,
+                &:focus a,
+                &.active a {
+                    color: $navsidebar-color-hover;
+                    background-color: $navsidebar-bg-hover;
+                }
+                &.active a {
+                    color: $navsidebar-color-active;
+                    background-color: $navsidebar-bg-active;
+                }
+            }
+        }
+    }
+
+    // Vertical variation specifics
+    .mx-menubar-vertical {
+        background-color: $navsidebar-bg;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    border-color: $navsidebar-border-color;
+                }
+            }
+        }
+    }
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Center text and icons
+.bottom-nav-text-icons.mx-menubar {
+    ul.mx-menubar-list {
+        li.mx-menubar-item {
+            a {
+                flex-direction: column;
+                padding: 8px 8px 6px 8px;
+                line-height: normal;
+                font-size: 11px;
+                .glyphicon {
+                    display: block;
+                    margin: 0 0 5px 0;
+                    font-size: 18px;
+                }
+                img {
+                    display: block;
+                    height: 18px;
+                    margin: 0 0 5px 0;
+                }
+            }
+        }
+    }
+}
