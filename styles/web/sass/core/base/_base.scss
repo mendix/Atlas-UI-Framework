@@ -24,9 +24,6 @@ body {
 }
 
 a {
-    -moz-transition: 0.25s;
-    -o-transition: 0.25s;
-    -webkit-transition: 0.25s;
     transition: 0.25s;
     color: $link-color;
     -webkit-backface-visibility: hidden;

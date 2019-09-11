@@ -12,20 +12,19 @@
 ========================================================================== */
 
 .label {
-    display: inline;
     display: inline-block;
+    margin: 0;
     padding: 0.2em 0.6em 0.3em;
     text-align: center;
     vertical-align: baseline;
     white-space: nowrap;
-    color: #ffffff;
+    color: #FFFFFF;
     border-radius: 0.25em;
     font-size: 100%;
     line-height: 1;
-    margin: 0;
 
     .form-control-static {
-        all: unset;
         font-weight: $font-weight-normal;
+        all: unset;
     }
 }
