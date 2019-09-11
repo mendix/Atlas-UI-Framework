@@ -65,9 +65,10 @@
                 content: '';
                 -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
-                border-width: 0 9px 9px 9px;
-                border-style: solid;
-                border-color: transparent transparent $navigation-border-color transparent;
+                border: 9px solid transparent {
+                    top: 0;
+                    bottom-color: $navigation-border-color;
+                }
             }
 
             // Image

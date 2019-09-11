@@ -13,28 +13,31 @@
 
 .mx-groupbox {
     margin: 0;
+
     > .mx-groupbox-header {
         margin: 0;
         color: $groupbox-default-color;
-        border-width: 1px 1px 0 1px;
-        border-style: solid;
-        border-color: $groupbox-default-bg;
+        border: 1px solid $groupbox-default-bg {
+            bottom: 0;
+        };
         background: $groupbox-default-bg;
         font-size: $font-size-h5;
+
         .mx-groupbox-collapse-icon {
             margin-top: 0.1em;
         }
     }
+
     > .mx-groupbox-body {
         padding: 10px 15px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: $groupbox-default-bg;
+        border: 1px solid $groupbox-default-bg;
         background-color: #FFFFFF;
     }
+
     .mx-groupbox-header + .mx-groupbox-body {
         border-top: none;
     }
+
     &.collapsed > .mx-groupbox-header {
     }
 }

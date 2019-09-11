@@ -16,16 +16,19 @@
     .mx-tabcontainer-tabs {
         margin-bottom: 20px;
         border-color: $tabs-border-color;
+
         & > li > a {
             margin-right: 0;
             transition: all 0.2s ease-in-out;
             color: $tabs-color;
             font-weight: $font-weight-normal;
+
             &:hover,
             &:focus {
                 background-color: $tabs-bg-hover;
             }
         }
+
         & > li.active > a,
         & > li.active > a:hover,
         & > li.active > a:focus {
@@ -44,6 +47,7 @@
         text-align: center;
         border-style: none;
         background-color: $brand-primary;
+
         li {
             display: table-cell;
             float: none;
@@ -52,24 +56,28 @@
             text-align: center;
             border-style: none;
             border-radius: 0;
+
             a {
                 padding: 15px;
                 text-transform: uppercase;
                 color: #FFFFFF;
-                border-width: 0 1px 0 0;
-                border-style: solid;
-                border-color: rgba(255, 255, 255, 0.3);
-                border-radius: 0;
+                border: 0 solid rgba(255, 255, 255, 0.3) {
+                    right: 1px;
+                    radius: 0;
+                }
                 font-size: 12px;
                 font-weight: $font-weight-normal;
+
                 &:hover,
                 &:focus {
                     background-color: inherit;
                 }
             }
+
             &:last-child a {
                 border-right: none;
             }
+
             &.active > a,
             &.active > a:hover,
             &.active > a:focus {
