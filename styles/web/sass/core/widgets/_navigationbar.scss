@@ -15,6 +15,7 @@
     border-style: none;
     border-radius: 0;
     background-color: $navigation-bg;
+
     ul.nav {
         margin: 0; // weird -margin if screen gets small (bootstrap)
 
@@ -35,17 +36,20 @@
                 border-top-color: $navigation-color;
                 border-bottom-color: $navigation-color;
             }
+
             &:hover,
             &:focus,
             &.active {
                 text-decoration: none;
                 color: $navigation-color-hover;
                 background-color: $navigation-bg-hover;
+
                 .caret {
                     border-top-color: $navigation-color-active;
                     border-bottom-color: $navigation-color-active;
                 }
             }
+
             &.active {
                 color: $navigation-color-active;
                 background-color: $navigation-bg-active;
@@ -61,9 +65,10 @@
                 content: '';
                 -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
-                border-width: 0 9px 9px 9px;
-                border-style: solid;
-                border-color: transparent transparent $navigation-border-color transparent;
+                border: 9px solid transparent {
+                    top: 0;
+                    bottom-color: $navigation-border-color;
+                }
             }
 
             // Image
@@ -72,6 +77,7 @@
                 height: auto;
                 margin-right: 0.5em;
             }
+
             .glyphicon {
                 top: 0;
                 margin-right: 0.5em;
@@ -90,20 +96,24 @@
             text-decoration: none;
             color: $navigation-color-hover;
             background-color: $navigation-bg-hover;
+
             .caret {
                 border-top-color: $navigation-color-hover;
                 border-bottom-color: $navigation-color-hover;
             }
         }
+
         & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
             color: $navigation-sub-color-active;
             background-color: $navigation-sub-bg-active;
+
             .caret {
                 border-top-color: $navigation-sub-color-active;
                 border-bottom-color: $navigation-sub-color-active;
             }
         }
     }
+
     @media (max-width: $screen-sm) {
         ul.nav > li.mx-navbar-item > a {
             padding: 10px 20px;
@@ -112,17 +122,20 @@
             padding: 0;
             border-radius: 0;
             background-color: $navigation-sub-bg;
+
             & > li.mx-navbar-subitem > a {
                 padding: 10px 20px;
                 color: $navigation-sub-color;
                 border-radius: 0;
                 font-size: $navigation-sub-font-size;
                 font-weight: $font-weight-normal;
+
                 &:hover,
                 &:focus {
                     color: $navigation-sub-color-hover;
                     background-color: $navigation-sub-bg-hover;
                 }
+
                 &.active {
                     color: $navigation-sub-color-active;
                     background-color: $navigation-sub-bg-active;

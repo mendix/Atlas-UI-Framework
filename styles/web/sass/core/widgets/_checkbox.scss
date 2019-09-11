@@ -52,9 +52,10 @@ input[type='checkbox'] {
         margin: 5px 4px;
         transform: rotate(-45deg);
         pointer-events: none;
-        border: 2px solid #FFFFFF;
-        border-top: 0;
-        border-right: 0;
+        border: 2px solid #FFFFFF {
+            top: 0;
+            right: 0;
+        };
     }
 
     &:not(:disabled):not(:checked):hover:after {

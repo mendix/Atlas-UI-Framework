@@ -39,9 +39,10 @@
 
 // Lined
 .form-control-lined {
-    border: 0;
-    border-bottom: 1px solid $form-input-border-color;
-    border-radius: 0;
+    border: 0 solid $form-input-border-color {
+        bottom: 1px;
+        radius: 0;
+    }
     background-color: transparent;
 
     &:focus {
@@ -69,9 +70,11 @@ select.form-control {
     $arrow: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='8px'><polyline id='Line' fill='none' stroke='%23555555' points='0.5 0.5 6 6 11.545361 0.5'></polyline></svg>";
     padding-right: 30px;
     padding-left: 30px;
-    background-image: url($arrow);
-    background-repeat: no-repeat;
-    background-position: calc(100% - #{$form-input-padding-x}) center;
+    background: {
+        position: calc(100% - #{$form-input-padding-x}) center;
+        image: url($arrow);
+        repeat: no-repeat;
+    }
 }
 
 .form-control.mx-selectbox {

@@ -39,9 +39,9 @@
         & > li {
             @include transition();
             padding: $listview-padding-top $listview-padding-right $listview-padding-bottom $listview-padding-left;
-            border-width: 1px 0 0 0;
-            border-style: solid;
-            border-color: $grid-border-color;
+            border: 0 solid $grid-border-color {
+                top: 1px;
+            }
             background-color: $grid-bg;
 
             &:first-child {
