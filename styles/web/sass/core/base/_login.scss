@@ -63,9 +63,6 @@ body {
 
             .glyphicon {
                 &:before {
-                    -webkit-transition: color 0.4s;
-                    -moz-transition: color 0.4s;
-                    -o-transition: color 0.4s;
                     transition: color 0.4s;
                 }
 

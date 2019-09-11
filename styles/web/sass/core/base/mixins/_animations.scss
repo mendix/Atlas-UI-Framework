@@ -12,9 +12,6 @@
     $property: all,
     $timing-fucntion: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
-    -webkit-transition: $property $duration $delay $timing-fucntion;
-    -moz-transition: $property $duration $delay $timing-fucntion;
-    -o-transition: $property $duration $delay $timing-fucntion;
     transition: $property $duration $delay $timing-fucntion;
     transform-style: $style;
 }
@@ -39,9 +36,6 @@
         -webkit-transform: scale($scale, $scale);
         transform: scale($scale, $scale);
         opacity: 0;
-        -webkit-transition: transform 0.5s, opacity 1s;
-        -moz-transition: transform 0.5s, opacity 1s;
-        -o-transition: transform 0.5s, opacity 1s;
         transition: transform 0.5s, opacity 1s;
     }
 
