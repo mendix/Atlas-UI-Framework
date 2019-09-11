@@ -10,6 +10,7 @@
    The form-control class style all inputs
 ========================================================================== */
 .form-control {
+    @include appearance(none);
     display: flex;
     flex: 1;
     min-width: 50px;
@@ -24,9 +25,6 @@
     box-shadow: none;
     font-size: $form-input-font-size;
     line-height: $form-input-line-height;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     @if $form-input-style==lined {
         @extend .form-control-lined;
     }
@@ -74,9 +72,6 @@ select.form-control {
     background-image: url($arrow);
     background-repeat: no-repeat;
     background-position: calc(100% - #{$form-input-padding-x}) center;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
 }
 
 .form-control.mx-selectbox {

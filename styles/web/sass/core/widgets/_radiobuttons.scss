@@ -29,18 +29,13 @@
 }
 
 input[type='radio'] {
+    @include appearance(none);
+    @include user-select(none);
     position: relative !important; // Remove after mxui merge
     width: 16px;
     height: 16px;
     margin: 0;
     cursor: pointer;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
 
     &:before,
     &:after {

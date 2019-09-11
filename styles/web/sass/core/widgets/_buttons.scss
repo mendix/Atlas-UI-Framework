@@ -13,14 +13,11 @@
 
 .btn,
 .mx-button {
+    @include user-select(none);
     display: inline-block;
     margin-bottom: 0;
     padding: 0.6em 1em;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     transition: all 0.2s ease-in-out;
     text-align: center;
     vertical-align: middle;
