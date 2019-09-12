@@ -10,63 +10,145 @@
 
    Default Mendix Grid (used for Mendix Datagrid)
 ========================================================================== */
-
-.mx-grid {
-    padding: 0px;
-    border: 0;
-    border-radius: 0;
-    .mx-grid-controlbar {
-        margin: 10px 0;
-        /* Paging */
-        .mx-grid-pagingbar {
-            /* Buttons */
-            .mx-button {
-                padding: 6px;
-                color: $grid-paging-color;
-                border-color: $grid-paging-border-color;
-                background-color: $grid-paging-bg;
-                &:hover {
-                    color: $grid-paging-color-hover;
-                    border-color: $grid-paging-border-color-hover;
-                    background-color: $grid-paging-bg-hover;
-                }
-            }
-            /* Text Paging .. to .. to .. */
-            .mx-grid-paging-status {
-                padding: 0 8px 8px;
-            }
-        }
-    }
-    .mx-grid-searchbar {
-        margin: 10px 0;
-        .mx-grid-search-item {
-            .mx-grid-search-label {
-                vertical-align: middle;
-                label {
-                    padding-top: 5px;
-                }
-            }
-            .mx-grid-search-input {
-                display: inline-flex;
-                .form-control {
-                    height: 28px;
-                    font-size: 11px;
-                }
-                select.form-control {
-                    padding: 3px;
-                    vertical-align: middle;
-                }
-                .mx-button {
-                    height: 28px;
-                    padding-top: 2px;
-                    padding-bottom: 2px;
-                }
-            }
-        }
-    }
-}
-
 // Remove default border from grid inside a Mendix Dataview
 .mx-dataview .mx-grid {
     border: 0;
 }
+
+.mx-grid {
+    overflow: hidden;
+}
+
+.mx-grid-controlbar,
+.mx-grid-searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.mx-grid-pagingbar,
+.mx-grid-search-controls {
+    display: flex;
+    align-items: baseline;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.mx-grid-controlbar,
+.mx-grid-search-controls {
+    .btn {
+        margin-bottom: 8px;
+
+        & + .btn {
+            margin-left: $spacing-small;
+        }
+    }
+}
+
+.mx-grid-toolbar,
+.mx-grid-search-inputs {
+    flex: 1;
+    margin-right: 5px;
+}
+
+
+/* Paging */
+.mx-grid-pagingbar {
+    /* Buttons */
+    .mx-button {
+        padding: 6px;
+        color: $grid-paging-color;
+        border-color: $grid-paging-border-color;
+        background-color: $grid-paging-bg;
+
+        &:hover {
+            color: $grid-paging-color-hover;
+            border-color: $grid-paging-border-color-hover;
+            background-color: $grid-paging-bg-hover;
+        }
+    }
+
+}
+
+/* Text Paging .. to .. to .. */
+.mx-grid-paging-status {
+    padding: 0 8px 8px;
+}
+
+/* search fields */
+.mx-grid-search-item {
+    display: inline-block;
+    margin-bottom: 8px;
+    vertical-align: top;
+}
+
+.mx-grid-search-label {
+    display: inline-block;
+    overflow: hidden;
+    width: 110px;
+    padding: 0 5px;
+    text-align: right;
+    vertical-align: middle;
+
+    label {
+        padding-top: 5px;
+    }
+}
+
+.mx-grid-search-input {
+    display: inline-flex;
+    width: 150px;
+    padding: 0 5px;
+    vertical-align: top;
+
+    .form-control {
+        height: 28px;
+        font-size: 11px;
+    }
+
+    select.form-control {
+        padding: 3px;
+        vertical-align: middle;
+    }
+
+    .mx-button {
+        height: 28px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+}
+
+.mx-grid-search-message {
+    flex-basis: 100%;
+}
+
+[dir="rtl"] {
+    .mx-grid-controlbar,
+    .mx-grid-search-controls {
+        .btn + .btn {
+            margin-right: 0.3em;
+            margin-left: 0;
+        }
+    }
+
+    .mx-grid-toolbar,
+    .mx-grid-search-inputs {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .mx-grid-pagingbar,
+    .mx-grid-search-controls {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+
+    .mx-grid-search-label {
+        text-align: left;
+    }
+}
+
+
+
