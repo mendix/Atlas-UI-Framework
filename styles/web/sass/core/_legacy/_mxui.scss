@@ -2836,22 +2836,22 @@ input[type="checkbox"] {
     float: left;
 }
 
-.mx-dataview {
-    position: relative;
-}
-.mx-dataview-controls {
-    padding: 19px 20px 12px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #eee;
-}
-
-.mx-dataview-controls .mx-button {
-    margin-bottom: 8px;
-}
-
-.mx-dataview-controls .mx-button + .mx-button {
-    margin-left: 0.3em;
-}
+//.mx-dataview {
+//    position: relative;
+//}
+//.mx-dataview-controls {
+//    padding: 19px 20px 12px;
+//    background-color: #f5f5f5;
+//    border-top: 1px solid #eee;
+//}
+//
+//.mx-dataview-controls .mx-button {
+//    margin-bottom: 8px;
+//}
+//
+//.mx-dataview-controls .mx-button + .mx-button {
+//    margin-left: 0.3em;
+//}
 
 .mx-dataview-message {
     background: #fff;
@@ -2880,10 +2880,10 @@ input[type="checkbox"] {
 .mx-window-view .mx-window-body > .mx-placeholder > .mx-dataview > .mx-dataview-content {
     padding: 15px;
 }
-.mx-window-view .mx-window-body > .mx-dataview > .mx-dataview-controls,
-.mx-window-view .mx-window-body > .mx-placeholder > .mx-dataview > .mx-dataview-controls {
-    border-radius: 0px 0px 6px 6px;
-}
+//.mx-window-view .mx-window-body > .mx-dataview > .mx-dataview-controls,
+//.mx-window-view .mx-window-body > .mx-placeholder > .mx-dataview > .mx-dataview-controls {
+//    border-radius: 0px 0px 6px 6px;
+//}
 
 .mx-dialog {
     position: fixed;
