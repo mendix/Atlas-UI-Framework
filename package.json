@@ -1,21 +1,32 @@
 {
-    "name": "atlas-ui-framework",
-    "version": "2.1.4",
-    "description": "Mendix Atlas UI is the foundation of making beautiful apps with Mendix. For more information about the framework go to https://atlas.mendix.com.",
-    "main": "",
-    "scripts": {
-        "bump:patch": "node ./scripts/bump-patch.js",
-        "bump:minor": "node ./scripts/bump-minor.js",
-        "bump:major": "node ./scripts/bump-major.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mendix/Atlas-UI-Framework.git"
-    },
-    "author": "Mendix",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/mendix/Atlas-UI-Framework/issues"
-    },
-    "homepage": "https://github.com/mendix/Atlas-UI-Framework#readme"
+  "name": "atlas-ui-framework",
+  "version": "0.0.0-development",
+  "description": "Mendix Atlas UI is the foundation of making beautiful apps with Mendix. For more information about the framework go to https://atlas.mendix.com.",
+  "main": "",
+  "scripts": {
+    "bump:patch": "node ./scripts/bump-patch.js",
+    "bump:minor": "node ./scripts/bump-minor.js",
+    "bump:major": "node ./scripts/bump-major.js",
+    "semantic-release": "semantic-release",
+      "cz": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mendix/Atlas-UI-Framework.git"
+  },
+  "author": "Mendix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendix/Atlas-UI-Framework/issues"
+  },
+  "homepage": "https://github.com/mendix/Atlas-UI-Framework#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
+    "semantic-release": "^15.13.24"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
