@@ -42,8 +42,14 @@
 }
 
 // Button Sizes
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
 .btn-lg {
     font-size: $font-size-large;
+
     img {
         height: calc(#{$font-size-small} + 4px);
     }
@@ -51,6 +57,7 @@
 
 .btn-sm {
     font-size: $font-size-small;
+
     img {
         height: calc(#{$font-size-small} + 4px);
     }
@@ -62,10 +69,12 @@
     vertical-align: middle;
     border-style: none;
     background-color: transparent;
+
     img {
         display: block; // or else the button doesn't get a width
         height: auto; // Image set height
     }
+
     &:hover,
     &:focus {
         background-color: transparent;
@@ -91,6 +100,7 @@
 .btn-icon-top {
     padding-right: 0;
     padding-left: 0;
+
     & > img,
     & > .glyphicon {
         display: block;

@@ -259,7 +259,7 @@ $form-group-gutter:                     15px !default;
 //## Define background-color, border-color and text. Used in components/buttons
 
 // Default button style
-$btn-font-size:                         14px !default;
+$btn-font-size:                         $font-size-default !default;
 $btn-bordered:                          false !default; // Default value false, set to true if you want this effect
 $btn-border-radius:                     $border-radius-default !default;
 
