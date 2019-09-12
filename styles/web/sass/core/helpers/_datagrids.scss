@@ -12,20 +12,16 @@
 ========================================================================== */
 // Striped style
 .datagrid-striped.mx-datagrid {
-    table {
-        th {
-            border-width: 0;
-        }
+    th {
+        border-width: 0;
+    }
 
-        tbody tr {
-            td {
-                border-top-width: 0;
-            }
+    td {
+        border-top-width: 0;
+    }
 
-            &:nth-child(odd) td {
-                background-color: $grid-bg-striped;
-            }
-        }
+    tr:nth-child(odd) td {
+        background-color: $grid-bg-striped;
     }
 }
 
@@ -33,88 +29,55 @@
 .datagrid-bordered.mx-datagrid {
     table {
         border: 1px solid;
-
-        th {
-            border: 1px solid $grid-border-color;
-        }
-
-        tbody tr {
-            td {
-                border: 1px solid $grid-border-color;
-            }
-        }
     }
 
-    tfoot {
-        > tr > th {
-            border-width: 0;
-            background-color: $grid-footer-bg;
-        }
+    th,
+    td {
+        border: 1px solid $grid-border-color;
+    }
 
-        > tr > td {
-            border-width: 1px;
-        }
+    tfoot th {
+        border-width: 0;
+        background-color: $grid-footer-bg;
+    }
+
+    tfoot td {
+        border-width: 1px;
     }
 }
 
 // Transparent style so you can see the background
 .datagrid-transparent.mx-datagrid {
-    table {
+    table,
+    td,
+    tr:nth-of-type(odd) {
         background-color: transparent;
-
-        tbody tr {
-            &:nth-of-type(odd) {
-                background-color: transparent;
-            }
-
-            td {
-                background-color: transparent;
-            }
-        }
     }
 }
 
 // Hover style activated
 .datagrid-hover.mx-datagrid {
-    table {
-        tbody tr {
-            &:hover td {
-                background-color: $grid-bg-hover !important;
-            }
+    tr:hover td {
+        background-color: $grid-bg-hover;
+    }
 
-            &.selected:hover td {
-                background-color: $grid-bg-selected-hover !important;
-            }
-        }
+    tr.selected:hover td {
+        background-color: $grid-bg-selected-hover;
     }
 }
 
 // Datagrid Row Sizes
 .datagrid-lg.mx-datagrid {
-    table {
-        th {
-            padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
-        }
-
-        tbody tr {
-            td {
-                padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
-            }
-        }
+    th,
+    td {
+        padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
     }
 }
 
 .datagrid-sm.mx-datagrid {
-    table {
-        th {
-            padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left / 2);
-        }
-
-        tbody tr {
-            td {
-                padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left/ 2);
-            }
-        }
+    th,
+    td {
+        padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left/ 2);
     }
 }
 
