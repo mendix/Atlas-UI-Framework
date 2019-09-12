@@ -2,28 +2,24 @@
 @import 'core/_legacy/bootstrap/bootstrap';
 @import 'core/_legacy/bootstrap/bootstrap-rtl';
 @import 'core/_legacy/mxui';
-
 // Custom variables
 @import 'app/custom-variables';
-
 //================================== CORE ==================================\\
-
 // Default variables
 @import 'core/variables';
-
 // Base
 @import 'core/base/mixins/animations';
 @import 'core/base/mixins/spacing';
 @import 'core/base/mixins/layout-spacing';
 @import 'core/base/mixins/buttons';
 @import 'core/base/mixins/groupbox';
+@import 'core/base/mixins/prefixes';
 @import 'core/base/animation';
 @import 'core/base/flex';
 @import 'core/base/spacing';
 @import 'core/base/reset';
 @import 'core/base/base';
 @import 'core/base/login';
-
 // Widgets
 @import 'core/widgets/inputs';
 @import 'core/widgets/alerts';
@@ -66,7 +62,6 @@
 @import 'core/widgets/layoutgrid';
 @import 'core/widgets/progress';
 @import 'core/helpers/helperclasses';
-
 // Custom widgets
 @import 'core/widgetscustom/dijit-widgets';
 @import 'core/widgetscustom/progress-bar-theme';
@@ -75,9 +70,7 @@
 @import 'core/widgetscustom/slider-theme';
 @import 'core/widgetscustom/star-rating-theme';
 @import 'core/widgetscustom/switchwidget';
-
 //================================= CUSTOM =================================\\
-
 // Building blocks
 @import 'ui_resources/atlas_ui_resources/buildingblocks/alignment-block';
 @import 'ui_resources/atlas_ui_resources/buildingblocks/breadcrumb';
@@ -93,13 +86,11 @@
 @import 'ui_resources/atlas_ui_resources/buildingblocks/userprofile';
 @import 'ui_resources/atlas_ui_resources/buildingblocks/wizard';
 @import 'ui_resources/atlas_ui_resources/buildingblocks/timeline';
-
 // Layouts
 @import 'ui_resources/atlas_ui_resources/layouts/layout-atlas';
 @import 'ui_resources/atlas_ui_resources/layouts/layout-atlas-phone';
 @import 'ui_resources/atlas_ui_resources/layouts/layout-atlas-responsive';
 @import 'ui_resources/atlas_ui_resources/layouts/layout-atlas-tablet';
 @import 'ui_resources/atlas_ui_resources/layouts/layout-atlas-device-wrapper';
-
 // Custom
 @import 'app/custom';

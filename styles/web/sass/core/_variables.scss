@@ -16,6 +16,10 @@
 
 //== Settings
 //## Enable or disable your desired framework features
+// Exclude all nondefault widget styling like design properties and helper classes.
+// CAUTION: Only set this to true if you are planning to create your own design language.
+$exclude-brand-styling:                false !default;
+
 // Use of !important
 $important-flex:                        true !default; // ./base/flex.scss
 $important-spacing:                     true !default; // ./base/spacing.scss
@@ -266,7 +270,7 @@ $form-group-gutter:                     15px !default;
 //## Define background-color, border-color and text. Used in components/buttons
 
 // Default button style
-$btn-font-size:                         14px !default;
+$btn-font-size:                         $font-size-default !default;
 $btn-bordered:                          false !default; // Default value false, set to true if you want this effect
 $btn-border-radius:                     $border-radius-default !default;
 
