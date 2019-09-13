@@ -49,7 +49,7 @@
 .mx-grid-toolbar,
 .mx-grid-search-inputs {
     flex: 1;
-    margin-right: 5px;
+    margin-right: $spacing-small;
 }
 
 
@@ -127,7 +127,7 @@
     .mx-grid-controlbar,
     .mx-grid-search-controls {
         .btn + .btn {
-            margin-right: 0.3em;
+            margin-right: $spacing-small;
             margin-left: 0;
         }
     }
@@ -135,7 +135,7 @@
     .mx-grid-toolbar,
     .mx-grid-search-inputs {
         margin-right: 0;
-        margin-left: 5px;
+        margin-left: $spacing-small;
     }
 
     .mx-grid-pagingbar,
