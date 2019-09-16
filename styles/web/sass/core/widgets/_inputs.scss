@@ -21,26 +21,41 @@
     border: 1px solid $form-input-border-color;
     border-radius: $form-input-border-radius;
     background-color: $form-input-bg;
-    background-image: none;
-    box-shadow: none;
     font-size: $form-input-font-size;
     line-height: $form-input-line-height;
     @if $form-input-style==lined {
         @extend .form-control-lined;
     }
+
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-webkit-input-placeholder {
+        color: $form-input-placeholder-color;
+    }
 }
 
 .form-control:focus {
+    color: $form-input-focus-color;
     border-color: $form-input-border-focus-color;
     outline: 0;
     background-color: $form-input-bg-focus;
-    box-shadow: none;
+}
+
+.form-control[disabled],
+.form-control[readonly] {
+    cursor: not-allowed;
+    color: $form-input-disabled-color;
+    background-color: $form-input-bg-disabled;
+
+    & ~ .btn {
+        cursor: not-allowed;
+    }
 }
 
 // Lined
 .form-control-lined {
     border: 0 solid $form-input-border-color {
-        bottom: 1px;
+        bottom-width: 1px;
         radius: 0;
     }
     background-color: transparent;
@@ -69,7 +84,6 @@
 select.form-control {
     $arrow: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='8px'><polyline id='Line' fill='none' stroke='%23555555' points='0.5 0.5 6 6 11.545361 0.5'></polyline></svg>";
     padding-right: 30px;
-    padding-left: 30px;
     background: {
         position: calc(100% - #{$form-input-padding-x}) center;
         image: url($arrow);
@@ -121,13 +135,6 @@ textarea.form-control {
         padding-left: $form-group-gutter;
     }
 
-    // Alignment content
-    div[class*='textBox'] > .control-label,
-    div[class*='textArea'] > .control-label,
-    div[class*='datePicker'] > .control-label {
-        @extend .form-control-static;
-    }
-
     // Label
     .control-label {
         overflow: hidden;
@@ -151,6 +158,7 @@ textarea.form-control {
     .form-control-static {
         flex: unset;
     }
+
 
     .control-label {
         margin-bottom: 0;
@@ -214,7 +222,7 @@ textarea.form-control {
 [dir='rtl'] {
     // Dropdown input widget
     select.form-control {
-        padding-right: 30px;
+        padding-right: $form-input-padding-x;
         padding-left: 30px;
         background-position: #{$form-input-padding-x} center;
     }
