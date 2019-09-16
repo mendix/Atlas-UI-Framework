@@ -14,14 +14,14 @@
 .label {
     display: inline-block;
     margin: 0;
-    padding: 0.2em 0.6em 0.3em;
+    padding: 3px 8px;
     text-align: center;
-    vertical-align: baseline;
-    white-space: nowrap;
     color: #FFFFFF;
-    border-radius: 0.25em;
-    font-size: 100%;
-    line-height: 1;
+    border-radius: $border-radius-default;
+
+    &:empty {
+        display: none;
+    }
 
     .form-control-static {
         font-weight: $font-weight-normal;
