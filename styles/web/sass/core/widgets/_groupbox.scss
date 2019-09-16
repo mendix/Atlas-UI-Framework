@@ -12,32 +12,50 @@
 ========================================================================== */
 
 .mx-groupbox {
+}
+
+.mx-groupbox-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     margin: 0;
-
-    > .mx-groupbox-header {
-        margin: 0;
-        color: $groupbox-default-color;
-        border: 1px solid $groupbox-default-bg {
-            bottom: 0;
-        };
-        background: $groupbox-default-bg;
-        font-size: $font-size-h5;
-
-        .mx-groupbox-collapse-icon {
-            margin-top: 0.1em;
-        }
+    padding: 10px 15px;
+    color: $groupbox-default-color;
+    border: 1px solid $groupbox-default-bg {
+        bottom: 0;
+        radius: 4px 4px 0 0;
     }
+    background: $groupbox-default-bg;
+    font-size: $font-size-h5;
+    line-height: inherit;
 
-    > .mx-groupbox-body {
-        padding: 10px 15px;
-        border: 1px solid $groupbox-default-bg;
-        background-color: #FFFFFF;
-    }
-
-    .mx-groupbox-header + .mx-groupbox-body {
+    & + .mx-groupbox-body {
         border-top: none;
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+.mx-groupbox-body {
+    padding: 10px 15px;
+    border: 1px solid $groupbox-default-bg;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+.mx-groupbox-collapsible > .mx-groupbox-header {
+    cursor: pointer;
+}
+
+.mx-groupbox.collapsed {
+    & > .mx-groupbox-header {
+        border-radius: 4px;
     }
 
-    &.collapsed > .mx-groupbox-header {
+    & > .mx-groupbox-body {
+        display: none;
     }
+}
+
+[dir="rtl"] .mx-groupbox-header {
+    flex-direction: row;
 }
