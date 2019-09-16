@@ -10,17 +10,6 @@
    Default Mendix Listview Widget. The list view shows a list of objects arranged vertically. Each object is shown using a template
 ========================================================================== */
 .mx-listview {
-    // Remove widget padding
-    padding: 0;
-    /* Clear search button (overrides load more button stying) */
-    // Search bar
-    .mx-listview-searchbar {
-        margin-bottom: $gutter-size;
-
-        .btn {
-            width: auto;
-        }
-    }
 
     /* Load more button */
     & > .btn {
@@ -30,8 +19,12 @@
 
     & > ul {
         margin: 0;
+        padding: 0;
+        list-style: none;
 
         .mx-listview-empty {
+            text-align: center;
+            color: #999999;
             border-style: none;
             background-color: transparent;
         }
@@ -40,34 +33,26 @@
             @include transition();
             padding: $listview-padding-top $listview-padding-right $listview-padding-bottom $listview-padding-left;
             border: 0 solid $grid-border-color {
-                top: 1px;
+                top-width: 1px;
             }
             background-color: $grid-bg;
 
-            &:first-child {
-                border-radius: 0; // Reset mxui listview style
-            }
-
             &:last-child {
                 border-bottom: 1px solid $grid-border-color;
-                border-radius: 0; // Reset mxui listview style
             }
 
             &:nth-child(2n + 1) {
                 background-color: $grid-bg;
             }
 
-            &:hover {
-                background-color: $grid-bg;
-            }
-
+            &:hover,
             &:focus,
             &:active {
                 background-color: $grid-bg-hover;
             }
 
             &.selected {
-                background-color: $grid-bg-selected !important;
+                background-color: $grid-bg-selected;
             }
         }
     }
@@ -78,12 +63,48 @@
     }
 }
 
+// Search bar
+.mx-listview-searchbar {
+    display: flex;
+    margin-bottom: $gutter-size;
+
+    .btn {
+        margin-left: $spacing-small;
+    }
+}
+
+.mx-listview-clickable ul li {
+    cursor: pointer;
+}
+
+.mx-listview-loading {
+    padding: 10px;
+    text-align: center;
+    line-height: 0;
+}
+
+.mx-listview-selection {
+    display: table-cell;
+    padding: 0 15px 0 5px;
+    vertical-align: middle;
+}
+
+.mx-listview-selectable .mx-listview-content {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.mx-listview .mx-table th,
+.mx-listview .mx-table td {
+    padding: 2px;
+}
+
 //== Phone specific
 //-------------------------------------------------------------------------------------------------------------------//
 .profile-phone .mx-listview {
     .mx-listview-searchbar {
         margin-bottom: 3px;
-        background: #FFFFFF;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 
         input {
@@ -105,5 +126,16 @@
         &:first-child {
             border-top: none;
         }
+    }
+}
+
+[dir=rtl] {
+    .mx-listview-selection {
+        padding: 0 5px 0 15px;
+    }
+
+    .mx-listview-searchbar .btn {
+        margin-right: $spacing-small;
+        margin-left: 0;
     }
 }
