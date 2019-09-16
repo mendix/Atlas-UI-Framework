@@ -8,7 +8,8 @@
 /* ==========================================================================
    Images
 
-   Default Mendix Image Widgets
+//== Design Properties
+//## Helper classes to change the look and feel of the component
 ========================================================================== */
 
 img.img-rounded,
@@ -18,15 +19,12 @@ img.img-rounded,
 
 img.img-thumbnail,
 .img-thumbnail img {
-    display: inline-block;
-    max-width: 100%;
+    @include transition();
     height: auto;
     padding: 4px;
-    transition: all 0.2s ease-in-out;
     border: 1px solid $brand-default;
     border-radius: 4px;
     background-color: #FFFFFF;
-    line-height: $line-height-base;
 }
 
 img.img-circle,
@@ -37,9 +35,7 @@ img.img-circle,
 img.img-auto,
 .img-auto img {
     width: auto !important;
-    max-width: 100% !important;
     height: auto !important;
-    max-height: 100% !important;
 }
 
 img.img-center,
