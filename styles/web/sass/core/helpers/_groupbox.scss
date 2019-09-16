@@ -51,7 +51,8 @@
 
 .groupbox-transparent {
     border-bottom: 1px solid $border-color-default;
-    > .mx-groupbox-header {
+
+    & > .mx-groupbox-header {
         padding: 15px 0;
         color: $gray-darker;
         border-style: none;
@@ -59,11 +60,13 @@
         font-size: 16px;
         font-weight: $font-weight-semibold;
     }
+
     .mx-groupbox-body {
         padding: 15px 0;
         border-style: none;
         background-color: transparent;
     }
+
     .mx-groupbox-collapse-icon {
         color: $brand-primary;
     }
@@ -96,52 +99,29 @@
 
 // Callout Look and Feel
 .groupbox-callout {
-    > .mx-groupbox-header,
-    > .mx-groupbox-body {
+    & > .mx-groupbox-header,
+    & > .mx-groupbox-body {
         border: 0;
         background-color: $callout-info-bg;
     }
+
     .mx-groupbox-header + .mx-groupbox-body {
         padding-top: 0;
     }
 }
 
-.groupbox-info.groupbox-callout {
-    > .mx-groupbox-header,
-    > .mx-groupbox-body {
-        background-color: $callout-info-bg;
-    }
-    > .mx-groupbox-header {
-        color: $callout-info-color;
-    }
+.groupbox-callout.groupbox-info {
+    @include groupbox-callout-variant($callout-info-color, $callout-info-bg)
 }
 
-.groupbox-success.groupbox-callout {
-    > .mx-groupbox-header,
-    > .mx-groupbox-body {
-        background-color: $callout-success-bg;
-    }
-    > .mx-groupbox-header {
-        color: $callout-success-color;
-    }
+.groupbox-callout.groupbox-success {
+    @include groupbox-callout-variant($callout-success-color, $callout-success-bg)
 }
 
-.groupbox-warning.groupbox-callout {
-    > .mx-groupbox-header,
-    > .mx-groupbox-body {
-        background-color: $callout-warning-bg;
-    }
-    > .mx-groupbox-header {
-        color: $callout-warning-color;
-    }
+.groupbox-callout.groupbox-warning {
+    @include groupbox-callout-variant($callout-warning-color, $callout-warning-bg)
 }
 
-.groupbox-danger.groupbox-callout {
-    > .mx-groupbox-header,
-    > .mx-groupbox-body {
-        background-color: $callout-danger-bg;
-    }
-    > .mx-groupbox-header {
-        color: $callout-danger-color;
-    }
+.groupbox-callout.groupbox-danger {
+    @include groupbox-callout-variant($callout-danger-color, $callout-danger-bg)
 }

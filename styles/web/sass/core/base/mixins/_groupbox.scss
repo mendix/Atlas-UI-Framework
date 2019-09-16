@@ -6,12 +6,23 @@
 //
 
 @mixin groupbox-variant($color, $background) {
-    > .mx-groupbox-header {
+    & > .mx-groupbox-header {
         color: $color;
         border-color: $background;
         background: $background;
     }
-    > .mx-groupbox-body {
+    & > .mx-groupbox-body {
         border-color: $background;
+    }
+}
+
+
+@mixin groupbox-callout-variant($color, $background) {
+    & > .mx-groupbox-header,
+    & > .mx-groupbox-body {
+        background-color: $background;
+    }
+    & > .mx-groupbox-header {
+        color: $color;
     }
 }
