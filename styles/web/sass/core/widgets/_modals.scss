@@ -12,43 +12,48 @@
 .modal-dialog {
     .modal-content {
         border: 1px solid $modal-header-border-color;
-        border-radius: 4px;
+        border-radius: $border-radius-default;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
         .modal-header {
             padding: 15px 20px;
-            border-bottom-color: $modal-header-border-color;
-            border-radius: 0; // Because of the class .mx-window-active in mxui.css
+            border-bottom: 1px solid $modal-header-border-color;
             background-color: $modal-header-bg;
 
             h4 {
                 margin: 0;
                 color: $modal-header-color;
-                font-size: 16px;
                 font-weight: $font-weight-bold;
             }
 
             .close {
-                margin-top: -3px;
                 opacity: 1;
-                /* For IE8 and earlier */
                 color: $modal-header-color;
-                text-shadow: none;
-                filter: alpha(opacity=100);
             }
         }
 
         .modal-body {
+            position: relative;
             padding: 20px;
         }
 
         .modal-footer {
-            display: flex;
-            justify-content: flex-end;
             margin-top: 0;
             padding: 20px;
+            text-align: right;
             border-style: none;
+            //border-top: 1px solid #E5E5E5;
+            .btn + .btn {
+                margin-bottom: 0;
+                margin-left: 5px;
+            }
+
+            .btn-block + .btn-block {
+                margin-left: 0;
+            }
         }
+
+
     }
 }
 
@@ -83,6 +88,10 @@
         padding-right: 0;
         padding-left: 0;
     }
+}
+
+.mx-window-header {
+    cursor: move;
 }
 
 // Login modal
