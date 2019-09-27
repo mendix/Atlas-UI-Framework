@@ -79,11 +79,15 @@
                 font-size: $navigation-glyph-size;
             }
         }
-
+        
+       //when menu item is active
+        & > .mx-navbar-item.active a{
+          color: $navigation-color-active;
+        }
+       
         /* When hovering or the dropdown is open */
         & > .mx-navbar-item > a:hover,
         & > .mx-navbar-item > a:focus,
-        & > .mx-navbar-item.active a,
         & > .mx-navbar-item.open > a,
         & > .mx-navbar-item.open > a:hover,
         & > .mx-navbar-item.open > a:focus {
