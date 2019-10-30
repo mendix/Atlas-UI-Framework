@@ -9,9 +9,12 @@
 
    Default Mendix Radio Button Widget
 ========================================================================== */
-.mx-radiobuttons.inline .mx-radiogroup {
-    display: flex;
-    flex-direction: row;
+.mx-radiobuttons.inline {
+    .mx-radiogroup {
+        display: flex;
+        flex-direction: row;
+
+    }
 
     .radio {
         margin: 0 20px 0 0;
