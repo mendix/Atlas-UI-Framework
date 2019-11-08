@@ -14,46 +14,44 @@
         border: 1px solid $modal-header-border-color;
         border-radius: $border-radius-default;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
 
-        .modal-header {
-            padding: 15px 20px;
-            border-bottom: 1px solid $modal-header-border-color;
-            background-color: $modal-header-bg;
+    .modal-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid $modal-header-border-color;
+        background-color: $modal-header-bg;
 
-            h4 {
-                margin: 0;
-                color: $modal-header-color;
-                font-weight: $font-weight-bold;
-            }
-
-            .close {
-                opacity: 1;
-                color: $modal-header-color;
-            }
+        h4 {
+            margin: 0;
+            color: $modal-header-color;
+            font-weight: $font-weight-bold;
         }
 
-        .modal-body {
-            position: relative;
-            padding: 20px;
+        .close {
+            opacity: 1;
+            color: $modal-header-color;
+        }
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 20px;
+    }
+
+    .modal-footer {
+        margin-top: 0;
+        padding: 20px;
+        text-align: right;
+        border-style: none;
+        //border-top: 1px solid #E5E5E5;
+        .btn + .btn {
+            margin-bottom: 0;
+            margin-left: 5px;
         }
 
-        .modal-footer {
-            margin-top: 0;
-            padding: 20px;
-            text-align: right;
-            border-style: none;
-            //border-top: 1px solid #E5E5E5;
-            .btn + .btn {
-                margin-bottom: 0;
-                margin-left: 5px;
-            }
-
-            .btn-block + .btn-block {
-                margin-left: 0;
-            }
+        .btn-block + .btn-block {
+            margin-left: 0;
         }
-
-
     }
 }
 
