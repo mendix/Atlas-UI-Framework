@@ -13,11 +13,14 @@
 ========================================================================== */
 
 .mx-tabcontainer {
-    .mx-tabcontainer-tabs {
-        margin-bottom: 20px;
-        border-color: $tabs-border-color;
+}
 
-        & > li > a {
+.mx-tabcontainer-tabs {
+    margin-bottom: 20px;
+    border-color: $tabs-border-color;
+
+    & > li {
+        & > a {
             margin-right: 0;
             transition: all 0.2s ease-in-out;
             color: $tabs-color;
@@ -27,17 +30,25 @@
             &:focus {
                 background-color: $tabs-bg-hover;
             }
+
+            &:active {
+                background-color: $tabs-bg-active;
+            }
         }
 
-        & > li.active > a,
-        & > li.active > a:hover,
-        & > li.active > a:focus {
-            color: $tabs-color-active;
-            border: 1px solid $tabs-border-color;
-            border-bottom-color: transparent;
-            background-color: $tabs-bg;
+        &.active > a {
+            &,
+            &:hover,
+            &:focus,
+            &:active {
+                color: $tabs-color-active;
+                border: 1px solid $tabs-border-color;
+                border-bottom-color: transparent;
+                background-color: $tabs-bg;
+            }
         }
     }
+
 }
 
 // Tab Styling Specific for mobile
