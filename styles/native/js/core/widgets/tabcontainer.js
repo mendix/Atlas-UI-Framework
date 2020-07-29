@@ -1,4 +1,4 @@
-import { font, spacing, tabContainer } from "../variables";
+import { badge, font, spacing, tabContainer } from "../variables";
 /*
 
 DISCLAIMER:
@@ -48,4 +48,18 @@ export const TabContainer = {
         fontWeight: tabContainer.activeLabel.fontWeight,
         textTransform: tabContainer.activeLabel.textTransform,
     },
+    badgeContainer: {
+        borderRadius: badge.borderRadius,
+        backgroundColor: badge.default.backgroundColor,
+        paddingVertical: badge.paddingVertical,
+        paddingHorizontal: badge.paddingHorizontal,
+        marginLeft: 8
+    },
+    badgeCaption: {
+        fontSize: font.size,
+        color: badge.default.color,
+        fontFamily: font.family,
+        fontWeight: badge.fontWeight,
+        marginTop: -1,
+    }
 };
