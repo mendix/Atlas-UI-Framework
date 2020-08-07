@@ -16,6 +16,9 @@ export const TextBox: TextBoxType = {
     container: {
         // All ViewStyle properties are allowed
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         numberOfLines: 1,
@@ -24,6 +27,10 @@ export const TextBox: TextBoxType = {
         fontFamily: font.family,
         textAlign: input.textAlign,
         marginRight: spacing.small,
+    },
+    labelDisabled: {
+        // TextStyle properties are allowed
+        color: "#474E5C",
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -43,7 +50,10 @@ export const TextBox: TextBoxType = {
     },
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
+        // todo: move to variables.
+        backgroundColor: "#F8F8F8",
+        borderColor: "#CED0D3",
+        color: "rgba(0,0,0,0.38)",
     },
     inputError: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed

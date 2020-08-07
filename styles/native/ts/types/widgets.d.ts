@@ -426,7 +426,9 @@ export interface TabContainerType {
 // Text Box
 export interface TextBoxType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     input?: InputType,
     inputDisabled?: InputType,
     inputError?: InputType,
