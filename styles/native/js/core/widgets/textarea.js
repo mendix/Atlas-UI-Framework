@@ -16,12 +16,19 @@ export const TextArea = {
         // All ViewStyle properties are allowed
         ...TextBox.container,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        ...TextBox.containerDisabled,
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
         height: "100%",
         textAlignVertical: "top",
         paddingVertical: TextBox.input?.paddingVertical,
+    },
+    labelDisabled: {
+        color: TextBox.labelDisabled?.color
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -32,6 +39,8 @@ export const TextArea = {
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
         backgroundColor: TextBox.inputDisabled?.backgroundColor,
+        borderColor: TextBox.inputDisabled?.borderColor,
+        color: TextBox.inputDisabled?.color,
     },
     inputError: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
