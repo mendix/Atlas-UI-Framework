@@ -25,10 +25,20 @@ export const ActionButton = {
         paddingVertical: button.paddingVertical,
         paddingHorizontal: button.paddingHorizontal,
     },
+    // todo: all disabled colors => move to variables?
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        backgroundColor: "#CED0D3",
+        borderColor: "#CED0D3",
+    },
     icon: {
         // Size and color are allowed
         color: button.primary.color,
         size: button.fontSizeIcon,
+    },
+    iconDisabled: {
+        // Size and color are allowed
+        color: "#9DA1A8"
     },
     caption: {
         // All TextStyle properties are allowed
@@ -37,6 +47,10 @@ export const ActionButton = {
         fontFamily: font.family,
         fontWeight: button.fontWeight,
     },
+    captionDisabled: {
+        // All TextStyle properties are allowed
+        color: "#9DA1A8"
+    }
 };
 //
 // Default style for button inside a header

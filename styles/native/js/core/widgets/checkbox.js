@@ -20,9 +20,17 @@ export const CheckBox = {
         paddingVertical: spacing.smallest,
         justifyContent: "center",
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        ...TextBox.containerDisabled
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
+    },
+    labelDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.labelDisabled
     },
     input: {
         // thumbColorOn, thumbColorOff, trackColorOn, trackColorOff and all TextStyle properties are allowed
@@ -35,7 +43,11 @@ export const CheckBox = {
     },
     inputDisabled: {
         // thumbColorOn, thumbColorOff, trackColorOn, trackColorOff and all TextStyle properties are allowed
-        opacity: Platform.select({ android: 0.5 }),
+        // opacity: Platform.select({android: 0.5}),
+        thumbColorOn: "#F8F8F8",
+        trackColorOn: "#9DA1A8",
+        thumbColorOff: "#F8F8F8",
+        trackColorOff: "#CED0D3",
     },
     inputError: {
         // thumbColorOn, thumbColorOff, trackColorOn, trackColorOff and all TextStyle properties are allowed

@@ -72,8 +72,11 @@ interface ButtonIconType extends ButtonStyleType {
 
 export interface ActionButtonType {
     container?: ButtonContainerType,
+    containerDisabled?: ViewStyle,
     icon?: ButtonIconType,
+    iconDisabled?: ButtonIconType,
     caption?: TextStyle
+    captionDisabled?: TextStyle
 }
 
 // Carousel
@@ -117,7 +120,9 @@ interface CheckBoxInputType extends TextStyle {
 
 export interface CheckBoxType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     input?: CheckBoxInputType,
     inputDisabled?: CheckBoxInputType,
     inputError?: CheckBoxInputType,
