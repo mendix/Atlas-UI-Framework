@@ -219,7 +219,9 @@ export interface FloatingActionButtonType {
 // Images
 export interface ImageType {
     container?: ButtonContainerType,
+    containerDisabled?: ButtonContainerType,
     image?: ImageStyle
+    imageDisabled?: ImageStyle
 }
 
 // Intro Screen
