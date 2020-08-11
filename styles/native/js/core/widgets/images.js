@@ -17,7 +17,7 @@ export const Image = {
         rippleColor: contrast.lowest,
     },
     containerDisabled: {
-    // rippleColor & all ViewStyle properties are allowed
+    // All ViewStyle properties are allowed
     },
     image: {
         // All ImageStyle properties are allowed

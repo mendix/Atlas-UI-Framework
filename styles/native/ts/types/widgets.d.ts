@@ -222,7 +222,7 @@ export interface FloatingActionButtonType {
 // Images
 export interface ImageType {
     container?: ButtonContainerType,
-    containerDisabled?: ButtonContainerType,
+    containerDisabled?: ViewStyle,
     image?: ImageStyle
     imageDisabled?: ImageStyle
 }
