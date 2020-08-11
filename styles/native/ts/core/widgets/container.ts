@@ -1,4 +1,4 @@
-import {ContainerType, ScrollContainerType} from "../../types/widgets";
+import {ContainerType} from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -16,12 +16,12 @@ export const Container: ContainerType = {
         // rippleColor & all ViewStyle properties are allowed
     },
     containerDisabled: {
-        // rippleColor & all ViewStyle properties are allowed
+        // All ViewStyle properties are allowed
         opacity: 0.6
     }
 };
 
-export const ScrollContainer: ScrollContainerType = {
+export const ScrollContainer: ContainerType = {
     container: {
         // All ViewStyle properties are allowed
     },

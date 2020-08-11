@@ -15,7 +15,7 @@ export const Container = {
     // rippleColor & all ViewStyle properties are allowed
     },
     containerDisabled: {
-        // rippleColor & all ViewStyle properties are allowed
+        // All ViewStyle properties are allowed
         opacity: 0.6
     }
 };
