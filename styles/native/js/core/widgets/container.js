@@ -12,8 +12,12 @@ To customize any core styling, copy the part you want to customize to styles/nat
 ========================================================================== */
 export const Container = {
     container: {
-    // All ViewStyle properties are allowed
+    // rippleColor & all ViewStyle properties are allowed
     },
+    containerDisabled: {
+        // rippleColor & all ViewStyle properties are allowed
+        opacity: 0.6
+    }
 };
 export const ScrollContainer = {
     container: {

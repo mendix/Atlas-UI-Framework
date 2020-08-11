@@ -1,4 +1,4 @@
-import { ContainerType } from "../../types/widgets";
+import {ContainerType, ScrollContainerType} from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -13,10 +13,15 @@ To customize any core styling, copy the part you want to customize to styles/nat
 ========================================================================== */
 export const Container: ContainerType = {
     container: {
-        // All ViewStyle properties are allowed
+        // rippleColor & all ViewStyle properties are allowed
     },
+    containerDisabled: {
+        // rippleColor & all ViewStyle properties are allowed
+        opacity: 0.6
+    }
 };
-export const ScrollContainer: ContainerType = {
+
+export const ScrollContainer: ScrollContainerType = {
     container: {
         // All ViewStyle properties are allowed
     },

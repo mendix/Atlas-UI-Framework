@@ -137,7 +137,17 @@ export interface ColorPickerType {
 
 // Container
 export interface ContainerType {
-    container?: ViewStyle
+    container?: ViewStyle & {
+        rippleColor?: string;
+    }
+    containerDisabled?: ViewStyle & {
+        rippleColor?: string;
+    }
+}
+
+// ScrollContainer
+export interface ScrollContainerType {
+    container?: ViewStyle;
 }
 
 // Date Picker
