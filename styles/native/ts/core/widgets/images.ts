@@ -36,10 +36,17 @@ export const ImageViewer: ImageType = {
         // RippleColor & All ViewStyle properties are allowed
         rippleColor: contrast.lowest,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+    },
     image: {
         // All ImageStyle properties are allowed
         maxWidth: "100%",
         maxHeight: "100%",
         resizeMode: "cover",
     },
+    imageDisabled: {
+        // All ImageStyle properties are allowed
+        opacity: 0.6
+    }
 };
