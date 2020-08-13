@@ -49,7 +49,6 @@ export const DropDown: DropDownType = {
     /*  New dropdown styles start */
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
-        backgroundColor: input.backgroundColor,
     },
     menuWrapper: {
         // All ViewStyle properties are allowed
@@ -64,6 +63,7 @@ export const DropDown: DropDownType = {
         maxWidth: 500,
         paddingVertical: 6,
         paddingHorizontal: 16,
+        backgroundColor: input.backgroundColor,
     },
     item: {
         // All TextStlye properties are allowed
