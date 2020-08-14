@@ -1,5 +1,4 @@
-import { font, input } from "../variables";
-import { background } from "../../app/custom-variables";
+import { background, font, input } from "../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
 /*
 
