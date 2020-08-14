@@ -1,4 +1,5 @@
 import { font, input } from "../variables";
+import { background } from "../../app/custom-variables";
 import { TextBox, TextBoxVertical } from "./textbox";
 /*
 
@@ -23,7 +24,7 @@ export const DatePicker = {
     },
     pickerIOS: {
         // All ViewStyle properties & "textColor" (type: string) are allowed
-        backgroundColor: input.backgroundColor,
+        backgroundColor: background.primary,
         textColor: font.color,
     },
     pickerBackdropIOS: {
@@ -31,7 +32,7 @@ export const DatePicker = {
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed
-        backgroundColor: input.backgroundColor,
+        backgroundColor: background.primary,
     },
     value: {
         // All TextStyle properties are allowed
