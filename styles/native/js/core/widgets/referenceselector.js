@@ -18,9 +18,17 @@ export const ReferenceSelector = {
         // All ViewStyle properties are allowed
         ...TextBox.container,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        ...TextBox.containerDisabled,
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
+    },
+    labelDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.labelDisabled,
     },
     value: {
         // All TextStyle properties & placeholderTextColor are allowed
@@ -39,6 +47,7 @@ export const ReferenceSelector = {
     valueDisabled: {
         // All TextStyle properties are allowed
         backgroundColor: input.disabledBackgroundColor,
+        color: TextBox.inputDisabled?.color
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -47,6 +56,9 @@ export const ReferenceSelector = {
     /*  New dropdown styles start */
     valueContainer: {
     // All ViewStyle properties & rippleColor are allowed
+    },
+    valueContainerDisabled: {
+    // All ViewStyle properties are allowed
     },
     menuWrapper: {
         // All ViewStyle properties are allowed
