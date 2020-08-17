@@ -49,6 +49,7 @@ export const TabContainer = {
         textTransform: tabContainer.activeLabel.textTransform,
     },
     badgeContainer: {
+        // All ViewStyle properties are allowed
         borderRadius: badge.borderRadius,
         backgroundColor: badge.default.backgroundColor,
         paddingVertical: badge.paddingVertical,
@@ -56,6 +57,7 @@ export const TabContainer = {
         marginLeft: 8
     },
     badgeCaption: {
+        // All TextStyle properties are allowed
         fontSize: font.size,
         color: badge.default.color,
         fontFamily: font.family,
