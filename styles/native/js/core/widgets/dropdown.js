@@ -40,7 +40,7 @@ export const DropDown = {
         borderRadius: input.borderRadius,
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
-        placeholderTextColor: input.placeholderTextColor,
+        placeholderTextColor: input.color,
     },
     valueDisabled: {
         // All TextStyle properties are allowed

@@ -44,7 +44,7 @@ export const DropDown: DropDownType = {
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
 
-        placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
+        placeholderTextColor: input.color, // Only applied when useUniformDesign is true
     },
     valueDisabled: {
         // All TextStyle properties are allowed
