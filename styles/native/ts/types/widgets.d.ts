@@ -411,7 +411,9 @@ export interface TabContainerType {
     indicator?: ViewStyle,
     tab?: ViewStyle,
     label?: TextStyle,
-    activeLabel?: TextStyle
+    activeLabel?: TextStyle,
+    badgeContainer?: ViewStyle,
+    badgeCaption?: TextStyle
 }
 
 // Text Box

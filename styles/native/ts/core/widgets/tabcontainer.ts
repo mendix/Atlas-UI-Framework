@@ -1,5 +1,5 @@
-import { font, spacing, tabContainer } from "../variables";
-import { TabContainerType }            from "../../types/widgets";
+import { badge, font, spacing, tabContainer } from "../variables";
+import { TabContainerType }                   from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -49,4 +49,20 @@ export const TabContainer: TabContainerType = {
         fontWeight: tabContainer.activeLabel.fontWeight,
         textTransform: tabContainer.activeLabel.textTransform,
     },
+    badgeContainer: {
+        // All ViewStyle properties are allowed
+        borderRadius: badge.borderRadius,
+        backgroundColor: badge.default.backgroundColor,
+        paddingVertical: badge.paddingVertical,
+        paddingHorizontal: badge.paddingHorizontal,
+        marginLeft: 8
+    },
+    badgeCaption: {
+        // All TextStyle properties are allowed
+        fontSize: font.size,
+        color: badge.default.color,
+        fontFamily: font.family,
+        fontWeight: badge.fontWeight,
+        marginTop: -1,
+    }
 };

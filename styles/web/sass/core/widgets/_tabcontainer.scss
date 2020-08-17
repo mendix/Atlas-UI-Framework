@@ -84,3 +84,14 @@
         }
     }
 }
+
+.mx-tabcontainer-badge {
+    margin-left: 8px;
+    border-radius: $font-size-small;
+    background-color: $label-primary-bg;
+    color: $label-primary-color;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    padding: 3px 7px;
+}
