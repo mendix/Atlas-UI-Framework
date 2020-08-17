@@ -17,9 +17,17 @@ export const DatePicker = {
         // All ViewStyle properties are allowed
         ...TextBox.container,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        ...TextBox.containerDisabled
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
+    },
+    labelDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.labelDisabled
     },
     pickerIOS: {
         // All ViewStyle properties & "color" (type: string) are allowed
@@ -48,6 +56,7 @@ export const DatePicker = {
     valueDisabled: {
         // All TextStyle properties are allowed
         backgroundColor: input.disabledBackgroundColor,
+        color: TextBox.inputDisabled?.color
     },
     placeholder: {
         // All TextStyle properties are allowed
@@ -55,6 +64,7 @@ export const DatePicker = {
     },
     placeholderDisabled: {
         // All TextStyle properties are allowed
+        color: TextBox.inputDisabled?.color
     },
     validationMessage: {
         // All TextStyle properties are allowed

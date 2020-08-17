@@ -146,7 +146,9 @@ export interface ContainerType {
 // Date Picker
 export interface DatePickerType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     pickerIOS?: {
                     color?: string
                 } & ViewStyle,
