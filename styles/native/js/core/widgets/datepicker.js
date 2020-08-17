@@ -22,9 +22,9 @@ export const DatePicker = {
         ...TextBox.label,
     },
     pickerIOS: {
-        // All ViewStyle properties & "textColor" (type: string) are allowed
+        // All ViewStyle properties & "color" (type: string) are allowed
         backgroundColor: background.primary,
-        textColor: font.color,
+        color: font.color,
     },
     pickerBackdropIOS: {
         // All ViewStyle properties are allowed
