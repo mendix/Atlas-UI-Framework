@@ -162,7 +162,9 @@ export interface DatePickerType {
 // Drop Down
 export interface DropDownType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     value?: {
                 placeholderTextColor?: string
             } & TextStyle,
@@ -172,7 +174,8 @@ export interface DropDownType {
     valueContainer?: {
                          rippleColor?: string
                      } & ViewStyle;
-    menuWrapper?: ViewStyle
+    valueContainerDisabled?: ViewStyle;
+    menuWrapper?: ViewStyle;
     item?: TextStyle;
     itemContainer?: ViewStyle;
     selectedItem?: TextStyle;
