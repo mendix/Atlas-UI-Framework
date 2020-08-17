@@ -53,3 +53,7 @@ div.widget-range-slider-danger .rc-slider-track {
 div.widget-range-slider-inverse .rc-slider-track {
     background-color: $brand-inverse;
 }
+
+.rc-slider-tooltip {
+    z-index: 999;
+}
