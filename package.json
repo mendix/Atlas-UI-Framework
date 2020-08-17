@@ -18,6 +18,9 @@
         "url": "https://github.com/mendix/Atlas-UI-Framework/issues"
     },
     "homepage": "https://github.com/mendix/Atlas-UI-Framework#readme",
-    "devDependencies": {},
+    "devDependencies": {
+        "@types/react-native": "^0.61.19",
+        "react-native-device-info": "^5.5.3"
+    },
     "dependencies": {}
 }
