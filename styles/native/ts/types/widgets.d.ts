@@ -268,7 +268,8 @@ export interface LayoutGridType {
 // List view
 export interface ListViewType {
     container?: ViewStyle,
-    listItem?: ViewStyle
+    listItem?: ViewStyle,
+    listItemDisabled?: ViewStyle,
 }
 
 // List View Swipe

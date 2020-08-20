@@ -13,9 +13,13 @@ To customize any core styling, copy the part you want to customize to styles/nat
 ========================================================================== */
 export const ListView: ListViewType = {
     container: {
-        // numColumns and all ViewStyle properties are allowed
+        // All ViewStyle properties are allowed
     },
     listItem: {
         // All ViewStyle properties are allowed
+    },
+    listItemDisabled: {
+        // All ViewStyle properties are allowed
+        opacity: 0.6
     },
 };
