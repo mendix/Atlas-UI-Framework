@@ -1,6 +1,6 @@
 {
     "name": "atlas-ui-framework",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "description": "Mendix Atlas UI is the foundation of making beautiful apps with Mendix. For more information about the framework go to https://atlas.mendix.com.",
     "main": "",
     "scripts": {
@@ -18,6 +18,9 @@
         "url": "https://github.com/mendix/Atlas-UI-Framework/issues"
     },
     "homepage": "https://github.com/mendix/Atlas-UI-Framework#readme",
-    "devDependencies": {},
+    "devDependencies": {
+        "@types/react-native": "^0.61.19",
+        "react-native-device-info": "^5.5.3"
+    },
     "dependencies": {}
 }

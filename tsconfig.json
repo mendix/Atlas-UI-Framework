@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "module": "es2015",
+        "target": "esnext",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "types": [
+            "react-native",
+            "react-native-device-info"
+        ],
+        "paths": {
+            "react-native": [
+                "./node_modules/@types/react-native"
+            ],
+            "react-native-device-info": [
+                "./node_modules/react-native-device-info/lib/typescript"
+            ]
+        },
+        "lib": [
+            "es2017"
+        ],
+        "noEmitOnError": true,
+        "sourceMap": false,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "removeComments": false,
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": false,
+        "noLib": false,
+        "watch": false,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "strict": true,
+        "strictFunctionTypes": false,
+        "skipLibCheck": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "moduleResolution": "node",
+        "outDir": "./styles/native/js",
+        "newLine": "CRLF"
+    },
+    "include": [
+        "./styles/native/**/*.ts"
+    ]
+}

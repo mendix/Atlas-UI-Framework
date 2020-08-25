@@ -19,3 +19,6 @@
 
 # Zips
 **/*.zip
+
+# Modules
+node_modules

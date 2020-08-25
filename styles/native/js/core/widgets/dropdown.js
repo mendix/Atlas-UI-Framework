@@ -44,7 +44,7 @@ export const DropDown = {
     },
     /*  New dropdown styles start */
     valueContainer: {
-    // All ViewStyle properties & rippleColor are allowed
+        // All ViewStyle properties & rippleColor are allowed
     },
     menuWrapper: {
         // All ViewStyle properties are allowed
@@ -59,9 +59,11 @@ export const DropDown = {
         maxWidth: 500,
         paddingVertical: 6,
         paddingHorizontal: 16,
+        backgroundColor: input.backgroundColor,
     },
     item: {
-    // All TextStlye properties are allowed
+        // All TextStlye properties are allowed
+        color: input.color,
     },
     selectedItem: {
         // All TextStlye properties are allowed
@@ -79,10 +81,10 @@ export const DropDown = {
         backgroundColor: input.backgroundColor,
     },
     pickerItemIOS: {
-    // All TextStyle properties are allowed
+        // All TextStyle properties are allowed
     },
     pickerBackdropIOS: {
-    // All ViewStyle properties are allowed
+        // All ViewStyle properties are allowed
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed

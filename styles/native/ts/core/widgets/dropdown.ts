@@ -63,9 +63,11 @@ export const DropDown: DropDownType = {
         maxWidth: 500,
         paddingVertical: 6,
         paddingHorizontal: 16,
+        backgroundColor: input.backgroundColor,
     },
     item: {
         // All TextStlye properties are allowed
+        color: input.color,
     },
     selectedItem: {
         // All TextStlye properties are allowed
