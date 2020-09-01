@@ -38,6 +38,9 @@ export const ReferenceSelector: DropDownType = {
         // All TextStyle properties are allowed
         ...DropDown.valueDisabled,
     },
+    valueFocused: {
+        // All TextStyle properties are allowed
+    },
     validationMessage: {
         // All TextStyle properties are allowed
         ...DropDown.validationMessage,
@@ -48,6 +51,9 @@ export const ReferenceSelector: DropDownType = {
         ...DropDown.valueContainer,
     },
     valueContainerDisabled: {
+        // All ViewStyle properties are allowed
+    },
+    valueContainerFocused: {
         // All ViewStyle properties are allowed
     },
     menuWrapper: {
@@ -61,6 +67,9 @@ export const ReferenceSelector: DropDownType = {
     item: {
         // All TextStyle properties are allowed
         ...DropDown.item,
+    },
+    iconStyle: {
+        // All TextStyle properties are allowed
     },
     selectedItem: {
         // All TextStyle properties are allowed

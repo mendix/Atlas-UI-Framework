@@ -33,29 +33,25 @@ export const DropDown: DropDownType = {
     value: {
         // All TextStyle properties & placeholderTextColor are allowed
         color: input.input.color,
-        borderColor: input.input.borderColor,
-        backgroundColor: input.input.backgroundColor,
         placeholderTextColor: input.input.placeholderTextColor, // Only applied when useUniformDesign is true
 
         fontSize: input.input.fontSize,
         lineHeight: input.input.lineHeight,
         fontFamily: font.family,
-        borderWidth: input.input.borderWidth,
-        borderRadius: input.input.borderRadius,
 
         overflow: "hidden",
         textAlignVertical: "center",
         minWidth: input.input.minWidth,
         minHeight: input.input.minHeight,
-        paddingHorizontal: input.input.paddingHorizontal,
-        paddingVertical: input.input.paddingVertical,
-
     },
     valueDisabled: {
         // All TextStyle properties are allowed
         color: TextBox.inputDisabled?.color,
         borderColor: TextBox.inputDisabled?.borderColor,
         backgroundColor: TextBox.inputDisabled?.backgroundColor,
+    },
+    valueFocused: {
+        // All TextStyle properties are allowed
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -65,8 +61,17 @@ export const DropDown: DropDownType = {
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
         rippleColor: input.valueContainer.rippleColor,
+        borderWidth: input.input.borderWidth,
+        borderRadius: input.input.borderRadius,
+        paddingHorizontal: input.input.paddingHorizontal,
+        paddingVertical: input.input.paddingVertical,
+        backgroundColor: input.input.backgroundColor,
+        borderColor: input.input.borderColor,
     },
     valueContainerDisabled: {
+        // All ViewStyle properties are allowed
+    },
+    valueContainerFocused: {
         // All ViewStyle properties are allowed
     },
     menuWrapper: {
@@ -77,6 +82,9 @@ export const DropDown: DropDownType = {
         shadowOpacity: 0.2,
         shadowRadius: 10,
         elevation: 16,
+    },
+    iconStyle: {
+        // All TextStyle properties are allowed
     },
     itemContainer: {
         // All ViewStyle properties are allowed

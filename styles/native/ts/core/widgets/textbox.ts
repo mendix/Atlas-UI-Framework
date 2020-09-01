@@ -64,6 +64,9 @@ export const TextBox: TextBoxType = {
         placeholderTextColor: input.inputError.placeholderTextColor,
         underlineColorAndroid: "transparent",
     },
+    inputFocused: {
+        // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
+    },
     validationMessage: {
         // All TextStyle properties are allowed
         color: input.validationMessage.color,
