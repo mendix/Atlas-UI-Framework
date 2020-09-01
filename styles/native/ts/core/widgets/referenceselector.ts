@@ -34,18 +34,9 @@ export const ReferenceSelector: DropDownType = {
     value: {
         // All TextStyle properties & placeholderTextColor are allowed
         color: input.color,
-        borderColor: input.borderColor,
-        backgroundColor: input.backgroundColor,
-
         fontSize: input.fontSize,
         fontFamily: input.fontFamily,
-        borderWidth: input.borderWidth,
-        borderRadius: input.borderRadius,
-
         overflow: "hidden",
-        paddingHorizontal: input.paddingHorizontal,
-        paddingVertical: input.paddingVertical,
-
         placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
     },
     valueDisabled: {
@@ -58,7 +49,16 @@ export const ReferenceSelector: DropDownType = {
     },
     /*  New dropdown styles start */
     valueContainer: {
-        // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
+        // All ViewStyle properties & rippleColor are allowed
+        borderWidth: input.borderWidth,
+        borderRadius: input.borderRadius,
+        borderColor: input.borderColor,
+        paddingHorizontal: input.paddingHorizontal,
+        paddingVertical: input.paddingVertical,
+        backgroundColor: input.backgroundColor,
+    },
+    valueContainerFocused: {
+        // All ViewStyle properties are allowed
     },
     valueContainerDisabled: {
         // All ViewStyle properties are allowed
@@ -79,6 +79,9 @@ export const ReferenceSelector: DropDownType = {
         paddingHorizontal: 16,
         backgroundColor: input.backgroundColor,
         underlayColor: input.inputContainerUnderlayColor,
+    },
+    iconStyle: {
+        // All TextStyle properties are allowed
     },
     item: {
         // All TextStyle properties are allowed
