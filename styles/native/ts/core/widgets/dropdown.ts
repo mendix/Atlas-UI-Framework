@@ -46,6 +46,9 @@ export const DropDown: DropDownType = {
         ...TextBox.validationMessage,
     },
     /*  New dropdown styles start */
+    valueFocused: {
+        // All TextStyle properties are allowed
+    },
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
         flexDirection: "row",

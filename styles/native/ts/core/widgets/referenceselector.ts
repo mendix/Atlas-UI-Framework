@@ -1,5 +1,5 @@
 import { border, contrast, font, input } from "../variables";
-import { DropDown }                      from "./dropdown";
+import { DropDown, DropDownVertical }                      from "./dropdown";
 import { TextBox, TextBoxVertical }      from "./textbox";
 import { DropDownType }                  from "../../types/widgets";
 /*
@@ -48,6 +48,9 @@ export const ReferenceSelector: DropDownType = {
         ...TextBox.validationMessage,
     },
     /*  New dropdown styles start */
+    valueFocused: {
+        // All TextStyle properties are allowed
+    },
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
         flexDirection: "row",
