@@ -111,5 +111,6 @@ export const TextBoxVertical: TextBoxType = {
         backgroundColor: input.inputDisabled.backgroundColor,
     },
     inputError: TextBox.inputError,
+    inputFocused: TextBox.inputFocused,
     validationMessage: TextBox.validationMessage,
 };

@@ -60,6 +60,9 @@ export const DropDown: DropDownType = {
     /*  New dropdown styles start */
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         rippleColor: input.valueContainer.rippleColor,
         borderWidth: input.input.borderWidth,
         borderRadius: input.input.borderRadius,
@@ -134,11 +137,14 @@ export const DropDownVertical: DropDownType = {
     container: TextBoxVertical.container,
     label: TextBoxVertical.label,
     value: DropDown.value,
+    valueFocused: DropDown.valueFocused,
     validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDown.valueContainer,
+    valueContainerFocused: DropDown.valueContainerFocused,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,
+    iconStyle: DropDown.iconStyle,
     useUniformDesign: DropDown.useUniformDesign,
     pickerIOS: DropDown.pickerIOS,
     pickerItemIOS: DropDown.pickerItemIOS,
