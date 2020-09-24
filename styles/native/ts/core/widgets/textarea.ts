@@ -70,6 +70,6 @@ export const TextAreaVertical: TextBoxType = {
         lineHeight: input.input.lineHeight,
     },
     inputError: TextBoxVertical.inputError,
-    inputFocused: TextBox.inputFocused,
+    inputFocused: TextBoxVertical.inputFocused,
     validationMessage: TextBoxVertical.validationMessage,
 };
