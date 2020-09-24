@@ -25,10 +25,19 @@ export const ActionButton = {
         paddingVertical: button.paddingVertical,
         paddingHorizontal: button.paddingHorizontal,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        borderColor: button.primary.borderColorDisabled,
+        backgroundColor: button.primary.backgroundColorDisabled,
+    },
     icon: {
-        // Size and color are allowed
+        // size and color are allowed
         color: button.primary.color,
         size: button.fontSizeIcon,
+    },
+    iconDisabled: {
+        // size and color are allowed
+        color: button.primary.colorDisabled,
     },
     caption: {
         // All TextStyle properties are allowed
@@ -36,6 +45,10 @@ export const ActionButton = {
         fontSize: button.fontSize,
         fontFamily: font.family,
         fontWeight: button.fontWeight,
+    },
+    captionDisabled: {
+        // All TextStyle properties are allowed
+        color: button.primary.colorDisabled,
     },
 };
 //

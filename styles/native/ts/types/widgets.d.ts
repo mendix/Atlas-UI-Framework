@@ -72,8 +72,11 @@ interface ButtonIconType extends ButtonStyleType {
 
 export interface ActionButtonType {
     container?: ButtonContainerType,
+    containerDisabled?: ViewStyle,
     icon?: ButtonIconType,
+    iconDisabled?: ButtonIconType,
     caption?: TextStyle
+    captionDisabled?: TextStyle
 }
 
 // Carousel
@@ -117,7 +120,9 @@ interface CheckBoxInputType extends TextStyle {
 
 export interface CheckBoxType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     input?: CheckBoxInputType,
     inputDisabled?: CheckBoxInputType,
     inputError?: CheckBoxInputType,
@@ -132,13 +137,18 @@ export interface ColorPickerType {
 
 // Container
 export interface ContainerType {
-    container?: ViewStyle
+    container?: ViewStyle & {
+        rippleColor?: string;
+    }
+    containerDisabled?: ViewStyle;
 }
 
 // Date Picker
 export interface DatePickerType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     pickerIOS?: {
                     color?: string
                 } & ViewStyle,
@@ -154,7 +164,9 @@ export interface DatePickerType {
 // Drop Down
 export interface DropDownType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     value?: {
                 placeholderTextColor?: string
             } & TextStyle,
@@ -164,7 +176,8 @@ export interface DropDownType {
     valueContainer?: {
                          rippleColor?: string
                      } & ViewStyle;
-    menuWrapper?: ViewStyle
+    valueContainerDisabled?: ViewStyle;
+    menuWrapper?: ViewStyle;
     item?: TextStyle;
     itemContainer?: ViewStyle;
     selectedItem?: TextStyle;
@@ -214,7 +227,9 @@ export interface FloatingActionButtonType {
 // Images
 export interface ImageType {
     container?: ButtonContainerType,
+    containerDisabled?: ViewStyle,
     image?: ImageStyle
+    imageDisabled?: ImageStyle
 }
 
 // Intro Screen
@@ -252,8 +267,11 @@ export interface LayoutGridType {
 
 // List view
 export interface ListViewType {
-    container?: ViewStyle,
-    listItem?: ViewStyle
+    container?: ViewStyle & {
+        numColumns?: number
+    },
+    listItem?: ViewStyle,
+    listItemDisabled?: ViewStyle,
 }
 
 // List View Swipe
@@ -421,7 +439,9 @@ export interface TabContainerType {
 // Text Box
 export interface TextBoxType {
     container?: ViewStyle,
+    containerDisabled?: ViewStyle,
     label?: InputLabelType,
+    labelDisabled?: TextStyle,
     input?: InputType,
     inputDisabled?: InputType,
     inputError?: InputType,
