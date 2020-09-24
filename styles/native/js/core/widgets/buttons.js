@@ -27,8 +27,8 @@ export const ActionButton = {
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-        backgroundColor: button.primary.borderColorDisabled,
-        borderColor: button.primary.backgroundColorDisabled,
+        borderColor: button.primary.borderColorDisabled,
+        backgroundColor: button.primary.backgroundColorDisabled,
     },
     icon: {
         // size and color are allowed
@@ -37,7 +37,7 @@ export const ActionButton = {
     },
     iconDisabled: {
         // size and color are allowed
-        color: button.primary.colorDisabled
+        color: button.primary.colorDisabled,
     },
     caption: {
         // All TextStyle properties are allowed
@@ -48,8 +48,8 @@ export const ActionButton = {
     },
     captionDisabled: {
         // All TextStyle properties are allowed
-        color: button.primary.colorDisabled
-    }
+        color: button.primary.colorDisabled,
+    },
 };
 //
 // Default style for button inside a header

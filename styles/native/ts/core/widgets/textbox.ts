@@ -1,5 +1,5 @@
-import {  font, input, spacing } from "../variables";
-import { TextBoxType }          from "../../types/widgets";
+import { font, input, spacing } from "../variables";
+import { TextBoxType } from "../../types/widgets";
 /*
 
 DISCLAIMER:

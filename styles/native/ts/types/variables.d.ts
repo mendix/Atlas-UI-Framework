@@ -55,6 +55,7 @@ export interface VariablesFont {
     sizeH6: number,
     color: string,
     colorDisabled: string,
+    labelColorDisabled: string,
     weightLight: FontWeight,
     weightNormal: FontWeight,
     weightSemiBold: FontWeight,
