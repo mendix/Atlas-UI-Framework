@@ -1,8 +1,6 @@
-import { NativeModules }            from "react-native";
-import { darkMode }                 from "../../app/custom-variables";
-import { font, input }              from "../variables";
+import { background, font, input } from "../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
-import { DatePickerType }           from "../../types/widgets";
+import { DatePickerType } from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -15,13 +13,6 @@ To customize any core styling, copy the part you want to customize to styles/nat
 
     Default Class For Mendix Date Picker Widget
 ========================================================================== */
-// Font color of native iOS datepicker can not be changed.
-// To fix this we change the background color of the picker if OS theme is dark and app theme is light (And the other way around).
-const isOSDarkMode = NativeModules && NativeModules.RNDarkMode && NativeModules.RNDarkMode.initialMode && NativeModules.RNDarkMode.initialMode === "dark";
-const pickerBackgroundColor = !darkMode && isOSDarkMode ?
-                              "rgba(0, 0, 0, 1)" :
-                              darkMode && !isOSDarkMode ? "rgba(255, 255, 255, 1)" : input.backgroundColor;
-//
 export const DatePicker: DatePickerType = {
     container: {
         // All ViewStyle properties are allowed
@@ -32,15 +23,16 @@ export const DatePicker: DatePickerType = {
         ...TextBox.label,
     },
     pickerIOS: {
-        // All ViewStyle properties are allowed
-        backgroundColor: pickerBackgroundColor,
+        // All ViewStyle properties & "color" (type: string) are allowed
+        backgroundColor: background.primary,
+        color: font.color,
     },
     pickerBackdropIOS: {
         // All ViewStyle properties are allowed
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed
-        backgroundColor: pickerBackgroundColor,
+        backgroundColor: background.primary,
     },
     value: {
         // All TextStyle properties are allowed
