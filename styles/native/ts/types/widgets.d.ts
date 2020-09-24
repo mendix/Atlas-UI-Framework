@@ -177,7 +177,10 @@ export interface DropDownType {
                          rippleColor?: string
                      } & ViewStyle;
     valueContainerDisabled?: ViewStyle;
+    valueContainerFocused?: ViewStyle;
+    valueFocused?: TextStyle;
     menuWrapper?: ViewStyle;
+    iconStyle?: TextStyle;
     item?: TextStyle;
     itemContainer?: ViewStyle;
     selectedItem?: TextStyle;
@@ -460,6 +463,7 @@ export interface TextBoxType {
     input?: InputType,
     inputDisabled?: InputType,
     inputError?: InputType,
+    inputFocused?: InputType;
     validationMessage?: TextStyle
 }
 
