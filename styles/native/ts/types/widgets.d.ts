@@ -267,7 +267,9 @@ export interface LayoutGridType {
 
 // List view
 export interface ListViewType {
-    container?: ViewStyle,
+    container?: ViewStyle & {
+        numColumns?: number
+    },
     listItem?: ViewStyle,
     listItemDisabled?: ViewStyle,
 }
