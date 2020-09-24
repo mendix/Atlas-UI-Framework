@@ -1,3 +1,4 @@
+import { input } from "../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
 /*
 
@@ -25,22 +26,21 @@ export const TextArea = {
         ...TextBox.label,
         height: "100%",
         textAlignVertical: "top",
-        paddingVertical: TextBox.input?.paddingVertical,
+        paddingVertical: input.paddingVertical,
     },
     labelDisabled: {
-        color: TextBox.labelDisabled?.color
+        // All ViewStyle properties are allowed
+        ...TextBox.labelDisabled
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
         ...TextBox.input,
         textAlignVertical: "top",
-        paddingTop: TextBox.input?.paddingVertical,
+        paddingTop: input.paddingVertical,
     },
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        backgroundColor: TextBox.inputDisabled?.backgroundColor,
-        borderColor: TextBox.inputDisabled?.borderColor,
-        color: TextBox.inputDisabled?.color,
+        ...TextBox.inputDisabled
     },
     inputError: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -53,13 +53,16 @@ export const TextArea = {
 };
 export const TextAreaVertical = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: {
         ...TextBoxVertical.label,
         height: undefined,
         paddingVertical: undefined,
         textAlignVertical: undefined,
     },
+    labelDisabled: TextBoxVertical.labelDisabled,
     input: TextBoxVertical.input,
+    inputDisabled: TextBoxVertical.inputDisabled,
     inputError: TextBoxVertical.inputError,
     validationMessage: TextBoxVertical.validationMessage,
 };

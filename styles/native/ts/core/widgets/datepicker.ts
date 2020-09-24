@@ -58,8 +58,8 @@ export const DatePicker: DatePickerType = {
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
-        color: TextBox.inputDisabled?.color
+        backgroundColor: input.backgroundColorDisabled,
+        color: input.colorDisabled
     },
     placeholder: {
         // All TextStyle properties are allowed
@@ -67,7 +67,7 @@ export const DatePicker: DatePickerType = {
     },
     placeholderDisabled: {
         // All TextStyle properties are allowed
-        color: TextBox.inputDisabled?.color
+        color: input.colorDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -76,22 +76,12 @@ export const DatePicker: DatePickerType = {
 };
 export const DatePickerVertical: DatePickerType = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
-    value: {
-        color: input.color,
-        borderColor: input.borderColor,
-        backgroundColor: input.backgroundColor,
-
-        fontSize: input.fontSize,
-        fontFamily: font.family,
-        borderRadius: input.borderRadius,
-        borderWidth: input.borderWidth,
-
-        paddingHorizontal: input.paddingHorizontal,
-        paddingVertical: input.paddingVertical,
-    },
-    placeholder: {
-        color: input.placeholderTextColor,
-    },
+    labelDisabled: TextBoxVertical.labelDisabled,
+    value: DatePicker.value,
+    valueDisabled: DatePicker.valueDisabled,
+    placeholder: DatePicker.placeholder,
+    placeholderDisabled: DatePicker.placeholderDisabled,
     validationMessage: TextBoxVertical.validationMessage,
 };

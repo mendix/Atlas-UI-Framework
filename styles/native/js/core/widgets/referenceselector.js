@@ -42,12 +42,11 @@ export const ReferenceSelector = {
         overflow: "hidden",
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
-        placeholderTextColor: input.color,
+        placeholderTextColor: input.placeholderTextColor,
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
-        color: TextBox.inputDisabled?.color
+        ...TextBox.inputDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -76,11 +75,11 @@ export const ReferenceSelector = {
         backgroundColor: input.backgroundColor,
     },
     item: {
-        // All TextStlye properties are allowed
+        // All TextStyle properties are allowed
         color: input.color,
     },
     selectedItem: {
-        // All TextStlye properties are allowed
+        // All TextStyle properties are allowed
         fontWeight: font.weightBold,
     },
     selectedItemContainer: {
@@ -107,10 +106,13 @@ export const ReferenceSelector = {
 };
 export const ReferenceSelectorVertical = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
+    labelDisabled: TextBoxVertical.labelDisabled,
     value: DropDown.value,
-    validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDown.valueContainer,
+    valueContainerDisabled: DropDown.valueContainerDisabled,
+    validationMessage: TextBoxVertical.validationMessage,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,

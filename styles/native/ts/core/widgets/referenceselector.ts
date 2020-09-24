@@ -46,12 +46,11 @@ export const ReferenceSelector: DropDownType = {
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
 
-        placeholderTextColor: input.color, // Only applied when useUniformDesign is true
+        placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
-        color: TextBox.inputDisabled?.color
+        ...TextBox.inputDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -80,11 +79,11 @@ export const ReferenceSelector: DropDownType = {
         backgroundColor: input.backgroundColor,
     },
     item: {
-        // All TextStlye properties are allowed
+        // All TextStyle properties are allowed
         color: input.color,
     },
     selectedItem: {
-        // All TextStlye properties are allowed
+        // All TextStyle properties are allowed
         fontWeight: font.weightBold,
     },
     selectedItemContainer: {
@@ -112,10 +111,13 @@ export const ReferenceSelector: DropDownType = {
 };
 export const ReferenceSelectorVertical: DropDownType = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
+    labelDisabled: TextBoxVertical.labelDisabled,
     value: DropDown.value,
-    validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDown.valueContainer,
+    valueContainerDisabled: DropDown.valueContainerDisabled,
+    validationMessage: TextBoxVertical.validationMessage,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,

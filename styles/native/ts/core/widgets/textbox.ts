@@ -1,4 +1,4 @@
-import { font, input, spacing } from "../variables";
+import {  font, input, spacing } from "../variables";
 import { TextBoxType }          from "../../types/widgets";
 /*
 
@@ -30,7 +30,7 @@ export const TextBox: TextBoxType = {
     },
     labelDisabled: {
         // TextStyle properties are allowed
-        color: "#474E5C",
+        color: input.labelColorDisabled,
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -50,10 +50,8 @@ export const TextBox: TextBoxType = {
     },
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        // todo: move to variables.
-        backgroundColor: "#F8F8F8",
-        borderColor: "#CED0D3",
-        color: "rgba(0,0,0,0.38)",
+        backgroundColor: input.backgroundColorDisabled,
+        color: input.colorDisabled,
     },
     inputError: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -71,6 +69,7 @@ export const TextBox: TextBoxType = {
 };
 export const TextBoxVertical: TextBoxType = {
     container: {},
+    containerDisabled: TextBox.containerDisabled,
     label: {
         numberOfLines: 1,
         color: input.labelColor,
@@ -79,6 +78,7 @@ export const TextBoxVertical: TextBoxType = {
         textAlign: input.textAlign,
         marginBottom: spacing.smallest,
     },
+    labelDisabled: TextBox.labelDisabled,
     input: {
         color: input.color,
         borderColor: input.borderColor,
@@ -94,6 +94,7 @@ export const TextBoxVertical: TextBoxType = {
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
     },
+    inputDisabled: TextBox.inputDisabled,
     inputError: TextBox.inputError,
     validationMessage: TextBox.validationMessage,
 };

@@ -29,7 +29,7 @@ export const TextBox = {
     },
     labelDisabled: {
         // TextStyle properties are allowed
-        color: "#474E5C",
+        color: input.labelColorDisabled,
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -47,10 +47,8 @@ export const TextBox = {
     },
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        // todo: move to variables.
-        backgroundColor: "#F8F8F8",
-        borderColor: "#CED0D3",
-        color: "rgba(0,0,0,0.38)",
+        backgroundColor: input.backgroundColorDisabled,
+        color: input.colorDisabled,
     },
     inputError: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -68,6 +66,7 @@ export const TextBox = {
 };
 export const TextBoxVertical = {
     container: {},
+    containerDisabled: TextBox.containerDisabled,
     label: {
         numberOfLines: 1,
         color: input.labelColor,
@@ -76,6 +75,7 @@ export const TextBoxVertical = {
         textAlign: input.textAlign,
         marginBottom: spacing.smallest,
     },
+    labelDisabled: TextBox.labelDisabled,
     input: {
         color: input.color,
         borderColor: input.borderColor,
@@ -89,6 +89,7 @@ export const TextBoxVertical = {
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
     },
+    inputDisabled: TextBox.inputDisabled,
     inputError: TextBox.inputError,
     validationMessage: TextBox.validationMessage,
 };

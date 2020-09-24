@@ -106,7 +106,7 @@ export interface VariablesInput {
     labelColor?: string,
     borderColor?: string,
     backgroundColor?: string,
-    disabledBackgroundColor?: string,
+    backgroundColorDisabled?: string,
     selectionColor?: string,
     placeholderTextColor?: string,
     underlineColorAndroid?: string,

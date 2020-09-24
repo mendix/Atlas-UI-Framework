@@ -40,12 +40,11 @@ export const DropDown = {
         borderRadius: input.borderRadius,
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
-        placeholderTextColor: input.color,
+        placeholderTextColor: input.placeholderTextColor,
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
-        color: TextBox.inputDisabled?.color,
+        ...TextBox.inputDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -53,7 +52,7 @@ export const DropDown = {
     },
     /*  New dropdown styles start */
     valueContainer: {
-        // All ViewStyle properties & rippleColor are allowed
+    // All ViewStyle properties & rippleColor are allowed
     },
     valueContainerDisabled: {
     // All ViewStyle properties are allowed
@@ -93,10 +92,10 @@ export const DropDown = {
         backgroundColor: input.backgroundColor,
     },
     pickerItemIOS: {
-        // All TextStyle properties are allowed
+    // All TextStyle properties are allowed
     },
     pickerBackdropIOS: {
-        // All ViewStyle properties are allowed
+    // All ViewStyle properties are allowed
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed
@@ -105,10 +104,13 @@ export const DropDown = {
 };
 export const DropDownVertical = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
+    labelDisabled: TextBoxVertical.labelDisabled,
     value: DropDown.value,
-    validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDown.valueContainer,
+    valueContainerDisabled: DropDown.valueContainerDisabled,
+    validationMessage: TextBoxVertical.validationMessage,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,

@@ -54,6 +54,7 @@ export interface VariablesFont {
     sizeH5: number,
     sizeH6: number,
     color: string,
+    colorDisabled: string,
     weightLight: FontWeight,
     weightNormal: FontWeight,
     weightSemiBold: FontWeight,
@@ -73,8 +74,11 @@ export interface VariablesSpacing {
 
 interface VariablesButtonStyles {
     color: string,
+    colorDisabled?: string,
     borderColor: string,
+    borderColorDisabled?: string,
     backgroundColor: string,
+    backgroundColorDisabled?: string,
     inversedColor?: string,
 }
 
@@ -107,11 +111,13 @@ export interface VariablesButton {
 
 export interface VariablesInput {
     color: string,
+    colorDisabled: string,
     errorColor: string,
     labelColor: string,
+    labelColorDisabled: string,
     borderColor: string,
     backgroundColor: string,
-    disabledBackgroundColor: string,
+    backgroundColorDisabled: string,
     selectionColor: string,
     placeholderTextColor: string,
     underlineColorAndroid: string,

@@ -25,20 +25,19 @@ export const ActionButton = {
         paddingVertical: button.paddingVertical,
         paddingHorizontal: button.paddingHorizontal,
     },
-    // todo: all disabled colors => move to variables?
     containerDisabled: {
         // All ViewStyle properties are allowed
-        backgroundColor: "#CED0D3",
-        borderColor: "#CED0D3",
+        backgroundColor: button.primary.borderColorDisabled,
+        borderColor: button.primary.backgroundColorDisabled,
     },
     icon: {
-        // Size and color are allowed
+        // size and color are allowed
         color: button.primary.color,
         size: button.fontSizeIcon,
     },
     iconDisabled: {
-        // Size and color are allowed
-        color: "#9DA1A8"
+        // size and color are allowed
+        color: button.primary.colorDisabled
     },
     caption: {
         // All TextStyle properties are allowed
@@ -49,7 +48,7 @@ export const ActionButton = {
     },
     captionDisabled: {
         // All TextStyle properties are allowed
-        color: "#9DA1A8"
+        color: button.primary.colorDisabled
     }
 };
 //

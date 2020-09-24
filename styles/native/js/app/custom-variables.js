@@ -72,6 +72,7 @@ export const font = {
     sizeH5: adjustFont(14),
     sizeH6: adjustFont(12),
     color: setColorBasedOnBackground(background.primary),
+    colorDisabled: "#9DA1A8",
     weightLight: "100",
     weightNormal: "normal",
     weightSemiBold: "600",
@@ -111,8 +112,11 @@ export const button = {
     },
     primary: {
         color: "#FFF",
+        colorDisabled: font.colorDisabled,
         borderColor: brand.primary,
+        borderColorDisabled: border.color,
         backgroundColor: brand.primary,
+        backgroundColorDisabled: border.color,
     },
     secondary: {
         color: brand.primary,
@@ -141,11 +145,13 @@ export const button = {
 export const input = {
     // Colors
     color: font.color,
+    colorDisabled: font.colorDisabled,
     errorColor: brand.danger,
     labelColor: font.color,
+    labelColorDisabled: font.color,
     borderColor: contrast.lower,
     backgroundColor: background.primary,
-    disabledBackgroundColor: contrast.lowest,
+    backgroundColorDisabled: background.secondary,
     selectionColor: contrast.lower,
     placeholderTextColor: contrast.regular,
     underlineColorAndroid: "transparent",
