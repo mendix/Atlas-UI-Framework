@@ -1,10 +1,10 @@
 import { NativeModules, Platform } from "react-native";
-import adjustFont                  from "../core/helpers/_functions/adjustfont";
+import adjustFont from "../core/helpers/_functions/adjustfont";
 import {
     anyColorToRgbString,
     setColorBasedOnBackground,
     setContrastScale,
-}                                  from "../core/helpers/_functions/convertcolors";
+} from "../core/helpers/_functions/convertcolors";
 import {
     VariablesBackground,
     VariablesBadge,
@@ -18,7 +18,7 @@ import {
     VariablesNavigation,
     VariablesSpacing,
     VariablesTabContainer,
-}                                  from "../types/variables";
+} from "../types/variables";
 /*
 
 ==> You can find a copy of the core variables below. (From styles/native/core/variables.js)
@@ -90,6 +90,8 @@ export const font: VariablesFont = {
     sizeH5: adjustFont(14),
     sizeH6: adjustFont(12),
     color: setColorBasedOnBackground(background.primary),
+    colorDisabled: "#9DA1A8",
+    labelColorDisabled: "#474E5C",
     weightLight: "100",  // Only supported on iOS, will be 'Normal' on Android
     weightNormal: "normal",
     weightSemiBold: "600", // Only supported on iOS, will be 'Bold' on Android
@@ -130,8 +132,11 @@ export const button: VariablesButton = {
     },
     primary: {
         color: "#FFF",
+        colorDisabled: font.colorDisabled,
         borderColor: brand.primary,
+        borderColorDisabled: border.color,
         backgroundColor: brand.primary,
+        backgroundColorDisabled: border.color,
     },
     secondary: {
         color: brand.primary,
@@ -160,11 +165,13 @@ export const button: VariablesButton = {
 export const input: VariablesInput = {
     // Colors
     color: font.color,
+    colorDisabled: font.colorDisabled,
     errorColor: brand.danger,
     labelColor: font.color,
+    labelColorDisabled: font.labelColorDisabled,
     borderColor: contrast.lower,
     backgroundColor: background.primary,
-    disabledBackgroundColor: contrast.lowest,
+    backgroundColorDisabled: background.secondary,
     selectionColor: contrast.lower,
     placeholderTextColor: contrast.regular,
     underlineColorAndroid: "transparent",

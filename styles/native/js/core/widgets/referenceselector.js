@@ -18,9 +18,17 @@ export const ReferenceSelector = {
         // All ViewStyle properties are allowed
         ...TextBox.container,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+        ...TextBox.containerDisabled,
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
+    },
+    labelDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.labelDisabled,
     },
     value: {
         // All TextStyle properties & placeholderTextColor are allowed
@@ -38,7 +46,7 @@ export const ReferenceSelector = {
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
+        ...TextBox.inputDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -47,6 +55,9 @@ export const ReferenceSelector = {
     /*  New dropdown styles start */
     valueContainer: {
     // All ViewStyle properties & rippleColor are allowed
+    },
+    valueContainerDisabled: {
+    // All ViewStyle properties are allowed
     },
     menuWrapper: {
         // All ViewStyle properties are allowed
@@ -64,11 +75,11 @@ export const ReferenceSelector = {
         backgroundColor: input.backgroundColor,
     },
     item: {
-        // All TextStlye properties are allowed
+        // All TextStyle properties are allowed
         color: input.color,
     },
     selectedItem: {
-        // All TextStlye properties are allowed
+        // All TextStyle properties are allowed
         fontWeight: font.weightBold,
     },
     selectedItemContainer: {
@@ -95,10 +106,13 @@ export const ReferenceSelector = {
 };
 export const ReferenceSelectorVertical = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
+    labelDisabled: TextBoxVertical.labelDisabled,
     value: DropDown.value,
-    validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDown.valueContainer,
+    valueContainerDisabled: DropDown.valueContainerDisabled,
+    validationMessage: TextBoxVertical.validationMessage,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,

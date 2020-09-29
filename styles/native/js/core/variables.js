@@ -69,6 +69,8 @@ let font = {
     sizeH5: adjustFont(14),
     sizeH6: adjustFont(12),
     color: setColorBasedOnBackground(background.primary),
+    colorDisabled: "#9DA1A8",
+    labelColorDisabled: "#474E5C",
     weightLight: "100",
     weightNormal: "normal",
     weightSemiBold: "600",
@@ -110,8 +112,11 @@ let button = {
     },
     primary: {
         color: "#FFF",
+        colorDisabled: font.colorDisabled,
         borderColor: brand.primary,
+        borderColorDisabled: border.color,
         backgroundColor: brand.primary,
+        backgroundColorDisabled: border.color,
     },
     secondary: {
         color: brand.primary,
@@ -141,11 +146,13 @@ button = merge(button, custom.button || {});
 let input = {
     // Colors
     color: font.color,
+    colorDisabled: font.colorDisabled,
     errorColor: brand.danger,
     labelColor: font.color,
+    labelColorDisabled: font.labelColorDisabled,
     borderColor: contrast.lower,
     backgroundColor: background.primary,
-    disabledBackgroundColor: contrast.lowest,
+    backgroundColorDisabled: background.secondary,
     selectionColor: contrast.lower,
     placeholderTextColor: contrast.regular,
     underlineColorAndroid: "transparent",

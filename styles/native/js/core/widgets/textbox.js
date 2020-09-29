@@ -15,6 +15,9 @@ export const TextBox = {
     container: {
     // All ViewStyle properties are allowed
     },
+    containerDisabled: {
+    // All ViewStyle properties are allowed
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         numberOfLines: 1,
@@ -23,6 +26,10 @@ export const TextBox = {
         fontFamily: font.family,
         textAlign: input.textAlign,
         marginRight: spacing.small,
+    },
+    labelDisabled: {
+        // TextStyle properties are allowed
+        color: input.labelColorDisabled,
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -40,7 +47,8 @@ export const TextBox = {
     },
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
+        backgroundColor: input.backgroundColorDisabled,
+        color: input.colorDisabled,
     },
     inputError: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
@@ -58,6 +66,7 @@ export const TextBox = {
 };
 export const TextBoxVertical = {
     container: {},
+    containerDisabled: TextBox.containerDisabled,
     label: {
         numberOfLines: 1,
         color: input.labelColor,
@@ -66,6 +75,7 @@ export const TextBoxVertical = {
         textAlign: input.textAlign,
         marginBottom: spacing.smallest,
     },
+    labelDisabled: TextBox.labelDisabled,
     input: {
         color: input.color,
         borderColor: input.borderColor,
@@ -79,6 +89,7 @@ export const TextBoxVertical = {
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
     },
+    inputDisabled: TextBox.inputDisabled,
     inputError: TextBox.inputError,
     validationMessage: TextBox.validationMessage,
 };

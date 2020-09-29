@@ -1,8 +1,6 @@
-import { NativeModules }            from "react-native";
-import { darkMode }                 from "../../app/custom-variables";
-import { font, input }              from "../variables";
+import { background, font, input } from "../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
-import { DatePickerType }           from "../../types/widgets";
+import { DatePickerType } from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -15,32 +13,34 @@ To customize any core styling, copy the part you want to customize to styles/nat
 
     Default Class For Mendix Date Picker Widget
 ========================================================================== */
-// Font color of native iOS datepicker can not be changed.
-// To fix this we change the background color of the picker if OS theme is dark and app theme is light (And the other way around).
-const isOSDarkMode = NativeModules && NativeModules.RNDarkMode && NativeModules.RNDarkMode.initialMode && NativeModules.RNDarkMode.initialMode === "dark";
-const pickerBackgroundColor = !darkMode && isOSDarkMode ?
-                              "rgba(0, 0, 0, 1)" :
-                              darkMode && !isOSDarkMode ? "rgba(255, 255, 255, 1)" : input.backgroundColor;
-//
 export const DatePicker: DatePickerType = {
     container: {
         // All ViewStyle properties are allowed
         ...TextBox.container,
     },
+    containerDisabled: {
+        // All ViewStyle properties are allowed
+      ...TextBox.containerDisabled
+    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
     },
+    labelDisabled: {
+        // All TextStyle properties are allowed
+      ...TextBox.labelDisabled
+    },
     pickerIOS: {
-        // All ViewStyle properties are allowed
-        backgroundColor: pickerBackgroundColor,
+        // All ViewStyle properties & "color" (type: string) are allowed
+        backgroundColor: background.primary,
+        color: font.color,
     },
     pickerBackdropIOS: {
         // All ViewStyle properties are allowed
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed
-        backgroundColor: pickerBackgroundColor,
+        backgroundColor: background.primary,
     },
     value: {
         // All TextStyle properties are allowed
@@ -58,7 +58,8 @@ export const DatePicker: DatePickerType = {
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.disabledBackgroundColor,
+        backgroundColor: input.backgroundColorDisabled,
+        color: input.colorDisabled
     },
     placeholder: {
         // All TextStyle properties are allowed
@@ -66,6 +67,7 @@ export const DatePicker: DatePickerType = {
     },
     placeholderDisabled: {
         // All TextStyle properties are allowed
+        color: input.colorDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
@@ -74,22 +76,12 @@ export const DatePicker: DatePickerType = {
 };
 export const DatePickerVertical: DatePickerType = {
     container: TextBoxVertical.container,
+    containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
-    value: {
-        color: input.color,
-        borderColor: input.borderColor,
-        backgroundColor: input.backgroundColor,
-
-        fontSize: input.fontSize,
-        fontFamily: font.family,
-        borderRadius: input.borderRadius,
-        borderWidth: input.borderWidth,
-
-        paddingHorizontal: input.paddingHorizontal,
-        paddingVertical: input.paddingVertical,
-    },
-    placeholder: {
-        color: input.placeholderTextColor,
-    },
+    labelDisabled: TextBoxVertical.labelDisabled,
+    value: DatePicker.value,
+    valueDisabled: DatePicker.valueDisabled,
+    placeholder: DatePicker.placeholder,
+    placeholderDisabled: DatePicker.placeholderDisabled,
     validationMessage: TextBoxVertical.validationMessage,
 };
