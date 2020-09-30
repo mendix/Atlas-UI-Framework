@@ -1,6 +1,6 @@
 {
     "name": "atlas-ui-framework",
-    "version": "2.6.2",
+    "version": "2.6.3",
     "description": "Mendix Atlas UI is the foundation of making beautiful apps with Mendix. For more information about the framework go to https://atlas.mendix.com.",
     "main": "",
     "scripts": {
