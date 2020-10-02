@@ -1,5 +1,5 @@
+import { FloatingActionButtonType } from "../../types/widgets";
 import { background, brand, contrast, font } from "../variables";
-import { FloatingActionButtonType }          from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -20,8 +20,11 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton:
     button: {
         // Size, ripplecolor and all ViewStyle properties are allowed
         size: 50,
+        height: 50,
+        width: 50,
         rippleColor: contrast.lowest,
         backgroundColor: brand.primary,
+        borderRadius: 25,
         elevation: 2,
         shadowColor: "#000",
         shadowOpacity: 0.3,
@@ -56,6 +59,9 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton:
     },
     secondaryButtonCaption: {
         // All TextStyle properties are allowed
+        color: font.color,
+        fontSize: font.size,
+        fontFamily: font.family,
     },
     secondaryButtonCaptionContainer: {
         // All ViewStyle properties are allowed
