@@ -1,4 +1,4 @@
-import { border, font, navigation, spacing } from "../variables";
+import { font, navigation, spacing } from "../variables";
 /*
 
 DISCLAIMER:
@@ -50,11 +50,11 @@ export const navigationStyle = {
             backgroundColor: navigation.progressOverlay.containerBackgroundColor,
             paddingHorizontal: spacing.largest,
             paddingVertical: spacing.large,
-            borderRadius: border.radius,
-            elevation: 1.5,
+            borderRadius: navigation.progressOverlay.borderRadius,
+            elevation: navigation.progressOverlay.elevation,
             shadowColor: navigation.progressOverlay.shadowColor,
-            shadowOpacity: 0.1,
-            shadowRadius: 10,
+            shadowOpacity: navigation.progressOverlay.shadowOpacity,
+            shadowRadius: navigation.progressOverlay.shadowRadius,
             shadowOffset: {
                 width: 0,
                 height: 2,

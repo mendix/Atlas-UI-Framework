@@ -1,5 +1,5 @@
-import { border, font, navigation, spacing } from "../variables";
-import { NavigationType }                    from "../../types/widgets";
+import { NavigationType } from "../../types/widgets";
+import { font, navigation, spacing } from "../variables";
 /*
 
 DISCLAIMER:
@@ -52,16 +52,15 @@ export const navigationStyle: NavigationType = {
             backgroundColor: navigation.progressOverlay.containerBackgroundColor,
             paddingHorizontal: spacing.largest,
             paddingVertical: spacing.large,
-            borderRadius: border.radius,
-            elevation: 1.5,
+            borderRadius: navigation.progressOverlay.borderRadius,
+            elevation: navigation.progressOverlay.elevation,
             shadowColor: navigation.progressOverlay.shadowColor,
-            shadowOpacity: 0.1,
-            shadowRadius: 10,
+            shadowOpacity: navigation.progressOverlay.shadowOpacity,
+            shadowRadius: navigation.progressOverlay.shadowRadius,
             shadowOffset: {
                 width: 0,
                 height: 2,
             },
-
         },
         activityIndicator: {
             // Color, Size & All ViewStyle properties are allowed

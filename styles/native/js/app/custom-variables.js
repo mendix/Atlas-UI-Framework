@@ -192,8 +192,12 @@ export const navigation = {
         activityIndicatorColor: font.color,
         backgroundColor: `rgba(0, 0, 0, 0.5)`,
         containerBackgroundColor: background.secondary,
-        shadowColor: "#000",
         fontSize: font.size,
+        borderRadius: border.radius,
+        elevation: 1.5,
+        shadowColor: "#000",
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
     },
 };
 //
