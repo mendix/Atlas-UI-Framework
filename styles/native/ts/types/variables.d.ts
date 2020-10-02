@@ -2,6 +2,8 @@
     Types
 ========================================================================== */
 
+import { badge, font } from "../app/custom-variables";
+
 declare type FontWeight = "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
 declare type TextAlign = "auto" | "left" | "right" | "center" | "justify";
 declare type TextTransform = "none" | "capitalize" | "uppercase" | "lowercase";
@@ -181,6 +183,18 @@ export interface VariablesTabContainer {
         fontWeight: FontWeight,
         textTransform: TextTransform
     },
+    badgeContainer: {
+        borderRadius: number,
+        backgroundColor: string,
+        paddingVertical: number,
+        paddingHorizontal: number,
+        marginLeft: number
+    },
+    badgeCaption: {
+        fontSize: number,
+        color: string,
+        fontWeight: FontWeight,
+    }
 }
 
 export interface VariablesListView {
