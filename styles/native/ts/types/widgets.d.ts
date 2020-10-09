@@ -173,13 +173,19 @@ export interface DropDownType {
     valueDisabled?: TextStyle,
     validationMessage?: TextStyle,
     /*  New dropdown styles start */
-    valueContainer?: {
-                         rippleColor?: string
-                     } & ViewStyle;
+    valueContainer?: ViewStyle & {
+        rippleColor?: string;
+        underlayColor?: string;
+        activeOpacity?: number;
+    };
     valueContainerDisabled?: ViewStyle;
     menuWrapper?: ViewStyle;
     item?: TextStyle;
-    itemContainer?: ViewStyle;
+    itemContainer?: ViewStyle & {
+        rippleColor?: string;
+        underlayColor?: string;
+        activeOpacity?: number;
+    };
     selectedItem?: TextStyle;
     selectedItemContainer?: ViewStyle;
     /*  New dropdown styles end */
