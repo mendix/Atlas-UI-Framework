@@ -72,7 +72,7 @@ export const DropDown = {
         paddingVertical: 6,
         paddingHorizontal: 16,
         backgroundColor: input.backgroundColor,
-        underlayColor: contrast.low,
+        underlayColor: input.inputContainerUnderlayColor,
     },
     item: {
         // All TextStlye properties are allowed
