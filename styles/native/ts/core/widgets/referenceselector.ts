@@ -77,6 +77,7 @@ export const ReferenceSelector: DropDownType = {
         paddingVertical: 6,
         paddingHorizontal: 16,
         backgroundColor: input.backgroundColor,
+        underlayColor: input.inputContainerUnderlayColor,
     },
     item: {
         // All TextStyle properties are allowed
