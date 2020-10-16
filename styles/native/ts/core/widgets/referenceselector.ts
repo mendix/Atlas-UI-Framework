@@ -58,7 +58,7 @@ export const ReferenceSelector: DropDownType = {
     },
     /*  New dropdown styles start */
     valueContainer: {
-        // All ViewStyle properties & rippleColor are allowed
+        // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
     },
     valueContainerDisabled: {
         // All ViewStyle properties are allowed
@@ -70,13 +70,15 @@ export const ReferenceSelector: DropDownType = {
         shadowOpacity: 0.2,
         shadowRadius: 10,
         elevation: 16,
+        backgroundColor: input.backgroundColor
     },
     itemContainer: {
-        // All ViewStyle properties are allowed
+        // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
         maxWidth: 500,
         paddingVertical: 6,
         paddingHorizontal: 16,
         backgroundColor: input.backgroundColor,
+        underlayColor: input.inputContainerUnderlayColor,
     },
     item: {
         // All TextStyle properties are allowed

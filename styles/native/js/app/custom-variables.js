@@ -156,6 +156,7 @@ export const input = {
     selectionColor: contrast.lower,
     placeholderTextColor: contrast.regular,
     underlineColorAndroid: "transparent",
+    inputContainerUnderlayColor: `rgba(${anyColorToRgbString(contrast.low)},0.4)`,
     // Sizes
     fontSize: font.size,
     fontFamily: font.family,
