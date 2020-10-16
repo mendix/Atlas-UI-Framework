@@ -86,6 +86,7 @@ export const DropDown: DropDownType = {
     },
     iconStyle: {
         // All TextStyle properties are allowed
+        color: input.color
     },
     item: {
         // All TextStlye properties are allowed
