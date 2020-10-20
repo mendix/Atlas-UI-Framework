@@ -1,0 +1,16 @@
+.widget-timeline-icon-circle {
+    background-color: $brand-primary
+}
+
+.widget-timeline-title {
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.widget-timeline-info-wrapper {
+    &:hover {
+        .title {
+            color: rgba($brand-primary, 0.7)
+        }
+    }    
+}
