@@ -213,8 +213,12 @@ export const navigation: VariablesNavigation = {
         activityIndicatorColor: font.color,
         backgroundColor: `rgba(0, 0, 0, 0.5)`,
         containerBackgroundColor: background.secondary,
-        shadowColor: "#000", // Only for iOS
         fontSize: font.size,
+        borderRadius: border.radius,
+        elevation: 1.5, // Only for Android
+        shadowColor: "#000", // Only for iOS
+        shadowOpacity: 0.1, // Only for iOS
+        shadowRadius: 10, // Only for iOS
     },
 };
 //
