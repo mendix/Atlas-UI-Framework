@@ -33,30 +33,36 @@ export const DropDown: DropDownType = {
     value: {
         // All TextStyle properties & placeholderTextColor are allowed
         color: input.color,
-        borderColor: input.borderColor,
-        backgroundColor: input.backgroundColor,
-
         fontSize: input.fontSize,
         fontFamily: input.fontFamily,
-        borderWidth: input.borderWidth,
-        borderRadius: input.borderRadius,
-
-        paddingHorizontal: input.paddingHorizontal,
-        paddingVertical: input.paddingVertical,
-
         placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
-    },
-    valueDisabled: {
-        // All TextStyle properties are allowed
-        ...TextBox.inputDisabled
     },
     validationMessage: {
         // All TextStyle properties are allowed
         ...TextBox.validationMessage,
     },
     /*  New dropdown styles start */
+    valueFocused: {
+        // All TextStyle properties are allowed
+    },
+    valueDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.inputDisabled
+    },
     valueContainer: {
-        // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
+        // All ViewStyle properties & rippleColor are allowed
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderWidth: input.borderWidth,
+        borderRadius: input.borderRadius,
+        borderColor: input.borderColor,
+        paddingHorizontal: input.paddingHorizontal,
+        paddingVertical: input.paddingVertical,
+        backgroundColor: input.backgroundColor,
+    },
+    valueContainerFocused: {
+        // All ViewStyle properties are allowed
     },
     valueContainerDisabled: {
         // All ViewStyle properties are allowed
@@ -77,6 +83,9 @@ export const DropDown: DropDownType = {
         paddingHorizontal: 16,
         backgroundColor: input.backgroundColor,
         underlayColor: input.inputContainerUnderlayColor,
+    },
+    iconStyle: {
+        // All TextStyle properties are allowed
     },
     item: {
         // All TextStlye properties are allowed
@@ -115,12 +124,15 @@ export const DropDownVertical: DropDownType = {
     label: TextBoxVertical.label,
     labelDisabled: TextBoxVertical.labelDisabled,
     value: DropDown.value,
-    valueContainer: DropDown.valueContainer,
-    valueContainerDisabled: DropDown.valueContainerDisabled,
+    valueFocused: DropDown.valueFocused,
     validationMessage: TextBoxVertical.validationMessage,
+    valueContainer: DropDown.valueContainer,
+    valueContainerFocused: DropDown.valueContainerFocused,
+    valueContainerDisabled: DropDown.valueContainerDisabled,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,
+    iconStyle: DropDown.iconStyle,
     useUniformDesign: DropDown.useUniformDesign,
     pickerIOS: DropDown.pickerIOS,
     pickerItemIOS: DropDown.pickerItemIOS,
