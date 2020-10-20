@@ -1,5 +1,5 @@
 import { border, contrast, font, input } from "../variables";
-import { DropDown, DropDownVertical }                      from "./dropdown";
+import { DropDownVertical }                      from "./dropdown";
 import { TextBox, TextBoxVertical }      from "./textbox";
 import { DropDownType }                  from "../../types/widgets";
 /*
@@ -39,10 +39,6 @@ export const ReferenceSelector: DropDownType = {
         overflow: "hidden",
         placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
     },
-    valueDisabled: {
-        // All TextStyle properties are allowed
-        ...TextBox.inputDisabled
-    },
     validationMessage: {
         // All TextStyle properties are allowed
         ...TextBox.validationMessage,
@@ -50,6 +46,10 @@ export const ReferenceSelector: DropDownType = {
     /*  New dropdown styles start */
     valueFocused: {
         // All TextStyle properties are allowed
+    },
+    valueDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.inputDisabled
     },
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
@@ -125,12 +125,12 @@ export const ReferenceSelectorVertical: DropDownType = {
     containerDisabled: TextBoxVertical.containerDisabled,
     label: TextBoxVertical.label,
     labelDisabled: TextBoxVertical.labelDisabled,
-    value: DropDown.value,
-    valueFocused: DropDown.valueFocused,
-    valueContainerDisabled: DropDown.valueContainerDisabled,
+    value: DropDownVertical.value,
+    valueFocused: DropDownVertical.valueFocused,
     validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDownVertical.valueContainer,
     valueContainerFocused: DropDownVertical.valueContainerFocused,
+    valueContainerDisabled: DropDownVertical.valueContainerDisabled,
     menuWrapper: DropDownVertical.menuWrapper,
     itemContainer: DropDownVertical.itemContainer,
     item: DropDownVertical.item,

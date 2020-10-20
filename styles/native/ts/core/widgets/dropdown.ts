@@ -37,10 +37,6 @@ export const DropDown: DropDownType = {
         fontFamily: input.fontFamily,
         placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
     },
-    valueDisabled: {
-        // All TextStyle properties are allowed
-        ...TextBox.inputDisabled
-    },
     validationMessage: {
         // All TextStyle properties are allowed
         ...TextBox.validationMessage,
@@ -48,6 +44,10 @@ export const DropDown: DropDownType = {
     /*  New dropdown styles start */
     valueFocused: {
         // All TextStyle properties are allowed
+    },
+    valueDisabled: {
+        // All TextStyle properties are allowed
+        ...TextBox.inputDisabled
     },
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
@@ -125,10 +125,10 @@ export const DropDownVertical: DropDownType = {
     labelDisabled: TextBoxVertical.labelDisabled,
     value: DropDown.value,
     valueFocused: DropDown.valueFocused,
-    valueContainerDisabled: DropDown.valueContainerDisabled,
     validationMessage: TextBoxVertical.validationMessage,
     valueContainer: DropDown.valueContainer,
     valueContainerFocused: DropDown.valueContainerFocused,
+    valueContainerDisabled: DropDown.valueContainerDisabled,
     menuWrapper: DropDown.menuWrapper,
     itemContainer: DropDown.itemContainer,
     item: DropDown.item,
