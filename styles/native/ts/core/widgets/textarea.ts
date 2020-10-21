@@ -47,6 +47,10 @@ export const TextArea: TextBoxType = {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
         ...TextBox.inputError,
     },
+    inputFocused: {
+        // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
+        ...TextBox.inputFocused,
+    },
     validationMessage: {
         // All TextStyle properties are allowed
         ...TextBox.validationMessage,
@@ -65,5 +69,6 @@ export const TextAreaVertical: TextBoxType = {
     input: TextBoxVertical.input,
     inputDisabled: TextBoxVertical.inputDisabled,
     inputError: TextBoxVertical.inputError,
+    inputFocused: TextBoxVertical.inputFocused,
     validationMessage: TextBoxVertical.validationMessage,
 };

@@ -152,10 +152,11 @@ export const input = {
     labelColorDisabled: font.labelColorDisabled,
     borderColor: contrast.lower,
     backgroundColor: background.primary,
-    backgroundColorDisabled: background.secondary,
+    backgroundColorDisabled: contrast.lowest,
     selectionColor: contrast.lower,
     placeholderTextColor: contrast.regular,
     underlineColorAndroid: "transparent",
+    inputContainerUnderlayColor: `rgba(${anyColorToRgbString(contrast.low)},0.4)`,
     // Sizes
     fontSize: font.size,
     fontFamily: font.family,
@@ -201,44 +202,6 @@ export const navigation = {
     },
 };
 //
-// Tabcontainer Styles
-export const tabContainer = {
-    tabBar: {
-        pressColor: contrast.lower,
-        backgroundColor: background.primary,
-    },
-    indicator: {
-        backgroundColor: brand.primary,
-        height: Platform.select({ ios: 2, android: 2 }),
-    },
-    label: {
-        color: contrast.highest,
-        fontWeight: font.weightBold,
-        textTransform: "uppercase",
-    },
-    activeLabel: {
-        color: brand.primary,
-        fontWeight: font.weightBold,
-        textTransform: "uppercase",
-    },
-};
-//
-// ListView Styles
-export const listView = {
-    border: {
-        color: border.color,
-        width: border.width,
-    },
-};
-//
-// Layoutgrid Styles
-export const layoutGrid = {
-    gutterSize: 15,
-};
-//
-//
-//== Pluggable Widgets
-//-------------------------------------------------------------------------------------------------------------------//
 // Badge Styles
 export const badge = {
     fontWeight: font.weightBold,
@@ -265,4 +228,51 @@ export const badge = {
         color: brand.danger,
         backgroundColor: brand.dangerLight,
     },
+};
+//
+// Tabcontainer Styles
+export const tabContainer = {
+    tabBar: {
+        pressColor: contrast.lower,
+        backgroundColor: background.primary,
+    },
+    indicator: {
+        backgroundColor: brand.primary,
+        height: Platform.select({ ios: 2, android: 2 }),
+    },
+    label: {
+        color: contrast.highest,
+        fontWeight: font.weightBold,
+        textTransform: "uppercase",
+    },
+    activeLabel: {
+        color: brand.primary,
+        fontWeight: font.weightBold,
+        textTransform: "uppercase",
+    },
+    badgeContainer: {
+        borderRadius: badge.borderRadius,
+        backgroundColor: badge.default.backgroundColor,
+        paddingVertical: badge.paddingVertical,
+        paddingHorizontal: badge.paddingHorizontal,
+        marginLeft: 8
+    },
+    badgeCaption: {
+        fontSize: font.size,
+        color: badge.default.color,
+        fontWeight: badge.fontWeight,
+    }
+};
+//
+// ListView Styles
+export const listView = {
+    border: {
+        color: border.color,
+        width: border.width,
+    },
+};
+//
+// Layoutgrid Styles
+export const layoutGrid = {
+    gutterSize: 15,
 };

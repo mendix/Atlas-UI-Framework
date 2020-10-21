@@ -122,6 +122,7 @@ export interface VariablesInput {
     selectionColor: string,
     placeholderTextColor: string,
     underlineColorAndroid: string,
+    inputContainerUnderlayColor: string,
 
     fontSize: number,
     fontFamily: string,
@@ -185,6 +186,18 @@ export interface VariablesTabContainer {
         fontWeight: FontWeight,
         textTransform: TextTransform
     },
+    badgeContainer: {
+        borderRadius: number,
+        backgroundColor: string,
+        paddingVertical: number,
+        paddingHorizontal: number,
+        marginLeft: number
+    },
+    badgeCaption: {
+        fontSize: number,
+        color: string,
+        fontWeight: FontWeight,
+    }
 }
 
 export interface VariablesListView {
