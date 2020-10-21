@@ -1,5 +1,5 @@
 import { border, contrast, font, input } from "../variables";
-import { DropDownVertical }                      from "./dropdown";
+import { DropDownVertical }              from "./dropdown";
 import { TextBox, TextBoxVertical }      from "./textbox";
 import { DropDownType }                  from "../../types/widgets";
 /*
@@ -88,6 +88,7 @@ export const ReferenceSelector: DropDownType = {
     },
     iconStyle: {
         // All TextStyle properties are allowed
+        color: input.color
     },
     item: {
         // All TextStyle properties are allowed
