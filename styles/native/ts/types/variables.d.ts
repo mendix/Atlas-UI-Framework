@@ -117,6 +117,7 @@ export interface VariablesInput {
     labelColor: string,
     labelColorDisabled: string,
     borderColor: string,
+    borderColorFocused: string,
     backgroundColor: string,
     backgroundColorDisabled: string,
     selectionColor: string,

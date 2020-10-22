@@ -62,6 +62,7 @@ export const TextBox: TextBoxType = {
     },
     inputFocused: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
+        borderColor: input.borderColorFocused
     },
     validationMessage: {
         // All TextStyle properties are allowed

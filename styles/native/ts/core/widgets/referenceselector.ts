@@ -1,7 +1,7 @@
+import { DropDownType } from "../../types/widgets";
 import { border, contrast, font, input } from "../variables";
-import { DropDownVertical }              from "./dropdown";
-import { TextBox, TextBoxVertical }      from "./textbox";
-import { DropDownType }                  from "../../types/widgets";
+import { DropDownVertical } from "./dropdown";
+import { TextBox, TextBoxVertical } from "./textbox";
 /*
 
 DISCLAIMER:
@@ -21,7 +21,7 @@ export const ReferenceSelector: DropDownType = {
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-      ...TextBox.containerDisabled,
+        ...TextBox.containerDisabled,
     },
     label: {
         // numberOfLines and all TextStyle properties are allowed
@@ -49,7 +49,7 @@ export const ReferenceSelector: DropDownType = {
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        ...TextBox.inputDisabled
+        ...TextBox.inputDisabled,
     },
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
@@ -65,6 +65,7 @@ export const ReferenceSelector: DropDownType = {
     },
     valueContainerFocused: {
         // All ViewStyle properties are allowed
+        ...TextBox.inputFocused,
     },
     valueContainerDisabled: {
         // All ViewStyle properties are allowed
@@ -76,7 +77,7 @@ export const ReferenceSelector: DropDownType = {
         shadowOpacity: 0.2,
         shadowRadius: 10,
         elevation: 16,
-        backgroundColor: input.backgroundColor
+        backgroundColor: input.backgroundColor,
     },
     itemContainer: {
         // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
@@ -88,7 +89,7 @@ export const ReferenceSelector: DropDownType = {
     },
     iconStyle: {
         // All TextStyle properties are allowed
-        color: input.color
+        color: input.color,
     },
     item: {
         // All TextStyle properties are allowed

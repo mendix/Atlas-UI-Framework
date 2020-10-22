@@ -57,6 +57,10 @@ export const TextBox = {
         placeholderTextColor: input.errorColor,
         underlineColorAndroid: input.underlineColorAndroid,
     },
+    inputFocused: {
+        // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
+        borderColor: input.borderColorFocused
+    },
     validationMessage: {
         // All TextStyle properties are allowed
         color: input.errorColor,
@@ -89,6 +93,7 @@ export const TextBoxVertical = {
         paddingHorizontal: input.paddingHorizontal,
         paddingVertical: input.paddingVertical,
     },
+    inputFocused: TextBox.inputFocused,
     inputDisabled: TextBox.inputDisabled,
     inputError: TextBox.inputError,
     validationMessage: TextBox.validationMessage,
