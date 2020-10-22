@@ -151,6 +151,7 @@ let input = {
     labelColor: font.color,
     labelColorDisabled: font.labelColorDisabled,
     borderColor: contrast.lower,
+    borderColorFocused: brand.primary,
     backgroundColor: background.primary,
     backgroundColorDisabled: background.secondary,
     selectionColor: contrast.lower,
