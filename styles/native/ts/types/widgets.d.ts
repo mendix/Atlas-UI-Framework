@@ -272,6 +272,41 @@ export interface LayoutGridType {
     container?: ViewStyle
 }
 
+// Line chart
+export interface LineChartType {
+    container?: ViewStyle;
+    errorMessage?: TextStyle;
+    chart?: ViewStyle;
+    gridAndLabelsRow?: ViewStyle;
+    gridRow?: ViewStyle;
+    gridWrapper?: ViewStyle;
+    grid?: VictoryChartProps["style"] & {
+        padding?: VictoryCommonProps["padding"];
+        xAxis?: VictoryAxisCommonProps["style"];
+        yAxis?: VictoryAxisCommonProps["style"];
+    };
+    xAxisLabel?: TextStyle & {
+        relativePositionGrid?: "bottom" | "right";
+    };
+    yAxisLabel?: TextStyle & {
+        relativePositionGrid?: "top" | "left";
+    };
+    legend?: {
+        container?: ViewStyle;
+        item?: ViewStyle;
+        indicator?: ViewStyle;
+        label?: TextStyle;
+    };
+    lineStyles?: { [key: string]: {
+        line?: VictoryLineProps["style"];
+        markers?: VictoryScatterProps["style"] & {
+            display?: "false" | "underneath" | "onTop";
+            size?: VictoryScatterProps["size"];
+        };
+    } };
+    lineColorPalette?: string[];
+}
+
 // List view
 export interface ListViewType {
     container?: ViewStyle & {
