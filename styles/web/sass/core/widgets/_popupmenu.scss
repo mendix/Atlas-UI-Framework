@@ -85,8 +85,24 @@
         background-color: $bg-color-secondary;
     }
 
+    &-inverse {
+        color: $brand-inverse;
+    }
+
     &-primary {
-        color: $brand-default;
+        color: $brand-primary;
+    }
+
+    &-info {
+        color: $brand-info;
+    }
+
+    &-success {
+        color: $brand-success;
+    }
+
+    &-warning {
+        color: $brand-warning;
     }
 
     &-danger {
