@@ -25,11 +25,9 @@
     display: none;
     flex-direction: column;
     width: max-content;
-    border: 1px solid $border-color-default;
     border-radius: 8px;
     background-color: $bg-color;
-    box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.02), 0 8px 10px 1px rgba(0, 0, 0, 0.04),
-    0 5px 5px -3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px 1px rgba(5, 15, 129, 0.05), 0 2px 16px 0 rgba(33, 43, 54, 0.08);
 
     &.popupmenu-position-left {
         top: 0;
