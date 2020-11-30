@@ -273,37 +273,63 @@ export interface LayoutGridType {
 }
 
 // Line chart
+interface LineChartGridStyle {
+    backgroundColor?: string;
+    color?: string;
+    dashArray?: string;
+    paddingBottom?: number;
+    paddingLeft?: number;
+    paddingRight?: number;
+    paddingTop?: number;
+    width?: number;
+}
+
+interface LineChartAxisStyle<T extends "X" | "Y"> {
+    color?: string;
+    dashArray?: string;
+    fontFamily?: string;
+    fontSize?: number;
+    fontStyle?: "normal" | "italic";
+    fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
+    label?: TextStyle & {
+        relativePositionGrid?: T extends "X" ? "bottom" | "right" : "top" | "left";
+    };
+    width?: number;
+}
+
+interface LineChartLineStyle {
+    line?: {
+        color?: string;
+        dashArray?: string;
+        ending?: "flat" | "round";
+        width?: number;
+    };
+    markers?: {
+        backgroundColor?: string;
+        borderColor?: string;
+        borderWidth?: number;
+        display?: "false" | "underneath" | "onTop";
+        size?: number;
+        symbol?: "circle" | "diamond" | "plus" | "minus" | "square" | "star" | "triangleDown" | "triangleUp";
+    };
+}
+
+interface LineChartLegendStyle {
+    container?: ViewStyle;
+    item?: ViewStyle;
+    indicator?: ViewStyle;
+    label?: TextStyle;
+}
+
 export interface LineChartType {
     container?: ViewStyle;
     errorMessage?: TextStyle;
     chart?: ViewStyle;
-    gridAndLabelsRow?: ViewStyle;
-    gridRow?: ViewStyle;
-    gridWrapper?: ViewStyle;
-    grid?: VictoryChartProps["style"] & {
-        padding?: VictoryCommonProps["padding"];
-        xAxis?: VictoryAxisCommonProps["style"];
-        yAxis?: VictoryAxisCommonProps["style"];
-    };
-    xAxisLabel?: TextStyle & {
-        relativePositionGrid?: "bottom" | "right";
-    };
-    yAxisLabel?: TextStyle & {
-        relativePositionGrid?: "top" | "left";
-    };
-    legend?: {
-        container?: ViewStyle;
-        item?: ViewStyle;
-        indicator?: ViewStyle;
-        label?: TextStyle;
-    };
-    lineStyles?: { [key: string]: {
-        line?: VictoryLineProps["style"];
-        markers?: VictoryScatterProps["style"] & {
-            display?: "false" | "underneath" | "onTop";
-            size?: VictoryScatterProps["size"];
-        };
-    } };
+    grid?: LineChartGridStyle;
+    xAxis?: LineChartAxisStyle<"X">;
+    yAxis?: LineChartAxisStyle<"Y">;
+    legend?: LineChartLegendStyle;
+    lineStyles?: { [key: string]: LineChartLineStyle };
     lineColorPalette?: string[];
 }
 

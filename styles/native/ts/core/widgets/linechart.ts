@@ -22,48 +22,48 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
         // All TextStyle properties are allowed
         fontFamily: font.family,
         fontSize: font.sizeSmall,
+        fontWeight: font.weightNormal,
     },
     chart: {
         // All ViewStyle properties are allowed
     },
-    gridAndLabelsRow: {
-        // All ViewStyle properties are allowed
-    },
-    gridRow: {
-        // All ViewStyle properties are allowed
-    },
-    gridWrapper: {
-        // All ViewStyle properties are allowed
-    },
     grid: {
-        padding: { top: 8, right: 8, bottom: 32, left: 32 },
-        xAxis: {
-            grid: { stroke: "#CED0D3" },
-            axis: { stroke: "#CED0D3" },
-            tickLabels: { fontFamily: font.family, fontSize: font.sizeSmall },
-        },
-        yAxis: {
-            grid: { stroke: "#CED0D3" },
-            axis: { stroke: "#CED0D3" },
-            tickLabels: { fontFamily: font.family, fontSize: font.sizeSmall },
-        },
+        color: "#CED0D3",
+        paddingBottom: 32,
+        paddingLeft: 32,
+        paddingRight: 8,
+        paddingTop: 8,
     },
-    xAxisLabel: {
-        // All TextStyle properties are allowed & relativePositionGrid property ("bottom" or "right")
-        color: "#6C717C",
-        alignSelf: "center",
-        marginHorizontal: 0,
-        marginVertical: 8,
+    xAxis: {
+        color: "#CED0D3",
         fontFamily: font.family,
         fontSize: font.sizeSmall,
+        fontWeight: font.weightNormal,
+        label: {
+            // All TextStyle properties are allowed & relativePositionGrid property ("bottom" or "right")
+            color: "#6C717C",
+            alignSelf: "center",
+            marginHorizontal: 0,
+            marginVertical: 8,
+            fontFamily: font.family,
+            fontSize: font.sizeSmall,
+            fontWeight: font.weightNormal,
+        },
     },
-    yAxisLabel: {
-        // All TextStyle properties are allowed & relativePositionGrid property ("top" or "left")
-        color: "#6C717C",
-        marginHorizontal: 0,
-        marginVertical: 8,
+    yAxis: {
+        color: "#CED0D3",
         fontFamily: font.family,
         fontSize: font.sizeSmall,
+        fontWeight: font.weightNormal,
+        label: {
+            // All TextStyle properties are allowed & relativePositionGrid property ("top" or "left")
+            color: "#6C717C",
+            marginHorizontal: 0,
+            marginVertical: 8,
+            fontFamily: font.family,
+            fontSize: font.sizeSmall,
+            fontWeight: font.weightNormal,
+        },
     },
     lineStyles: {},
     legend: {
