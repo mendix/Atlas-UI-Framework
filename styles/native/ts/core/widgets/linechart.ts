@@ -1,4 +1,4 @@
-import { brand, font } from "../variables";
+import { border, brand, font } from "../variables";
 import { LineChartType } from "../../types/widgets";
 
 /*
@@ -22,48 +22,50 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
         // All TextStyle properties are allowed
         fontFamily: font.family,
         fontSize: font.sizeSmall,
-        fontWeight: font.weightNormal,
+        fontWeight: font.weightNormal
     },
     chart: {
         // All ViewStyle properties are allowed
     },
     grid: {
-        color: "#CED0D3",
+        lineColor: border.color,
         paddingBottom: 32,
         paddingLeft: 32,
         paddingRight: 8,
-        paddingTop: 8,
+        paddingTop: 8
     },
     xAxis: {
-        color: "#CED0D3",
+        color: font.color,
         fontFamily: font.family,
         fontSize: font.sizeSmall,
         fontWeight: font.weightNormal,
         label: {
             // All TextStyle properties are allowed & relativePositionGrid property ("bottom" or "right")
-            color: "#6C717C",
+            color: font.color,
             alignSelf: "center",
             marginHorizontal: 0,
             marginVertical: 8,
             fontFamily: font.family,
             fontSize: font.sizeSmall,
-            fontWeight: font.weightNormal,
+            fontWeight: font.weightNormal
         },
+        lineColor: border.color
     },
     yAxis: {
-        color: "#CED0D3",
+        color: font.color,
         fontFamily: font.family,
         fontSize: font.sizeSmall,
         fontWeight: font.weightNormal,
         label: {
             // All TextStyle properties are allowed & relativePositionGrid property ("top" or "left")
-            color: "#6C717C",
+            color: font.color,
             marginHorizontal: 0,
             marginVertical: 8,
             fontFamily: font.family,
             fontSize: font.sizeSmall,
-            fontWeight: font.weightNormal,
+            fontWeight: font.weightNormal
         },
+        lineColor: border.color
     },
     lineStyles: {},
     legend: {
@@ -71,22 +73,24 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
             // All ViewStyle properties are allowed
             justifyContent: "flex-start",
             marginHorizontal: 0,
-            marginVertical: 8,
+            marginVertical: 8
         },
         item: {
             // All ViewStyle properties are allowed
             padding: 0,
-            paddingRight: 16,
+            paddingRight: 16
         },
         indicator: {
             // All ViewStyle properties are allowed
-            marginRight: 8,
+            marginRight: 8
         },
         label: {
             // All TextStyle properties are allowed
+            color: font.color,
             fontFamily: font.family,
             fontSize: font.sizeSmall,
-        },
+            fontWeight: font.weightNormal
+        }
     },
-    lineColorPalette: Object.values(brand), // Array of color strings
+    lineColorPalette: Object.values(brand) // Array of color strings
 };

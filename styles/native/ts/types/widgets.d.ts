@@ -275,8 +275,8 @@ export interface LayoutGridType {
 // Line chart
 interface LineChartGridStyle {
     backgroundColor?: string;
-    color?: string;
     dashArray?: string;
+    lineColor?: string;
     paddingBottom?: number;
     paddingLeft?: number;
     paddingRight?: number;
@@ -294,14 +294,15 @@ interface LineChartAxisStyle<T extends "X" | "Y"> {
     label?: TextStyle & {
         relativePositionGrid?: T extends "X" ? "bottom" | "right" : "top" | "left";
     };
+    lineColor?: string;
     width?: number;
 }
 
 interface LineChartLineStyle {
     line?: {
-        color?: string;
         dashArray?: string;
         ending?: "flat" | "round";
+        lineColor?: string;
         width?: number;
     };
     markers?: {
