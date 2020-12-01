@@ -1,16 +1,102 @@
-.widget-timeline-icon-circle {
-    background-color: $brand-primary
+.widget-timeline-date-header {
+    display: inline-block;
+    width: 110px;
+    overflow-wrap: break-word;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid $timeline-border-color;
+    border-radius: 30px;
+}
+
+.widget-timeline-events-wrapper {
+    display: flex;
+    flex: 1;
+    margin-left: 55px;
+    padding-top: 35px;
+
+    ul {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
 }
 
 .widget-timeline-title {
+    color: $timeline-color-header;
     font-weight: 600;
     margin: 0 0 10px 0;
 }
 
-.widget-timeline-info-wrapper {
-    &:hover {
-        .title {
-            color: rgba($brand-primary, 0.7)
+.widget-timeline-description {
+    color: $timeline-color-detail;
+}
+
+.widget-timeline-event {
+    position: relative;
+    margin-left: $timeline-icon-size / 2;
+    padding-left: $spacing-large;
+    padding-bottom: 20px;
+
+    &:not(:last-of-type) {
+        border-left: 1px solid $timeline-border-color;
+    }
+
+    &.clickable {
+        cursor: pointer;
+        transition: background 0.8s;
+
+        &:hover {
+            .widget-timeline-title {
+                color: #dadcde;
+            }
         }
-    }    
+    }
+}
+
+.widget-timeline-icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $timeline-icon-size;
+    height: $timeline-icon-size;
+    transform: translateX(-50%);
+
+    .glyphicon {
+        font-size: $timeline-icon-size;
+    }
+
+    img {
+        max-width: $timeline-icon-size;
+        max-height: $timeline-icon-size;
+    }
+}
+
+.widget-timeline-content-wrapper {
+    .widget-timeline-date-time-wrapper {
+        margin-right: 15px;
+    }
+
+    .widget-timeline-info-wrapper {
+        flex-direction: column;
+    }
+}
+
+.widget-timeline-icon-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $timeline-icon-color;
+}
+
+.widget-timeline-no-divider {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-left: 0;
+}
+
+.widget-timeline-flex-container {
+    display: flex;
 }
