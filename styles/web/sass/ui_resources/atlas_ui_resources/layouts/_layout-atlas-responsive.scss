@@ -41,22 +41,9 @@
 
 
     .mx-scrollcontainer-slide {
-        &:not(.mx-scrollcontainer-open) > .region-sidebar {
-            overflow: hidden;
-        }
 
         &.mx-scrollcontainer-open > .region-sidebar {
             width: $sidebar-width !important;
-
-            & > .mx-scrollcontainer-wrapper {
-                position: relative;
-            }
-        }
-
-        .region-sidebar > .mx-scrollcontainer-wrapper {
-            z-index: 2;
-            left: 0 !important;
-            background-color: inherit;
         }
     }
 
@@ -68,13 +55,6 @@
 
         .mx-scrollcontainer-slide .toggle-btn {
             display: inline-block !important;
-        }
-    }
-   
-    .mx-scrollcontainer-slide,
-    .mx-scrollcontainer-push {
-        &:not(.mx-scrollcontainer-open) > .region-sidebar {
-            visibility: hidden;
         }
     }
 
@@ -121,6 +101,12 @@
 
 // Topbar variant
 .layout-atlas-responsive-topbar {
+    .mx-scrollcontainer-slide,
+    .mx-scrollcontainer-push {
+        &:not(.mx-scrollcontainer-open) > .region-sidebar {
+            visibility: hidden;
+        }
+    }
 }
 
 // All responsive layouts
@@ -134,6 +120,24 @@
             @media (max-width: $screen-sm-max) {
                 display: inline-block;
             }
+        }
+    }
+
+    .mx-scrollcontainer-slide {
+        &:not(.mx-scrollcontainer-open) > .region-sidebar {
+            overflow: hidden;
+        }
+
+        &.mx-scrollcontainer-open > .region-sidebar {
+
+            & > .mx-scrollcontainer-wrapper {
+                position: relative;
+            }
+        }
+
+        .region-sidebar > .mx-scrollcontainer-wrapper {
+            z-index: 2;
+            background-color: inherit;
         }
     }
 }
