@@ -62,6 +62,7 @@ export const com_mendix_widget_native_linechart_LineChart = {
         fontFamily: font.family,
         fontSize: font.sizeSmall,
         fontWeight: font.weightNormal,
+        lineColor: border.color,
         label: {
             /*
                 All TextStyle properties are allowed and:
@@ -74,8 +75,8 @@ export const com_mendix_widget_native_linechart_LineChart = {
             fontFamily: font.family,
             fontSize: font.sizeSmall,
             fontWeight: font.weightNormal,
+            relativePositionGrid: "bottom"
         },
-        lineColor: border.color,
     },
     yAxis: {
         /*
@@ -93,6 +94,7 @@ export const com_mendix_widget_native_linechart_LineChart = {
         fontFamily: font.family,
         fontSize: font.sizeSmall,
         fontWeight: font.weightNormal,
+        lineColor: border.color,
         label: {
             /*
                All TextStyle properties are allowed and:
@@ -104,8 +106,8 @@ export const com_mendix_widget_native_linechart_LineChart = {
             fontFamily: font.family,
             fontSize: font.sizeSmall,
             fontWeight: font.weightNormal,
+            relativePositionGrid: "top"
         },
-        lineColor: border.color,
     },
     lineStyles: {
         line: {
