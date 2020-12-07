@@ -273,7 +273,7 @@ export interface LayoutGridType {
 }
 
 // Line chart
-export interface LineChartGridStyle {
+interface LineChartGridStyle {
     backgroundColor?: string;
     dashArray?: string;
     lineColor?: string;
@@ -333,8 +333,12 @@ export interface LineChartType {
     xAxis?: LineChartAxisStyle<"X">;
     yAxis?: LineChartAxisStyle<"Y">;
     legend?: LineChartLegendStyle;
-    lineStyles?: { [key: string]: LineChartLineStyle };
-    lineColorPalette?: string[];
+    lines?: {
+        lineColorPalette?: string;
+        customLineStyles?: {
+            [key: string]: LineChartLineStyle;
+        };
+    };
 }
 
 // List view

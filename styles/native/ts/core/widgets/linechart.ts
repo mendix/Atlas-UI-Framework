@@ -111,27 +111,38 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
             relativePositionGrid: "top"
         },
     },
-    lineStyles: {
-        line: {
-            /*
-                Allowed properties:
-                  -  dashArray (string)
-                  -  ending ("flat" or "round")
-                  -  lineColor (string)
-                  -  width (number)
-            */
-        },
-        marker: {
-            /*
-                Allowed properties:
-                  -  backgroundColor (string)
-                  -  borderColor (string)
-                  -  borderWidth (number)
-                  -  display ("false" or "underneath" or "onTop")
-                  -  size (number)
-                  -  symbol ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp")
-            */
-        },
+    lines: {
+        /*
+            Allowed properties:
+              -  lineColorPalette (string with array of colors separated by ';')
+        */
+        lineColorPalette: Object.values(brand)
+            .map((color, index, brandColors) => (index === brandColors.length - 1 ? color : `${color};`))
+            .join(""),
+        customLineStyles: {
+            any_custom_line_style_name: {
+                line: {
+                    /*
+                        Allowed properties:
+                          -  dashArray (string)
+                          -  ending ("flat" or "round")
+                          -  lineColor (string)
+                          -  width (number)
+                    */
+                },
+                markers: {
+                    /*
+                        Allowed properties:
+                          -  backgroundColor (string)
+                          -  borderColor (string)
+                          -  borderWidth (number)
+                          -  display ("false" or "underneath" or "onTop")
+                          -  size (number)
+                          -  symbol ("circle" or "diamond" or "plus" or "minus" or "square" or "star" or "triangleDown" or "triangleUp")
+                    */
+                }
+            }
+        }
     },
     legend: {
         container: {
@@ -156,6 +167,5 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
             fontSize: font.sizeSmall,
             fontWeight: font.weightNormal,
         },
-    },
-    lineColorPalette: Object.values(brand), // Array of color strings
+    }
 };
