@@ -33,6 +33,7 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
               -  backgroundColor (string)
               -  dashArray (string)
               -  lineColor (string)
+              -  lineWidth (number)
               -  padding (number)
               -  paddingBottom (number)
               -  paddingHorizontal (number)
@@ -40,7 +41,6 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
               -  paddingRight (number)
               -  paddingTop (number)
               -  paddingVertical (number)
-              -  width (number)
         */
         lineColor: border.color,
         paddingBottom: 32,
@@ -58,7 +58,7 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
               -  fontStyle ("normal" or "italic")
               -  fontWeight ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900")
               -  lineColor (string)
-              -  width (number)
+              -  lineWidth (number)
         */
         color: font.color,
         fontFamily: font.family,
@@ -90,7 +90,7 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
               -  fontStyle ("normal" or "italic")
               -  fontWeight ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900")
               -  lineColor (string)
-              -  width (number)
+              -  lineWidth (number)
         */
         color: font.color,
         fontFamily: font.family,
@@ -127,7 +127,7 @@ export const com_mendix_widget_native_linechart_LineChart: LineChartType = {
                           -  dashArray (string)
                           -  ending ("flat" or "round")
                           -  lineColor (string)
-                          -  width (number)
+                          -  lineWidth (number)
                     */
                 },
                 markers: {
