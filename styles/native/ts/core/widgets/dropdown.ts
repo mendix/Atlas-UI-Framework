@@ -63,6 +63,7 @@ export const DropDown: DropDownType = {
     },
     valueContainerFocused: {
         // All ViewStyle properties are allowed
+        ...TextBox.inputFocused
     },
     valueContainerDisabled: {
         // All ViewStyle properties are allowed

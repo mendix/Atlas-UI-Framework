@@ -7,9 +7,9 @@ Customizing core files will make updating Atlas much more difficult in the futur
 To customize any core styling, copy the part you want to customize to styles/native/app/ so the core styling is overwritten.
 
 ==========================================================================
-    TopBar / BottomBar / ProgressOverlay
+    BottomBar / ProgressOverlay
 
-    Default Class For Mendix TopBar, BottomBar and ProgressOverlay
+    Default Class For Mendix BottomBar and ProgressOverlay
 ========================================================================== */
 export const navigationStyle = {
     bottomBar: {

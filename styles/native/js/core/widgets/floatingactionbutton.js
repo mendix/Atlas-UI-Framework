@@ -60,6 +60,7 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
         // All TextStyle properties are allowed
         color: font.color,
         fontSize: font.size,
+        lineHeight: font.size,
         fontFamily: font.family,
     },
     secondaryButtonCaptionContainer: {

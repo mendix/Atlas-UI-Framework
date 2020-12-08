@@ -558,9 +558,17 @@ $callout-success-bg:                    $color-success-lighter !default;
 $callout-warning-bg:                    $color-warning-lighter !default;
 $callout-danger-bg:                     $color-danger-lighter !default;
 
+//== Timeline
+//## Extended variables for Timeline Widget
+// Colors
+$timeline-icon-color: $brand-primary;
+$timeline-border-color: $border-color-default;
 
+$timeline-color-header: $font-color-header;
+$timeline-color-detail: $font-color-detail;
 
-
+// Sizes
+$timeline-icon-size: 18px;
 
 //== Spacing
 //## Advanced layout options (used in base/mixins/default-spacing)

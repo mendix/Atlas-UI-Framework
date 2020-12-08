@@ -175,6 +175,7 @@ export const input: VariablesInput = {
     labelColor: font.color,
     labelColorDisabled: font.labelColorDisabled,
     borderColor: contrast.lower,
+    borderColorFocused: "",
     backgroundColor: background.primary,
     backgroundColorDisabled: contrast.lowest,
     selectionColor: contrast.lower,
@@ -283,13 +284,13 @@ export const tabContainer: VariablesTabContainer = {
         backgroundColor: badge.default.backgroundColor,
         paddingVertical: badge.paddingVertical,
         paddingHorizontal: badge.paddingHorizontal,
-        marginLeft: 8
+        marginLeft: 8,
     },
     badgeCaption: {
         fontSize: font.size,
         color: badge.default.color,
         fontWeight: badge.fontWeight,
-    }
+    },
 };
 //
 // ListView Styles

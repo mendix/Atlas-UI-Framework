@@ -23,10 +23,14 @@ export const brand = {
     dangerLight: `rgba(${anyColorToRgbString("#ed1c24")}, 0.14)`,
 };
 //
+// Safely check if Appearance API is available in this version of React Native
+const Appearance = require("react-native").Appearance;
 // Dark Mode - Inherits OS theme if possible
 export const darkMode = NativeModules && NativeModules.RNDarkMode && NativeModules.RNDarkMode.initialMode
     ? NativeModules.RNDarkMode.initialMode === "dark"
-    : false;
+    : Appearance
+        ? Appearance.getColorScheme() === "dark"
+        : false;
 //
 // Background Colors
 const backgroundColor = darkMode ? "#000" : "#FFF";
@@ -151,6 +155,7 @@ export const input = {
     labelColor: font.color,
     labelColorDisabled: font.labelColorDisabled,
     borderColor: contrast.lower,
+    borderColorFocused: "",
     backgroundColor: background.primary,
     backgroundColorDisabled: contrast.lowest,
     selectionColor: contrast.lower,
@@ -255,13 +260,13 @@ export const tabContainer = {
         backgroundColor: badge.default.backgroundColor,
         paddingVertical: badge.paddingVertical,
         paddingHorizontal: badge.paddingHorizontal,
-        marginLeft: 8
+        marginLeft: 8,
     },
     badgeCaption: {
         fontSize: font.size,
         color: badge.default.color,
         fontWeight: badge.fontWeight,
-    }
+    },
 };
 //
 // ListView Styles
