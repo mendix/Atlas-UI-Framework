@@ -1482,6 +1482,23 @@
                 ]
             }
         ],
+        "com.mendix.widget.native.barchart.BarChart": [
+            {
+                "name": "Chart size",
+                "type": "Dropdown",
+                "description": "Size of the chart.",
+                "options": [
+                    {
+                        "name": "Square",
+                        "class": "barChartSquare"
+                    },
+                    {
+                        "name": "Maximum space",
+                        "class": "barChartMaxSpace"
+                    }
+                ]
+            }
+        ],
         "com.mendix.widget.native.progressbar.ProgressBar": [
             {
                 "name": "Progress bar style",
