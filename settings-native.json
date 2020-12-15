@@ -1412,6 +1412,23 @@
                 ]
             }
         ],
+        "com.mendix.widget.native.linechart.LineChart": [
+            {
+                "name": "Chart size",
+                "type": "Dropdown",
+                "description": "Size of the chart.",
+                "options": [
+                    {
+                        "name": "Square",
+                        "class": "lineChartSquare"
+                    },
+                    {
+                        "name": "Maximum space",
+                        "class": "lineChartMaxSpace"
+                    }
+                ]
+            }
+        ],
         "com.mendix.widget.native.listviewswipe.ListViewSwipe": [
             {
                 "name": "Panel size",

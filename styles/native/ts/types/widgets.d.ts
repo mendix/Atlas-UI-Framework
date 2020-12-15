@@ -272,6 +272,75 @@ export interface LayoutGridType {
     container?: ViewStyle
 }
 
+// Line chart
+interface LineChartGridStyle {
+    backgroundColor?: string;
+    dashArray?: string;
+    lineColor?: string;
+    lineWidth?: number;
+    padding?: number;
+    paddingBottom?: number;
+    paddingHorizontal?: number;
+    paddingLeft?: number;
+    paddingRight?: number;
+    paddingTop?: number;
+    paddingVertical?: number;
+}
+
+interface LineChartAxisStyle<T extends "X" | "Y"> {
+    color?: string;
+    dashArray?: string;
+    fontFamily?: string;
+    fontSize?: number;
+    fontStyle?: "normal" | "italic";
+    fontWeight?: "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
+    lineColor?: string;
+    lineWidth?: number;
+    label?: TextStyle & {
+        relativePositionGrid?: T extends "X" ? "bottom" | "right" : "top" | "left";
+    };
+}
+
+interface LineChartLineStyle {
+    line?: {
+        dashArray?: string;
+        ending?: "flat" | "round";
+        lineColor?: string;
+        lineWidth?: number;
+    };
+    markers?: {
+        backgroundColor?: string;
+        borderColor?: string;
+        borderWidth?: number;
+        display?: "false" | "underneath" | "onTop";
+        size?: number;
+        symbol?: "circle" | "diamond" | "plus" | "minus" | "square" | "star" | "triangleDown" | "triangleUp";
+    };
+}
+
+interface LineChartLegendStyle {
+    container?: ViewStyle;
+    item?: ViewStyle;
+    indicator?: ViewStyle;
+    label?: TextStyle;
+}
+
+export interface LineChartType {
+    container?: ViewStyle;
+    errorMessage?: TextStyle;
+    chart?: ViewStyle;
+    grid?: LineChartGridStyle;
+    xAxis?: LineChartAxisStyle<"X">;
+    yAxis?: LineChartAxisStyle<"Y">;
+    legend?: LineChartLegendStyle;
+    lines?: {
+        lineColorPalette?: string;
+        customLineStyles?: {
+            [key: string]: LineChartLineStyle;
+        };
+    };
+}
+
 // List view
 export interface ListViewType {
     container?: ViewStyle & {
