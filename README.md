@@ -1,4 +1,8 @@
-# Mendix Atlas UI
+# For Atlas 3 UI go [here](https://github.com/mendix/widgets-resources/tree/master/packages/theming/atlas)
+
+We are always improving our code base with new technologies. Thus we moved our new atlas 3 theme package to our [monorepo](https://github.com/mendix/widgets-resources)
+
+## Mendix Atlas 2 UI
 
 Mendix Atlas UI is the foundation of making beautiful apps with Mendix. For more information about the framework go to
 [here](https://atlas.mendix.com/).
