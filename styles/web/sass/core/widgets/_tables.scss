@@ -30,23 +30,25 @@ table.mx-table {
         > tr {
             /* Table header */
             > th {
-                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;s
-                * {
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom
+                    $padding-table-cell-left;
+                s * {
                     color: $form-label-color;
                     font-weight: $font-weight-bold;
                     font-weight: $form-label-weight;
                 }
                 > label {
-                    padding-top: 7px;
+                    padding-top: 8px;
                     padding-bottom: 6px; // Aligns label in the middle if there is no input field next to it.
                 }
             }
             /* Table cells */
             > td {
-                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom
+                    $padding-table-cell-left;
                 > div > label,
                 .mx-referenceselector-input-wrapper label {
-                    padding-top: 7px;
+                    padding-top: 8px;
                     padding-bottom: 6px; // Aligns label in the middle if there is no input field next to it.
                 }
             }
@@ -60,7 +62,8 @@ table.mx-table {
         > tr {
             > th,
             > td {
-                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom
+                    $padding-table-cell-left;
             }
         }
     }
@@ -72,7 +75,8 @@ table.mx-table {
         > tr {
             > th,
             > td {
-                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom
+                    $padding-table-cell-left;
             }
         }
     }

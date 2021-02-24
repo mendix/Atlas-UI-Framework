@@ -2,16 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
-        {{themecss}}
-        {{appicons}}
-        {{manifest}}
-        {{startupimages}}
-
+        {{themecss}} {{appicons}} {{manifest}} {{startupimages}}
     </head>
 
     <body>
@@ -127,14 +122,14 @@
         <script src="js/login.js?{{cachebust}}"></script>
         <script>
             function togglePassword() {
-                const icon = document.querySelector('[class*=glyphicon-eye]');
-                if (icon.classList.contains('glyphicon-eye-close'))
-                    icon.classList.replace('glyphicon-eye-close', 'glyphicon-eye-open');
-                else icon.classList.replace('glyphicon-eye-open', 'glyphicon-eye-close');
+                const icon = document.querySelector("[class*=glyphicon-eye]");
+                if (icon.classList.contains("glyphicon-eye-close"))
+                    icon.classList.replace("glyphicon-eye-close", "glyphicon-eye-open");
+                else icon.classList.replace("glyphicon-eye-open", "glyphicon-eye-close");
 
-                const input = document.querySelector('#passwordInput');
-                if (input.type === 'password') input.type = 'text';
-                else input.type = 'password';
+                const input = document.querySelector("#passwordInput");
+                if (input.type === "password") input.type = "text";
+                else input.type = "password";
             }
         </script>
     </body>

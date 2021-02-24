@@ -5,18 +5,23 @@
 // To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
 //
 
-// Based on https://github.com/mendixlabs/slider/tree/master/src/ui/_slider-theme.scss
+/* ==========================================================================
+   Slider
 
-div.widget-slider {
+   Default Mendix Slider Widget.
+========================================================================== */
+
+.widget-slider {
+    margin-bottom: 16px;
+    padding: 5px 10px;
+
     .rc-slider-handle,
     .rc-slider-dot-active {
-        border-color: $brand-default;
-        &:active {
-            border-color: $brand-default;
-        }
-        &:hover {
-            border-color: $brand-default;
-        }
+        border-color: #dddddd;
+    }
+
+    .rc-slider.rc-slider-with-marks {
+        padding-bottom: 25px;
     }
 
     &.has-error {
@@ -27,26 +32,26 @@ div.widget-slider {
     }
 }
 
-div.widget-slider-primary .rc-slider-track {
+.widget-slider-primary .rc-slider-track {
     background-color: $brand-primary;
 }
 
-div.widget-slider-info .rc-slider-track {
+.widget-slider-info .rc-slider-track {
     background-color: $brand-info;
 }
 
-div.widget-slider-success .rc-slider-track {
+.widget-slider-success .rc-slider-track {
     background-color: $brand-success;
 }
 
-div.widget-slider-warning .rc-slider-track {
+.widget-slider-warning .rc-slider-track {
     background-color: $brand-warning;
 }
 
-div.widget-slider-danger .rc-slider-track {
+.widget-slider-danger .rc-slider-track {
     background-color: $brand-danger;
 }
 
-div.widget-slider-inverse .rc-slider-track {
+.widget-slider-inverse .rc-slider-track {
     background-color: $brand-inverse;
 }

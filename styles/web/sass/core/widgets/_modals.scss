@@ -34,12 +34,9 @@
                 /* For IE8 and earlier */
                 color: $modal-header-color;
                 text-shadow: none;
-                filter: alpha(opacity=100);
             }
         }
-
         .modal-body {
-            padding: 20px;
         }
 
         .modal-footer {
@@ -85,6 +82,10 @@
     }
 }
 
+.mx-dialog .modal-body {
+    padding: 24px;
+}
+
 // Login modal
 .mx-login {
     .modal-body {
@@ -95,13 +96,13 @@
         input {
             height: 56px;
             padding: 12px 12px;
-            border: 1px solid #EEEEEE;
-            background: #EEEEEE;
+            border: 1px solid #eeeeee;
+            background: #eeeeee;
             box-shadow: none;
             font-size: 16px;
 
             &:focus {
-                border-color: #66AFE9;
+                border-color: #66afe9;
             }
         }
     }
@@ -116,7 +117,7 @@
     }
 
     h4 {
-        color: #AAAAAA;
+        color: #aaaaaa;
         font-size: 20px;
         font-weight: $font-weight-bold;
     }

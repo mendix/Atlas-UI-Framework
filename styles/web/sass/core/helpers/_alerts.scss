@@ -11,21 +11,38 @@
 //== Design Properties
 //## Helper classes to change the look and feel of the component
 ========================================================================== */
-.alert-bordered {
-    border: 1px solid;
+.alert-icon {
+    font-size: $font-size-h3;
 }
 
-// Color variations
+.alert-title {
+    color: inherit;
+}
+
+.alert-description {
+    color: inherit;
+}
+
+//Variations
+
+.alert-primary,
+.alert {
+    color: $alert-primary-color;
+    border-color: $alert-primary-border-color;
+    background-color: $alert-primary-bg;
+}
+
+.alert-secondary{
+    color: $alert-secondary-color;
+    border-color: $alert-secondary-border-color;
+    background-color: $alert-secondary-bg;
+}
+
+// Semantic variations
 .alert-success {
     color: $alert-success-color;
     border-color: $alert-success-border-color;
     background-color: $alert-success-bg;
-}
-
-.alert-info {
-    color: $alert-info-color;
-    border-color: $alert-info-border-color;
-    background-color: $alert-info-bg;
 }
 
 .alert-warning {
@@ -44,6 +61,7 @@
 //## Styling when component is in certain state
 //-------------------------------------------------------------------------------------------------------------------//
 .has-error .alert {
-    margin-top: 8px;
+    margin-top: $spacing-small;
     margin-bottom: 0;
+    padding: 0;
 }

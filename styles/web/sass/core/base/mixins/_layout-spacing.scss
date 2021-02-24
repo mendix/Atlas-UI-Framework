@@ -6,9 +6,9 @@
 //
 
 @mixin layout-spacing($type: padding, $direction: all, $device: responsive, $is_important: false) {
-    $suffix: '';
+    $suffix: "";
     @if $is_important != false {
-        $suffix: ' !important';
+        $suffix: " !important";
     }
     @if $device==responsive {
         @if $direction==all {

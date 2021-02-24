@@ -22,13 +22,10 @@ img.img-thumbnail,
     max-width: 100%;
     height: auto;
     padding: 4px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     border: 1px solid $brand-default;
     border-radius: 4px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     line-height: $line-height-base;
 }
 
@@ -49,4 +46,31 @@ img.img-center,
 .img-center img {
     margin-right: auto !important;
     margin-left: auto !important;
+}
+
+img.img-icon {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+img.img-fill,
+.img-fill img {
+    object-fit: fill;
+}
+
+img.img-contain,
+.img-contain img {
+    object-fit: contain;
+}
+
+img.img-cover,
+.img-cover img {
+    object-fit: cover;
+}
+
+img.img-scale-down,
+.img-scale-down img {
+    object-fit: scale-down;
 }

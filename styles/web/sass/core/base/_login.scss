@@ -63,19 +63,12 @@ body {
 
             .glyphicon {
                 &:before {
-                    -webkit-transition: color 0.4s;
-                    -moz-transition: color 0.4s;
-                    -o-transition: color 0.4s;
                     transition: color 0.4s;
                 }
 
                 position: absolute;
                 top: 50%;
                 left: $form-input-padding-x;
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
                 transform: translateY(-50%);
 
                 &-eye-open:hover,
@@ -134,36 +127,9 @@ body {
     .loginpage-image {
         height: 100%;
         animation: makePointer 1s ease-out both;
-        background: left / cover no-repeat url('../../../resources/work-do-more.jpeg'); // Microsoft EDGE
         background: left / cover no-repeat
                 linear-gradient(to right, rgba($brand-primary, 0.9) 0%, rgba($brand-primary, 0.6) 100%),
-            left / cover no-repeat url('../../../resources/work-do-more.jpeg');
-        background: left / cover no-repeat -moz-linear-gradient(left, rgba($brand-primary, 0.9) 0%, rgba(
-                            $brand-primary,
-                            0.6
-                        )
-                        100%),
-            left / cover no-repeat url('../../../resources/work-do-more.jpeg');
-        background: left / cover no-repeat -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, rgba($brand-primary, 0.9)), color-stop(100%, rgba($brand-primary, 0.6))),
-            left / cover no-repeat url('../../../resources/work-do-more.jpeg');
-        background: left / cover no-repeat -webkit-linear-gradient(left, rgba($brand-primary, 0.9) 0%, rgba(
-                            $brand-primary,
-                            0.6
-                        )
-                        100%),
-            left / cover no-repeat url('../../../resources/work-do-more.jpeg');
-        background: left / cover no-repeat -o-linear-gradient(left, rgba($brand-primary, 0.9) 0%, rgba(
-                            $brand-primary,
-                            0.6
-                        )
-                        100%),
-            left / cover no-repeat url('../../../resources/work-do-more.jpeg');
-        background: left / cover no-repeat -ms-linear-gradient(left, rgba($brand-primary, 0.9) 0%, rgba(
-                            $brand-primary,
-                            0.6
-                        )
-                        100%),
-            left / cover no-repeat url('../../../resources/work-do-more.jpeg');
+            left / cover no-repeat url("../../resources/work-do-more.jpeg");
         -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     }

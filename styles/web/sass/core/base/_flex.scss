@@ -9,7 +9,7 @@
 
    Flex classes
 ========================================================================== */
-$important-flex-value: if($important-flex, ' !important', '');
+$important-flex-value: if($important-flex, " !important", "");
 
 // Flex layout
 .flexcontainer {

@@ -3,335 +3,61 @@
 
 ========================================================================== */
 .card {
-    padding: 30px;
-    border: 1px solid $border-color-default;
+    border: 0;
     border-radius: $border-radius-default;
-    background-color: #FFFFFF;
-}
-
-//== Elements
-//-------------------------------------------------------------------------------------------------------------------//
-.card-title {
-    margin-top: 0;
-}
-
-//== Variations
-//-------------------------------------------------------------------------------------------------------------------//
-.cardaction {
-    .card-image {
-        .glyphicon {
-            font-size: 58px;
-        }
-    }
-}
-
-.cardmetrics {
-    .card-title {
-        margin-bottom: 0;
-    }
-
-    .figurecontent {
-    }
-
-    .card-image {
-        width: 100px;
-        height: auto;
-        // If btn
-        &.btn {
-            width: 100px;
-            height: 100px;
-            padding: 0;
-            cursor: default;
-            pointer-events: none;
-            font-size: 40px;
-        }
-    }
-
-    .card-counter {
-        margin: 0;
-        font-size: 64px;
-    }
-
-    .card-morebutton {
-    }
-}
-
-.cardinfo {
-    .card-text {
-        margin-bottom: $spacing-large;
-    }
-}
-
-// Used in card info
-.textwithicon {
+    background-color: #ffffff;
     overflow: hidden;
-    max-width: 100%;
-    margin-bottom: 15px;
-    text-overflow: ellipsis;
-
-    .textwithicon-icon,
-    .textwithicon-text {
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .textwithicon-icon {
-        margin-right: 15px;
-        padding: 0;
-        color: $brand-primary; // class .text-primary
-        border: 0;
-        background: transparent;
-        font-size: 23px;
-    }
-
-    .textwithicon-text {
-    }
-}
-
-// Used in card info
-.socialprofiles {
-    .socialprofiles-title {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold; // class text-bold
-    }
-
-    .socialprofiles-button {
-        width: 24px;
-        height: 24px;
-        margin-right: 15px;
-        padding: 0;
-        border-radius: 24px;
-
-        .glyphicon {
-            margin: 0;
-        }
-    }
-}
-
-
-.cardtabs {
-    padding: 0;
-}
-
-.cardtabs-tabs {
-    margin: 0;
-
-    ul.mx-tabcontainer-tabs {
-        display: flex;
-        margin: 0;
-        background-color: mix($tabs-border-color, #FFFFFF, 20%);
-
-        li {
-            flex: 1 1 auto;
-            text-align: center;
-
-            a,
-            a:hover,
-            a:focus {
-                border-top-width: 0;
-                border-right-width: 1px;
-                border-left-width: 0;
-            }
-
-            &:first-child a {
-                border-radius: $border-radius-default 0 0 0;
-            }
-
-            &:last-child a {
-                border-radius: 0 $border-radius-default 0 0;
-            }
-        }
-    }
-
-    .mx-tabcontainer-pane {
-        @include get-responsive-spacing-large($type: padding, $direction: all);
-    }
-}
-
-.carduser {
-    .card-controls {
-    }
-
-    .card-title {
-    }
-
-    .card-detail {
-    }
-}
-
-.cardgraph {
-    .card-title {
-    }
-}
-
-.cardchart {
-    .card-title {
-    }
-}
-
-.cardproduct {
-    padding: 0;
-
-}
-
-.cardproduct-header {
     position: relative;
-    overflow: hidden;
-    height: 200px;
-
-    .card-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-    }
-
+    padding: $spacing-large;
+    margin-bottom: $spacing-large;
 }
 
-.cardproduct-overlay {
+//== Card components
+//-------------------------------------------------------------------------------------------------------------------//
+.card-body {
+    padding: $spacing-large;
+}
+
+.card-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px 30px;
-    background: rgba(0, 0, 0, 0.60);
-
+    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(250, 250, 250, 0) 8%,
+        rgba(0, 0, 0, 0.99) 121%,
+        #000 100%
+    );
+    padding: $spacing-large;
 }
 
-.cardproduct-overlay-category,
-.cardproduct-overlay-title {
-    margin: 0;
-    color: #FFFFFF;
+.card-title {
 }
 
-.cardproduct-footer .col {
-    padding: 20px 30px;
-
-    .widget-star-rating-font {
-        font-size: 20px;
-    }
+.card-image {
+    width: 100%;
+    height: auto;
 }
 
-.cardproduct-name {
-    margin: 0;
+.card-supportingtext {
 }
 
-.cardproduct-btn {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 30px;
-    border-left: 1px solid $border-color-default;
+.card-action {
 }
 
-.cardproduct2 {
-    @extend .cardproduct;
-
-    .cardproduct-header {
-        &::after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            padding: 20px 30px;
-            content: "";
-            background: rgba(0, 0, 0, 0.60);
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
-            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
-        }
-    }
+.card-icon {
+    font-size: $font-size-h1;
 }
 
-
-.cardproduct3 {
-    @extend .cardproduct;
-
-    .cardproduct-header {
-        height: 320px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-    }
-
-    .cardproduct-overlay {
-        min-height: 100px;
-        padding: 30px;
-        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
-        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
-        font-size: $font-size-default;
-    }
-}
-
-.cardshopping {
-}
-
-.carduserlist {
-}
-
-.cardstatus {
-    padding: 20px;
-
-    .card-linkicon {
-        font-size: 30px;
-    }
-
-    .cardstatus-status {
-        margin-bottom: 5px;
-    }
-}
-
-.cardpayment {
-}
-
-.cardprogress {
-}
-
-.cardprogress-state {
-    width: 80px;
-    height: 80px;
-    padding: 0;
-    cursor: default;
-    pointer-events: none;
-    border-radius: 100%;
-    font-size: 28px;
-}
-
-.cardhighlight {
-    border-top: 4px solid $brand-primary;
-}
-
-.cardchat {
+//== Variations
+//-------------------------------------------------------------------------------------------------------------------//
+.card-with-image {
     overflow: hidden;
-    padding: 0;
-
-    .chat {
-        height: 400px;
-    }
 }
 
-@media screen and (max-width: $screen-md-max) {
-    .widget-charts:not([height]),
-    .widget-charts-line:not([height]) {
-        padding-bottom: 80% !important;
-    }
-}
-
-
-@media screen and (max-width: $screen-lg-max) {
-    .cardprogress {
-        .cardprogress-state {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-        }
-    }
+.card-with-background {
+    position: relative;
 }

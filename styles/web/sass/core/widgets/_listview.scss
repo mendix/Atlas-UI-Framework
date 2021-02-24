@@ -13,24 +13,8 @@
     // Remove widget padding
     padding: 0;
     /* Clear search button (overrides load more button stying) */
-    // Search bar
-    .mx-listview-searchbar {
-        margin-bottom: $gutter-size;
-
-        .btn {
-            width: auto;
-        }
-    }
-
-    /* Load more button */
-    & > .btn {
-        width: 100%;
-        margin: 10px auto;
-    }
-
     & > ul {
-        margin: 0;
-
+        margin: 0 0 $spacing-medium;
         .mx-listview-empty {
             border-style: none;
             background-color: transparent;
@@ -38,29 +22,15 @@
 
         & > li {
             @include transition();
-            padding: $listview-padding-top $listview-padding-right $listview-padding-bottom $listview-padding-left;
-            border-width: 1px 0 0 0;
-            border-style: solid;
-            border-color: $grid-border-color;
-            background-color: $grid-bg;
-
-            &:first-child {
-                border-radius: 0; // Reset mxui listview style
-            }
-
+            background-color: #fff;
+            padding: $spacing-medium;
+            border-top: 1px solid $grid-border-color;
             &:last-child {
                 border-bottom: 1px solid $grid-border-color;
-                border-radius: 0; // Reset mxui listview style
             }
-
             &:focus,
             &:active {
                 outline: 0;
-                background-color: $grid-bg-hover;
-            }
-
-            &.selected {
-                background-color: $grid-bg-selected;
             }
         }
     }
@@ -71,12 +41,26 @@
     }
 }
 
+// Search bar
+.mx-listview-searchbar {
+    margin-bottom: $spacing-medium;
+    .btn {
+        width: auto;
+    }
+}
+
+/* Load more button */
+.btn.mx-listview-loadMore {
+    width: 100%;
+    margin: 0 0 $spacing-medium;
+}
+
 //== Phone specific
 //-------------------------------------------------------------------------------------------------------------------//
 .profile-phone .mx-listview {
     .mx-listview-searchbar {
         margin-bottom: 3px;
-        background: #FFFFFF;
+        background: #ffffff;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 
         input {

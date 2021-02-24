@@ -1,99 +1,41 @@
 /* ==========================================================================
-   Pageheader
+   Hero header
 
 ========================================================================== */
-.heroheader {
-    border-bottom: 1px solid $border-color-default;
-    background: $header-bg-color;
+
+.headerhero {
+    width: 100%;
+    min-height: $header-min-height;
+    background-color: $header-bg-color;
+    position: relative;
+    overflow: hidden;
+    padding: $spacing-large;
+    margin-bottom: $spacing-large;
 }
 
 //== Elements
 //-------------------------------------------------------------------------------------------------------------------//
-.heroheader-title {
-    margin: 0 0 10px 0;
+.headerhero-title {
+    color: $header-text-color;
 }
 
-.heroheader-subtitle {
-    margin: 0;
-    padding: 0 15px;
-
-    &::before {
-        display: block;
-        max-width: 330px;
-        height: 1px;
-        margin: auto auto 10px auto;
-        content: "";
-        background-color: lighten($border-color-default, 4);
-    }
+.headerhero-subtitle {
+    color: $header-text-color;
 }
 
-//== Variations
-//-------------------------------------------------------------------------------------------------------------------//
-.heroheader1 {
-    background-image: $brand-gradient;
-
-    .heroheader-title {
-        margin-bottom: 10px;
-        color: #FFFFFF;
-    }
-
-    .heroheader-subtitle {
-        padding: 0;
-        color: #FFFFFF;
-
-        &::before {
-            display: none;
-        }
-    }
+.headerhero-backgroundimage {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    filter: $header-bgimage-filter;
 }
 
-.heroheadermap {
-    padding: 0 !important;
+.btn.headerhero-action {
+    color: $header-text-color;
 }
 
-.heroheadermap-controls {
-    padding: $spacing-large;
-    background: $header-bg-color;
-}
-
-.heroheaderproduct {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    background-color: #000000;
-
-    .heroheaderproduct-backgroundimage {
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        width: 100%;
-        opacity: 0.7;
-        filter: blur(5px);
-    }
-
-    .heroheaderproduct-overlay {
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.heroheaderexpense {
-    .heroheaderexpense-title {
-        font-size: 72px;
-    }
-
-    .heroheaderexpense-type {
-        align-items: center;
-
-        &::before {
-            flex-grow: 1;
-            height: 1px;
-            margin-right: 10px;
-            content: "";
-            background-color: #D2D2D2;
-        }
-    }
+.heroheader-overlay {
+    z-index: 1;
 }

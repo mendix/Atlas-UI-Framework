@@ -4,43 +4,23 @@
     A list with a listening dataview
 ========================================================================== */
 .masterdetail {
+    background: #fff;
     .masterdetail-master {
-        .controlgroup {
-            margin-bottom: $gutter-size;
-        }
-
-        @media (max-width: $screen-lg) {
-            @include layout-spacing($type: margin, $direction: bottom, $device: responsive);
-        }
-
-        @media (min-width: $screen-lg) {
-            border-right: 1px solid $border-color-default;
-
-            .mx-listview-searchbar {
-                margin: $gutter-size;
-            }
-            .controlgroup {
-                padding: $gutter-size;
-                border-bottom: 1px solid $border-color-default;
-            }
-        }
+        border-right: 1px solid $border-color-default;
     }
-
     .masterdetail-detail {
-        @media (min-width: $screen-lg) {
-            @include layout-spacing($type: padding, $direction: all, $device: responsive);
-        }
+        padding: $spacing-large;
     }
 }
 
 //== Variations
 //-------------------------------------------------------------------------------------------------------------------//
-.masterdetailvertical {
+.masterdetail-vertical {
+    background: #fff;
     .masterdetail-master {
-        @include layout-spacing($type: margin, $direction: bottom, $device: responsive);
+        border-bottom: 1px solid $border-color-default;
     }
-
     .masterdetail-detail {
-        @include layout-spacing($type: padding, $direction: top, $device: responsive);
+        padding: $spacing-large;
     }
 }

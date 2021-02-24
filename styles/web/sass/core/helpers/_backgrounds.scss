@@ -15,9 +15,107 @@
     background-color: $bg-color !important;
 }
 
+//Brand variations
+
+.background-primary {
+    background-color: $brand-primary !important;
+}
+
+.background-primary-darker {
+    background-color: $color-primary-darker !important;
+}
+
+.background-primary.background-dark, .background-primary-dark {
+    background-color: $color-primary-dark !important;
+}
+
+.background-primary.background-light, .background-primary-light {
+    background-color: $color-primary-light !important;
+}
+
+.background-primary-lighter{
+    background-color: $color-primary-lighter !important;
+}
+
 .background-secondary {
     background-color: $bg-color-secondary !important;
 }
+
+.background-secondary.background-light {
+    background-color: $bg-color-secondary !important;
+}
+
+.background-secondary.background-dark {
+    background-color: $bg-color-secondary !important;
+}
+
+.background-brand-gradient {
+    background-image: $brand-gradient !important;
+}
+
+//Semantic variations
+
+.background-success {
+    background-color: $brand-success !important;
+}
+
+.background-success-darker {
+    background-color: $color-success-darker !important;
+}
+
+.background-success.background-dark, .background-success-dark {
+    background-color: $color-success-dark !important;
+}
+
+.background-success.background-light,  .background-success-light {
+    background-color: $color-success-light !important;
+}
+
+.background-success-lighter {
+    background-color: $color-success-lighter !important;
+}
+
+.background-warning {
+    background-color: $brand-warning !important;
+}
+
+.background-warning-darker {
+    background-color: $color-warning-darker !important;
+}
+
+.background-warning.background-dark, .background-warning-dark{
+    background-color: $color-warning-dark !important;
+}
+
+.background-warning.background-light, .background-warning-light {
+    background-color: $color-warning-light !important;
+}
+
+.background-warning-lighter {
+    background-color: $color-warning-lighter !important;
+}
+
+.background-danger {
+    background-color: $brand-danger !important;
+}
+
+.background-danger-darker {
+    background-color: $color-danger-darker !important;
+}
+
+.background-danger.background-dark, .background-danger-dark{
+    background-color: $color-danger-dark !important;
+}
+
+.background-danger.background-light, .background-danger-light{
+    background-color: $color-danger-light !important;
+}
+
+.background-danger-lighter {
+    background-color: $color-danger-lighter !important;
+}
+
+//Bootstrap variations
 
 .background-default {
     background-color: $brand-default !important;
@@ -59,26 +157,6 @@
     background-color: $color-inverse-lighter !important;
 }
 
-.background-primary {
-    background-color: $brand-primary !important;
-}
-
-.background-primary-darker {
-    background-color: $color-primary-darker !important;
-}
-
-.background-primary-dark {
-    background-color: $color-primary-dark !important;
-}
-
-.background-primary-light {
-    background-color: $color-primary-light !important;
-}
-
-.background-primary-lighter {
-    background-color: $color-primary-lighter !important;
-}
-
 .background-info {
     background-color: $brand-info !important;
 }
@@ -97,68 +175,4 @@
 
 .background-info-lighter {
     background-color: $color-info-lighter !important;
-}
-
-.background-success {
-    background-color: $brand-success !important;
-}
-
-.background-success-darker {
-    background-color: $color-success-darker !important;
-}
-
-.background-success-dark {
-    background-color: $color-success-dark !important;
-}
-
-.background-success-light {
-    background-color: $color-success-light !important;
-}
-
-.background-success-lighter {
-    background-color: $color-success-lighter !important;
-}
-
-.background-warning {
-    background-color: $brand-warning !important;
-}
-
-.background-warning-darker {
-    background-color: $color-warning-darker !important;
-}
-
-.background-warning-dark {
-    background-color: $color-warning-dark !important;
-}
-
-.background-warning-light {
-    background-color: $color-warning-light !important;
-}
-
-.background-warning-lighter {
-    background-color: $color-warning-lighter !important;
-}
-
-.background-danger {
-    background-color: $brand-danger !important;
-}
-
-.background-danger-darker {
-    background-color: $color-danger-darker !important;
-}
-
-.background-danger-dark {
-    background-color: $color-danger-dark !important;
-}
-
-.background-danger-light {
-    background-color: $color-danger-light !important;
-}
-
-.background-danger-lighter {
-    background-color: $color-danger-lighter !important;
-}
-
-.background-brand-gradient {
-    background-image: $brand-gradient !important;
 }

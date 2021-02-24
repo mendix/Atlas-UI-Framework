@@ -75,6 +75,7 @@
 
     ul.mx-menubar-list {
         display: flex;
+        flex-direction: column;
 
         li.mx-menubar-item {
             display: block;

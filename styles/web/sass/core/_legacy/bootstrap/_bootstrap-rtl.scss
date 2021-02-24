@@ -6,7 +6,7 @@
  *   Copyright: Unlicensed Public Domain
  *******************************************************************************/
 
-[dir='rtl'] {
+ [dir="rtl"] {
     .flip.text-left {
         text-align: right;
     }
@@ -967,10 +967,10 @@
         padding-right: 20px;
         padding-left: initial;
     }
-    .radio input[type='radio'],
-    .radio-inline input[type='radio'],
-    .checkbox input[type='checkbox'],
-    .checkbox-inline input[type='checkbox'] {
+    .radio input[type="radio"],
+    .radio-inline input[type="radio"],
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"] {
         margin-right: -20px;
         margin-left: auto;
     }
@@ -997,8 +997,8 @@
             padding-right: 0;
             padding-left: initial;
         }
-        .form-inline .radio input[type='radio'],
-        .form-inline .checkbox input[type='checkbox'] {
+        .form-inline .radio input[type="radio"],
+        .form-inline .checkbox input[type="checkbox"] {
             margin-right: 0;
             margin-left: auto;
         }

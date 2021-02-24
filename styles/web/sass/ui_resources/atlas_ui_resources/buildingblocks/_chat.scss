@@ -48,13 +48,12 @@
             display: block;
             width: 50%;
             margin: 15px auto;
-            color: #FFFFFF;
+            color: #ffffff;
             background-color: $brand-primary;
             box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
         }
     }
 }
-
 
 .chat-message {
     display: flex;
@@ -84,7 +83,7 @@
         right: 100%;
         width: 0;
         height: 0;
-        content: '';
+        content: "";
         border: 10px solid transparent;
         border-top: 0;
         border-right-color: $bg-color;

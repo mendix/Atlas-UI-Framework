@@ -60,40 +60,6 @@ table.table-compact.mx-table {
     }
 }
 
-// Remove padding on sides
-table.table-sideless.mx-table {
-    > tbody {
-        // Table row
-        > tr {
-            // Table header
-            // Table data
-            > td,
-            > th {
-                padding-right: 0;
-            }
-            > th:first-child,
-            > td:first-child {
-                padding-left: 0;
-            }
-        }
-    }
-}
-
-// Remove all padding
-table.table-spaceless.mx-table {
-    > tbody {
-        // Table row
-        > tr {
-            // Table header
-            // Table data
-            > th,
-            > td {
-                padding: 0;
-            }
-        }
-    }
-}
-
 // Tables Vertical
 // Will remove unwanted paddings
 table.table-vertical.mx-table {

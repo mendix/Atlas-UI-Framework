@@ -7,14 +7,14 @@
 
 /* ==========================================================================
    Date Picker
-   
+
    Default Mendix Date Picker Widget.
 ========================================================================== */
 
 .mx-calendar {
     /* (must be higher than popup z-index) */
     z-index: 10010 !important;
-    padding: 10px;
+    padding: 8px;
     font-size: 12px;
     background: $bg-color;
     border-radius: $border-radius-default;

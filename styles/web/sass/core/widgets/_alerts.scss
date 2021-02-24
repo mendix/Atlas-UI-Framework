@@ -12,8 +12,9 @@
 ========================================================================== */
 
 .alert {
-    margin-top: 0; // want to align it with padding of a page
-    padding: 15px;
-    border: 0;
-    border-radius: 4px;
+    margin-top: 0;
+    padding: $spacing-medium;
+    border: 1px solid;
+    border-radius: $border-radius-default;
+    padding: $spacing-medium;
 }

@@ -18,9 +18,6 @@
         border-color: $tabs-border-color;
         & > li > a {
             margin-right: 0;
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
             color: $tabs-color;
             font-weight: $font-weight-normal;
@@ -49,16 +46,16 @@
         background-color: $brand-primary;
         li {
             display: table-cell;
-            float: none;
+            float: none; // reset bootstrap
             width: 1%;
             margin: 0;
             text-align: center;
             border-style: none;
             border-radius: 0;
             a {
-                padding: 15px;
+                padding: 16px;
                 text-transform: uppercase;
-                color: #FFFFFF;
+                color: #ffffff;
                 border-width: 0 1px 0 0;
                 border-style: solid;
                 border-color: rgba(255, 255, 255, 0.3);
@@ -76,7 +73,7 @@
             &.active > a,
             &.active > a:hover,
             &.active > a:focus {
-                color: #FFFFFF;
+                color: #ffffff;
                 border-style: none;
                 border-radius: 0;
                 background-color: mix($brand-primary, #000000, 80%);

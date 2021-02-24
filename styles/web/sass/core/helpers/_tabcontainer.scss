@@ -15,20 +15,25 @@
 .tab-pills.mx-tabcontainer {
     & > .mx-tabcontainer-tabs {
         border: 0;
+        & > li {
+            margin-bottom: $spacing-small;
+        }
         & > li > a {
-            margin-right: 2px;
+            margin-right: $spacing-small;
             color: $tabs-color;
-            border: 1px solid $tabs-border-color;
-            border-radius: 4px;
+            border-radius: $border-radius-default;
+            background-color: $tabs-bg-pills;
+
             &:hover,
             &:focus {
                 background-color: $tabs-bg-hover;
             }
         }
+
         & > li.active > a,
         & > li.active > a:hover,
         & > li.active > a:focus {
-            color: #FFFFFF;
+            color: #ffffff;
             border-color: $tabs-bg-active;
             background-color: $tabs-bg-active;
         }
@@ -38,18 +43,18 @@
 // Style with lines
 .tab-lined.mx-tabcontainer {
     & > .mx-tabcontainer-tabs {
-        border-width: 3px;
+        border-width: 1px;
+
         li {
-            margin-right: 30px;
-            margin-bottom: -3px;
+            margin-right: $spacing-large;
+
             & > a {
-                padding: 10px 0;
+                padding: 16px 0 13px 0; // border is 3px
                 color: $tabs-color;
                 border: 0;
-                border-style: solid;
-                border-color: transparent;
-                border-bottom-width: 3px;
+                border-bottom: 3px solid transparent;
                 border-radius: 0;
+
                 &:hover,
                 &:focus {
                     color: $tabs-color;
@@ -58,6 +63,7 @@
                     background: transparent;
                 }
             }
+
             &.active > a,
             &.active > a:hover,
             &.active > a:focus {
@@ -76,25 +82,19 @@
     & > .mx-tabcontainer-tabs {
         width: 100%;
         border-bottom: 0;
+
         & > li {
             display: table-cell;
-            float: none;
+            float: none; // reset bootstrap
             width: 1%;
             margin: 0;
             @media (max-width: $screen-sm-max) {
                 display: block;
                 width: 100%;
             }
+
             & > a {
                 text-align: center;
-                border-bottom: 1px solid $tabs-border-color;
-            }
-        }
-        & > li.active > a {
-            border-bottom-color: transparent;
-            border-radius: 4px;
-            @media (max-width: $screen-sm-max) {
-                border-bottom-color: $tabs-border-color;
             }
         }
     }
@@ -105,12 +105,13 @@
     & > .mx-tabcontainer-tabs {
         margin: 0;
     }
+
     & > .mx-tabcontainer-content {
         padding: 10px;
         border-width: 0 1px 1px 1px;
         border-style: solid;
         border-color: $tabs-border-color;
-        background-color: #FFFFFF;
+        background-color: transparent;
     }
 }
 
@@ -131,34 +132,162 @@
             content: "";
             background-color: $tabs-border-color;
         }
+
         & > li {
             position: relative;
-            float: none;
+            float: none; // reset bootstrap
             width: 100%;
             text-align: center;
+
             & > a {
                 width: 33px;
                 height: 33px;
                 margin: auto;
                 padding: 0;
                 text-align: center;
-                color: $brand-default;
+                color: $brand-primary;
                 border: 1px solid $tabs-border-color;
                 border-radius: 100%;
-                background-color: #FFFFFF;
+                background-color: $bg-color;
                 font-size: 18px;
                 font-weight: bold;
                 line-height: 33px;
             }
+
             &.active {
                 & > a,
                 & > a:hover,
                 & > a:focus {
-                    color: #FFFFFF;
+                    color: #ffffff;
                     border-color: $tabs-bg-active;
                     background-color: $tabs-bg-active;
                 }
             }
         }
+    }
+}
+
+//add tabcontainer flex classes
+
+.tab-center.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+}
+
+.tab-left.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+        justify-content: flex-start;
+    }
+}
+
+.tab-right.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+        justify-content: flex-end;
+    }
+}
+
+.tab-spacing-outer-top-none.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-top: 0;
+    }
+}
+
+.tab-spacing-outer-top.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-top: $spacing-small;
+    }
+}
+
+.tab-spacing-outer-top-medium.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-top: $spacing-medium;
+    }
+}
+
+.tab-spacing-outer-top-large.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-top: $spacing-large;
+    }
+}
+
+.tab-spacing-outer-bottom-none.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-bottom: 0;
+    }
+}
+
+.tab-spacing-outer-bottom.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-bottom: $spacing-small;
+    }
+}
+
+.tab-spacing-outer-bottom-medium.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-bottom: $spacing-medium;
+    }
+}
+
+.tab-spacing-outer-bottom-large.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs {
+        margin-bottom: $spacing-large;
+    }
+}
+
+.tab-spacing-outer-left-none.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:first-child {
+        margin-left: 0;
+    }
+}
+
+.tab-spacing-outer-left.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs li:first-child {
+        margin-left: $spacing-small;
+    }
+}
+
+.tab-spacing-outer-left-medium.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:first-child {
+        margin-left: $spacing-medium;
+    }
+}
+
+.tab-spacing-outer-left-large.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:first-child {
+        margin-left: $spacing-large;
+    }
+}
+
+.tab-spacing-outer-right-none.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:last-child {
+        margin-right: 0;
+    }
+}
+
+.tab-spacing-outer-right.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:last-child {
+        margin-right: $spacing-small;
+    }
+}
+
+.tab-spacing-outer-right-medium.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:last-child {
+        margin-right: $spacing-medium;
+    }
+}
+
+.tab-spacing-outer-right-large.mx-tabcontainer {
+    & > .mx-tabcontainer-tabs > li:last-child {
+        margin-right: $spacing-large;
     }
 }

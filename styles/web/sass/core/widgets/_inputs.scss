@@ -30,6 +30,10 @@
     @if $form-input-style==lined {
         @extend .form-control-lined;
     }
+
+    &::placeholder {
+        color: $form-input-placeholder-color;
+    }
 }
 
 .form-control:not([readonly]):focus {
@@ -43,7 +47,7 @@
 .form-control[readonly],
 fieldset[disabled] .form-control {
     opacity: 1;
-    background-color: #EEEEEE;
+    background-color: $form-input-bg-disabled;
 }
 
 .form-control[disabled],
@@ -68,8 +72,8 @@ fieldset[disabled] .form-control {
     overflow: hidden;
     flex: 1;
     min-height: auto;
-    padding: $form-input-padding-y $form-input-padding-x;
-    border-bottom: 1px solid $form-input-static-border-color;
+    padding: $form-input-static-padding-y $form-input-static-padding-x;
+    //border-bottom: 1px solid $form-input-static-border-color;
     font-size: $form-input-font-size;
     line-height: $form-input-line-height;
 
@@ -101,6 +105,13 @@ select.form-control {
     height: auto;
 }
 
+.mx-textarea-counter{
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-top: $spacing-small;
+}
+
 textarea.form-control {
     flex-basis: auto;
 }
@@ -111,9 +122,13 @@ textarea.form-control {
     flex-wrap: wrap;
     max-width: 100%;
 
+    .btn {
+        margin-left: $spacing-small;
+    }
+
     .mx-validation-message {
         flex-basis: 100%;
-        margin-top: 5px;
+        margin-top: 4px;
     }
 }
 
@@ -123,28 +138,29 @@ textarea.form-control {
     flex-direction: row;
     margin-bottom: $form-group-margin-bottom;
 
-    & > div[class*='col-'] {
+    & > div[class*="col-"] {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    & > [class*='col-'] {
+    & > [class*="col-"] {
         padding-right: $form-group-gutter;
         padding-left: $form-group-gutter;
     }
 
     // Alignment content
-    div[class*='textBox'] > .control-label,
-    div[class*='textArea'] > .control-label,
-    div[class*='datePicker'] > .control-label {
+    div[class*="textBox"] > .control-label,
+    div[class*="textArea"] > .control-label,
+    div[class*="datePicker"] > .control-label {
         @extend .form-control-static;
     }
 
     // Label
     .control-label {
         overflow: hidden;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
+        text-align: left;
         text-overflow: ellipsis;
         color: $form-label-color;
         font-size: $form-label-size;
@@ -200,26 +216,26 @@ textarea.form-control {
 
 @media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 0) {
     // Fixes alignment bug on iPads / iPhones where datefield is not aligned vertically
-    input[type='date'],
-    input[type='time'],
-    input[type='datetime-local'],
-    input[type='month'] {
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="month"] {
         line-height: 1;
     }
     // Fix shrinking of date inputs because inability of setting a placeholder
-    input[type='time']:not(.has-value):before,
-    input[type='date']:not(.has-value):before,
-    input[type='month']:not(.has-value):before,
-    input[type='datetime-local']:not(.has-value):before {
+    input[type="time"]:not(.has-value):before,
+    input[type="date"]:not(.has-value):before,
+    input[type="month"]:not(.has-value):before,
+    input[type="datetime-local"]:not(.has-value):before {
         margin-right: 0.5em;
         content: attr(placeholder) !important;
-        color: #AAAAAA;
+        color: #aaaaaa;
     }
-    input[type='time'].has-value:before,
-    input[type='date'].has-value:before,
-    input[type='month'].has-value:before,
-    input[type='datetime-local'].has-value:before {
-        content: '' !important;
+    input[type="time"].has-value:before,
+    input[type="date"].has-value:before,
+    input[type="month"].has-value:before,
+    input[type="datetime-local"].has-value:before {
+        content: "" !important;
     }
 }
 
@@ -230,11 +246,16 @@ textarea.form-control {
     }
 }
 
-[dir='rtl'] {
+[dir="rtl"] {
     // Dropdown input widget
     select.form-control {
         padding-right: 30px;
         padding-left: 0;
         background-position: #{$form-input-padding-x} center;
+    }
+
+    .mx-compound-control .btn {
+        margin-right: $spacing-small;
+        margin-left: 0;
     }
 }

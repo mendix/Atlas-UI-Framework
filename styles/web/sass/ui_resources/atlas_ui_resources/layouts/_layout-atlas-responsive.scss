@@ -3,11 +3,14 @@
 
    Extra styling for responsive layouts
 ========================================================================== */
+.layout-atlas-responsive,
 .layout-atlas-responsive-default {
-    $sidebar-width: 60px;
+    $sidebar-width: 56px;
 
     @media (min-width: $screen-md) {
-        .mx-scrollcontainer:not(.mx-scrollcontainer-open) > .region-sidebar {
+        .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar,
+        .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar,
+        .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar {
             width: $sidebar-width !important;
 
             .mx-scrollcontainer-wrapper > .mx-navigationtree ul li {
@@ -39,11 +42,23 @@
         }
     }
 
-
     .mx-scrollcontainer-slide {
+        &:not(.mx-scrollcontainer-open) > .region-sidebar {
+            overflow: hidden;
+        }
 
         &.mx-scrollcontainer-open > .region-sidebar {
             width: $sidebar-width !important;
+
+            & > .mx-scrollcontainer-wrapper {
+                position: relative;
+            }
+        }
+
+        .region-sidebar > .mx-scrollcontainer-wrapper {
+            z-index: 2;
+            left: 0 !important;
+            background-color: inherit;
         }
     }
 
@@ -62,32 +77,46 @@
     .region-sidebar {
         .toggle-btn {
             width: $sidebar-width;
-            height: 60px;
             border-color: transparent;
             border-radius: 0;
             background: transparent;
         }
 
-        .mx-scrollcontainer-wrapper > .mx-navigationtree {
-            .navbar-inner > ul > li {
+        .mx-scrollcontainer-wrapper {
+            .toggle-btn-wrapper {
+                display: flex;
+                padding: $spacing-small;
+                align-items: center;
+                min-height: $topbar-minimalheight + 4px;
+                background: $navsidebar-sub-bg;
+            }
+            .toggle-btn {
+                margin-left: -$spacing-small;
+                padding: $spacing-small;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            .toggle-text {
+                color: #fff;
+                font-weight: bold;
+            }
+            & > .mx-navigationtree .navbar-inner > ul > li {
                 & > a {
                     height: $sidebar-width;
+                    padding: $spacing-small;
                     // Glyph icon
                     .glyphicon {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 40px;
-                        height: 40px;
-                        margin-left: -5px;
+                        width: 56px;
+                        height: 56px;
+                        margin-left: -$spacing-small;
                         padding: 10px;
                         border-radius: 3px;
-                    }
-
-                    &.active {
-                        .glyphicon {
-                            background: $brand-primary;
-                        }
                     }
                 }
             }
@@ -101,15 +130,10 @@
 
 // Topbar variant
 .layout-atlas-responsive-topbar {
-    .mx-scrollcontainer-slide,
-    .mx-scrollcontainer-push {
-        &:not(.mx-scrollcontainer-open) > .region-sidebar {
-            visibility: hidden;
-        }
-    }
 }
 
 // All responsive layouts
+.layout-atlas-responsive,
 .layout-atlas-responsive-default,
 .layout-atlas-responsive-topbar {
     // Topbar
@@ -120,24 +144,6 @@
             @media (max-width: $screen-sm-max) {
                 display: inline-block;
             }
-        }
-    }
-
-    .mx-scrollcontainer-slide {
-        &:not(.mx-scrollcontainer-open) > .region-sidebar {
-            overflow: hidden;
-        }
-
-        &.mx-scrollcontainer-open > .region-sidebar {
-
-            & > .mx-scrollcontainer-wrapper {
-                position: relative;
-            }
-        }
-
-        .region-sidebar > .mx-scrollcontainer-wrapper {
-            z-index: 2;
-            background-color: inherit;
         }
     }
 }

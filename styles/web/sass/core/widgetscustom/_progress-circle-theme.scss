@@ -5,60 +5,104 @@
 // To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
 //
 
-/* Based on https://github.com/mendixlabs/progress-circle/tree/master/src/ui/_progress-circle-theme.scss */
-path.widget-progress-circle-path {
-    stroke: $brand-primary;
+/* ==========================================================================
+   Progress Circle
+
+   Default Mendix Progress Circle Widget.
+========================================================================== */
+
+.widget-progress-circle {
+    width: 100%;
 }
 
+.widget-progress-circle-trail-path {
+    stroke: #eeeeee;
+}
+
+.widget-progress-circle-default .widget-progress-circle-path {
+    stroke: #dddddd;
+}
+
+
 .widget-progress-circle-primary {
-    path.widget-progress-circle-path {
+    .widget-progress-circle-trail-path {
+        stroke: $color-primary-lighter;
+    }
+
+    .widget-progress-circle-path {
         stroke: $brand-primary;
     }
+
     .progressbar-text {
         color: $brand-primary !important;
     }
 }
 
 .widget-progress-circle-info {
-    path.widget-progress-circle-path {
+    .widget-progress-circle-trail-path {
+        stroke: $color-info-lighter;
+    }
+
+    .widget-progress-circle-path {
         stroke: $brand-info;
     }
+
     .progressbar-text {
         color: $brand-info !important;
     }
 }
 
 .widget-progress-circle-success {
-    path.widget-progress-circle-path {
+    .widget-progress-circle-trail-path {
+        stroke: $color-success-lighter;
+    }
+
+    .widget-progress-circle-path {
         stroke: $brand-success;
     }
+
     .progressbar-text {
         color: $brand-success !important;
     }
 }
 
 .widget-progress-circle-warning {
-    path.widget-progress-circle-path {
+    .widget-progress-circle-trail-path {
+        stroke: $color-warning-lighter;
+    }
+
+    .widget-progress-circle-path {
         stroke: $brand-warning;
     }
+
     .progressbar-text {
         color: $brand-warning !important;
     }
 }
 
 .widget-progress-circle-danger {
-    path.widget-progress-circle-path {
+    .widget-progress-circle-trail-path {
+        stroke: $color-danger-lighter;
+    }
+
+    .widget-progress-circle-path {
         stroke: $brand-danger;
     }
+
     .progressbar-text {
         color: $brand-danger !important;
     }
 }
 
 .widget-progress-circle-inverse {
-    path.widget-progress-circle-path {
+    .widget-progress-circle-trail-path {
+        stroke: $color-inverse-lighter;
+    }
+
+    .widget-progress-circle-path {
         stroke: $brand-inverse;
     }
+
     .progressbar-text {
         color: $brand-inverse !important;
     }

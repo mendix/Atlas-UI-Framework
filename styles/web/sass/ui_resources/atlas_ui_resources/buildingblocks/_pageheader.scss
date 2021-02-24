@@ -5,55 +5,18 @@
 //== Default
 //-------------------------------------------------------------------------------------------------------------------//
 .pageheader {
-    border-bottom: 1px solid $border-color-default;
-    background: $header-bg-color;
-}
-
-// Check if it is part of a inner layoutgrid
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid .pageheader {
-    @include get-responsive-spacing-large($type: margin, $direction: bottom);
-    @include get-responsive-spacing-large($type: padding, $direction: bottom);
-    background: transparent;
-}
-
-//== Elements
-//-------------------------------------------------------------------------------------------------------------------//
-.pageheader-type {
-    margin: 0;
-}
-
-.pageheader-title {
-    margin: 0;
-}
-
-.pageheader-subtitle {
-    margin: 0;
-}
-
-//== Variations
-//-------------------------------------------------------------------------------------------------------------------//
-.pageheaderwithcontrols {
-    .controlgroup {
-    }
-}
-
-.pageheaderwithimage {
-    .pageheader-image {
-    }
-    .figurecontent {
-    }
-}
-
-.pageheaderwithimageandcontrols {
-}
-
-.pageheaderwithsearch {
-    .pageheader-title {
-        margin-bottom: 1em;
-    }
-}
-
-.pageheaderwithbreadcrumb {
-    .breadcrumb {
-    }
-}
+    width: 100%;
+    margin-bottom: $spacing-large;
+ }
+ 
+ //== Elements
+ //-------------------------------------------------------------------------------------------------------------------//
+ .pageheader-title {
+ }
+ 
+ .pageheader-subtitle {
+ }
+ 
+ .pageheader-image {
+ }
+ 

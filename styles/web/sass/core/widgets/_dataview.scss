@@ -12,24 +12,6 @@
 ========================================================================== */
 
 .mx-dataview {
-    /* Control bar */
-    .mx-dataview-controls {
-        // Needed to clear the bootstrap columns (get float: left)
-        clear: both;
-        margin-top: 10px;
-        padding: 8px 0;
-        border-top: 1px solid $dataview-controls-border-color;
-        border-radius: 0;
-        background-color: $dataview-controls-bg;
-        /* Buttons */
-        .mx-button {
-            margin-right: 0.3em;
-            margin-bottom: 0;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
     /* Dataview-content gives problems for nexted layout grid containers */
     > .mx-dataview-content > .mx-container-nested {
         > .row {
@@ -42,4 +24,21 @@
         color: $dataview-emptymessage-color;
         background: $dataview-emptymessage-bg;
     }
+}
+
+.mx-dataview-controls {
+    margin-top: $spacing-medium;
+    padding: $spacing-medium 0 0;
+    border-top: 1px solid $dataview-controls-border-color;
+    border-radius: 0;
+    background-color: $dataview-controls-bg;
+    /* Buttons */
+    .mx-button {
+        margin-right: $spacing-small;
+        margin-bottom: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    background-color: inherit;
 }

@@ -10,24 +10,34 @@
 //== Design Properties
 //## Helper classes to change the look and feel of the component
 ========================================================================== */
-// Bordered
-.listview-bordered.mx-listview {
-    & > ul > li {
-        border: 1px solid $grid-border-color;
-        border-top: 0;
 
+// List items lined
+.listview-lined.mx-listview {
+    & > ul > li {
+        border-top: 1px solid $grid-border-color;
         &:first-child {
             border-top: 1px solid $grid-border-color;
-            border-radius: 0;
         }
-
         &:last-child {
-            border-radius: 0;
+            border-bottom: 1px solid $grid-border-color;
         }
     }
 }
 
-// Striped
+//List items Bordered
+.listview-bordered.mx-listview {
+    & > ul > li {
+        border: 1px solid $grid-border-color;
+        border-top: 0;
+        &:first-child {
+            border-top: 1px solid $grid-border-color;
+        }
+        &:last-child {
+        }
+    }
+}
+
+// List items striped
 .listview-striped.mx-listview {
     & > ul > li:nth-child(2n + 1) {
         background-color: $grid-bg-striped;
@@ -37,19 +47,18 @@
 // Items as seperated blocks
 .listview-seperated.mx-listview {
     & > ul > li {
-        margin-bottom: $gutter-size;
-        border-width: 1px;
-        border-style: solid;
+        margin-bottom: $spacing-medium;
+        border: 1px solid $grid-border-color;
         border-radius: $border-radius-default;
     }
 }
 
-// Remove all styling
+// Remove all styling - deprecated
 .listview-stylingless.mx-listview {
     & > ul > li {
-        padding: 0;
+        padding: unset;
         cursor: default;
-        border: 0;
+        border: unset;
         background-color: transparent;
 
         &:hover,
@@ -73,40 +82,43 @@
 // Hover style activated
 .listview-hover.mx-listview {
     & > ul > li {
+        cursor: pointer;
+
         &:hover,
         &:focus,
         &:active {
-            background-color: $grid-bg-hover !important;
+            background-color: $grid-bg-hover;
         }
 
         &.selected {
             &:hover,
             &:focus,
             &:active {
-                background-color: $grid-bg-selected-hover !important;
+                background-color: $grid-bg-selected-hover;
             }
         }
     }
 }
 
-// Templategrid Row Sizes
-.listview-lg.mx-listview {
-    & > ul > li {
-        padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
-    }
-}
+// Row Sizes
 
 .listview-sm.mx-listview {
     & > ul > li {
-        padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left / 2);
+        padding: $spacing-small;
+    }
+}
+
+.listview-lg.mx-listview {
+    & > ul > li {
+        padding: $spacing-large;
     }
 }
 
 // Bootstrap columns
-.mx-listview[class*='lv-col'] {
+.mx-listview[class*="lv-col"] {
     overflow: hidden; // For if it is not in a layout, to prevent scrollbars
     & > ul {
-        display: block; // normal a table
+        display: flex; // normal a table
         margin-right: -1 * $gutter-size;
         margin-left: -1 * $gutter-size;
 
@@ -115,14 +127,12 @@
             // clearfix
             display: table;
             clear: both;
-            content: ' ';
+            content: " ";
         }
 
         & > li {
             // bootstrap col
             position: relative;
-            display: block; // normal a table
-            float: left;
             min-height: 1px;
             padding-right: $gutter-size;
             padding-left: $gutter-size;

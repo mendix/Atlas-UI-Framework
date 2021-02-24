@@ -62,8 +62,7 @@
                 left: 15px;
                 width: 0;
                 height: 0;
-                content: '';
-                -webkit-transform: rotate(360deg);
+                content: "";
                 transform: rotate(360deg);
                 border-width: 0 9px 9px 9px;
                 border-style: solid;
@@ -117,7 +116,7 @@
     }
     @media (max-width: $screen-md) {
         ul.nav > li.mx-navbar-item > a {
-            padding: 10px 20px;
+            padding: 10px 24px;
         }
         .mx-navbar-item.open .dropdown-menu {
             padding: 0;
@@ -125,7 +124,7 @@
             background-color: $navigation-sub-bg;
 
             & > li.mx-navbar-subitem > a {
-                padding: 10px 20px;
+                padding: 10px 24px;
                 color: $navigation-sub-color;
                 border-radius: 0;
                 font-size: $navigation-sub-font-size;

@@ -4,12 +4,12 @@
    Used in default forms
 ========================================================================== */
 .formblock {
-}
-
-//== Elements
-//-------------------------------------------------------------------------------------------------------------------//
-.formblock-title {
-    margin-bottom: $gutter-size;
-    padding-bottom: $gutter-size;
-    border-bottom: 1px solid $border-color-default;
-}
+    width: 100%;
+    margin-bottom: $spacing-large;
+ }
+ 
+ //== Elements
+ //-------------------------------------------------------------------------------------------------------------------//
+ .form-title {
+ }
+ 

@@ -17,30 +17,35 @@
     .navbar-inner > ul {
         margin: 0;
         padding-left: 0;
+
         & > li {
             padding: 0;
             border-style: none;
+
             & > a {
                 display: flex;
                 align-items: center;
                 height: $navigation-item-height;
                 padding: $navigation-item-padding;
                 color: $navigation-color;
-                border-bottom: 1px solid $navigation-border-color;
-                border-radius: 0;
+                //border-bottom: 1px solid $navigation-border-color;
+                //border-radius: 0;
                 background-color: $navigation-bg;
                 text-shadow: none;
                 font-size: $navigation-font-size;
                 font-weight: $font-weight-normal;
+
                 .caret {
                     border-top-color: $navigation-color;
                     border-bottom-color: $navigation-color;
                 }
+
                 img {
                     width: 20px; // Default size
                     height: auto;
                     margin-right: 0.5em;
                 }
+
                 .glyphicon {
                     top: 0;
                     margin-right: 0.5em;
@@ -48,17 +53,20 @@
                     font-size: $navigation-glyph-size;
                 }
             }
+
             a:hover,
             a:focus,
             a.active {
                 text-decoration: none;
                 color: $navigation-color-hover;
                 background-color: $navigation-bg-hover;
+
                 .caret {
                     border-top-color: $navigation-color-active;
                     border-bottom-color: $navigation-color-active;
                 }
             }
+
             a.active {
                 color: $navigation-color-active;
                 border-left-color: $navigation-color-active;
@@ -73,12 +81,14 @@
             margin: 0;
             padding-left: 0;
             background-color: $navigation-sub-bg;
+
             li {
                 margin: 0;
                 padding: 0;
                 border: 0;
+
                 a {
-                    padding: 12px 20px 12px 25px;
+                    padding: 12px 20px 12px 24px;
                     text-decoration: none;
                     color: $navigation-sub-color;
                     border: 0;
@@ -94,6 +104,7 @@
                         outline: 0;
                         background-color: $navigation-sub-bg-hover;
                     }
+
                     &.active {
                         color: $navigation-sub-color-active;
                         border: 0;

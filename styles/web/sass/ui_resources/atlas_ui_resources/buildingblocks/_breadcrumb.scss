@@ -9,6 +9,7 @@
     border-radius: 0;
     background-color: transparent;
     font-size: $font-size-default;
+    margin-bottom: $spacing-large;
 }
 
 //== Elements
@@ -26,19 +27,19 @@
 .breadcrumb-item + .breadcrumb-item {
     &::before {
         display: inline-block;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: $spacing-small;
+        padding-left: $spacing-small;
         content: "/";
         color: $gray-light;
     }
 }
 
-//== Variations 
+//== Variations
 //-------------------------------------------------------------------------------------------------------------------//
 .breadcrumb-large {
     font-size: $font-size-h3;
 }
 .breadcrumb-underline {
-    padding-bottom: $gutter-size;
+    padding-bottom: $spacing-medium;
     border-bottom: 1px solid $border-color-default;
 }

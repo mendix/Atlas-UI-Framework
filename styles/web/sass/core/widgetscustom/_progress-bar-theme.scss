@@ -5,39 +5,94 @@
 // To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
 //
 
-/* Based on https://github.com/mendixlabs/star-rating/blob/v1.1.1/src/ui/StarRating.scss */
-div.widget-progress-bar .progress-bar-default {
+/* ==========================================================================
+   Progress Bar
+
+   Default Mendix Progress Bar Widget.
+========================================================================== */
+
+.progress {
+    overflow: hidden;
+    height: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+.progress-bar {
+    align-self: flex-start;
+    width: 0;
+    height: 100%;
+    transition: width 0.6s ease;
+    text-align: center;
+    color: #ffffff;
+    border-radius: $border-radius-default;
+    font-size: 12px;
+    font-weight: $font-weight-semibold;
+    line-height: 16px;
+}
+
+.progress-striped .progress-bar,
+.progress-bar-striped {
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 40px 40px;
+}
+
+.progress.active .progress-bar,
+.progress-bar.active {
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+.widget-progress-bar .progress-bar-default {
     background-color: $brand-default;
 }
 
-div.widget-progress-bar .progress-bar-primary {
+.widget-progress-bar .progress-bar-primary {
     background-color: $brand-primary;
 }
 
-div.widget-progress-bar .progress-bar-success {
+.widget-progress-bar .progress-bar-success {
     background-color: $brand-success;
 }
 
-div.widget-progress-bar .progress-bar-info {
+.widget-progress-bar .progress-bar-info {
     background-color: $brand-info;
 }
 
-div.widget-progress-bar .progress-bar-warning {
+.widget-progress-bar .progress-bar-warning {
     background-color: $brand-warning;
 }
 
-div.widget-progress-bar .progress-bar-danger {
+.widget-progress-bar .progress-bar-danger {
     background-color: $brand-danger;
 }
 
-div.widget-progress-bar .progress-bar-inverse {
+.widget-progress-bar .progress-bar-inverse {
     background-color: $brand-inverse;
 }
 
-div.widget-progress-bar-alert.widget-progress-bar-text-contrast .progress-bar {
+.widget-progress-bar-alert.widget-progress-bar-text-contrast .progress-bar {
     color: $color-danger-darker;
 }
 
-div.widget-progress-bar-text-contrast .progress-bar {
+.widget-progress-bar-text-contrast .progress-bar {
     color: $font-color-default;
 }

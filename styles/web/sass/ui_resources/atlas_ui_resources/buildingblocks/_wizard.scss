@@ -1,137 +1,139 @@
-$wizard-step-number-size: 60px;
-$wizard-step-height: 50px;
-
+//Wizard
 .wizard {
     display: flex;
     justify-content: space-between;
-    .wizard-step {
-        position: relative;
+    width: 100%;
+    margin-bottom: $spacing-large;
+}
+
+//Wizard step
+.wizard-step {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+//Wizard step number
+.wizard-step-number {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $wizard-step-number-size;
+    height: $wizard-step-number-size;
+    color: $wizard-default-step-color;
+    font-size: $wizard-step-number-font-size;
+    border-radius: 50%;
+    background-color: $wizard-default-bg;
+    border-color: $wizard-default-border-color;
+}
+
+//Wizard step text
+.wizard-step-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    color: $wizard-default-step-color;
+}
+
+//Wizard circle
+.wizard-circle .wizard-step {
+    flex-direction: column;
+    &::before {
+        position: absolute;
+        z-index: 0;
+        top: $wizard-step-number-size / 2;
+        display: block;
         width: 100%;
-        text-align: center;
-        &::before {
-            position: absolute;
-            z-index: -1;
-            top: $wizard-step-number-size / 2;
-            display: block;
-            width: 100%;
-            height: 2px;
-            content: "";
-            background-color: $border-color-default;
-        }
-        .wizard-step-number {
-            width: $wizard-step-number-size;
-            height: $wizard-step-number-size;
-            border-color: $border-color-default;
-            border-radius: 50%;
-            background-color: #FFFFFF;
-            font-size: 20px;
-        }
-        .wizard-step-text {
-            display: block;
-            margin-top: 15px;
-        }
+        height: 2px;
+        content: "";
+        background-color: $wizard-default-border-color;
+    }
+}
+
+//Wizard arrow
+.wizard-arrow .wizard-step {
+    height: $wizard-step-height;
+    margin-left: 0 - ($wizard-step-height / 2);
+    padding-left: ($wizard-step-height / 2);
+    background-color: $wizard-default-bg;
+    justify-content: flex-start;
+    border: 1px solid $wizard-default-border-color;
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: 1;
+        left: 100%;
+        margin-left: 0 - (($wizard-step-height / 2) - 1);
+        content: " ";
+        border-style: solid;
+        border-color: transparent;
+    }
+    &::after {
+        top: 0;
+        border-width: (($wizard-step-height / 2) - 1);
+        border-left-color: $wizard-default-bg;
+    }
+    &::before {
+        top: -1px;
+        border-width: $wizard-step-height / 2;
+        border-left-color: $wizard-default-border-color;
     }
 
-
-    // States
-    .wizard-step-active {
-        .wizard-step-number {
-            color: #FFFFFF;
-            border-color: $brand-primary;
-            background-color: $brand-primary;
-        }
-        .wizard-step-text {
-            color: $brand-primary;
-        }
+    &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+        border-top-left-radius: $border-radius-default;
+        border-bottom-left-radius: $border-radius-default;
     }
-    .wizard-step-visited {
-        .wizard-step-number {
-            color: #FFFFFF;
-            border-color: $brand-success;
-            background-color: $brand-success;
-        }
-        .wizard-step-text {
+
+    &:last-child {
+        border-top-right-radius: $border-radius-default;
+        border-bottom-right-radius: $border-radius-default;
+        &::before,
+        &::after {
+            display: none;
         }
     }
 }
 
-.wizardprogress {
-    display: flex;
-    justify-content: space-between;
-
+//Wizard states
+.wizard-circle .wizard-step-active {
+    .wizard-step-number {
+        color: $wizard-active-color;
+        border-color: $wizard-active-border-color;
+        background-color: $wizard-active-bg;
+    }
     .wizard-step-text {
-        width: 100%;
+        color: $wizard-active-step-color;
     }
-
-    .wizard-step {
-        position: relative;
-        width: 100%;
-        height: $wizard-step-height;
-        margin-left: 0 - ($wizard-step-height / 2);
-        padding-left: ($wizard-step-height / 2);
-        border: 1px solid $border-color-default;
-        background: #FFFFFF;
-
-        a {
-            display: block;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            padding: 14px;
-            white-space: nowrap;
-            text-decoration: none;
-            text-overflow: ellipsis;
-            color: $font-color-default;
-        }
-        &::before,
-        &::after {
-            position: absolute;
-            z-index: 1;
-            left: 100%;
-            margin-left: 0 - ($wizard-step-height / 2);
-            content: " ";
-            border-style: solid;
-            border-color: transparent;
-        }
-        &::after {
-            top: 1px;
-            border-width: (($wizard-step-height / 2) - 1);
-            border-left-color: #FFFFFF;
-        }
-        &::before {
-            top: 0;
-            border-width: $wizard-step-height / 2;
-            border-left-color: $border-color-default;
-        }
-
-        &:first-child {
-            margin-left: 0;
-            padding-left: 0;
-            border-radius: 5px 0 0 5px;
-        }
-
-        &:last-child {
-            border-radius: 0 5px 5px 0;
-            &::before,
-            &::after {
-                display: none;
-            }
-        }
+}
+.wizard-circle .wizard-step-visited {
+    .wizard-step-number {
+        color: $wizard-visited-color;
+        border-color: $wizard-visited-border-color;
+        background-color: $wizard-visited-bg;
     }
-    // States
-    .wizard-step-active {
-        background: $brand-primary;
-        a {
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-        &::after {
-            border-left-color: $brand-primary;
-        }
+    .wizard-step-text {
+        color: $wizard-visited-step-color;
     }
-    .wizard-step-visited {
-        a {
-            color: $link-color;
-        }
+}
+
+.wizard-arrow .wizard-step-active {
+    background-color: $wizard-active-bg;
+    .wizard-step-text {
+        color: $wizard-active-color;
+    }
+    &::after {
+        border-left-color: $wizard-active-border-color;
+    }
+}
+
+.wizard-arrow .wizard-step-visited {
+    .wizard-step-text {
+        color: $link-color;
     }
 }

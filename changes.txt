@@ -1,0 +1,105 @@
+There's an Atlas 3 branch fix/atlas_3_cleanup with improvements. Push this when this process done.
+
+Atlas 3 master b2b2bfd154e0731be308551da1b6095515a89688
+Atlas 2 develop 618eb65155f174d94de7288378f6c247cb5d5e14
+
+left is ATLAS 2 | right is Atlas 3
+
+copy all atlas 3 into atlas 2
+
+take note of file name changes | additions | removals
+
+styles/web/sass/app/_custom-variables.scss -> src/theme/web/custom-variables.scss
+login-with-sso.html -> src/theme/web/login-with-sso.html
+login.html -> src/theme/web/login.html
+
+styles/web/sass/core/_legacy/bootstrap/_bootstrap-rtl.scss
+styles/web/sass/core/_legacy/bootstrap/_bootstrap.scss
+styles/web/sass/core/_legacy/_mxui.scss
+styles/web/sass/core/_legacy/bootstrap/fonts/glyphicons-halflings-regular.woff -> src/themesource/atlas_ui_resources/web/resources/glyphicons-halflings-regular.woff
+styles/web/sass/core/_legacy/bootstrap/fonts/glyphicons-halflings-regular.woff2 -> src/themesource/atlas_ui_resources/web/resources/glyphicons-halflings-regular.woff2
+
+styles/web/sass/core/base/mixins/_animations.scss
+styles/web/sass/core/base/mixins/_buttons.scss
+styles/web/sass/core/base/mixins/_groupbox.scss
+styles/web/sass/core/base/mixins/_layout-spacing.scss
+styles/web/sass/core/base/mixins/_spacing.scss
+styles/web/sass/core/base/_animation.scss
+styles/web/sass/core/base/_base.scss
+styles/web/sass/core/base/_flex.scss
+styles/web/sass/core/base/_login.scss
+styles/web/sass/core/base/_reset.scss
+styles/web/sass/core/base/_spacing.scss
+
+styles/web/sass/core/helpers/_alerts.scss + styles/web/sass/core/widgets/_alerts.scss -> src/themesource/atlas_ui_resources/web/buildingblocks/_alert.scss
+styles/web/sass/core/helpers/_backgrounds.scss
+styles/web/sass/core/helpers/_buttons.scss
+styles/web/sass/core/helpers/_datagrids.scss
+styles/web/sass/core/helpers/_groupbox.scss
+styles/web/sass/core/helpers/_helperclasses.scss
+styles/web/sass/core/helpers/_images.scss
+styles/web/sass/core/helpers/_labels.scss
+styles/web/sass/core/helpers/_listview.scss
+styles/web/sass/core/helpers/_navigationbar.scss
+styles/web/sass/core/helpers/_navigationtree.scss
+styles/web/sass/core/helpers/_simplemenubar.scss
+styles/web/sass/core/helpers/_tabcontainer.scss
+styles/web/sass/core/helpers/_tables.scss
+styles/web/sass/core/helpers/_templategrids.scss
+styles/web/sass/core/helpers/_typography.scss
+
+styles/web/sass/core/widgets/_buttons.scss
+styles/web/sass/core/widgets/_checkbox.scss
+styles/web/sass/core/widgets/_datagrids.scss
+styles/web/sass/core/widgets/_dataview.scss
+styles/web/sass/core/widgets/_datepicker.scss
+styles/web/sass/core/widgets/_glyphicons.scss
+styles/web/sass/core/widgets/_grid.scss
+styles/web/sass/core/widgets/_groupbox.scss
+styles/web/sass/core/widgets/_header.scss
+styles/web/sass/core/widgets/_inputs.scss
+styles/web/sass/core/widgets/_labels.scss
+styles/web/sass/core/widgets/_layoutgrid.scss
+styles/web/sass/core/widgets/_listview.scss
+styles/web/sass/core/widgets/_modals.scss
+styles/web/sass/core/widgets/_navigationbar.scss
+styles/web/sass/core/widgets/_navigationlist.scss
+styles/web/sass/core/widgets/_navigationtree.scss
+styles/web/sass/core/widgets/_popupmenu.scss
+styles/web/sass/core/widgets/_progress.scss
+styles/web/sass/core/widgets/_radiobuttons.scss
+styles/web/sass/core/widgets/_simplemenubar.scss
+styles/web/sass/core/widgets/_tabcontainer.scss
+styles/web/sass/core/widgets/_tables.scss
+styles/web/sass/core/widgets/_templategrids.scss
+styles/web/sass/core/widgets/_timeline.scss
+styles/web/sass/core/widgets/_typography.scss
+
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_breadcrumb.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_card.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_chat.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_controlgroup.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_formblock.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_heroheader.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_master-detail.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_pageblocks.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_pageheader.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_userprofile.scss
+styles/web/sass/ui_resources/atlas_ui_resources/buildingblocks/_wizard.scss
+
+styles/web/sass/ui_resources/atlas_ui_resources/layouts/_layout-atlas-phone.scss
+styles/web/sass/ui_resources/atlas_ui_resources/layouts/_layout-atlas-responsive.scss
+styles/web/sass/ui_resources/atlas_ui_resources/layouts/_layout-atlas-responsive.scss
+styles/web/sass/ui_resources/atlas_ui_resources/layouts/_layout-atlas.scss
+
+styles/web/sass/core/widgetscustom/_progress-bar-theme.scss -> src/themesource/atlas_ui_resources/web/core/widgets/_progressbar.scss  + src/themesource/atlas_ui_resources/web/core/helpers/_progressbar.scss 
+styles/web/sass/core/widgetscustom/_progress-circle-theme.scss -> src/themesource/atlas_ui_resources/web/core/widgets/_progresscircle.scss + src/themesource/atlas_ui_resources/web/core/helpers/_progresscircle.scss
+styles/web/sass/core/widgetscustom/_range-slider-theme.scss -> src/themesource/atlas_ui_resources/web/core/widgets/_rangeslider.scss + src/themesource/atlas_ui_resources/web/core/helpers/_rangeslider.scss
+styles/web/sass/core/widgetscustom/_slider-theme.scss -> src/themesource/atlas_ui_resources/web/core/helpers/_slider.scss + src/themesource/atlas_ui_resources/web/core/widgets/_slider.scss
+tyles/web/sass/core/widgetscustom/_star-rating-theme.scss -> src/themesource/atlas_ui_resources/web/core/helpers/_rating.scss + src/themesource/atlas_ui_resources/web/core/widgets/_rating.scss 
+styles/web/sass/core/widgetscustom/_dijit-widgets.scss
+styles/web/sass/core/widgetscustom/_switchwidget.scss
+
+styles/web/sass/core/_variables.scss -> src/themesource/atlas_ui_resources/web/_variables.scss
+
+settings.json -> src/themesource/atlas_ui_resources/web/design-properties.json

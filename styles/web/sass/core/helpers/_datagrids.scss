@@ -93,12 +93,14 @@
 .datagrid-lg.mx-datagrid {
     table {
         th {
-            padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
+            padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2)
+                ($grid-padding-left * 2);
         }
 
         tbody tr {
             td {
-                padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
+                padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2)
+                    ($grid-padding-left * 2);
             }
         }
     }
@@ -107,12 +109,14 @@
 .datagrid-sm.mx-datagrid {
     table {
         th {
-            padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left / 2);
+            padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2)
+                ($grid-padding-left / 2);
         }
 
         tbody tr {
             td {
-                padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left/ 2);
+                padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2)
+                    ($grid-padding-left/ 2);
             }
         }
     }

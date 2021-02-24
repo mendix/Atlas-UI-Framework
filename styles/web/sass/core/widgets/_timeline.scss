@@ -1,58 +1,61 @@
+//
+// DISCLAIMER:
+// Do not change this file because it is core styling.
+// Customizing core files will make updating Atlas much more difficult in the future.
+// To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
+//
+
+/* ==========================================================================
+   Timeline
+
+========================================================================== */
+
+//Timeline grouping
 .widget-timeline-date-header {
-    display: inline-block;
-    width: 110px;
+    display: flex;
+    justify-content: center;
+    width: $timeline-grouping-size;
     overflow-wrap: break-word;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid $timeline-border-color;
-    border-radius: 30px;
+    padding: $spacing-small;
+    border: 1px solid $timeline-grouping-border-color;
+    border-radius: $timeline-grouping-border-radius;
 }
 
+//Timeline entries
 .widget-timeline-events-wrapper {
     display: flex;
     flex: 1;
-    margin-left: 55px;
-    padding-top: 35px;
+    margin-left: $timeline-grouping-size/2;
+    padding: $spacing-large 0 0 0;
+    border-left: 1px solid $timeline-border-color;
 
     ul {
+        flex: 1;
         padding: 0;
         list-style: none;
         margin-bottom: 0;
     }
 }
 
-.widget-timeline-title {
-    color: $timeline-color-header;
-    font-weight: 600;
-    margin: 0 0 10px 0;
-}
-
-.widget-timeline-description {
-    color: $timeline-color-detail;
-}
-
+//Timeline entry
 .widget-timeline-event {
+    flex: 1;
     position: relative;
-    margin-left: $timeline-icon-size / 2;
-    padding-left: $spacing-large;
-    padding-bottom: 20px;
-
-    &:not(:last-of-type) {
-        border-left: 1px solid $timeline-border-color;
-    }
-
+    margin-left: -1px;
+    padding: 0 $spacing-large $spacing-large $spacing-large;
+    margin-bottom: $spacing-medium;
     &.clickable {
         cursor: pointer;
         transition: background 0.8s;
 
         &:hover {
             .widget-timeline-title {
-                color: #dadcde;
             }
         }
     }
 }
 
+//Timeline entry content wrapper
 .widget-timeline-icon-wrapper {
     position: absolute;
     top: 0;
@@ -60,43 +63,69 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $timeline-icon-size;
-    height: $timeline-icon-size;
     transform: translateX(-50%);
-
     .glyphicon {
         font-size: $timeline-icon-size;
     }
-
     img {
-        max-width: $timeline-icon-size;
-        max-height: $timeline-icon-size;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
 .widget-timeline-content-wrapper {
+    display: flex;
     .widget-timeline-date-time-wrapper {
-        margin-right: 15px;
+        order: 2;
+        margin-right: 0;
     }
-
     .widget-timeline-info-wrapper {
-        flex-direction: column;
+        flex: 1;
+        order: 1;
+        margin-right: $spacing-medium;
     }
 }
 
+.timeline-with-image .widget-timeline-content-wrapper {
+    display: flex;
+    .widget-timeline-date-time-wrapper {
+        order: 1;
+        margin-right: $spacing-medium;
+    }
+    .widget-timeline-info-wrapper {
+        flex: 1;
+        order: 2;
+    }
+}
+
+//Timeline entry components
 .widget-timeline-icon-circle {
-    width: 18px;
-    height: 18px;
+    width: $timeline-icon-size;
+    height: $timeline-icon-size;
     border-radius: 50%;
     background-color: $timeline-icon-color;
 }
 
-.widget-timeline-no-divider {
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-left: 0;
+.widget-timeline-title {
+    @extend h5;
 }
 
-.widget-timeline-flex-container {
+.widget-timeline-description {
+}
+
+.widget-timeline-no-divider {
+}
+
+.widget-eventTime {
+    @extend h5;
+    color: $timeline-event-time-color;
+}
+
+.timeline-entry-image {
     display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: $border-radius-default;
+    height: $timeline-image-size;
+    width: $timeline-image-size;
 }

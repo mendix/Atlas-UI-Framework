@@ -20,18 +20,9 @@
     @include groupbox-variant($groupbox-primary-color, $groupbox-primary-bg);
 }
 
-.groupbox-inverse {
-    @include groupbox-variant($groupbox-inverse-color, $groupbox-inverse-bg);
-}
-
 // Success appears as green
 .groupbox-success {
     @include groupbox-variant($groupbox-success-color, $groupbox-success-bg);
-}
-
-// Info appears as blue-green
-.groupbox-info {
-    @include groupbox-variant($groupbox-info-color, $groupbox-info-bg);
 }
 
 // Warning appears as orange
@@ -44,26 +35,23 @@
     @include groupbox-variant($groupbox-danger-color, $groupbox-danger-bg);
 }
 
-// white appears as full white
-.groupbox-white {
-    @include groupbox-variant($groupbox-white-color, $groupbox-white-bg);
-}
-
 .groupbox-transparent {
-    border-bottom: 1px solid $border-color-default;
     > .mx-groupbox-header {
-        padding: 15px 0;
+        padding: $spacing-small*1.5 0;
         color: $gray-darker;
         border-style: none;
         background: transparent;
-        font-size: 16px;
         font-weight: $font-weight-semibold;
     }
+
     .mx-groupbox-body {
-        padding: 15px 0;
-        border-style: none;
+        padding: $spacing-small 0;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 1px solid $groupbox-default-bg;
         background-color: transparent;
     }
+
     .mx-groupbox-collapse-icon {
         color: $brand-primary;
     }
@@ -99,20 +87,13 @@
     > .mx-groupbox-header,
     > .mx-groupbox-body {
         border: 0;
-        background-color: $callout-info-bg;
+        background-color: $callout-primary-bg;
+    }
+    > .mx-groupbox-header {
+        color: $callout-primary-color;
     }
     .mx-groupbox-header + .mx-groupbox-body {
         padding-top: 0;
-    }
-}
-
-.groupbox-info.groupbox-callout {
-    > .mx-groupbox-header,
-    > .mx-groupbox-body {
-        background-color: $callout-info-bg;
-    }
-    > .mx-groupbox-header {
-        color: $callout-info-color;
     }
 }
 
@@ -121,6 +102,7 @@
     > .mx-groupbox-body {
         background-color: $callout-success-bg;
     }
+
     > .mx-groupbox-header {
         color: $callout-success-color;
     }
@@ -131,6 +113,7 @@
     > .mx-groupbox-body {
         background-color: $callout-warning-bg;
     }
+
     > .mx-groupbox-header {
         color: $callout-warning-color;
     }
@@ -141,7 +124,33 @@
     > .mx-groupbox-body {
         background-color: $callout-danger-bg;
     }
+
     > .mx-groupbox-header {
         color: $callout-danger-color;
+    }
+}
+
+//Bootstrap variations
+
+.groupbox-info {
+    @include groupbox-variant($groupbox-info-color, $groupbox-info-bg);
+}
+
+.groupbox-inverse {
+    @include groupbox-variant($groupbox-inverse-color, $groupbox-inverse-bg);
+}
+
+.groupbox-white {
+    @include groupbox-variant($groupbox-white-color, $groupbox-white-bg);
+}
+
+.groupbox-info.groupbox-callout {
+    > .mx-groupbox-header,
+    > .mx-groupbox-body {
+        background-color: $callout-info-bg;
+    }
+
+    > .mx-groupbox-header {
+        color: $callout-info-color;
     }
 }

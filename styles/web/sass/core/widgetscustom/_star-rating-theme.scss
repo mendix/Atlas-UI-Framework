@@ -5,31 +5,48 @@
 // To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
 //
 
-/* Based on https://github.com/mendixlabs/star-rating/blob/v1.1.1/src/ui/StarRating.scss */
-span.widget-star-rating-full-default {
-    color: $brand-default;
+/* ==========================================================================
+   Rating
+
+   Default Mendix Rating Widget.
+========================================================================== */
+
+.widget-star-rating-empty {
+    color: #cccccc;
 }
 
-span.widget-star-rating-full-primary {
+.widget-star-rating-full-widget {
+    color: #ffa611;
+}
+
+.widget-star-rating-full-default {
+    color: #ced0d3;
+}
+
+.widget-star-rating-font-medium {
+    font-size: 30px;
+}
+
+.widget-star-rating-full-primary {
     color: $brand-primary;
 }
 
-span.widget-star-rating-full-success {
+.widget-star-rating-full-success {
     color: $brand-success;
 }
 
-span.widget-star-rating-full-info {
+.widget-star-rating-full-info {
     color: $brand-info;
 }
 
-span.widget-star-rating-full-warning {
+.widget-star-rating-full-warning {
     color: $brand-warning;
 }
 
-span.widget-star-rating-full-danger {
+.widget-star-rating-full-danger {
     color: $brand-danger;
 }
 
-span.widget-star-rating-full-inverse {
+.widget-star-rating-full-inverse {
     color: $brand-inverse;
 }

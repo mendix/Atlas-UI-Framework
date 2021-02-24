@@ -11,8 +11,16 @@
    Default labels combined with Bootstrap labels
 ========================================================================== */
 
-.label {
+.label,
+.label-default,
+.label-primary,
+.label-success,
+.label-info,
+.label-inverse,
+.label-warning,
+.label-danger {
     display: inline-block;
+    margin: 0;
     padding: 0.2em 0.6em 0.3em;
     text-align: center;
     vertical-align: baseline;
@@ -21,10 +29,9 @@
     border-radius: 0.25em;
     font-size: 100%;
     line-height: 1;
-    margin: 0;
 
     .form-control-static {
-        all: unset;
         font-weight: $font-weight-normal;
+        all: unset;
     }
 }

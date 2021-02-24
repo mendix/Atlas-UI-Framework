@@ -1,0 +1,78 @@
+//
+// DISCLAIMER:
+// Do not change this file because it is core styling.
+// Customizing core files will make updating Atlas much more difficult in the future.
+// To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
+//
+
+/* ==========================================================================
+   Pagination
+
+   Default Mendix Pagination Widget.
+========================================================================== */
+
+.widget-pagination {
+    overflow: unset;
+
+    .pagination {
+        overflow: unset;
+
+        .btn {
+            &:hover {
+                color: $btn-default-color;
+                background-color: $btn-default-bg-hover;
+            }
+
+            &:focus {
+                outline: unset;
+                outline-offset: unset;
+                box-shadow: 0 0 0 0.3rem $color-primary-light;
+            }
+        }
+
+        ul {
+            margin-top: unset;
+            margin-bottom: unset;
+
+            li {
+                display: inline-flex;
+                align-items: center;
+                width: unset;
+                min-width: 24px;
+                min-height: 24px;
+                margin-right: 16px;
+                padding: 4px 8px;
+                transition: all 0.2s ease-in-out;
+                color: $font-color-default;
+                border-radius: $border-radius-default;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:not(.break-view) {
+                    &:hover {
+                        color: $btn-default-color;
+                        background-color: $btn-default-bg-hover;
+                    }
+
+                    &:focus {
+                        outline: unset;
+                        outline-offset: unset;
+                        box-shadow: 0 0 0 0.3rem $color-primary-light;
+                    }
+
+                    &.active {
+                        color: $btn-primary-color;
+                        background-color: $btn-primary-bg;
+                    }
+
+                    &.active:hover {
+                        color: $btn-primary-color;
+                        background-color: $btn-primary-bg-hover;
+                    }
+                }
+            }
+        }
+    }
+}
