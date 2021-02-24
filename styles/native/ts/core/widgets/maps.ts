@@ -1,4 +1,4 @@
-import { brand }    from "../variables";
+import { brand } from "../../variables";
 import { MapsType } from "../../types/widgets";
 /*
 
@@ -17,18 +17,18 @@ export const com_mendix_widget_native_maps_Maps: MapsType = {
         // All ViewStyle properties are allowed
         flex: 1,
         maxWidth: "100%",
-        aspectRatio: 4 / 2,
+        aspectRatio: 4 / 2
     },
     loadingOverlay: {
         // All ViewStyle properties are allowed
     },
     loadingIndicator: {
         // Only color is allowed
-        color: brand.primary,
+        color: brand.primary
     },
     marker: {
         // Only color & opacity are allowed
         color: brand.primary,
-        opacity: 1,
-    },
+        opacity: 1
+    }
 };

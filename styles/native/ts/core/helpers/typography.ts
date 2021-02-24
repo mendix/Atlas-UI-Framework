@@ -1,4 +1,4 @@
-import { brand, contrast, font } from "../variables";
+import { brand, font } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -13,138 +13,127 @@ To customize any core styling, copy the part you want to customize to styles/nat
 //## Helper classes to change the look and feel of the widget
 ========================================================================== */
 // Text Colors
-export const textPrimary = {
+export const textTitle = {
     text: {
-        color: brand.primary,
-    },
+        color: font.colorTitle
+    }
 };
-export const textSuccess = {
+export const textParagraph = {
     text: {
-        color: brand.success,
-    },
+        color: font.colorParagraph
+    }
 };
-export const textWarning = {
+export const textDisabled = {
     text: {
-        color: brand.warning,
-    },
-};
-export const textDanger = {
-    text: {
-        color: brand.danger,
-    },
+        color: font.colorDisabled
+    }
 };
 export const textWhite = {
     text: {
-        color: "#FFF",
-    },
+        color: "#FFF"
+    }
 };
-//
-export const textContrastLowest = {
+export const textPrimary = {
     text: {
-        color: contrast.lowest,
-    },
+        color: brand.primary
+    }
 };
-export const textContrastLower = {
+export const textSuccess = {
     text: {
-        color: contrast.lower,
-    },
+        color: brand.success
+    }
 };
-export const textContrastLow = {
+export const textWarning = {
     text: {
-        color: contrast.low,
-    },
+        color: brand.warning
+    }
 };
-export const textContrastDefault = {
+export const textDanger = {
     text: {
-        color: contrast.regular,
-    },
-};
-export const textContrastHigh = {
-    text: {
-        color: contrast.high,
-    },
-};
-export const textContrastHigher = {
-    text: {
-        color: contrast.higher,
-    },
-};
-export const textContrastHighest = {
-    text: {
-        color: contrast.highest,
-    },
+        color: brand.danger
+    }
 };
 //
 // Text Alignment
 export const textLeft = {
     text: {
-        textAlign: "left",
-    },
+        textAlign: "left"
+    }
 };
 export const textCenter = {
     text: {
-        textAlign: "center",
-    },
+        textAlign: "center"
+    }
 };
 export const textRight = {
     text: {
-        textAlign: "right",
-    },
+        textAlign: "right"
+    }
 };
 //
 // Text Weights
 export const textLight = {
     text: {
-        fontWeight: font.weightLight,
-    },
+        fontWeight: font.weightLight
+    }
 };
 export const textNormal = {
     text: {
-        fontWeight: font.weightNormal,
-    },
+        fontWeight: font.weightNormal
+    }
 };
 export const textSemiBold = {
     text: {
-        fontWeight: font.weightSemiBold,
-    },
+        fontWeight: font.weightSemiBold
+    }
 };
 export const textBold = {
     text: {
-        fontWeight: font.weightBold,
-    },
+        fontWeight: font.weightBold
+    }
 };
 //
 // Text Sizes
 export const textSmall = {
     text: {
         fontSize: font.sizeSmall,
-        lineHeight: font.sizeSmall + 2,
-    },
+        lineHeight: font.lineHeightSmall
+    }
 };
 export const textLarge = {
     text: {
         fontSize: font.sizeLarge,
-        lineHeight: font.sizeLarge + 2,
-    },
+        lineHeight: font.lineHeightLarge
+    }
 };
 //
-//== Extra Classes
-//## Helper classes to change the look and feel of the widget
-//-------------------------------------------------------------------------------------------------------------------//
+// == Extra Classes
+// ## Helper classes to change the look and feel of the widget
+// -------------------------------------------------------------------------------------------------------------------//
 //
 // Text Transformations
 export const textLowercase = {
     text: {
-        textTransform: "lowercase",
-    },
+        textTransform: "lowercase"
+    }
 };
 export const textUppercase = {
     text: {
-        textTransform: "uppercase",
-    },
+        textTransform: "uppercase"
+    }
 };
 export const textCapitalize = {
     text: {
-        textTransform: "capitalize",
-    },
+        textTransform: "capitalize"
+    }
+};
+export const textUnderline = {
+    text: {
+        textDecorationLine: "underline"
+    }
+};
+export const textLineThrough = {
+    text: {
+        textDecorationLine: "line-through"
+    }
 };

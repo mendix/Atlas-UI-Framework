@@ -17,5 +17,5 @@ export const com_mendix_widget_native_colorpicker_ColorPicker: ColorPickerType =
     },
     thumbnail: {
         // All ViewStyle properties are allowed
-    },
+    }
 };

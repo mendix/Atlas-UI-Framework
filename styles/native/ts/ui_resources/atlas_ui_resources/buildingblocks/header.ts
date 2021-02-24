@@ -1,5 +1,4 @@
-import { Platform }                              from "react-native";
-import { background, border, contrast, spacing } from "../../../core/variables";
+import { background, spacing } from "../variables";
 /*
 ==========================================================================
     Cards
@@ -8,39 +7,23 @@ import { background, border, contrast, spacing } from "../../../core/variables";
 */
 export const header = {
     container: {
-        borderRadius: border.radius,
+        height: 280,
         backgroundColor: background.primary,
-        marginBottom: spacing.regular,
-
-        ...Platform.select({
-            android: {
-                borderWidth: 1,
-                borderColor: contrast.lowest,
-            },
-        }),
-    },
+        marginBottom: spacing.regular
+    }
 };
 //
-//== Elements
-//-------------------------------------------------------------------------------------------------------------------//
+// == Elements
+// -------------------------------------------------------------------------------------------------------------------//
 export const headerImageFull = {
     container: {
-        overflow: "hidden",
+        overflow: "hidden"
     },
     image: {
         width: "100%",
-        height: 250,
-        resizeMode: "cover",
-    },
-};
-export const headerImageOverlay = {
-    container: {
-        zIndex: 10,
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-        backgroundColor: "rgba(0,0,0,0.4)",
-    },
+        height: 280,
+        resizeMode: "cover"
+    }
 };
 export const headerBody = {
     container: {
@@ -48,10 +31,9 @@ export const headerBody = {
         zIndex: 11,
         width: "100%",
         position: "absolute",
-        backgroundColor: "transparent",
-    },
+        backgroundColor: "transparent"
+    }
 };
 //
-//== Variations
-//-------------------------------------------------------------------------------------------------------------------//
-
+// == Variations
+// -------------------------------------------------------------------------------------------------------------------//

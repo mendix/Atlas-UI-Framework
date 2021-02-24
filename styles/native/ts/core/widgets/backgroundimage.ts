@@ -11,14 +11,11 @@ import { BackgroundImageType } from "../../types/widgets";
 
     Default Class For Mendix Background Image Widget
 ========================================================================== */
-
-
 export const com_mendix_widget_native_backgroundimage_BackgroundImage: BackgroundImageType = {
     container: {
         // All ViewStyle properties are allowed
     },
     image: {
         // svgColor and all ImageStyle properties are allowed
-    },
+    }
 };
-

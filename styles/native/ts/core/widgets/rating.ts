@@ -1,4 +1,4 @@
-import { spacing }    from "../variables";
+import { spacing, rating } from "../../variables";
 import { RatingType } from "../../types/widgets";
 /*
 
@@ -15,14 +15,17 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const com_mendix_widget_native_rating_Rating: RatingType = {
     container: {
         // All ViewStyle properties are allowed
+        justifyContent: "center"
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-        opacity: 0.5,
+        opacity: rating.containerDisabled.opacity
     },
     icon: {
         // Size, color, selectedColor & all ViewStyle properties are allowed
-        size: 30,
+        size: rating.icon.size,
         marginRight: spacing.smaller,
-    },
+        color: rating.icon.color,
+        selectedColor: rating.icon.selectedColor
+    }
 };

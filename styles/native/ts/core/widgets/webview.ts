@@ -1,4 +1,4 @@
-import { font }        from "../variables";
+import { font } from "../../variables";
 import { WebViewType } from "../../types/widgets";
 /*
 
@@ -22,6 +22,6 @@ export const com_mendix_widget_native_webview_WebView: WebViewType = {
     errorText: {
         // All TextStyle properties are allowed
         fontSize: font.size,
-        fontFamily: font.family,
-    },
+        fontFamily: font.family
+    }
 };

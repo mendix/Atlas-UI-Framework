@@ -1,4 +1,4 @@
-import { brand, contrast, font } from "../variables";
+import { brand, contrast, font } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -15,46 +15,46 @@ To customize any core styling, copy the part you want to customize to styles/nat
 // Progress Circle Color
 export const progressCircleSuccess = {
     fill: {
-        backgroundColor: brand.success,
+        backgroundColor: brand.success
     },
     text: {
-        color: contrast.regular,
-    },
+        color: brand.success
+    }
 };
 export const progressCircleWarning = {
     fill: {
-        backgroundColor: brand.warning,
+        backgroundColor: brand.warning
     },
     text: {
-        color: contrast.regular,
-    },
+        color: brand.warning
+    }
 };
 export const progressCircleDanger = {
     fill: {
-        backgroundColor: brand.danger,
+        backgroundColor: brand.danger
     },
     text: {
-        color: contrast.regular,
-    },
+        color: brand.danger
+    }
 };
 export const progressCircleGray = {
     fill: {
-        backgroundColor: contrast.regular,
+        backgroundColor: contrast.regular
     },
     text: {
-        color: contrast.regular,
-    },
+        color: contrast.regular
+    }
 };
 //
 // Sizes
 export const progressCircleSmall = {
     circle: {
-        size: 50,
+        size: 50
     },
     fill: {
-        width: 3,
+        width: 3
     },
     text: {
-        fontSize: font.sizeSmall,
-    },
+        fontSize: font.sizeSmall
+    }
 };

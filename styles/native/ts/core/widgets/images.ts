@@ -1,4 +1,4 @@
-import { contrast }  from "../variables";
+import { contrast, image } from "../../variables";
 import { ImageType } from "../../types/widgets";
 /*
 
@@ -16,6 +16,8 @@ export const Image: ImageType = {
     container: {
         // rippleColor & all ViewStyle properties are allowed
         rippleColor: contrast.lowest,
+        maxWidth: "100%",
+        maxHeight: "100%"
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
@@ -24,17 +26,19 @@ export const Image: ImageType = {
         // All ImageStyle properties are allowed
         maxWidth: "100%",
         maxHeight: "100%",
-        resizeMode: "cover",
+        resizeMode: "cover"
     },
     imageDisabled: {
         // All ImageStyle properties are allowed
-        opacity: 0.6
+        opacity: image.imageDisabled.opacity
     }
 };
 export const ImageViewer: ImageType = {
     container: {
         // RippleColor & All ViewStyle properties are allowed
         rippleColor: contrast.lowest,
+        maxWidth: "100%",
+        maxHeight: "100%"
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
@@ -43,10 +47,10 @@ export const ImageViewer: ImageType = {
         // All ImageStyle properties are allowed
         maxWidth: "100%",
         maxHeight: "100%",
-        resizeMode: "cover",
+        resizeMode: "cover"
     },
     imageDisabled: {
         // All ImageStyle properties are allowed
-        opacity: 0.6
+        opacity: image.imageDisabled.opacity
     }
 };

@@ -1,7 +1,7 @@
-import { Platform }                             from "react-native";
-import { background, border, brand, contrast, font, spacing } from "../variables";
+import { Platform } from "react-native";
+import { background, border, brand, contrast, font, spacing } from "../../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
-import { CheckBoxType }             from "../../types/widgets";
+import { CheckBoxType } from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -19,7 +19,7 @@ export const CheckBox: CheckBoxType = {
         // All ViewStyle properties are allowed
         ...TextBox.container,
         paddingVertical: spacing.smallest,
-        justifyContent: "center",
+        justifyContent: "center"
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
@@ -27,7 +27,7 @@ export const CheckBox: CheckBoxType = {
     },
     label: {
         // numberOfLines and all TextStyle properties are allowed
-        ...TextBox.label,
+        ...TextBox.label
     },
     labelDisabled: {
         // All TextStyle properties are allowed
@@ -36,32 +36,32 @@ export const CheckBox: CheckBoxType = {
     input: {
         // thumbColorOn, thumbColorOff, trackColorOn, trackColorOff and all TextStyle properties are allowed
         backgroundColor: "transparent",
-        marginRight: Platform.select({android: -3}),
+        marginRight: Platform.select({ android: -3 }),
         thumbColorOn: background.primary,
-        trackColorOn: brand.success,
-        thumbColorOff: contrast.regular,
-        trackColorOff: contrast.lower,
+        trackColorOn: brand.primary,
+        thumbColorOff: "#FFF",
+        trackColorOff: border.color
     },
     inputDisabled: {
         // thumbColorOn, thumbColorOff, trackColorOn, trackColorOff and all TextStyle properties are allowed
-        thumbColorOn: background.secondary,
+        thumbColorOn: background.gray,
         trackColorOn: font.colorDisabled,
-        thumbColorOff: background.secondary,
-        trackColorOff: border.color,
+        thumbColorOff: background.gray,
+        trackColorOff: border.color
     },
     inputError: {
         // thumbColorOn, thumbColorOff, trackColorOn, trackColorOff and all TextStyle properties are allowed
         ...TextBox.inputError,
         thumbColorOn: background.primary,
         trackColorOn: brand.danger,
-        thumbColorOff: contrast.regular,
-        trackColorOff: brand.danger,
+        thumbColorOff: contrast.low,
+        trackColorOff: brand.danger
     },
     validationMessage: {
         // All TextStyle properties are allowed
         ...TextBox.validationMessage,
-        alignSelf: "stretch",
-    },
+        alignSelf: "stretch"
+    }
 };
 export const CheckBoxVertical: CheckBoxType = {
     container: TextBoxVertical.container,
@@ -70,18 +70,18 @@ export const CheckBoxVertical: CheckBoxType = {
     labelDisabled: TextBoxVertical.labelDisabled,
     input: {
         ...CheckBox.input,
-        alignSelf: "flex-start",
+        alignSelf: "flex-start"
     },
     inputDisabled: CheckBox.inputDisabled,
     inputError: {
         ...TextBoxVertical.inputError,
         thumbColorOn: background.primary,
         trackColorOn: brand.danger,
-        thumbColorOff: contrast.regular,
-        trackColorOff: brand.danger,
+        thumbColorOff: contrast.low,
+        trackColorOff: brand.danger
     },
     validationMessage: {
         ...TextBoxVertical.validationMessage,
-        alignSelf: "stretch",
-    },
+        alignSelf: "stretch"
+    }
 };

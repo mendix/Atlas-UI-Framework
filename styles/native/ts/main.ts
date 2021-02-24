@@ -1,4 +1,4 @@
-//================================== CORE ==================================\\
+// ================================== CORE ==================================\\
 //
 //
 // Base
@@ -67,21 +67,19 @@ export * from "./core/widgets/webview";
 export * from "./core/helpers/helperclasses";
 //
 //
-//================================= CUSTOM =================================\\
+// ================================= CUSTOM =================================\\
+//
 //
 // Layouts
-export * from "./ui_resources/atlas_ui_resources/layouts/layout";
+export * from "./layouts/layout";
+export * from "./layouts/page";
 //
 //
 // Page Templates
-export * from "./ui_resources/atlas_ui_resources/pagetemplates/page";
-export * from "./ui_resources/atlas_ui_resources/pagetemplates/maps";
-export * from "./ui_resources/atlas_ui_resources/pagetemplates/inspectiondetails";
+export * from "./pagetemplates/maps";
+export * from "./pagetemplates/inspectiondetails";
 //
 //
 // Building blocks
-export * from "./ui_resources/atlas_ui_resources/buildingblocks/card";
-export * from "./ui_resources/atlas_ui_resources/buildingblocks/header";
-
-
-
+export * from "./buildingblocks/card";
+export * from "./buildingblocks/header";

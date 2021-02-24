@@ -1,3 +1,5 @@
+import { listViewSwipe } from "../../variables";
+
 /*
 
 DISCLAIMER:
@@ -14,24 +16,24 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const listViewSwipeSmallPanels = {
     leftAction: {
         // PanelSize & All ViewStyle properties are allowed
-        panelSize: 150,
+        panelSize: listViewSwipe.leftAction.panelSizeSmall
     },
     rightAction: {
         // PanelSize & All ViewStyle properties are allowed
-        panelSize: 150,
-    },
+        panelSize: listViewSwipe.rightAction.panelSizeSmall
+    }
 };
 export const listViewSwipeLargePanels = {
     leftAction: {
         // PanelSize & All ViewStyle properties are allowed
-        panelSize: 250,
+        panelSize: listViewSwipe.leftAction.panelSizeLarge
     },
     rightAction: {
         // PanelSize & All ViewStyle properties are allowed
-        panelSize: 250,
-    },
+        panelSize: listViewSwipe.rightAction.panelSizeLarge
+    }
 };
 //
-//== Extra Classes
-//## Helper classes to change the look and feel of the widget
-//-------------------------------------------------------------------------------------------------------------------//
+// == Extra Classes
+// ## Helper classes to change the look and feel of the widget
+// -------------------------------------------------------------------------------------------------------------------//

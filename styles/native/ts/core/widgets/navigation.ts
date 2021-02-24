@@ -1,5 +1,5 @@
+import { border, font, navigation, spacing } from "../../variables";
 import { NavigationType } from "../../types/widgets";
-import { font, navigation, spacing } from "../variables";
 /*
 
 DISCLAIMER:
@@ -16,62 +16,61 @@ export const navigationStyle: NavigationType = {
     bottomBar: {
         container: {
             // All ViewStyle properties are allowed
-            backgroundColor: navigation.bottomBar.backgroundColor,
+            backgroundColor: navigation.bottomBar.backgroundColor
         },
         label: {
             // All TextStyle properties are allowed
             color: navigation.bottomBar.color,
             fontFamily: font.family,
-            fontSize: navigation.bottomBar.fontSize,
-
+            fontSize: navigation.bottomBar.fontSize
         },
         selectedLabel: {
             // All TextStyle properties are allowed
             color: navigation.bottomBar.selectedTextColor,
             fontFamily: font.family,
-            fontSize: navigation.bottomBar.fontSize,
+            fontSize: navigation.bottomBar.fontSize
         },
         icon: {
             // All TextStyle properties are allowed
             color: navigation.bottomBar.color,
-            fontSize: navigation.bottomBar.iconSize,
+            fontSize: navigation.bottomBar.iconSize
         },
         selectedIcon: {
             // All TextStyle properties are allowed
             color: navigation.bottomBar.selectedIconColor,
-            fontSize: navigation.bottomBar.iconSize,
-        },
+            fontSize: navigation.bottomBar.iconSize
+        }
     },
     progressOverlay: {
         background: {
             // All ViewStyle properties are allowed
-            backgroundColor: navigation.progressOverlay.backgroundColor,
+            backgroundColor: navigation.progressOverlay.backgroundColor
         },
         container: {
             // All ViewStyle properties are allowed
             backgroundColor: navigation.progressOverlay.containerBackgroundColor,
             paddingHorizontal: spacing.largest,
             paddingVertical: spacing.large,
-            borderRadius: navigation.progressOverlay.borderRadius,
+            borderRadius: border.radiusSmall,
             elevation: navigation.progressOverlay.elevation,
             shadowColor: navigation.progressOverlay.shadowColor,
             shadowOpacity: navigation.progressOverlay.shadowOpacity,
             shadowRadius: navigation.progressOverlay.shadowRadius,
             shadowOffset: {
                 width: 0,
-                height: 2,
-            },
+                height: 2
+            }
         },
         activityIndicator: {
             // Color, Size & All ViewStyle properties are allowed
-            color: navigation.progressOverlay.activityIndicatorColor,
+            color: navigation.progressOverlay.activityIndicatorColor
         },
         text: {
             // All TextStyle properties are allowed
             color: navigation.progressOverlay.color,
             marginTop: spacing.small,
             fontFamily: font.family,
-            fontSize: navigation.progressOverlay.fontSize,
-        },
-    },
+            fontSize: navigation.progressOverlay.fontSize
+        }
+    }
 };

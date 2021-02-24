@@ -1,4 +1,4 @@
-import { background, font, input } from "../variables";
+import { background, font, input } from "../../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
 import { DatePickerType } from "../../types/widgets";
 /*
@@ -16,63 +16,68 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const DatePicker: DatePickerType = {
     container: {
         // All ViewStyle properties are allowed
-        ...TextBox.container,
+        ...TextBox.container
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-      ...TextBox.containerDisabled
+        ...TextBox.containerDisabled
     },
     label: {
         // numberOfLines and all TextStyle properties are allowed
-        ...TextBox.label,
+        ...TextBox.label
     },
     labelDisabled: {
         // All TextStyle properties are allowed
-      ...TextBox.labelDisabled
+        ...TextBox.labelDisabled
     },
     pickerIOS: {
         // All ViewStyle properties & "color" (type: string) are allowed
         backgroundColor: background.primary,
-        color: font.color,
+        color: font.colorTitle
     },
     pickerBackdropIOS: {
         // All ViewStyle properties are allowed
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed
-        backgroundColor: background.primary,
+        backgroundColor: background.primary
     },
     value: {
         // All TextStyle properties are allowed
-        color: input.color,
-        borderColor: input.borderColor,
-        backgroundColor: input.backgroundColor,
+        color: input.input.color,
+        borderColor: input.input.borderColor,
+        backgroundColor: input.input.backgroundColor,
 
-        fontSize: input.fontSize,
+        fontSize: input.input.fontSize,
+        lineHeight: input.input.lineHeight,
         fontFamily: font.family,
-        borderWidth: input.borderWidth,
-        borderRadius: input.borderRadius,
+        borderWidth: input.input.borderWidth,
+        borderRadius: input.input.borderRadius,
 
-        paddingHorizontal: input.paddingHorizontal,
-        paddingVertical: input.paddingVertical,
+        textAlignVertical: "center",
+        minWidth: input.input.minWidth,
+        minHeight: input.input.minHeight,
+        paddingHorizontal: input.input.paddingHorizontal,
+        paddingVertical: input.input.paddingVertical
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        backgroundColor: input.backgroundColorDisabled,
-        color: input.colorDisabled
+        color: TextBox.inputDisabled?.color,
+        borderColor: TextBox.inputDisabled?.borderColor,
+        backgroundColor: TextBox.inputDisabled?.backgroundColor
     },
     placeholder: {
         // All TextStyle properties are allowed
-        color: input.placeholderTextColor,
+        color: input.input.placeholderTextColor
     },
     placeholderDisabled: {
         // All TextStyle properties are allowed
-        color: input.colorDisabled
+        color: TextBox.inputDisabled?.color
     },
     validationMessage: {
         // All TextStyle properties are allowed
-        ...TextBox.validationMessage,
-    },
+        ...TextBox.validationMessage
+    }
 };
 export const DatePickerVertical: DatePickerType = {
     container: TextBoxVertical.container,
@@ -82,6 +87,5 @@ export const DatePickerVertical: DatePickerType = {
     value: DatePicker.value,
     valueDisabled: DatePicker.valueDisabled,
     placeholder: DatePicker.placeholder,
-    placeholderDisabled: DatePicker.placeholderDisabled,
-    validationMessage: TextBoxVertical.validationMessage,
+    validationMessage: TextBoxVertical.validationMessage
 };

@@ -1,4 +1,4 @@
-import { background, border, contrast, spacing } from "../../../core/variables.js";
+import { background, border, contrast, spacing } from "../variables";
 /*
 ==========================================================================
     Maps
@@ -6,21 +6,21 @@ import { background, border, contrast, spacing } from "../../../core/variables.j
 ==========================================================================
 */
 //
-//== Elements
-//-------------------------------------------------------------------------------------------------------------------//
+// == Elements
+// -------------------------------------------------------------------------------------------------------------------//
 export const mapsBackground = {
     container: {
         position: "absolute",
         height: "100%",
         width: "100%",
-        zIndex: 0,
-    },
+        zIndex: 0
+    }
 };
 export const mapsFooter = {
     container: {
         bottom: 0,
-        position: "absolute",
-    },
+        position: "absolute"
+    }
 };
 export const mapsFooterSendLocation = {
     container: {
@@ -29,26 +29,21 @@ export const mapsFooterSendLocation = {
         backgroundColor: background.primary,
         padding: spacing.regular,
         margin: spacing.regular,
-        borderRadius: border.radius,
+        borderRadius: border.radiusSmall,
         elevation: 4,
         shadowColor: contrast.lower,
         shadowOpacity: 0.8,
         shadowRadius: 8,
         shadowOffset: {
             width: 0,
-            height: 2,
-        },
-    },
-};
-export const mapsList = {
-    container: {
-        paddingHorizontal: spacing.regular,
-    },
+            height: 2
+        }
+    }
 };
 export const mapsListItemImage = {
     container: {
         backgroundColor: background.primary,
-        borderRadius: border.radius,
+        borderRadius: border.radiusSmall,
         marginVertical: spacing.regular,
         marginLeft: spacing.smallest,
         marginRight: spacing.regular,
@@ -58,15 +53,14 @@ export const mapsListItemImage = {
         shadowRadius: 8,
         shadowOffset: {
             width: 0,
-            height: 2,
-        },
+            height: 2
+        }
     },
     image: {
-        borderRadius: border.radius,
-    },
+        borderRadius: border.radiusSmall
+    }
 };
 //
-//== Variations
-//-------------------------------------------------------------------------------------------------------------------//
+// == Variations
+// -------------------------------------------------------------------------------------------------------------------//
 //
-

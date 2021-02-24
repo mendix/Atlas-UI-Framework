@@ -1,6 +1,6 @@
-import { Platform }                                         from "react-native";
-import { background, border, brand, contrast, font, input } from "../variables";
-import { SliderType }                                       from "../../types/widgets";
+import { slider } from "../../variables";
+import { SliderType } from "../../types/widgets";
+import { TextBox } from "./textbox";
 /*
 
 DISCLAIMER:
@@ -16,82 +16,62 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const com_mendix_widget_native_slider_Slider: SliderType = {
     container: {
         // All ViewStyle properties are allowed
-        alignSelf: "stretch",
+        alignSelf: "stretch"
     },
     track: {
         // All ViewStyle properties are allowed
-        backgroundColor: contrast.lower,
+        height: slider.track.height,
+        backgroundColor: slider.track.backgroundColor
     },
     trackDisabled: {
         // All ViewStyle properties are allowed
-        backgroundColor: contrast.lower,
-        opacity: Platform.select({ios: 0.4}),
+        height: slider.track.height,
+        backgroundColor: slider.trackDisabled.backgroundColor,
+        opacity: slider.trackDisabled.opacity
     },
     highlight: {
         // All ViewStyle properties are allowed
-        backgroundColor: brand.primary,
+        height: slider.track.height,
+        backgroundColor: slider.highlight.backgroundColor
     },
     highlightDisabled: {
         // All ViewStyle properties are allowed
-        backgroundColor: Platform.select({ios: brand.primary, android: contrast.low}),
+        height: slider.track.height,
+        backgroundColor: slider.highlightDisabled.backgroundColor
     },
     marker: {
         // All ViewStyle properties are allowed
-        backgroundColor: background.secondary,
-        ...Platform.select({
-            ios: {
-                width: 30,
-                height: 30,
-                shadowColor: "#000",
-                shadowOpacity: 0.2,
-                borderColor: contrast.lowest,
-                shadowOffset: {width: 0, height: 1},
-            },
-            android: {
-                width: 20,
-                height: 20,
-                borderRadius: 10,
-                elevation: 3,
-                borderColor: border.color,
-            },
-        }),
+        backgroundColor: slider.marker.backgroundColor,
+        width: slider.marker.size,
+        height: slider.marker.size,
+        borderRadius: slider.marker.size / 2,
+        borderColor: slider.marker.borderColor,
+        elevation: 2,
+        shadowColor: "#000",
+        shadowOpacity: 0.1,
+        shadowOffset: { width: 0, height: 1 }
     },
     markerActive: {
         // All ViewStyle properties are allowed
-        ...Platform.select({
-            android: {
-                borderWidth: 0,
-                width: 34,
-                height: 34,
-                borderRadius: 17,
-            },
-        }),
+        width: slider.markerActive.size,
+        height: slider.markerActive.size,
+        borderRadius: slider.markerActive.size / 2,
+        borderWidth: 0
     },
     markerDisabled: {
         // All ViewStyle properties are allowed
-        ...Platform.select({
-            ios: {
-                borderColor: contrast.lowest,
-                backgroundColor: background.secondary,
-                shadowColor: "#000",
-                shadowOpacity: 0.2,
-                shadowOffset: {width: 0, height: 1},
-            },
-            android: {
-                marginTop: 1,
-                borderColor: background.primary,
-                backgroundColor: contrast.low,
-                borderWidth: 3,
-                width: 14,
-                height: 14,
-                borderRadius: 7,
-            },
-        }),
+        backgroundColor: slider.markerDisabled.backgroundColor,
+        width: slider.markerDisabled.size,
+        height: slider.markerDisabled.size,
+        borderRadius: slider.markerDisabled.size / 2,
+        borderColor: slider.markerDisabled.borderColor,
+        elevation: 2,
+        shadowColor: "#000",
+        shadowOpacity: 0.1,
+        shadowOffset: { width: 0, height: 1 }
     },
     validationMessage: {
         // All TextStyle properties are allowed
-        color: input.errorColor,
-        fontSize: font.size,
-        fontFamily: font.family,
-    },
+        ...TextBox.validationMessage
+    }
 };

@@ -1,4 +1,5 @@
-import {ContainerType} from "../../types/widgets";
+import { ContainerType } from "../../types/widgets";
+import { container } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -17,12 +18,12 @@ export const Container: ContainerType = {
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-        opacity: 0.6
+        opacity: container.containerDisabled.opacity
     }
 };
 
 export const ScrollContainer: ContainerType = {
     container: {
         // All ViewStyle properties are allowed
-    },
+    }
 };

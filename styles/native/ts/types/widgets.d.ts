@@ -3,184 +3,186 @@ import { ImageStyle, TextProps, TextStyle, ViewStyle } from "react-native";
 declare type ActivityIndicatorSizeType = "small" | "large";
 
 interface InputLabelType extends TextStyle {
-    numberOfLines?: number
+    numberOfLines?: number;
 }
 
 interface InputType extends TextStyle {
-    autoCapitalize?: string,
-    selectionColor?: string,
-    placeholderTextColor?: string,
-    underlineColorAndroid?: string,
+    autoCapitalize?: string;
+    selectionColor?: string;
+    placeholderTextColor?: string;
+    underlineColorAndroid?: string;
 }
 
 // Activity Indicator
 export interface ActivityIndicatorType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     indicator?: {
-        color?: string
-        size?: ActivityIndicatorSizeType
-    }
+        color?: string;
+        size?: ActivityIndicatorSizeType;
+    };
 }
 
 // Animation
 export interface AnimationType {
-    container?: ViewStyle
+    container?: ViewStyle;
 }
 
 // Background Image
 export interface BackgroundImageType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     image?: ImageStyle & {
-        svgColor?: string
-    }
+        svgColor?: string;
+    };
 }
 
 // Badge
 export interface BadgeType {
-    container?: ViewStyle,
-    caption?: TextStyle
+    container?: ViewStyle;
+    caption?: TextStyle;
 }
 
 // Bottom Sheet
 export interface BottomSheetType {
-    container?: ViewStyle,
-    containerWhenExpandedFullscreen?: ViewStyle,
-    modal?: ViewStyle,
+    container?: ViewStyle;
+    containerWhenExpandedFullscreen?: ViewStyle;
+    modal?: ViewStyle;
     modalItems?: {
         container?: ViewStyle & {
             rippleColor?: string;
-        }
+        };
         defaultStyle?: TextStyle;
         primaryStyle?: TextStyle;
         dangerStyle?: TextStyle;
         customStyle?: TextStyle;
-    }
+    };
 }
 
 // Action Button
 interface ButtonContainerType extends ViewStyle {
-    rippleColor?: string
+    rippleColor?: string;
 }
 
 interface ButtonStyleType extends ViewStyle {
-    size?: number
+    size?: number;
 }
 
 interface ButtonIconType extends ButtonStyleType {
-    color?: string
+    color?: string;
 }
 
 export interface ActionButtonType {
-    container?: ButtonContainerType,
-    containerDisabled?: ViewStyle,
-    icon?: ButtonIconType,
-    iconDisabled?: ButtonIconType,
-    caption?: TextStyle
-    captionDisabled?: TextStyle
+    container?: ButtonContainerType;
+    containerDisabled?: ViewStyle;
+    icon?: ButtonIconType;
+    iconDisabled?: ButtonIconType;
+    caption?: TextStyle;
+    captionDisabled?: TextStyle;
 }
 
 // Carousel
 export interface CarouselLayoutType {
-    slideItem?: ViewStyle,
+    slideItem?: ViewStyle;
     inactiveSlideItem?: {
-        opacity?: number,
-        scale?: number
-    },
+        opacity?: number;
+        scale?: number;
+    };
     pagination?: {
-        container?: ViewStyle,
-        text?: TextStyle,
-        dotContainerStyle?: ViewStyle,
+        container?: ViewStyle;
+        text?: TextStyle;
+        dotContainerStyle?: ViewStyle;
         dotStyle?: ViewStyle & {
-            color?: string
-        },
+            color?: string;
+        };
         inactiveDotStyle?: {
-            color?: string,
-            scale?: number,
-            opacity?: number
-        }
-    }
+            color?: string;
+            scale?: number;
+            opacity?: number;
+        };
+    };
 }
 
 export interface CarouselType {
-    container?: ViewStyle,
-    fullWidthLayout?: CarouselLayoutType,
-    cardLayout?: CarouselLayoutType,
+    container?: ViewStyle;
+    fullWidthLayout?: CarouselLayoutType;
+    cardLayout?: CarouselLayoutType;
     activityIndicator?: {
-        color?: string
-    }
+        color?: string;
+    };
 }
 
 // Checkbox
 interface CheckBoxInputType extends TextStyle {
-    thumbColorOn?: string,
-    thumbColorOff?: string,
-    trackColorOn?: string,
-    trackColorOff?: string,
+    thumbColorOn?: string;
+    thumbColorOff?: string;
+    trackColorOn?: string;
+    trackColorOff?: string;
 }
 
 export interface CheckBoxType {
-    container?: ViewStyle,
-    containerDisabled?: ViewStyle,
-    label?: InputLabelType,
-    labelDisabled?: TextStyle,
-    input?: CheckBoxInputType,
-    inputDisabled?: CheckBoxInputType,
-    inputError?: CheckBoxInputType,
-    validationMessage?: TextStyle
+    container?: ViewStyle;
+    containerDisabled?: ViewStyle;
+    label?: InputLabelType;
+    labelDisabled?: TextStyle;
+    input?: CheckBoxInputType;
+    inputDisabled?: CheckBoxInputType;
+    inputError?: CheckBoxInputType;
+    validationMessage?: TextStyle;
 }
 
 // Color Picker
 export interface ColorPickerType {
-    container?: ViewStyle,
-    thumbnail?: ViewStyle
+    container?: ViewStyle;
+    thumbnail?: ViewStyle;
 }
 
 // Container
 export interface ContainerType {
     container?: ViewStyle & {
         rippleColor?: string;
-    }
+    };
     containerDisabled?: ViewStyle;
 }
 
 // Date Picker
 export interface DatePickerType {
-    container?: ViewStyle,
-    containerDisabled?: ViewStyle,
-    label?: InputLabelType,
-    labelDisabled?: TextStyle,
+    container?: ViewStyle;
+    containerDisabled?: ViewStyle;
+    label?: InputLabelType;
+    labelDisabled?: TextStyle;
     pickerIOS?: {
-                    color?: string
-                } & ViewStyle,
-    pickerBackdropIOS?: ViewStyle,
-    pickerTopIOS?: ViewStyle,
-    value?: TextStyle,
-    valueDisabled?: TextStyle,
-    placeholder?: TextStyle,
-    placeholderDisabled?: TextStyle,
-    validationMessage?: TextStyle
+        color?: string;
+    } & ViewStyle;
+    pickerBackdropIOS?: ViewStyle;
+    pickerTopIOS?: ViewStyle;
+    value?: TextStyle;
+    valueDisabled?: TextStyle;
+    placeholder?: TextStyle;
+    placeholderDisabled?: TextStyle;
+    validationMessage?: TextStyle;
 }
 
 // Drop Down
 export interface DropDownType {
-    container?: ViewStyle,
-    containerDisabled?: ViewStyle,
-    label?: InputLabelType,
-    labelDisabled?: TextStyle,
+    container?: ViewStyle;
+    containerDisabled?: ViewStyle;
+    label?: InputLabelType;
+    labelDisabled?: TextStyle;
     value?: {
-                placeholderTextColor?: string
-            } & TextStyle,
-    valueDisabled?: TextStyle,
-    validationMessage?: TextStyle,
+        placeholderTextColor?: string;
+    } & TextStyle;
+    valueDisabled?: TextStyle;
+    valueFocused?: ViewStyle;
+    validationMessage?: TextStyle;
     /*  New dropdown styles start */
-    valueContainer?: {
-                         rippleColor?: string
-                     } & ViewStyle;
-    valueContainerFocused?: ViewStyle;
+    valueContainer?: ViewStyle & {
+        rippleColor?: string;
+        underlayColor?: string;
+        activeOpacity?: number;
+    };
     valueContainerDisabled?: ViewStyle;
-    valueFocused?: TextStyle;
-    menuWrapper?: ViewStyle;
+    valueContainerFocused?: ViewStyle;
     iconStyle?: TextStyle;
+    menuWrapper?: ViewStyle;
     item?: TextStyle;
     itemContainer?: ViewStyle & {
         rippleColor?: string;
@@ -192,84 +194,100 @@ export interface DropDownType {
     /*  New dropdown styles end */
     useUniformDesign?: boolean; // Flag for using old dropdown design with PickerWheel in IOS
     // Old dropdown styles start
-    pickerIOS?: ViewStyle,
-    pickerItemIOS?: ViewStyle,
-    pickerBackdropIOS?: ViewStyle,
-    pickerTopIOS?: ViewStyle,
+    pickerIOS?: ViewStyle;
+    pickerItemIOS?: ViewStyle;
+    pickerBackdropIOS?: ViewStyle;
+    pickerTopIOS?: ViewStyle;
     // Old dropdown styles end
 }
 
 // Feedback
 export interface FeedbackType {
-    floatingButton?: ViewStyle,
-    dialog?: ViewStyle,
-    title?: TextStyle,
-    textAreaInput?: InputType,
-    switchLabel?: TextStyle,
-    switchInput?: CheckBoxInputType,
+    floatingButton?: ViewStyle;
+    dialog?: ViewStyle;
+    title?: TextStyle;
+    textAreaInput?: InputType;
+    switchLabel?: TextStyle;
+    switchInput?: CheckBoxInputType;
     button?: {
-        color?: string,
-        borderColor?: string,
-        borderWidth?: number
-    },
+        color?: string;
+        borderColor?: string;
+        borderWidth?: number;
+    };
     activityIndicator?: {
-        color?: string
-    }
+        color?: string;
+    };
 }
-
 
 // Floating Action Button
 export interface FloatingActionButtonType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     button?: ButtonStyleType & {
-        rippleColor?: string
-    },
-    buttonIcon?: ButtonIconType
-    secondaryButton?: ButtonStyleType
-    secondaryButtonIcon?: ButtonIconType
-    secondaryButtonCaption?: TextStyle,
-    secondaryButtonCaptionContainer?: ViewStyle,
+        rippleColor?: string;
+    };
+    buttonIcon?: ButtonIconType;
+    secondaryButton?: ButtonStyleType;
+    secondaryButtonIcon?: ButtonIconType;
+    secondaryButtonCaption?: TextStyle;
+    secondaryButtonCaptionContainer?: ViewStyle;
 }
 
 // Images
 export interface ImageType {
-    container?: ButtonContainerType,
-    containerDisabled?: ViewStyle,
-    image?: ImageStyle
-    imageDisabled?: ImageStyle
+    container?: ButtonContainerType;
+    containerDisabled?: ViewStyle;
+    image?: ImageStyle;
+    imageDisabled?: ImageStyle;
 }
 
 // Intro Screen
 export interface IntroScreenButtonType {
-    container?: ButtonContainerType,
-    icon?: ButtonIconType,
-    caption?: TextStyle
+    container?: ButtonContainerType;
+    icon?: ButtonIconType;
+    caption?: TextStyle;
 }
 
 interface IntroScreenPaginationType {
-    buttonSkip?: IntroScreenButtonType,
-    buttonPrevious?: IntroScreenButtonType,
-    buttonNext?: IntroScreenButtonType,
-    buttonDone?: IntroScreenButtonType,
+    buttonSkip?: IntroScreenButtonType;
+    buttonPrevious?: IntroScreenButtonType;
+    buttonNext?: IntroScreenButtonType;
+    buttonDone?: IntroScreenButtonType;
 }
 
 export interface IntroScreenType {
-    fullscreenContainer?: ViewStyle,
-    popupContainer?: ViewStyle,
-    paginationContainer?: ViewStyle,
-    paginationText?: TextStyle,
-    dotStyle?: ViewStyle,
-    activeDotStyle?: ViewStyle,
+    fullscreenContainer?: ViewStyle;
+    popupContainer?: ViewStyle;
+    paginationContainer?: ViewStyle;
+    paginationText?: TextStyle;
+    dotStyle?: ViewStyle;
+    activeDotStyle?: ViewStyle;
 
     paginationAbove?: IntroScreenPaginationType & {
-        buttonsContainer?: ViewStyle,
-    },
-    paginationBetween?: IntroScreenPaginationType
+        buttonsContainer?: ViewStyle;
+    };
+    paginationBetween?: IntroScreenPaginationType;
+}
+
+// Layout
+export interface LayoutType {
+    sidebar: ViewStyle;
+    statusBar: {
+        // Only backgroundColor and barStyle are allowed
+        backgroundColor: string;
+        barStyle: string;
+    };
+    header: {
+        container: ViewStyle;
+        title: TextStyle;
+        backButtonText: TextStyle;
+        backButtonIcon: ImageStyle;
+    };
+    container: ViewStyle;
 }
 
 // Layout grid
 export interface LayoutGridType {
-    container?: ViewStyle
+    container?: ViewStyle;
 }
 
 // Line chart
@@ -400,111 +418,109 @@ export interface BarChartType {
     yAxis?: BarChartAxisStyle<"Y">;
     legend?: BarChartLegendStyle;
     bars?: {
+        barColorPalette?: string;
+        barsOffset?: number; // only applicable to Grouped presentation mode
         customBarStyles?: {
             [key: string]: {
-                bar?: BarChartBarStyle,
-                label?: BarChartBarLabelStyle
-            }
+                bar?: BarChartBarStyle;
+                label?: BarChartBarLabelStyle;
+            };
         };
-        barsOffset?: number; // only applicable to Grouped presentation mode
-        barColorPalette?: string;
     };
     domain?: {
-        padding?: { x?: number; y?: number };
+        padding?: { x: number; y: number };
     };
 }
 
 // List view
 export interface ListViewType {
-    container?: ViewStyle & {
-        numColumns?: number
-    },
-    listItem?: ViewStyle,
-    listItemDisabled?: ViewStyle,
+    container?: ViewStyle;
+    listItem?: ViewStyle;
+    listItemDisabled?: ViewStyle;
 }
 
 // List View Swipe
 interface ListViewSwipeActionType extends ViewStyle {
-    panelSize?: number
+    panelSize?: number;
 }
 
 export interface ListViewSwipeType {
-    container?: ViewStyle,
-    leftAction?: ListViewSwipeActionType,
-    rightAction?: ListViewSwipeActionType,
+    container?: ViewStyle;
+    leftAction?: ListViewSwipeActionType;
+    rightAction?: ListViewSwipeActionType;
 }
 
 // Maps
 export interface MapsType {
-    container?: ViewStyle,
-    loadingOverlay?: ViewStyle,
+    container?: ViewStyle;
+    loadingOverlay?: ViewStyle;
     loadingIndicator?: {
-        color?: string
-    },
+        color?: string;
+    };
     marker?: {
-        color?: string,
-        opacity?: number
-    }
+        color?: string;
+        opacity?: number;
+    };
 }
 
 // Navigation
 export interface NavigationType {
     bottomBar?: {
-        container?: ViewStyle,
-        label?: TextStyle,
-        selectedLabel?: TextStyle,
-        icon?: TextStyle,
-        selectedIcon?: TextStyle,
-    },
+        container?: ViewStyle;
+        label?: TextStyle;
+        selectedLabel?: TextStyle;
+        icon?: TextStyle;
+        selectedIcon?: TextStyle;
+    };
     progressOverlay?: {
-        background?: ViewStyle,
-        container?: ViewStyle,
+        background?: ViewStyle;
+        container?: ViewStyle;
         activityIndicator?: ViewStyle & {
-            color?: string,
-            size?: ActivityIndicatorSizeType
-        }
-        text?: TextStyle
-    },
+            color?: string;
+            size?: ActivityIndicatorSizeType;
+        };
+        text?: TextStyle;
+    };
 }
 
 // Page Title
 export interface PageTitleType {
-    container?: ViewStyle,
-    text?: TextStyle
+    container?: ViewStyle;
+    text?: TextStyle;
 }
 
 // Progress Bar
 export interface ProgressBarType {
-    container?: ViewStyle,
-    bar?: ViewStyle,
+    container?: ViewStyle;
+    bar?: ViewStyle;
     fill?: {
-        backgroundColor?: string
-    },
-    validationMessage?: TextStyle
+        backgroundColor?: string;
+    };
+    validationMessage?: TextStyle;
 }
 
 // Progress Circle
 export interface ProgressCircleType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     circle?: {
-        size?: number,
-        borderWidth?: number,
-        borderColor?: string
-    },
+        size?: number;
+        borderWidth?: number;
+        borderColor?: string;
+    };
     fill?: {
-        width?: number,
-        backgroundColor?: string,
-        lineCapRounded?: boolean,
-    },
-    text?: TextStyle
-    validationMessage?: TextStyle
+        width?: number;
+        backgroundColor?: string;
+        lineCapRounded?: boolean;
+    };
+    text?: TextStyle;
+    validationMessage?: TextStyle;
 }
 
 // Popup Menu
 export interface PopupMenuType {
     container?: ViewStyle;
     basic: BasicItemStyle;
-    custom: CustomItemStyle
+    custom: CustomItemStyle;
     buttonContainer?: ViewStyle;
 }
 
@@ -530,103 +546,102 @@ interface ItemStyle {
 
 // QR Code
 export interface QRCodeType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     qrcode?: {
-        size?: number,
-        color?: string,
-        backgroundColor?: string
-    }
+        size?: number;
+        color?: string;
+        backgroundColor?: string;
+    };
 }
 
 // Rating
 export interface RatingType {
-    container?: ViewStyle,
-    containerDisabled?: ViewStyle,
+    container?: ViewStyle;
+    containerDisabled?: ViewStyle;
     icon?: ViewStyle & {
-        size?: number,
-        color?: string,
-        selectedColor?: string,
-    }
+        size?: number;
+        color?: string;
+        selectedColor?: string;
+    };
 }
 
 // Safe Area View
 export interface SafeAreaViewType {
-    container?: ViewStyle
+    container?: ViewStyle;
 }
 
 // Slider
 export interface SliderType {
-    container?: ViewStyle,
-    track?: ViewStyle,
-    trackDisabled?: ViewStyle,
-    highlight?: ViewStyle,
-    highlightDisabled?: ViewStyle,
-    marker?: ViewStyle,
-    markerActive?: ViewStyle,
-    markerDisabled?: ViewStyle,
-    validationMessage?: TextStyle,
-
+    container?: ViewStyle;
+    track?: ViewStyle;
+    trackDisabled?: ViewStyle;
+    highlight?: ViewStyle;
+    highlightDisabled?: ViewStyle;
+    marker?: ViewStyle;
+    markerActive?: ViewStyle;
+    markerDisabled?: ViewStyle;
+    validationMessage?: TextStyle;
 }
 
 // Tab Container
 export interface TabContainerType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     tabBar?: ViewStyle & {
-        bounces?: boolean,
-        pressColor?: string,
-        pressOpacity?: number,
-        scrollEnabled?: boolean
-    },
-    indicator?: ViewStyle,
-    tab?: ViewStyle,
-    label?: TextStyle,
-    activeLabel?: TextStyle,
-    badgeContainer?: ViewStyle,
-    badgeCaption?: TextStyle
+        bounces?: boolean;
+        pressColor?: string;
+        pressOpacity?: number;
+        scrollEnabled?: boolean;
+    };
+    indicator?: ViewStyle;
+    tab?: ViewStyle;
+    label?: TextStyle;
+    activeLabel?: TextStyle;
+    badgeContainer?: ViewStyle;
+    badgeCaption?: TextStyle;
 }
 
 // Text Box
 export interface TextBoxType {
-    container?: ViewStyle,
-    containerDisabled?: ViewStyle,
-    label?: InputLabelType,
-    labelDisabled?: TextStyle,
-    input?: InputType,
-    inputDisabled?: InputType,
-    inputError?: InputType,
+    container?: ViewStyle;
+    containerDisabled?: ViewStyle;
+    label?: InputLabelType;
+    labelDisabled?: TextStyle;
+    input?: InputType;
+    inputDisabled?: InputType;
     inputFocused?: InputType;
-    validationMessage?: TextStyle
+    inputError?: InputType;
+    validationMessage?: TextStyle;
 }
 
 // Toggle Buttons
 export interface ToggleButtonsType {
-    container?: ViewStyle,
-    containerDisabled?: ViewStyle,
-    button?: ViewStyle,
-    text?: TextStyle,
-    activeButton?: ViewStyle,
-    activeButtonText?: TextStyle,
-    validationMessage?: TextStyle,
+    container?: ViewStyle;
+    containerDisabled?: ViewStyle;
+    button?: ViewStyle;
+    text?: TextStyle;
+    activeButton?: ViewStyle;
+    activeButtonText?: TextStyle;
+    validationMessage?: TextStyle;
 }
 
 // Text
 export interface TextType {
-    container?: ViewStyle,
-    text?: TextStyle
+    container?: ViewStyle;
+    text?: TextStyle;
 }
 
 // Video Player
 export interface VideoPlayerType {
-    container?: ViewStyle,
+    container?: ViewStyle;
     indicator?: {
-        backgroundColor?: string,
-    },
-    video?: ViewStyle
+        backgroundColor?: string;
+    };
+    video?: ViewStyle;
 }
 
 // Web View
 export interface WebViewType {
-    container?: ViewStyle,
-    errorContainer?: ViewStyle,
-    errorText?: TextStyle
+    container?: ViewStyle;
+    errorContainer?: ViewStyle;
+    errorText?: TextStyle;
 }

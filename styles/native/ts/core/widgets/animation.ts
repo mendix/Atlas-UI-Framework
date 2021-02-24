@@ -12,5 +12,7 @@ To customize any core styling, copy the part you want to customize to styles/nat
     Default Class For Mendix Animation Widget
 ========================================================================== */
 export const com_mendix_widget_native_animation_Animation: AnimationType = {
-    container: {},
+    container: {
+        // All ViewStyle properties are allowed
+    }
 };

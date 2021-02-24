@@ -15,21 +15,21 @@ To customize any core styling, copy the part you want to customize to styles/nat
 // Text Box Color
 export const textInputCapitalizeNone: TextBoxType = {
     input: {
-        autoCapitalize: "none",
-    },
+        autoCapitalize: "none"
+    }
 };
 export const textInputCapitalizeCharacters: TextBoxType = {
     input: {
-        autoCapitalize: "characters",
-    },
+        autoCapitalize: "characters"
+    }
 };
 export const textInputCapitalizeWords: TextBoxType = {
     input: {
-        autoCapitalize: "words",
-    },
+        autoCapitalize: "words"
+    }
 };
 export const textInputCapitalizeSentences: TextBoxType = {
     input: {
-        autoCapitalize: "sentences",
-    },
+        autoCapitalize: "sentences"
+    }
 };

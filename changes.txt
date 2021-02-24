@@ -3,11 +3,8 @@ There's an Atlas 3 branch fix/atlas_3_cleanup with improvements. Push this when 
 Atlas 3 master b2b2bfd154e0731be308551da1b6095515a89688
 Atlas 2 develop 618eb65155f174d94de7288378f6c247cb5d5e14
 
-left is ATLAS 2 | right is Atlas 3
 
-copy all atlas 3 into atlas 2
-
-take note of file name changes | additions | removals
+---------------------------------- WEB --------------------------------------
 
 styles/web/sass/app/_custom-variables.scss -> src/theme/web/custom-variables.scss
 login-with-sso.html -> src/theme/web/login-with-sso.html
@@ -103,3 +100,19 @@ styles/web/sass/core/widgetscustom/_switchwidget.scss
 styles/web/sass/core/_variables.scss -> src/themesource/atlas_ui_resources/web/_variables.scss
 
 settings.json -> src/themesource/atlas_ui_resources/web/design-properties.json
+
+----------------------------------------- NATIVE ---------------------------------------------------
+
+
+
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/app/custom-variables.ts
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/main.ts
+/Users/Jordan.Hunt/mendix/atlasUI/theme/settings-native.json
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/core/variables.ts
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/core/base/flex.ts
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/core/base/spacing.ts
+
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/core/helpers/**/*
+/Users/Jordan.Hunt/mendix/atlasUI/theme/styles/native/ts/core/widgets/**/*
+
+pagetemplates/Page.ts -> ../

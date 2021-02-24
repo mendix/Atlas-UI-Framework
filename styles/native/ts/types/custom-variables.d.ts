@@ -2,198 +2,197 @@ declare type FontWeight = "normal" | "bold" | "100" | "200" | "300" | "400" | "5
 declare type TextAlign = "auto" | "left" | "right" | "center" | "justify";
 
 export interface VariablesBrand {
-    primary?: string,
-    success?: string,
-    warning?: string,
-    danger?: string,
-    primaryLight?: string,
-    successLight?: string,
-    warningLight?: string,
-    dangerLight?: string,
+    primary?: string;
+    success?: string;
+    warning?: string;
+    danger?: string;
+    primaryLight?: string;
+    successLight?: string;
+    warningLight?: string;
+    dangerLight?: string;
 }
 
 export interface VariablesBackground {
-    primary?: string,
-    secondary?: string,
-    gray?: string,
-    brandPrimary?: string,
-    brandSuccess?: string,
-    brandWarning?: string,
-    brandDanger?: string,
+    primary?: string;
+    secondary?: string;
+    gray?: string;
+    brandPrimary?: string;
+    brandSuccess?: string;
+    brandWarning?: string;
+    brandDanger?: string;
 }
 
 export interface VariablesContrast {
-    highest?: string,
-    higher?: string,
-    high?: string,
-    regular?: string,
-    low?: string,
-    lower?: string,
-    lowest?: string,
+    highest?: string;
+    higher?: string;
+    high?: string;
+    regular?: string;
+    low?: string;
+    lower?: string;
+    lowest?: string;
 }
 
 export interface VariablesBorder {
-    color?: string,
-    width?: number,
-    radius?: number,
+    color?: string;
+    width?: number;
+    radius?: number;
 }
 
 export interface VariablesFont {
-    size?: number,
-    sizeSmall?: number,
-    sizeLarge?: number,
-    sizeH1?: number,
-    sizeH2?: number,
-    sizeH3?: number,
-    sizeH4?: number,
-    sizeH5?: number,
-    sizeH6?: number,
-    color?: string,
-    weightLight?: FontWeight,
-    weightNormal?: FontWeight,
-    weightSemiBold?: FontWeight,
-    weightBold?: FontWeight,
-    family?: string,
+    size?: number;
+    sizeSmall?: number;
+    sizeLarge?: number;
+    sizeH1?: number;
+    sizeH2?: number;
+    sizeH3?: number;
+    sizeH4?: number;
+    sizeH5?: number;
+    sizeH6?: number;
+    color?: string;
+    weightLight?: FontWeight;
+    weightNormal?: FontWeight;
+    weightSemiBold?: FontWeight;
+    weightBold?: FontWeight;
+    family?: string;
 }
 
 export interface VariablesSpacing {
-    smallest?: number,
-    smaller?: number,
-    small?: number,
-    regular?: number,
-    large?: number,
-    larger?: number,
-    largest?: number,
+    smallest?: number;
+    smaller?: number;
+    small?: number;
+    regular?: number;
+    large?: number;
+    larger?: number;
+    largest?: number;
 }
 
 interface VariablesButtonStyles {
-    color?: string,
-    borderColor?: string,
-    backgroundColor?: string,
-    inversedColor?: string,
+    color?: string;
+    borderColor?: string;
+    backgroundColor?: string;
+    inversedColor?: string;
 }
 
 export interface VariablesButton {
-    fontSize?: number,
-    fontSizeLarge?: number,
-    fontWeight?: FontWeight,
-    fontSizeIcon?: number,
-    fontSizeIconLarge?: number,
-    borderRadius?: number,
-    paddingVertical?: number,
-    paddingHorizontal?: number,
+    fontSize?: number;
+    fontSizeLarge?: number;
+    fontWeight?: FontWeight;
+    fontSizeIcon?: number;
+    fontSizeIconLarge?: number;
+    borderRadius?: number;
+    paddingVertical?: number;
+    paddingHorizontal?: number;
 
     header?: {
-        color?: string,
-        borderColor?: string,
-        backgroundColor?: string,
-        fontSize?: number,
-        fontSizeIcon?: number,
-        paddingLeft?: number,
-        paddingRight?: number,
-    },
+        color?: string;
+        borderColor?: string;
+        backgroundColor?: string;
+        fontSize?: number;
+        fontSizeIcon?: number;
+        paddingLeft?: number;
+        paddingRight?: number;
+    };
 
-    primary?: VariablesButtonStyles,
-    secondary?: VariablesButtonStyles,
-    success?: VariablesButtonStyles,
-    warning?: VariablesButtonStyles,
-    danger?: VariablesButtonStyles,
+    primary?: VariablesButtonStyles;
+    secondary?: VariablesButtonStyles;
+    success?: VariablesButtonStyles;
+    warning?: VariablesButtonStyles;
+    danger?: VariablesButtonStyles;
 }
 
 export interface VariablesInput {
-    color?: string,
-    errorColor?: string,
-    labelColor?: string,
-    borderColor?: string,
-    backgroundColor?: string,
-    backgroundColorDisabled?: string,
-    selectionColor?: string,
-    placeholderTextColor?: string,
-    underlineColorAndroid?: string,
+    color?: string;
+    errorColor?: string;
+    labelColor?: string;
+    borderColor?: string;
+    backgroundColor?: string;
+    disabledBackgroundColor?: string;
+    selectionColor?: string;
+    placeholderTextColor?: string;
+    underlineColorAndroid?: string;
 
-    fontSize?: number,
-    fontFamily?: string,
-    borderWidth?: number,
-    borderRadius?: number,
+    fontSize?: number;
+    fontFamily?: string;
+    borderWidth?: number;
+    borderRadius?: number;
 
-    textAlign?: TextAlign,
-    paddingVertical?: number,
-    paddingHorizontal?: number,
+    textAlign?: TextAlign;
+    paddingVertical?: number;
+    paddingHorizontal?: number;
 }
 
 export interface VariablesNavigation {
     statusBar?: {
-        backgroundColor?: string,
-        barStyle?: "light-content" | "dark-content",
-    },
+        backgroundColor?: string;
+        barStyle?: "light-content" | "dark-content";
+    };
     topBar?: {
-        backgroundColor?: string,
-        backButtonColor?: string,
-        titleColor?: string,
-        titleFontSize?: number,
-    },
+        backgroundColor?: string;
+        backButtonColor?: string;
+        titleColor?: string;
+        titleFontSize?: number;
+    };
     bottomBar?: {
-        color?: string,
-        selectedTextColor?: string,
-        selectedIconColor?: string,
-        backgroundColor?: string,
-        fontSize?: number,
-        iconSize?: number,
-    },
+        color?: string;
+        selectedTextColor?: string;
+        selectedIconColor?: string;
+        backgroundColor?: string;
+        fontSize?: number;
+        iconSize?: number;
+    };
     progressOverlay?: {
-        color?: string,
-        activityIndicatorColor?: string,
-        backgroundColor?: string,
-        containerBackgroundColor?: string,
-        shadowColor?: string,
-        fontSize?: number
-    }
+        color?: string;
+        activityIndicatorColor?: string;
+        backgroundColor?: string;
+        containerBackgroundColor?: string;
+        shadowColor?: string;
+        fontSize?: number;
+    };
 }
 
 export interface VariablesTabContainer {
     tabBar?: {
-        pressColor?: string,
-        backgroundColor?: string,
-    },
+        pressColor?: string;
+        backgroundColor?: string;
+    };
     indicator?: {
-        backgroundColor?: string,
-        height?: number
-    },
+        backgroundColor?: string;
+        height?: number;
+    };
     label?: {
-        color?: string,
-        fontWeight?: FontWeight
-    }
+        color?: string;
+        fontWeight?: FontWeight;
+    };
 }
 
 export interface VariablesListView {
     border?: {
-        color?: string,
-        width?: number
-    }
+        color?: string;
+        width?: number;
+    };
 }
 
 export interface VariablesLayoutgrid {
-    gutterSize?: number
+    gutterSize?: number;
 }
 
-
-//## Pluggable Widgets
-//-------------------------------------------------------------------------------------------------------------------//
+// ## Pluggable Widgets
+// -------------------------------------------------------------------------------------------------------------------//
 
 interface VariablesBadgeStyles {
-    color?: string,
-    backgroundColor?: string
+    color?: string;
+    backgroundColor?: string;
 }
 
 export interface VariablesBadge {
-    fontWeight?: FontWeight,
-    borderRadius?: number,
-    paddingVertical?: number,
-    paddingHorizontal?: number,
+    fontWeight?: FontWeight;
+    borderRadius?: number;
+    paddingVertical?: number;
+    paddingHorizontal?: number;
 
-    default?: VariablesBadgeStyles,
-    primary?: VariablesBadgeStyles,
-    success?: VariablesBadgeStyles,
-    warning?: VariablesBadgeStyles,
-    danger?: VariablesBadgeStyles,
+    default?: VariablesBadgeStyles;
+    primary?: VariablesBadgeStyles;
+    success?: VariablesBadgeStyles;
+    warning?: VariablesBadgeStyles;
+    danger?: VariablesBadgeStyles;
 }

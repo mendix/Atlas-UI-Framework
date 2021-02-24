@@ -1,6 +1,5 @@
-import { border, brand, font, spacing } from "../variables";
+import { border, brand, font, spacing } from "../../variables";
 import { BarChartType } from "../../types/widgets";
-
 /*
 
 DISCLAIMER:
@@ -9,11 +8,10 @@ Customizing core files will make updating Atlas much more difficult in the futur
 To customize any core styling, copy the part you want to customize to styles/native/app/ so the core styling is overwritten.
 
 ==========================================================================
-    Line Chart
+    Bar Chart
 
-    Default Class For Mendix Line Chart Widget
+    Default Class For Mendix Bar Chart Widget
 ========================================================================== */
-// eslint-disable-next-line @typescript-eslint/camelcase
 export const com_mendix_widget_native_barchart_BarChart: BarChartType = {
     container: {
         // All ViewStyle properties are allowed
@@ -60,25 +58,24 @@ export const com_mendix_widget_native_barchart_BarChart: BarChartType = {
               -  lineColor (string)
               -  width (number)
         */
-        color: font.color,
+        color: font.colorTitle,
         fontFamily: font.family,
         fontSize: font.sizeSmall,
         fontWeight: font.weightNormal,
-        lineColor: border.color,
         label: {
             /*
                 All TextStyle properties are allowed and:
                   -  relativePositionGrid ("bottom" or "right")
             */
-            color: font.color,
+            color: font.colorParagraph,
             alignSelf: "center",
             marginHorizontal: 0,
-            marginVertical: spacing.smallest,
+            marginVertical: 8,
             fontFamily: font.family,
             fontSize: font.sizeSmall,
-            fontWeight: font.weightNormal,
-            relativePositionGrid: "bottom"
+            fontWeight: font.weightNormal
         },
+        lineColor: border.color
     },
     yAxis: {
         /*
@@ -92,24 +89,23 @@ export const com_mendix_widget_native_barchart_BarChart: BarChartType = {
               -  lineColor (string)
               -  width (number)
         */
-        color: font.color,
+        color: font.colorTitle,
         fontFamily: font.family,
         fontSize: font.sizeSmall,
         fontWeight: font.weightNormal,
-        lineColor: border.color,
         label: {
             /*
                All TextStyle properties are allowed and:
                  -  relativePositionGrid ("top" or "left")
            */
-            color: font.color,
+            color: font.colorParagraph,
             marginHorizontal: 0,
-            marginVertical: spacing.smallest,
+            marginVertical: 8,
             fontFamily: font.family,
             fontSize: font.sizeSmall,
-            fontWeight: font.weightNormal,
-            relativePositionGrid: "top"
+            fontWeight: font.weightNormal
         },
+        lineColor: border.color
     },
     bars: {
         /*
@@ -149,20 +145,20 @@ export const com_mendix_widget_native_barchart_BarChart: BarChartType = {
             // All ViewStyle properties are allowed
             justifyContent: "flex-start",
             marginHorizontal: 0,
-            marginVertical: spacing.smallest
+            marginVertical: spacing.small
         },
         item: {
             // All ViewStyle properties are allowed
             padding: 0,
-            paddingRight: spacing.smaller
+            paddingRight: spacing.regular
         },
         indicator: {
             // All ViewStyle properties are allowed
-            marginRight: spacing.smallest
+            marginRight: spacing.small
         },
         label: {
             // All TextStyle properties are allowed
-            color: font.color,
+            color: font.colorTitle,
             fontFamily: font.family,
             fontSize: font.sizeSmall,
             fontWeight: font.weightNormal

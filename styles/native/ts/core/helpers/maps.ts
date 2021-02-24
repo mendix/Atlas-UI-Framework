@@ -1,4 +1,4 @@
-import { border, brand } from "../variables";
+import { border, brand } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -15,40 +15,40 @@ To customize any core styling, copy the part you want to customize to styles/nat
 // Maps Colors
 export const mapsSuccess = {
     marker: {
-        color: brand.success,
-    },
+        color: brand.success
+    }
 };
 export const mapsWarning = {
     marker: {
-        color: brand.warning,
-    },
+        color: brand.warning
+    }
 };
 export const mapsDanger = {
     marker: {
-        color: brand.danger,
-    },
+        color: brand.danger
+    }
 };
 //
 // Maps Size
 export const mapsSquare = {
     container: {
-        aspectRatio: 1 / 1,
-    },
+        aspectRatio: 1 / 1
+    }
 };
 export const mapsMaxSpace = {
     container: {
         flex: 1,
-        aspectRatio: undefined,
-    },
+        aspectRatio: undefined
+    }
 };
 //
-//== Extra Classes
-//## Helper classes to change the look and feel of the widget
-//-------------------------------------------------------------------------------------------------------------------//
+// == Extra Classes
+// ## Helper classes to change the look and feel of the widget
+// -------------------------------------------------------------------------------------------------------------------//
 // Maps Shape
 export const mapsRounded = {
     container: {
-        borderRadius: border.radius,
-        overflow: "hidden",
-    },
+        borderRadius: border.radiusSmall,
+        overflow: "hidden"
+    }
 };

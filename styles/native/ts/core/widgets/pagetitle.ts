@@ -1,5 +1,5 @@
-import { font }         from "../variables";
-import { TextHeading1 }  from "./typography";
+import { font } from "../../variables";
+import { TextHeading1 } from "./typography";
 import { PageTitleType } from "../../types/widgets";
 /*
 
@@ -20,6 +20,6 @@ export const PageTitle: PageTitleType = {
     text: {
         // All TextStyle properties are allowed
         ...TextHeading1.text,
-        color: font.color,
-    },
+        color: font.colorTitle
+    }
 };

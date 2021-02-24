@@ -13,16 +13,20 @@ export default function <T extends { [k: string]: any }>(...sources: T[]): T {
             return item && typeof item === "object" && !Array.isArray(item);
         }
 
-        if (!sources.length) return target;
+        if (!sources.length) {
+            return target;
+        }
         const source: T = sources.shift()!;
 
         if (isObject(target) && isObject(source)) {
-            Object.keys(source).forEach((key) => {
+            Object.keys(source).forEach(key => {
                 if (isObject(source[key] as T)) {
-                    if (!target[key]) Object.assign(target, {[key]: {}});
+                    if (!target[key]) {
+                        Object.assign(target, { [key]: {} });
+                    }
                     mergeDeep(target[key] as T, source[key] as T);
                 } else {
-                    Object.assign(target, {[key]: source[key]});
+                    Object.assign(target, { [key]: source[key] || target[key] });
                 }
             });
         }

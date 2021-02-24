@@ -1,4 +1,4 @@
-import { button, contrast, font } from "../variables";
+import { button, font } from "../../variables";
 import { ActionButtonType } from "../../types/widgets";
 /*
 
@@ -17,40 +17,44 @@ export const ActionButton: ActionButtonType = {
         // Ripplecolor and all ViewStyle properties are allowed
         borderWidth: 1,
         borderStyle: "solid",
-        rippleColor: contrast.lowest,
+        rippleColor: button.container.rippleColor,
         borderColor: button.primary.borderColor,
         backgroundColor: button.primary.backgroundColor,
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: button.borderRadius,
-        paddingVertical: button.paddingVertical,
-        paddingHorizontal: button.paddingHorizontal,
+        borderRadius: button.container.borderRadius,
+
+        minWidth: button.container.minWidth,
+        minHeight: button.container.minHeight,
+        paddingVertical: button.container.paddingVertical,
+        paddingHorizontal: button.container.paddingHorizontal
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-        borderColor: button.primary.borderColorDisabled,
-        backgroundColor: button.primary.backgroundColorDisabled,
+        borderColor: button.containerDisabled.borderColor,
+        backgroundColor: button.containerDisabled.backgroundColor
     },
     icon: {
-        // size and color are allowed
+        // Size and color are allowed
         color: button.primary.color,
-        size: button.fontSizeIcon,
+        size: button.icon.size
     },
     iconDisabled: {
-        // size and color are allowed
-        color: button.primary.colorDisabled,
+        // Size and color are allowed
+        color: button.iconDisabled.color
     },
     caption: {
         // All TextStyle properties are allowed
         color: button.primary.color,
-        fontSize: button.fontSize,
+        fontSize: button.caption.fontSize,
         fontFamily: font.family,
-        fontWeight: button.fontWeight,
+        fontWeight: button.caption.fontWeight,
+        lineHeight: font.lineHeight
     },
     captionDisabled: {
         // All TextStyle properties are allowed
-        color: button.primary.colorDisabled,
-    },
+        color: button.captionDisabled.color
+    }
 };
 //
 // Default style for button inside a header
@@ -59,15 +63,15 @@ export const ActionButtonHeader: ActionButtonType = {
         borderColor: button.header.borderColor,
         backgroundColor: button.header.backgroundColor,
         paddingLeft: button.header.paddingLeft,
-        paddingRight: button.header.paddingRight,
+        paddingRight: button.header.paddingRight
     },
     icon: {
         color: button.header.color,
-        size: button.header.fontSizeIcon,
+        size: button.header.fontSizeIcon
     },
     caption: {
         color: button.header.color,
         fontSize: button.header.fontSize,
-        fontFamily: font.family,
-    },
+        fontFamily: font.family
+    }
 };

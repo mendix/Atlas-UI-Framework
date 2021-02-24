@@ -1,5 +1,5 @@
-import { font, spacing, tabContainer } from "../variables";
-import { TabContainerType }                   from "../../types/widgets";
+import { badge, font, tabContainer } from "../../variables";
+import { TabContainerType } from "../../types/widgets";
 /*
 
 DISCLAIMER:
@@ -15,54 +15,59 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const TabContainer: TabContainerType = {
     container: {
         // All ViewStyle properties are allowed
-        flex: 1,
+        flex: 1
     },
     tabBar: {
         // bounces, pressColor, pressOpacity, scrollEnabled and all ViewStyle properties are allowed
         bounces: true,
-        pressColor: tabContainer.tabBar.pressColor,
-        pressOpacity: 0.8,
-        backgroundColor: tabContainer.tabBar.backgroundColor,
         scrollEnabled: false,
-        paddingVertical: spacing.smaller,
+        pressOpacity: 0.8,
+        pressColor: tabContainer.tabBar.pressColor,
+        backgroundColor: tabContainer.tabBar.backgroundColor,
+        height: 48,
+        justifyContent: "center"
     },
     indicator: {
         // All ViewStyle properties are allowed
         backgroundColor: tabContainer.indicator.backgroundColor,
-        height: tabContainer.indicator.height,
+        height: tabContainer.indicator.height
     },
     tab: {
         // All ViewStyle properties are allowed
-        paddingVertical: spacing.smaller,
+        padding: undefined,
+        minHeight: undefined,
+        paddingVertical: tabContainer.tab.paddingVertical
     },
     label: {
         // All TextStyle properties are allowed
         color: tabContainer.label.color,
+        fontSize: tabContainer.label.fontSize,
         fontFamily: font.family,
         fontWeight: tabContainer.label.fontWeight,
-        textTransform: tabContainer.label.textTransform,
+        textTransform: tabContainer.label.textTransform
     },
     activeLabel: {
         // All TextStyle properties are allowed
         color: tabContainer.activeLabel.color,
+        fontSize: tabContainer.activeLabel.fontSize,
         fontFamily: font.family,
         fontWeight: tabContainer.activeLabel.fontWeight,
-        textTransform: tabContainer.activeLabel.textTransform,
+        textTransform: tabContainer.activeLabel.textTransform
     },
     badgeContainer: {
         // All ViewStyle properties are allowed
-        borderRadius: tabContainer.badgeContainer.borderRadius,
-        backgroundColor: tabContainer.badgeContainer.backgroundColor,
-        paddingVertical: tabContainer.badgeContainer.paddingVertical,
-        paddingHorizontal: tabContainer.badgeContainer.paddingHorizontal,
-        marginLeft: tabContainer.badgeContainer.marginLeft
+        borderRadius: badge.borderRadius,
+        backgroundColor: badge.default.backgroundColor,
+        paddingVertical: badge.paddingVertical,
+        paddingHorizontal: badge.paddingHorizontal,
+        marginLeft: 8
     },
     badgeCaption: {
         // All TextStyle properties are allowed
-        fontSize: tabContainer.badgeCaption.fontSize,
-        color: tabContainer.badgeCaption.color,
+        fontSize: font.size,
+        color: badge.default.color,
         fontFamily: font.family,
-        fontWeight: tabContainer.badgeCaption.fontWeight,
-        marginTop: -1,
+        fontWeight: badge.fontWeight,
+        marginTop: -1
     }
 };

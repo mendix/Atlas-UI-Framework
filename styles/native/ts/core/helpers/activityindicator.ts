@@ -1,4 +1,4 @@
-import { brand } from "../variables";
+import { brand } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -16,18 +16,18 @@ To customize any core styling, copy the part you want to customize to styles/nat
 
 export const activityIndicatorSuccess = {
     indicator: {
-        color: brand.success,
-    },
+        color: brand.success
+    }
 };
 
 export const activityIndicatorWarning = {
     indicator: {
-        color: brand.warning,
-    },
+        color: brand.warning
+    }
 };
 
 export const activityIndicatorDanger = {
     indicator: {
-        color: brand.danger,
-    },
+        color: brand.danger
+    }
 };

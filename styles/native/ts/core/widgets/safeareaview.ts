@@ -14,5 +14,5 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const com_mendix_widget_native_safeareaview_SafeAreaView: SafeAreaViewType = {
     container: {
         // All ViewStyle properties are allowed
-    },
+    }
 };

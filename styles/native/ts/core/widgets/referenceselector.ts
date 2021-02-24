@@ -1,7 +1,5 @@
+import { DropDown, DropDownVertical } from "./dropdown";
 import { DropDownType } from "../../types/widgets";
-import { border, contrast, font, input } from "../variables";
-import { DropDownVertical } from "./dropdown";
-import { TextBox, TextBoxVertical } from "./textbox";
 /*
 
 DISCLAIMER:
@@ -17,129 +15,108 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const ReferenceSelector: DropDownType = {
     container: {
         // All ViewStyle properties are allowed
-        ...TextBox.container,
+        ...DropDown.container
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-        ...TextBox.containerDisabled,
+        ...DropDown.containerDisabled
     },
     label: {
         // numberOfLines and all TextStyle properties are allowed
-        ...TextBox.label,
+        ...DropDown.label
     },
     labelDisabled: {
         // All TextStyle properties are allowed
-        ...TextBox.labelDisabled,
+        ...DropDown.labelDisabled
     },
     value: {
         // All TextStyle properties & placeholderTextColor are allowed
-        color: input.color,
-        fontSize: input.fontSize,
-        fontFamily: input.fontFamily,
-        overflow: "hidden",
-        placeholderTextColor: input.placeholderTextColor, // Only applied when useUniformDesign is true
-    },
-    validationMessage: {
-        // All TextStyle properties are allowed
-        ...TextBox.validationMessage,
-    },
-    /*  New dropdown styles start */
-    valueFocused: {
-        // All TextStyle properties are allowed
+        ...DropDown.value
     },
     valueDisabled: {
         // All TextStyle properties are allowed
-        ...TextBox.inputDisabled,
+        ...DropDown.valueDisabled
     },
+    valueFocused: {
+        // All TextStyle properties are allowed
+        ...DropDown.valueFocused
+    },
+    validationMessage: {
+        // All TextStyle properties are allowed
+        ...DropDown.validationMessage
+    },
+    /*  New dropdown styles start */
     valueContainer: {
         // All ViewStyle properties & rippleColor are allowed
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        borderWidth: input.borderWidth,
-        borderRadius: input.borderRadius,
-        borderColor: input.borderColor,
-        paddingHorizontal: input.paddingHorizontal,
-        paddingVertical: input.paddingVertical,
-        backgroundColor: input.backgroundColor,
-    },
-    valueContainerFocused: {
-        // All ViewStyle properties are allowed
-        ...TextBox.inputFocused,
+        ...DropDown.valueContainer
     },
     valueContainerDisabled: {
         // All ViewStyle properties are allowed
     },
-    menuWrapper: {
+    valueContainerFocused: {
         // All ViewStyle properties are allowed
-        borderRadius: border.radius,
-        shadowColor: "#000",
-        shadowOpacity: 0.2,
-        shadowRadius: 10,
-        elevation: 16,
-        backgroundColor: input.backgroundColor,
-    },
-    itemContainer: {
-        // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
-        maxWidth: 500,
-        paddingVertical: 6,
-        paddingHorizontal: 16,
-        backgroundColor: input.backgroundColor,
-        underlayColor: input.inputContainerUnderlayColor,
+        ...DropDown.valueContainerFocused
     },
     iconStyle: {
         // All TextStyle properties are allowed
-        color: input.color,
+        ...DropDown.iconStyle
+    },
+    menuWrapper: {
+        // All ViewStyle properties are allowed
+        ...DropDown.menuWrapper
+    },
+    itemContainer: {
+        // All ViewStyle properties are allowed
+        ...DropDown.itemContainer
     },
     item: {
         // All TextStyle properties are allowed
-        color: input.color,
+        ...DropDown.item
     },
     selectedItem: {
         // All TextStyle properties are allowed
-        fontWeight: font.weightBold,
+        ...DropDown.selectedItem
     },
     selectedItemContainer: {
         // All ViewStyle properties are allowed
-        backgroundColor: contrast.lowest,
+        ...DropDown.selectedItemContainer
     },
     /*  New dropdown styles end */
-    useUniformDesign: true,
+    useUniformDesign: DropDown.useUniformDesign,
     /*  Old dropdown styles start */
     pickerIOS: {
         // All ViewStyle properties are allowed
-        backgroundColor: input.backgroundColor,
+        ...DropDown.pickerIOS
     },
     pickerItemIOS: {
         // All TextStyle properties are allowed
+        ...DropDown.pickerItemIOS
     },
     pickerBackdropIOS: {
         // All ViewStyle properties are allowed
+        ...DropDown.pickerBackdropIOS
     },
     pickerTopIOS: {
         // All ViewStyle properties are allowed
-        backgroundColor: input.backgroundColor,
-    },
+        ...DropDown.pickerTopIOS
+    }
     /*  Old dropdown styles end */
 };
 export const ReferenceSelectorVertical: DropDownType = {
-    container: TextBoxVertical.container,
-    containerDisabled: TextBoxVertical.containerDisabled,
-    label: TextBoxVertical.label,
-    labelDisabled: TextBoxVertical.labelDisabled,
+    container: DropDownVertical.container,
+    label: DropDownVertical.label,
     value: DropDownVertical.value,
     valueFocused: DropDownVertical.valueFocused,
-    validationMessage: TextBoxVertical.validationMessage,
+    validationMessage: DropDownVertical.validationMessage,
     valueContainer: DropDownVertical.valueContainer,
     valueContainerFocused: DropDownVertical.valueContainerFocused,
-    valueContainerDisabled: DropDownVertical.valueContainerDisabled,
+    iconStyle: DropDownVertical.iconStyle,
     menuWrapper: DropDownVertical.menuWrapper,
     itemContainer: DropDownVertical.itemContainer,
     item: DropDownVertical.item,
-    iconStyle: DropDownVertical.iconStyle,
     useUniformDesign: DropDownVertical.useUniformDesign,
     pickerIOS: DropDownVertical.pickerIOS,
     pickerItemIOS: DropDownVertical.pickerItemIOS,
     pickerBackdropIOS: DropDownVertical.pickerBackdropIOS,
-    pickerTopIOS: DropDownVertical.pickerTopIOS,
+    pickerTopIOS: DropDownVertical.pickerTopIOS
 };

@@ -1,4 +1,4 @@
-import { brand }                 from "../variables";
+import { brand } from "../../variables";
 import { ActivityIndicatorType } from "../../types/widgets";
 /*
 
@@ -19,6 +19,6 @@ export const com_mendix_widget_native_activityindicator_ActivityIndicator: Activ
     indicator: {
         // Color and size are allowed
         color: brand.primary,
-        size: "large",
-    },
+        size: "large"
+    }
 };

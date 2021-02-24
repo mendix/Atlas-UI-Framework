@@ -1,7 +1,6 @@
-import { Platform }            from "react-native";
-import { anyColorToRgbString } from "../helpers/_functions/convertcolors";
-import { brand, font, input } from "../variables";
-import { ProgressBarType }    from "../../types/widgets";
+import { progressBar } from "../../variables";
+import { ProgressBarType } from "../../types/widgets";
+import { TextBox } from "./textbox";
 /*
 
 DISCLAIMER:
@@ -17,29 +16,21 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const com_mendix_widget_native_progressbar_ProgressBar: ProgressBarType = {
     container: {
         // All ViewStyle properties are allowed
-        alignSelf: "stretch",
+        alignSelf: "stretch"
     },
     bar: {
         // All ViewStyle properties are allowed
-        ...Platform.select({
-            ios: {
-                borderColor: brand.primary,
-            },
-            android: {
-                borderRadius: 0,
-                borderWidth: 0,
-                backgroundColor: `rgba(${anyColorToRgbString(brand.primary)},0.2)`,
-            },
-        }),
+        height: progressBar.bar.height,
+        borderWidth: 0,
+        borderRadius: progressBar.bar.height / 2,
+        backgroundColor: progressBar.bar.backgroundColor
     },
     fill: {
-        //Only the backgroundColor property is allowed
-        backgroundColor: brand.primary,
+        // Only the backgroundColor property is allowed
+        backgroundColor: progressBar.fill.backgroundColor
     },
     validationMessage: {
         // All TextStyle properties are allowed
-        color: input.errorColor,
-        fontSize: font.size,
-        fontFamily: font.family,
-    },
+        ...TextBox.validationMessage
+    }
 };

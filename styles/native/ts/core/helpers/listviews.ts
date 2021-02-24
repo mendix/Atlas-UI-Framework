@@ -1,4 +1,4 @@
-import { listView } from "../variables";
+import { background, border, listView, spacing } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -16,27 +16,32 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const listItemBorderBottom = {
     listItem: {
         borderColor: listView.border.color,
-        borderBottomWidth: listView.border.width,
-    },
+        borderBottomWidth: listView.border.width
+    }
 };
 export const listItemBorderRight = {
     listItem: {
         borderColor: listView.border.color,
-        borderRightWidth: listView.border.width,
-    },
+        borderRightWidth: listView.border.width
+    }
 };
 //
-//== Extra Classes
-//## Helper classes to change the look and feel of the widget
-//-------------------------------------------------------------------------------------------------------------------//
-
-export const listItemIconSmall = {
-    icon: {
-        size: 16,
-    },
+// == Extra Classes
+// ## Helper classes to change the look and feel of the widget
+// -------------------------------------------------------------------------------------------------------------------//
+export const listItemImage = {
+    container: {
+        height: 88,
+        width: 128,
+        overflow: "hidden",
+        backgroundColor: background.primary,
+        borderRadius: border.radiusLarge,
+        marginRight: spacing.regular
+    }
 };
-export const listItemIconLarge = {
-    icon: {
-        size: 24,
-    },
+
+export const horizontalListItemCard = {
+    container: {
+        width: 280
+    }
 };

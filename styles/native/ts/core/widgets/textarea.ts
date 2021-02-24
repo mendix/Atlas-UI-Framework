@@ -1,6 +1,6 @@
-import {  input } from "../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
-import { TextBoxType }              from "../../types/widgets";
+import { TextBoxType } from "../../types/widgets";
+import { input } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -16,45 +16,46 @@ To customize any core styling, copy the part you want to customize to styles/nat
 export const TextArea: TextBoxType = {
     container: {
         // All ViewStyle properties are allowed
-        ...TextBox.container,
+        ...TextBox.container
     },
     containerDisabled: {
         // All ViewStyle properties are allowed
-        ...TextBox.containerDisabled,
+        ...TextBox.containerDisabled
     },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
+        lineHeight: input.input.lineHeight,
         height: "100%",
         textAlignVertical: "top",
-        paddingVertical: input.paddingVertical,
+        paddingVertical: TextBox.input?.paddingVertical
     },
     labelDisabled: {
-        // All ViewStyle properties are allowed
-        ...TextBox.labelDisabled
+        color: TextBox.labelDisabled?.color
     },
     input: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
         ...TextBox.input,
         textAlignVertical: "top",
-        paddingTop: input.paddingVertical,
+        paddingTop: TextBox.input?.paddingVertical
     },
     inputDisabled: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        ...TextBox.inputDisabled
-    },
-    inputError: {
-        // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        ...TextBox.inputError,
+        backgroundColor: TextBox.inputDisabled?.backgroundColor,
+        borderColor: TextBox.inputDisabled?.borderColor,
+        color: TextBox.inputDisabled?.color
     },
     inputFocused: {
         // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        ...TextBox.inputFocused,
+    },
+    inputError: {
+        // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
+        ...TextBox.inputError
     },
     validationMessage: {
         // All TextStyle properties are allowed
-        ...TextBox.validationMessage,
-    },
+        ...TextBox.validationMessage
+    }
 };
 export const TextAreaVertical: TextBoxType = {
     container: TextBoxVertical.container,
@@ -63,12 +64,20 @@ export const TextAreaVertical: TextBoxType = {
         ...TextBoxVertical.label,
         height: undefined,
         paddingVertical: undefined,
-        textAlignVertical: undefined,
+        textAlignVertical: undefined
     },
-    labelDisabled: TextBoxVertical.labelDisabled,
-    input: TextBoxVertical.input,
+    labelDisabled: {
+        ...TextBoxVertical.labelDisabled,
+        height: undefined,
+        paddingVertical: undefined,
+        textAlignVertical: undefined
+    },
+    input: {
+        ...TextBoxVertical.input,
+        lineHeight: input.input.lineHeight
+    },
     inputDisabled: TextBoxVertical.inputDisabled,
-    inputError: TextBoxVertical.inputError,
     inputFocused: TextBoxVertical.inputFocused,
-    validationMessage: TextBoxVertical.validationMessage,
+    inputError: TextBoxVertical.inputError,
+    validationMessage: TextBoxVertical.validationMessage
 };

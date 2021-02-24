@@ -6,7 +6,6 @@ export interface ShadowStyleIOS {
     shadowRadius?: number;
 }
 
-
 //
 interface PerspectiveTransform {
     perspective: number;
@@ -57,7 +56,7 @@ interface SkewYTransform {
 }
 
 export interface TransformsStyle {
-    transform?: (
+    transform?: Array<
         | PerspectiveTransform
         | RotateTransform
         | RotateXTransform
@@ -70,15 +69,14 @@ export interface TransformsStyle {
         | TranslateYTransform
         | SkewXTransform
         | SkewYTransform
-        )[];
-    transformMatrix?: Array<number>;
+    >;
+    transformMatrix?: number[];
     rotation?: number;
     scaleX?: number;
     scaleY?: number;
     translateX?: number;
     translateY?: number;
 }
-
 
 /**
  * Flex Prop Types
@@ -147,7 +145,6 @@ export interface FlexStyle {
      */
     direction?: "inherit" | "ltr" | "rtl";
 }
-
 
 /**
  * @see https://facebook.github.io/react-native/docs/view.html#style
@@ -231,7 +228,6 @@ export interface TextStyle extends TextStyleIOS, TextStyleAndroid, ViewStyle {
     testID?: string;
 }
 
-
 /**
  * Image style
  * @see https://facebook.github.io/react-native/docs/image.html#style
@@ -255,4 +251,3 @@ export interface ImageStyle extends FlexStyle, ShadowStyleIOS, TransformsStyle {
     tintColor?: string;
     opacity?: number;
 }
-

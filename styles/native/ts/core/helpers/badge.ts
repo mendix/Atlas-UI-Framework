@@ -1,4 +1,4 @@
-import { badge } from "../variables";
+import { badge } from "../../variables";
 /*
 
 DISCLAIMER:
@@ -15,33 +15,33 @@ To customize any core styling, copy the part you want to customize to styles/nat
 // Badge Colors
 export const badgePrimary = {
     container: {
-        backgroundColor: badge.primary.backgroundColor,
+        backgroundColor: badge.primary.backgroundColor
     },
     caption: {
-        color: badge.primary.color,
-    },
+        color: badge.primary.color
+    }
 };
 export const badgeSuccess = {
     container: {
-        backgroundColor: badge.success.backgroundColor,
+        backgroundColor: badge.success.backgroundColor
     },
     caption: {
-        color: badge.success.color,
-    },
+        color: badge.success.color
+    }
 };
 export const badgeWarning = {
     container: {
-        backgroundColor: badge.warning.backgroundColor,
+        backgroundColor: badge.warning.backgroundColor
     },
     caption: {
-        color: badge.warning.color,
-    },
+        color: badge.warning.color
+    }
 };
 export const badgeDanger = {
     container: {
-        backgroundColor: badge.danger.backgroundColor,
+        backgroundColor: badge.danger.backgroundColor
     },
     caption: {
-        color: badge.danger.color,
-    },
+        color: badge.danger.color
+    }
 };
