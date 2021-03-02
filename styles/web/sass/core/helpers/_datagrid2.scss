@@ -1,0 +1,98 @@
+//
+// DISCLAIMER:
+// Do not change this file because it is core styling.
+// Customizing core files will make updating Atlas much more difficult in the future.
+// To customize any core styling, copy the part you want to customize to styles/web/sass/app/ so the core styling is overwritten.
+//
+
+/* ==========================================================================
+   Data grid v2
+
+   The data grid v2 shows a list of objects and widgets in a grid
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+========================================================================== */
+.table-compact {
+  .th{
+    padding: $spacing-small;
+
+    .filter-selectors {
+      margin: 0 $spacing-small;
+    }
+  }
+  .td {
+    padding: $spacing-small;
+  }
+}
+
+.table-striped {
+  .tr:nth-child(odd) > .td {
+    background-color: $grid-bg-striped;
+  }
+}
+
+.table-hover {
+  .tr:hover > .td {
+    background-color: $grid-bg-hover;
+  }
+}
+
+.table-bordered-all{
+  .th {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+
+    // Column for the visibility when a column can be hidden
+    &.column-selector {
+      border-left-width: 0px;
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+
+  .td {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+
+    &.td-borders {
+      border-top-width: 1px;
+    }
+
+    // Column for the visibility when a column can be hidden
+    &.column-selector {
+      border-left-width: 0px;
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+}
+
+.table-bordered-horizontal {
+  .td {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    &.td-borders {
+      border-top-width: 1px;
+    }
+  }
+}
+
+.table-bordered-vertical {
+  .th, .td {
+    border-left-width: 1px;
+    border-left-style: solid;
+
+    // Column for the visibility when a column can be hidden
+    &.column-selector {
+      border-left-width: 0px;
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+}

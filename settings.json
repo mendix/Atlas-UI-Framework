@@ -748,6 +748,45 @@
                     }
                 ]
             }
+        ],
+        "com.mendix.widget.web.datagrid.Datagrid": [
+            {
+                "name": "Borders",
+                "type": "Dropdown",
+                "description": "Add either a horizontal, vertical separator or both to the cells.",
+                "options": [
+                    {
+                        "name": "Both",
+                        "class": "table-bordered-all"
+                    },
+                    {
+                        "name": "Vertical",
+                        "class": "table-bordered-vertical"
+                    },
+                    {
+                        "name": "Horizontal",
+                        "class": "table-bordered-horizontal"
+                    }
+                ]
+            },
+            {
+                "name": "Compact?",
+                "type": "Toggle",
+                "description": "Change the cell spacing to compact.",
+                "class": "table-compact"
+            },
+            {
+                "name": "Hover?",
+                "type": "Toggle",
+                "description": "Highlight a row when hovering over it. Only useful when the row is clickable.",
+                "class": "table-hover"
+            },
+            {
+                "name": "Striped?",
+                "type": "Toggle",
+                "description": "Add alternating background colors to rows.",
+                "class": "table-striped"
+            }
         ]
     }
 }
