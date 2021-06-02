@@ -79,7 +79,6 @@ export const DropDown: DropDownType = {
     },
     itemContainer: {
         // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
-        maxWidth: 500,
         paddingVertical: 6,
         paddingHorizontal: 16,
         backgroundColor: input.backgroundColor,
