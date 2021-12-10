@@ -1,6 +1,6 @@
 import { FloatingActionButtonType } from "../../types/widgets";
 import { background, brand, contrast, font } from "../variables";
-import { darkMode } from "../../app/custom-variables"
+
 /*
 
 DISCLAIMER:
@@ -69,7 +69,7 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton:
         // All ViewStyle properties are allowed
         marginHorizontal: 5,
         backgroundColor: background.secondary,
-        borderColor: darkMode ? background.secondary : "#eee",
+        borderColor: background.secondary,
         elevation: 2,
         shadowOpacity: 0.3,
         shadowRadius: 4,
