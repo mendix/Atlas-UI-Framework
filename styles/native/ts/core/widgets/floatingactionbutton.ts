@@ -1,5 +1,6 @@
 import { FloatingActionButtonType } from "../../types/widgets";
 import { background, brand, contrast, font } from "../variables";
+
 /*
 
 DISCLAIMER:
@@ -67,6 +68,8 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton:
     secondaryButtonCaptionContainer: {
         // All ViewStyle properties are allowed
         marginHorizontal: 5,
+        backgroundColor: background.secondary,
+        borderColor: background.secondary,
         elevation: 2,
         shadowOpacity: 0.3,
         shadowRadius: 4,

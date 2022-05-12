@@ -621,7 +621,11 @@ export interface VideoPlayerType {
     indicator?: {
         backgroundColor?: string,
     },
-    video?: ViewStyle
+    video?: ViewStyle,
+    fullScreenVideoPlayer?: ViewStyle,
+    controlBtnContainerStyle?: ViewStyle,
+    fullScreenVideoStyle?: ViewStyle,
+    fullScreenActivityIndicatorStyle?: ViewStyle,
 }
 
 // Web View
